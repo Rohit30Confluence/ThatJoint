@@ -1,0 +1,459 @@
+/* ==========================================================================
+   THATJOINT / 3D Building Tour Visualizer Stylesheet
+   Matches isometric miniature aesthetic: pale stone textures, warm subtle
+   ambient light, minimal soft shadows, architectural HUD, responsive hotspots.
+   ========================================================================== */
+
+.tj-tour-wrapper {
+  position: relative;
+  width: 100%;
+  height: clamp(540px, 60vh, 760px);
+  background: radial-gradient(circle at 45% 35%, #F7F9FA 0%, #E6EDF0 65%, #D7E1E6 100%);
+  border: 1px solid var(--line, rgba(43, 43, 43, 0.2));
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(31, 49, 54, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Canvas viewport */
+.tj-tour-canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.tj-tour-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  cursor: grab;
+}
+
+.tj-tour-canvas:active {
+  cursor: grabbing;
+}
+
+/* ------------------------------------------------------------------ *
+ *  HUD: Floor / Zone Selector & Meta Overlay                          *
+ * ------------------------------------------------------------------ */
+.tj-tour-hud-top {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tj-tour-title-badge {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(43, 43, 43, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border-radius: 3px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.tj-tour-title-badge span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--grey, #7A7A7A);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.tj-tour-title-badge span i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--purple, #A459FF);
+  box-shadow: 0 0 0 3px rgba(164, 89, 255, 0.2);
+}
+
+.tj-tour-title-badge strong {
+  display: block;
+  font-family: var(--display, "Barlow Condensed", sans-serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--charcoal, #2B2B2B);
+}
+
+/* Floor / Zone Minimalist Selector Buttons */
+.tj-tour-zones {
+  pointer-events: auto;
+  display: flex;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(43, 43, 43, 0.15);
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.tj-tour-zone-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-right: 1px solid rgba(43, 43, 43, 0.12);
+  background: transparent;
+  padding: 10px 14px;
+  color: var(--charcoal, #2B2B2B);
+  font-family: var(--body, "DM Sans", Arial, sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tj-tour-zone-btn:last-child {
+  border-right: 0;
+}
+
+.tj-tour-zone-btn span {
+  color: var(--grey, #7A7A7A);
+  font-size: 8px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.tj-tour-zone-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.tj-tour-zone-btn.is-active {
+  background: var(--charcoal, #2B2B2B);
+  color: #fff;
+}
+
+.tj-tour-zone-btn.is-active span {
+  color: var(--purple, #A459FF);
+}
+
+.tj-tour-zone-btn:focus-visible {
+  outline: 2px solid var(--purple, #A459FF);
+  outline-offset: -2px;
+}
+
+/* Bottom HUD: Orbit Controls Hint & Reset */
+.tj-tour-hud-bottom {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.tj-tour-hint {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(43, 43, 43, 0.14);
+  backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey, #7A7A7A);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tj-tour-hint b {
+  color: var(--charcoal, #2B2B2B);
+  font-weight: 600;
+}
+
+.tj-tour-actions {
+  pointer-events: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.tj-tour-action-btn {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(43, 43, 43, 0.15);
+  border-radius: 3px;
+  padding: 8px 14px;
+  color: var(--charcoal, #2B2B2B);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tj-tour-action-btn:hover {
+  background: var(--charcoal, #2B2B2B);
+  color: #fff;
+}
+
+.tj-tour-action-btn i {
+  color: var(--purple, #A459FF);
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------ *
+ *  3D Context Hotspots & Pins                                         *
+ * ------------------------------------------------------------------ */
+.tj-hotspot-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 15;
+}
+
+.tj-hotspot {
+  position: absolute;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, left, top;
+}
+
+.tj-hotspot.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tj-hotspot-pin {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--purple, #A459FF);
+  box-shadow: 0 4px 14px rgba(164, 89, 255, 0.35);
+  display: grid;
+  place-items: center;
+  color: var(--charcoal, #2B2B2B);
+  font-family: var(--display, "Barlow Condensed", sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.tj-hotspot-pin::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid var(--purple, #A459FF);
+  opacity: 0.6;
+  animation: hotspotPulse 2.4s ease-out infinite;
+}
+
+@keyframes hotspotPulse {
+  0% { transform: scale(0.85); opacity: 0.8; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.tj-hotspot:hover .tj-hotspot-pin,
+.tj-hotspot.is-active .tj-hotspot-pin {
+  transform: scale(1.15);
+  background: var(--purple, #A459FF);
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 8px 24px rgba(164, 89, 255, 0.5);
+}
+
+/* Hotspot Editorial Popover */
+.tj-hotspot-popover {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 260px;
+  background: var(--charcoal, #2B2B2B);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  padding: 14px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s 0.25s;
+  pointer-events: none;
+  z-index: 30;
+}
+
+.tj-hotspot-popover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: var(--charcoal, #2B2B2B) transparent transparent transparent;
+}
+
+.tj-hotspot.is-active .tj-hotspot-popover,
+.tj-hotspot:hover .tj-hotspot-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+  transition-delay: 0s;
+}
+
+.tj-hotspot-popover-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.tj-hotspot-popover-head b {
+  color: var(--purple, #A459FF);
+}
+
+.tj-hotspot-popover h5 {
+  margin: 0 0 6px 0;
+  font-family: var(--display, "Barlow Condensed", sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tj-hotspot-popover p {
+  margin: 0 0 10px 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.tj-hotspot-popover-btn {
+  width: 100%;
+  background: var(--purple, #A459FF);
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  padding: 7px 10px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tj-hotspot-popover-btn:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------------------------------------------------ *
+ *  Fallback for Environments without WebGL                            *
+ * ------------------------------------------------------------------ */
+.tj-tour-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #E8ECEE;
+  padding: 24px;
+  text-align: center;
+}
+
+.tj-tour-fallback img {
+  max-width: 80%;
+  max-height: 60%;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.tj-tour-fallback p {
+  color: var(--charcoal, #2B2B2B);
+  font-size: 12px;
+  max-width: 420px;
+}
+
+/* ------------------------------------------------------------------ *
+ *  Responsive Behavior                                                *
+ * ------------------------------------------------------------------ */
+@media (max-width: 860px) {
+  .tj-tour-wrapper {
+    height: 520px;
+  }
+  .tj-tour-hud-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tj-tour-zones {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  .tj-tour-zone-btn {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+  .tj-hotspot-popover {
+    width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tj-tour-wrapper {
+    height: 460px;
+  }
+  .tj-tour-title-badge strong {
+    font-size: 16px;
+  }
+  .tj-tour-hint {
+    display: none;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .tj-hotspot-pin::after {
+    animation: none !important;
+  }
+  .tj-hotspot-popover,
+  .tj-tour-zone-btn {
+    transition: none !important;
+  }
+}
