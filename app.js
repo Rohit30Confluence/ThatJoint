@@ -792,11 +792,6 @@
     var tour = null;
     var terminal = null;
 
-    var tourRoot = document.getElementById('embeddedBuildingTour');
-    if (tourRoot && typeof ThatJointBuildingTour !== 'undefined') {
-      tour = new ThatJointBuildingTour({ containerId: tourRoot });
-    }
-
     var terminalRoot = document.getElementById('terminalDrawerRoot');
     if (terminalRoot && typeof ThatJointChatbot !== 'undefined') {
       terminal = new ThatJointChatbot({
@@ -804,6 +799,16 @@
         isDrawer: true,
         activeUnit: 'Home 014'
       });
+    }
+
+    // A WebGL failure must not prevent the chatbot from opening.
+    var tourRoot = document.getElementById('embeddedBuildingTour');
+    if (tourRoot && typeof ThatJointBuildingTour !== 'undefined') {
+      try {
+        tour = new ThatJointBuildingTour({ containerId: tourRoot });
+      } catch (error) {
+        console.error('Building tour could not start:', error);
+      }
     }
 
     // Connect tour hotspot clicks to terminal queries
