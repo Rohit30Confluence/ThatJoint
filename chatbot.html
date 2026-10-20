@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#181c1e" />
-  <title>THΛTJOINT / INTELLIGENCE Terminal</title>
+  <meta name="theme-color" content="#161a1c" />
+  <title>THΛTJOINT / Property Sentinel AI Companion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="chatbot.css" />
   <style>
     body {
-      background: #111416;
+      background: #0f1214;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -21,15 +21,15 @@
       margin: 0;
       color: #f4f5f4;
     }
-    .terminal-page-header {
+    .companion-page-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 16px 24px;
-      background: #181c1e;
+      background: #161a1c;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .terminal-page-nav {
+    .companion-page-nav {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -37,15 +37,15 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-    .terminal-page-nav a {
+    .companion-page-nav a {
       color: rgba(255, 255, 255, 0.7);
       transition: color 0.2s;
     }
-    .terminal-page-nav a:hover,
-    .terminal-page-nav a.is-current {
+    .companion-page-nav a:hover,
+    .companion-page-nav a.is-current {
       color: var(--purple, #A459FF);
     }
-    .terminal-wrapper-full {
+    .companion-wrapper-full {
       flex: 1 1 auto;
       display: flex;
       padding: 20px 24px;
@@ -54,16 +54,16 @@
       width: 100%;
       margin: 0 auto;
     }
-    .terminal-wrapper-full .tj-terminal-container {
+    .companion-wrapper-full .tj-companion-container {
       width: 100%;
       height: calc(100vh - 110px);
       max-height: none;
     }
     @media (max-width: 768px) {
-      .terminal-wrapper-full {
+      .companion-wrapper-full {
         padding: 0;
       }
-      .terminal-wrapper-full .tj-terminal-container {
+      .companion-wrapper-full .tj-companion-container {
         height: calc(100vh - 65px);
         border: 0;
         border-radius: 0;
@@ -72,30 +72,30 @@
   </style>
 </head>
 <body>
-  <header class="terminal-page-header">
+  <header class="companion-page-header">
     <a class="brand" href="index.html" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
-    <nav class="terminal-page-nav" aria-label="Terminal Navigation">
+    <nav class="companion-page-nav" aria-label="Companion Navigation">
       <a href="index.html">← Back to Overview</a>
       <a href="building-tour.html">3D Building Tour ↗</a>
-      <a href="chatbot.html" class="is-current">Terminal Console</a>
+      <a href="chatbot.html" class="is-current">Property Sentinel AI</a>
     </nav>
   </header>
 
-  <main class="terminal-wrapper-full">
-    <div id="terminalApp" style="width: 100%;"></div>
+  <main class="companion-wrapper-full">
+    <div id="companionApp" style="width: 100%;"></div>
   </main>
 
   <script src="chatbot.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var terminal = new ThatJointChatbot({
-        containerId: 'terminalApp',
+      var sentinel = new ThatJointChatbot({
+        containerId: 'companionApp',
         isDrawer: false,
         activeUnit: 'Home 014'
       });
 
       // Handle crosslink requests to 3D Tour
-      terminal.on('selectZone3D', function (zone) {
+      sentinel.on('selectZone3D', function (zone) {
         window.location.href = 'building-tour.html?zone=' + encodeURIComponent(zone);
       });
     });

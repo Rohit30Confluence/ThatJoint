@@ -61,7 +61,7 @@
       badge: '01 / Active Unit',
       worldPos: { x: 1.8, y: 6.2, z: 2.8 },
       signal: 'Unit 014: HVAC Inspection Scheduled Today 14:00 · Lease Active (Renewal in 30d)',
-      prompt: 'Status Home 014'
+      prompt: 'Inspect Home 014 Status'
     },
     {
       id: 'courtyard-entry',
@@ -79,7 +79,7 @@
       badge: '03 / Energy',
       worldPos: { x: -1.4, y: 9.1, z: -1.2 },
       signal: 'Rooftop Solar: 4.8 kW Peak Generation · Battery Storage at 92% (13.8 kWh)',
-      prompt: 'Solar Microgrid Generation'
+      prompt: 'Solar Microgrid Telemetry'
     },
     {
       id: 'ops-desk',
@@ -88,7 +88,7 @@
       badge: '04 / Telemetry',
       worldPos: { x: -3.2, y: 1.8, z: 1.8 },
       signal: 'Building Ops Desk: All 4 Subsystems Synced · Zero Critical Alerts on Record',
-      prompt: 'Audit Maintenance Queue'
+      prompt: 'Dispatch HVAC Work Order'
     }
   ];
 
@@ -193,7 +193,7 @@
                 <span>Reset View</span>
               </button>
               <button type="button" class="tj-tour-action-btn" id="tjBtnOpenChatbot">
-                <span>Query Unit in Terminal</span>
+                <span>Ask Property Sentinel</span>
                 <i>↗</i>
               </button>
             </div>
@@ -504,7 +504,7 @@
             <h5>${data.title}</h5>
             <p>${data.signal}</p>
             <button type="button" class="tj-hotspot-popover-btn" data-prompt="${data.prompt}">
-              <span>Query in Terminal</span>
+              <span>Ask Sentinel</span>
               <span aria-hidden="true">↗</span>
             </button>
           </div>
