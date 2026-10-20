@@ -784,4 +784,63 @@
       selectMarket(marketButtons[nextIndex], true);
     });
   });
+
+  /* ------------------------------------------------------------------ *
+   *  3D Building Tour & Operational Intelligence Terminal Integration   *
+   * ------------------------------------------------------------------ */
+  function init3DTourAndTerminal() {
+    var tour = null;
+    var terminal = null;
+
+    var tourRoot = document.getElementById('embeddedBuildingTour');
+    if (tourRoot && typeof ThatJointBuildingTour !== 'undefined') {
+      tour = new ThatJointBuildingTour({ containerId: tourRoot });
+    }
+
+    var terminalRoot = document.getElementById('terminalDrawerRoot');
+    if (terminalRoot && typeof ThatJointChatbot !== 'undefined') {
+      terminal = new ThatJointChatbot({
+        containerId: terminalRoot,
+        isDrawer: true,
+        activeUnit: 'Home 014'
+      });
+    }
+
+    // Connect tour hotspot clicks to terminal queries
+    if (tour && terminal) {
+      tour.on('queryTerminal', function (prompt) {
+        terminal.open();
+        if (terminal.input) {
+          terminal.input.value = prompt;
+          terminal.submitQuery();
+        }
+      });
+
+      terminal.on('selectZone3D', function (zoneLabel) {
+        var zoneKey = 'assembly';
+        if (zoneLabel.indexOf('01') !== -1 || zoneLabel.toLowerCase().indexOf('courtyard') !== -1) zoneKey = 'courtyard';
+        if (zoneLabel.indexOf('02') !== -1 || zoneLabel.toLowerCase().indexOf('living') !== -1 || zoneLabel.indexOf('014') !== -1) zoneKey = 'living';
+        if (zoneLabel.indexOf('03') !== -1 || zoneLabel.toLowerCase().indexOf('rooftop') !== -1) zoneKey = 'rooftop';
+        tour.switchZone(zoneKey);
+      });
+    }
+
+    // Terminal launcher triggers
+    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal'];
+    terminalTriggers.forEach(function (id) {
+      var btn = document.getElementById(id);
+      if (btn && terminal) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          terminal.open();
+        });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init3DTourAndTerminal);
+  } else {
+    init3DTourAndTerminal();
+  }
 })();

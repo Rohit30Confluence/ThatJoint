@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css?v=20260927-2" />
+  <link rel="stylesheet" href="building-tour.css" />
+  <link rel="stylesheet" href="chatbot.css" />
   <noscript><style>.loader { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -20,12 +22,12 @@
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="#terminalDrawer" id="navTerminalTrigger" class="nav-terminal-pill"><i></i>Property Sentinel [⌘K]</a></nav>
     <button class="header-cta open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button>
     <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
   </header>
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#process"><span>02</span>Operations</a><a href="#rollout"><span>03</span>Rollout</a><a href="#intelligence"><span>04</span>Intelligence</a></nav>
+    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#intelligence"><span>05</span>Intelligence</a><a href="#terminalDrawer" id="mobileTerminalTrigger"><span>06</span>Property Sentinel [⌘K]</a></nav>
     <button class="button button-light open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button><p>One system for the whole property.</p>
   </aside>
 
@@ -69,6 +71,19 @@
         <div class="product-panel" id="productPanel" role="tabpanel" aria-labelledby="tab-single-family" tabindex="0">
           <div class="product-visual-clip" style="opacity: 1;"><div class="product-visual-track"><div class="product-app-frame" id="productAppFrame" role="img" aria-label="Single-family management application wireframe"></div></div><span class="product-visual-wash" aria-hidden="true"></span></div>
           <article class="product-card"><div class="product-panel-content"><div class="panel-top"><span><i id="productNumber">01</i><b id="productLabel">Single-family</b></span><em>THΛTJOINT / ONE OS</em></div><h3 id="productTitle">Every home.<br />One operating<br />rhythm.</h3><p id="productCopy">Keep rent, resident history, repairs, and documents connected to each address, so every home stays clear from move-in to renewal.</p><dl id="productDetails"><div><dt>Connected</dt><dd>Home + resident</dd></div><div><dt>Visible</dt><dd>Rent + repairs</dd></div><div><dt>Ready</dt><dd>Renewal context</dd></div></dl></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour section-pad" id="tour" aria-labelledby="tour-title">
+      <div class="tour-inner">
+        <p class="eyebrow reveal"><span>03</span><b>Interactive spatial twin</b></p>
+        <div class="tour-heading">
+          <h2 class="display split-heading" id="tour-title">Physical architecture.<br /><em>Directly connected.</em></h2>
+          <p class="tour-intro reveal">Explore the building’s modular courtyard layout in real time. Switch zones, inspect live operations hotspots, and cross-reference unit diagnostics with the intelligence terminal.</p>
+        </div>
+        <div class="tour-embed-wrap reveal">
+          <div id="embeddedBuildingTour"></div>
         </div>
       </div>
     </section>
@@ -145,7 +160,7 @@
     </section>
 
     <section class="intelligence section-pad" id="intelligence" aria-labelledby="intelligence-title">
-      <div class="intelligence-copy"><p class="eyebrow reveal"><span>05</span><b>Connected intelligence</b></p><h2 class="display split-heading" id="intelligence-title">The answer,<br /><em>already in context.</em></h2><p class="reveal">Daily operations create useful signals. THΛTJOINT keeps those signals close to the records behind them, so teams can review what needs attention without losing the human story.</p><button class="button button-dark open-demo reveal" type="button">Explore a pilot <span aria-hidden="true">↗</span></button></div>
+      <div class="intelligence-copy"><p class="eyebrow reveal"><span>05</span><b>Connected intelligence</b></p><h2 class="display split-heading" id="intelligence-title">The answer,<br /><em>already in context.</em></h2><p class="reveal">Daily operations create useful signals. THΛTJOINT keeps those signals close to the records behind them, so teams can review what needs attention without losing the human story.</p><div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px;"><button class="button button-dark open-demo reveal" type="button">Explore a pilot <span aria-hidden="true">↗</span></button><button class="button button-light reveal" id="btnLaunchTerminal" type="button">Ask Property Sentinel [⌘K] <span aria-hidden="true">↗</span></button></div></div>
       <div class="intelligence-visual reveal">
         <figure class="portfolio-stage">
           <picture>
@@ -171,6 +186,11 @@
 
   <dialog id="demoDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription"><form method="dialog" id="demoForm"><div class="dialog-head"><span>THΛTJOINT / PILOT REQUEST</span><button class="dialog-close" value="cancel" type="submit" formnovalidate aria-label="Close dialog">×</button></div><h2 id="dialogTitle">Start with<br /><em>one property.</em></h2><p id="dialogDescription">Tell us where your team loses time today.</p><div class="form-grid"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name" /><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" /><label for="focus">Pilot focus</label><select id="focus" name="focus" required><option value="">Choose a workflow</option><option>Rent and payments</option><option>Resident operations</option><option>Repairs and maintenance</option><option>Documents and records</option><option>Connected portfolio view</option></select></div><button class="submit-button" type="submit"><span>Request a pilot</span><b aria-hidden="true">↗</b></button><small>This prototype form does not transmit or store information.</small></form></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite">Thanks—this prototype request was completed locally.</div>
+  <div id="terminalDrawerRoot"></div>
+  <script src="assets/vendor/three.min.js" defer></script>
+  <script src="assets/vendor/OrbitControls.js" defer></script>
+  <script src="building-tour.js" defer></script>
+  <script src="chatbot.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="app.js?v=20260927-2" defer></script>
 </body>
 </html>

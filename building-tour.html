@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#E6EDF0" />
+  <title>THΛTJOINT / 3D Architectural Building Tour</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css?v=20260927-2" />
+  <link rel="stylesheet" href="building-tour.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <style>
+    body {
+      background: #eef1f3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      color: var(--charcoal, #2B2B2B);
+    }
+    .tour-page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--line, rgba(43, 43, 43, 0.2));
+      backdrop-filter: blur(8px);
+    }
+    .tour-page-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .tour-page-nav a {
+      color: var(--grey, #7A7A7A);
+      transition: color 0.2s;
+    }
+    .tour-page-nav a:hover,
+    .tour-page-nav a.is-current {
+      color: var(--purple, #A459FF);
+    }
+    .tour-page-main {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      max-width: 1500px;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+    .tour-page-main .tj-tour-wrapper {
+      height: calc(100vh - 170px);
+      min-height: 580px;
+    }
+    @media (max-width: 768px) {
+      .tour-page-main {
+        padding: 12px;
+      }
+      .tour-page-main .tj-tour-wrapper {
+        height: calc(100vh - 120px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="tour-page-header">
+    <a class="brand" href="index.html" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
+    <nav class="tour-page-nav" aria-label="Tour Page Navigation">
+      <a href="index.html">← Back to Overview</a>
+      <a href="building-tour.html" class="is-current">3D Building Tour</a>
+      <a href="chatbot.html">Property Sentinel AI ↗</a>
+    </nav>
+  </header>
+
+  <main class="tour-page-main">
+    <div id="buildingTourApp"></div>
+  </main>
+
+  <!-- Synchronized Drawer Chatbot Terminal -->
+  <div id="drawerChatbotRoot"></div>
+
+  <!-- Vendor Three.js & OrbitControls -->
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/OrbitControls.js"></script>
+  <script src="building-tour.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize 3D Building Tour
+      var tour = new ThatJointBuildingTour({
+        containerId: 'buildingTourApp'
+      });
+
+      // Initialize Synchronized Chatbot Terminal Drawer
+      var terminal = new ThatJointChatbot({
+        containerId: 'drawerChatbotRoot',
+        isDrawer: true,
+        activeUnit: 'Home 014'
+      });
+
+      // Synchronize Tour Hotspot Click -> Terminal Query
+      tour.on('queryTerminal', function (prompt) {
+        terminal.open();
+        if (terminal.input) {
+          terminal.input.value = prompt;
+          terminal.submitQuery();
+        }
+      });
+
+      // Synchronize Terminal Unit Selection -> Tour Highlight
+      terminal.on('selectZone3D', function (zoneLabel) {
+        var zoneKey = 'assembly';
+        if (zoneLabel.indexOf('01') !== -1 || zoneLabel.toLowerCase().indexOf('courtyard') !== -1) zoneKey = 'courtyard';
+        if (zoneLabel.indexOf('02') !== -1 || zoneLabel.toLowerCase().indexOf('living') !== -1 || zoneLabel.indexOf('014') !== -1) zoneKey = 'living';
+        if (zoneLabel.indexOf('03') !== -1 || zoneLabel.toLowerCase().indexOf('rooftop') !== -1) zoneKey = 'rooftop';
+        tour.switchZone(zoneKey);
+      });
+
+      // Check URL search params for direct zone linking (e.g. ?zone=02%20Living%20Quarters)
+      var params = new URLSearchParams(window.location.search);
+      var initialZone = params.get('zone');
+      if (initialZone) {
+        var zoneKey = 'assembly';
+        if (initialZone.indexOf('01') !== -1 || initialZone.toLowerCase().indexOf('courtyard') !== -1) zoneKey = 'courtyard';
+        if (initialZone.indexOf('02') !== -1 || initialZone.toLowerCase().indexOf('living') !== -1 || initialZone.indexOf('014') !== -1) zoneKey = 'living';
+        if (initialZone.indexOf('03') !== -1 || initialZone.toLowerCase().indexOf('rooftop') !== -1) zoneKey = 'rooftop';
+        tour.switchZone(zoneKey);
+      }
+    });
+  </script>
+</body>
+</html>
