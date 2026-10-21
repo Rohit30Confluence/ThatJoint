@@ -1,8 +1,12 @@
 /* ==========================================================================
-   THATJOINT / GENERATIVE AI PROPERTY COMPANION ENGINE
-   Visual Mascot: "The Property Sentinel" (Red Panda / Equestrian Mode)
-   Multi-Modal Suite: Native Voice Input, Document Uploads, Drag & Drop,
-   Reactive SVG States, and Real Estate Operations Intelligence.
+   THATJOINT / GENERATIVE AI PROPERTY SENTINEL ENGINE
+   Mascot: "The Property Sentinel" (Red Panda Theme)
+   Multimodal Input: Voice Dictation (Web Speech API), Lease Document Parsing,
+   Drag & Drop Strip, Operational Prompt Chips, and Client Packaging Tiers.
+   Tiers:
+     - Tier 1: Local Heuristic Engine (Static GitHub Pages, zero-config default)
+     - Tier 2: Bring-Your-Own API Key (OpenAI / Gemini)
+     - Tier 3: Enterprise Webhook
    ========================================================================== */
 
 (function (root, factory) {
@@ -17,107 +21,71 @@
   'use strict';
 
   // ------------------------------------------------------------------
-  // High-fidelity Architectural SVGs for The Property Sentinel
+  // Inline Architectural SVG: The Property Sentinel (Red Panda Mascot)
   // ------------------------------------------------------------------
-  const MASCOT_SVGS = {
-    'red-panda': `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="mascot-svg mascot-red-panda">
-        <defs>
-          <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Animated Bushy Tail -->
-        <g class="mascot-tail">
-          <path d="M18 42C12 40 4 46 6 54C8 60 17 62 25 56C28 53 28 48 24 45C22 43 20 42 18 42Z" fill="#D45D3A" />
-          <path d="M12 45C8 47 6 52 9 56" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
-          <path d="M18 48C15 50 14 55 18 58" stroke="#3D261E" stroke-width="2.5" stroke-linecap="round" />
-        </g>
-        <!-- Body / Shoulders -->
-        <path d="M20 46C20 40 25 36 32 36C39 36 44 40 44 46L46 58C46 60 44 62 42 62H22C20 62 18 60 18 58L20 46Z" fill="#2B2B2B" />
-        <!-- Head Group (Mouse tracking target) -->
-        <g class="mascot-head" id="mascotHead">
-          <!-- Ears -->
+  const RED_PANDA_SVG = `
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="tj-mascot-svg mascot-red-panda">
+      <defs>
+        <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Animated Bushy Tail -->
+      <g class="mascot-tail">
+        <path d="M18 42C12 40 4 46 6 54C8 60 17 62 25 56C28 53 28 48 24 45C22 43 20 42 18 42Z" fill="#D45D3A" />
+        <path d="M12 45C8 47 6 52 9 56" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M18 48C15 50 14 55 18 58" stroke="#3D261E" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+      <!-- Body & Shoulders -->
+      <path d="M20 46C20 40 25 36 32 36C39 36 44 40 44 46L46 58C46 60 44 62 42 62H22C20 62 18 60 18 58L20 46Z" fill="#2B2B2B" />
+      <!-- Head Group (Mouse tracking & animation target) -->
+      <g class="mascot-head" id="mascotHead">
+        <!-- Ears with separate classes for flick animations -->
+        <g class="mascot-ear-left">
           <polygon points="17,14 27,24 15,28" fill="#D45D3A" />
           <polygon points="18,17 25,23 17,26" fill="#F4F1EA" />
+        </g>
+        <g class="mascot-ear-right">
           <polygon points="47,14 37,24 49,28" fill="#D45D3A" />
           <polygon points="46,17 39,23 47,26" fill="#F4F1EA" />
-          <!-- Main Face Shape -->
-          <path d="M18 26C18 19 24 16 32 16C40 16 46 19 46 26C48 31 46 38 41 41C38 43 26 43 23 41C18 38 16 31 18 26Z" fill="#D45D3A" />
-          <!-- White Facial Cheek Masks -->
-          <path d="M17 28C19 36 24 38 28 36C25 31 22 26 17 28Z" fill="#F4F1EA" />
-          <path d="M47 28C45 36 40 38 36 36C39 31 42 26 47 28Z" fill="#F4F1EA" />
-          <!-- Eyebrows / Forehead Marking -->
-          <path d="M27 21C29 19 35 19 37 21" stroke="#F4F1EA" stroke-width="2" stroke-linecap="round" />
-          <circle cx="28" cy="22" r="1.5" fill="#F4F1EA" />
-          <circle cx="36" cy="22" r="1.5" fill="#F4F1EA" />
-          <!-- Eyes & Lids -->
-          <g class="mascot-eyes" id="mascotEyes">
-            <!-- Left Eye -->
-            <ellipse cx="25.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
-            <circle cx="26.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
-            <ellipse cx="25.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
-            <!-- Right Eye -->
-            <ellipse cx="38.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
-            <circle cx="39.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
-            <ellipse cx="38.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
-          </g>
-          <!-- Muzzle & Cute Nose -->
-          <path d="M28 33C28 31 36 31 36 33C37 36 35 39 32 39C29 39 27 36 28 33Z" fill="#F4F1EA" />
-          <path d="M30.5 33.5L33.5 33.5L32 35.5Z" fill="#241B18" />
-          <!-- Mouth -->
-          <path d="M30.5 36.5C31.5 37.5 32.5 37.5 33.5 36.5" stroke="#241B18" stroke-width="1.2" stroke-linecap="round" class="mascot-mouth" />
         </g>
-        <!-- Collar & Glowing Purple Intelligence Orbiter -->
-        <path d="M22 45C26 47 38 47 42 45" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
-        <circle cx="32" cy="46" r="3" fill="#A459FF" filter="url(#purpleGlow)" />
-        <circle cx="32" cy="46" r="1.5" fill="#FFFFFF" />
-      </svg>
-    `,
-    'equestrian': `
-      <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="mascot-svg mascot-equestrian">
-        <defs>
-          <filter id="crestGlow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-          </filter>
-        </defs>
-        <!-- Equestrian Neck & Shoulders -->
-        <path d="M19 44C21 34 26 27 33 22L41 24C45 32 46 44 48 58H18C18 53 18.5 48 19 44Z" fill="#EDEBE4" />
-        <path d="M22 40L20 58H26L27 42Z" fill="#38464A" />
-        <!-- Head Group -->
-        <g class="mascot-head" id="mascotHead">
-          <!-- Ears -->
-          <polygon points="34,8 39,18 31,16" fill="#EDEBE4" />
-          <polygon points="35,10 38,17 33,15" fill="#A459FF" />
-          <polygon points="39,9 43,19 36,17" fill="#EDEBE4" />
-          <!-- Mane Facets (Architectural stylized) -->
-          <path d="M31 16L27 24L30 26L25 35L29 37L26 46L32 43" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-          <!-- Muzzle & Crown -->
-          <path d="M33 16L44 19C48 21 51 25 50 30L44 33L36 29L32 23Z" fill="#EDEBE4" />
-          <path d="M44 33L47 32C49 31 51 33 50 35L47 38C44 40 40 38 39 36L44 33Z" fill="#D9D6CC" />
-          <!-- Nostril -->
-          <circle cx="47" cy="35" r="1.2" fill="#2B2B2B" />
-          <!-- Eye & Blink Lid -->
-          <g class="mascot-eyes" id="mascotEyes">
-            <ellipse cx="40" cy="24" rx="2.8" ry="3.2" fill="#161A1C" />
-            <circle cx="41" cy="23.2" r="1" fill="#FFFFFF" class="mascot-pupil" />
-            <ellipse cx="40" cy="24" rx="3.0" ry="3.5" fill="#EDEBE4" class="mascot-eyelid" />
-          </g>
-          <!-- Bridle / Intelligence Crest -->
-          <path d="M37 20L44 33" stroke="#A459FF" stroke-width="1.5" />
-          <path d="M33 24L48 27" stroke="#A459FF" stroke-width="1.5" />
-          <polygon points="38,23 41,21 41,25" fill="#A459FF" filter="url(#crestGlow)" />
+        <!-- Main Face Shape -->
+        <path d="M18 26C18 19 24 16 32 16C40 16 46 19 46 26C48 31 46 38 41 41C38 43 26 43 23 41C18 38 16 31 18 26Z" fill="#D45D3A" />
+        <!-- White Facial Cheek Masks -->
+        <path d="M17 28C19 36 24 38 28 36C25 31 22 26 17 28Z" fill="#F4F1EA" />
+        <path d="M47 28C45 36 40 38 36 36C39 31 42 26 47 28Z" fill="#F4F1EA" />
+        <!-- Eyebrows / Forehead Marking -->
+        <path d="M27 21C29 19 35 19 37 21" stroke="#F4F1EA" stroke-width="2" stroke-linecap="round" />
+        <circle cx="28" cy="22" r="1.5" fill="#F4F1EA" />
+        <circle cx="36" cy="22" r="1.5" fill="#F4F1EA" />
+        <!-- Eyes & Lids -->
+        <g class="mascot-eyes" id="mascotEyes">
+          <!-- Left Eye -->
+          <ellipse cx="25.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
+          <circle cx="26.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
+          <ellipse cx="25.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
+          <!-- Right Eye -->
+          <ellipse cx="38.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
+          <circle cx="39.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
+          <ellipse cx="38.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
         </g>
-        <!-- Collar Accent -->
-        <circle cx="34" cy="46" r="3" fill="#A459FF" filter="url(#crestGlow)" />
-        <circle cx="34" cy="46" r="1.5" fill="#FFFFFF" />
-      </svg>
-    `
-  };
+        <!-- Muzzle & Cute Nose -->
+        <path d="M28 33C28 31 36 31 36 33C37 36 35 39 32 39C29 39 27 36 28 33Z" fill="#F4F1EA" />
+        <path d="M30.5 33.5L33.5 33.5L32 35.5Z" fill="#241B18" />
+        <!-- Mouth -->
+        <path d="M30.5 36.5C31.5 37.5 32.5 37.5 33.5 36.5" stroke="#241B18" stroke-width="1.2" stroke-linecap="round" class="mascot-mouth" />
+      </g>
+      <!-- Collar & Glowing Purple Intelligence Orbiter -->
+      <path d="M22 45C26 47 38 47 42 45" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
+      <circle cx="32" cy="46" r="3" fill="#A459FF" filter="url(#purpleGlow)" />
+      <circle cx="32" cy="46" r="1.5" fill="#FFFFFF" />
+    </svg>
+  `;
 
-  // Property Database grounded in THATJOINT operations
+  // ------------------------------------------------------------------
+  // Grounded Real Estate Operations Dataset for THATJOINT (Home 014)
+  // ------------------------------------------------------------------
   const PROPERTY_DATA = {
     unit: 'Home 014',
     community: 'Oakview Courtyard Residences',
@@ -125,7 +93,7 @@
     resident: {
       name: 'Dr. A. Verma',
       since: 'Nov 2025',
-      contact: 'a.verma@domain.in',
+      contact: 'a.verma@thatjoint.domain',
       status: 'In Good Standing (Zero Infractions)'
     },
     lease: {
@@ -135,113 +103,31 @@
       securityDeposit: '₹4,35,000 (Escrow Backed)',
       lastPaidDate: '18 Oct 2026',
       escalationRate: '5.0% Annual Indexing',
-      renewalWindowActive: true
+      renewalWindowActive: true,
+      status: 'Renewal Window Active (30 Days Remaining)'
     },
     maintenance: {
       activeWorkOrders: 1,
+      ticketId: 'WO-8841',
       scheduledTime: 'Today at 14:00',
       vendor: 'Apex Climate Solutions (Rajesh K.)',
       scope: 'Routine HVAC air-filter & static pressure audit',
-      lastInspection: '16 Aug 2026 (Passed)'
+      lastInspection: '16 Aug 2026 (Passed 100%)',
+      status: 'Technician Dispatched'
     },
     microgrid: {
       solarGeneration: '4.8 kW (Peak Generation)',
       dailyYield: '28.4 kWh',
       batteryStorage: '92% (13.8 kWh Reserve)',
-      buildingOffset: '94.2% Net Zero'
+      buildingOffset: '94.2% Net Zero',
+      status: 'Optimal Efficiency'
     },
     security: {
       perimeterLock: 'Smart Pass #014 Active',
-      lastEvent: 'Main Gate Access Confirmed: Courier Delivery #4481 at 09:16'
+      lastEvent: 'Main Gate Access Confirmed: Courier Delivery #4481 at 09:16',
+      status: 'Secured'
     }
   };
-
-  // ------------------------------------------------------------------
-  // Avatar Controller Class (Coordinates Reactive Visual States)
-  // ------------------------------------------------------------------
-  class AvatarController {
-    constructor(stageEl, statusTextEl) {
-      this.stage = stageEl;
-      this.statusText = statusTextEl;
-      this.theme = localStorage.getItem('tj_sentinel_theme') || 'red-panda';
-      this.state = 'idle'; // idle | listening | thinking | speaking
-      this.render();
-      this.bindMouseTracking();
-    }
-
-    render() {
-      if (!this.stage) return;
-      this.stage.innerHTML = `
-        <div class="tj-avatar-voice-rings" aria-hidden="true"></div>
-        <div class="tj-avatar-orbiters" aria-hidden="true"></div>
-        ${MASCOT_SVGS[this.theme] || MASCOT_SVGS['red-panda']}
-        <span class="tj-avatar-status-dot" aria-hidden="true"></span>
-      `;
-      this.applyState(this.state);
-    }
-
-    setTheme(newTheme) {
-      if (newTheme !== 'red-panda' && newTheme !== 'equestrian') return;
-      this.theme = newTheme;
-      localStorage.setItem('tj_sentinel_theme', newTheme);
-      this.render();
-    }
-
-    toggleTheme() {
-      this.setTheme(this.theme === 'red-panda' ? 'equestrian' : 'red-panda');
-    }
-
-    applyState(state) {
-      this.state = state;
-      if (!this.stage) return;
-      this.stage.classList.remove('state-idle', 'state-listening', 'state-thinking', 'state-speaking');
-      this.stage.classList.add(`state-${state}`);
-
-      if (this.statusText) {
-        if (state === 'idle') {
-          this.statusText.innerHTML = `<span>Sentinel Ready</span> · <i>Active monitoring</i>`;
-        } else if (state === 'listening') {
-          this.statusText.innerHTML = `<span>Listening live...</span> · <i style="color:#A459FF">Audio captured</i>`;
-        } else if (state === 'thinking') {
-          this.statusText.innerHTML = `<span>Analyzing telemetry...</span> · <i style="color:#fbbf24">Processing</i>`;
-        } else if (state === 'speaking') {
-          this.statusText.innerHTML = `<span>Delivering insights...</span> · <i style="color:#34d399">Transmitting</i>`;
-        }
-      }
-    }
-
-    setIdle() { this.applyState('idle'); }
-    setListening() { this.applyState('listening'); }
-    setThinking() { this.applyState('thinking'); }
-    setSpeaking() { this.applyState('speaking'); }
-
-    bindMouseTracking() {
-      if (!this.stage) return;
-      window.addEventListener('mousemove', (e) => {
-        if (this.state !== 'idle') return;
-        const rect = this.stage.getBoundingClientRect();
-        const stageCenterX = rect.left + rect.width / 2;
-        const stageCenterY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - stageCenterX) / window.innerWidth;
-        const deltaY = (e.clientY - stageCenterY) / window.innerHeight;
-
-        const head = this.stage.querySelector('#mascotHead');
-        const pupils = this.stage.querySelectorAll('.mascot-pupil');
-
-        if (head) {
-          const rotDeg = Math.max(-6, Math.min(6, deltaX * 14));
-          const transY = Math.max(-2, Math.min(2, deltaY * 4));
-          head.style.transform = `rotate(${rotDeg}deg) translateY(${transY}px)`;
-        }
-
-        pupils.forEach(pupil => {
-          const pX = Math.max(-1.2, Math.min(1.2, deltaX * 3.5));
-          const pY = Math.max(-1.2, Math.min(1.2, deltaY * 3.5));
-          pupil.style.transform = `translate(${pX}px, ${pY}px)`;
-        });
-      }, { passive: true });
-    }
-  }
 
   // ------------------------------------------------------------------
   // Main ThatJointChatbot Class
@@ -261,20 +147,102 @@
       this.stagedFile = null;
       this.recognition = null;
       this.isVoiceActive = false;
+      this.mascotState = 'idle';
+
+      // Load client packaging tier configuration
+      this.loadTierConfig();
 
       this.init();
     }
 
+    // ----------------------------------------------------------------
+    // Configuration Management (Tiers 1, 2, 3)
+    // ----------------------------------------------------------------
+    loadTierConfig() {
+      try {
+        const saved = localStorage.getItem('tj_sentinel_tier_config');
+        if (saved) {
+          this.tierConfig = JSON.parse(saved);
+        } else {
+          this.tierConfig = {
+            tier: 'tier1',
+            tier2Provider: 'gemini',
+            tier2Key: '',
+            tier2Model: 'gemini-1.5-flash',
+            tier3Url: '',
+            tier3Token: ''
+          };
+        }
+      } catch (e) {
+        this.tierConfig = {
+          tier: 'tier1',
+          tier2Provider: 'gemini',
+          tier2Key: '',
+          tier2Model: 'gemini-1.5-flash',
+          tier3Url: '',
+          tier3Token: ''
+        };
+      }
+    }
+
+    saveTierConfig(newConfig) {
+      this.tierConfig = Object.assign({}, this.tierConfig, newConfig);
+      try {
+        localStorage.setItem('tj_sentinel_tier_config', JSON.stringify(this.tierConfig));
+      } catch (e) {
+        // Local storage restricted
+      }
+      this.updateTierBadge();
+    }
+
+    resetTierConfig() {
+      this.tierConfig = {
+        tier: 'tier1',
+        tier2Provider: 'gemini',
+        tier2Key: '',
+        tier2Model: 'gemini-1.5-flash',
+        tier3Url: '',
+        tier3Token: ''
+      };
+      try {
+        localStorage.removeItem('tj_sentinel_tier_config');
+      } catch (e) {
+        // ignore
+      }
+      this.updateTierBadge();
+    }
+
+    getTierLabel() {
+      if (this.tierConfig.tier === 'tier2') {
+        const prov = this.tierConfig.tier2Provider === 'openai' ? 'OpenAI' : 'Gemini';
+        return `Tier 2: BYO Key (${prov})`;
+      }
+      if (this.tierConfig.tier === 'tier3') {
+        return 'Tier 3: Webhook';
+      }
+      return 'Tier 1: Local';
+    }
+
+    updateTierBadge() {
+      const badge = document.getElementById('sentinelTierBadge');
+      if (badge) {
+        badge.textContent = this.getTierLabel();
+      }
+    }
+
+    // ----------------------------------------------------------------
+    // DOM Initialization & Rendering
+    // ----------------------------------------------------------------
     init() {
       if (!this.container) return;
       this.render();
-      this.avatarController = new AvatarController(
-        document.getElementById('tjAvatarStage'),
-        document.getElementById('tjSentinelStateText')
-      );
+      this.bindElements();
+      this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Active monitoring</i>');
+      this.bindMouseTracking();
       this.initSpeechRecognition();
       this.bindEvents();
       this.setupKeyboardShortcuts();
+      this.ensureConfigModal();
       this.postWelcomeCard();
     }
 
@@ -292,17 +260,24 @@
           <header class="tj-sentinel-header">
             <div class="tj-sentinel-topline">
               <div class="tj-sentinel-profile">
-                <!-- Avatar Stage -->
-                <div class="tj-avatar-stage state-idle" id="tjAvatarStage" title="Click to toggle avatar theme (Red Panda / Stallion)" role="button" tabindex="0" aria-label="Sentinel Avatar">
-                  <!-- Injected via AvatarController -->
+                <!-- Mascot Wrapper & Reactive States -->
+                <div class="tj-mascot-wrapper" id="sentinelMascotWrapper" data-state="idle" role="button" tabindex="0" title="The Property Sentinel">
+                  <div class="tj-mascot-voice-rings" aria-hidden="true"></div>
+                  <div class="tj-mascot-thinking-halo" aria-hidden="true"></div>
+                  ${RED_PANDA_SVG}
+                  <span class="tj-mascot-status-dot" aria-hidden="true"></span>
                 </div>
+
                 <div class="tj-sentinel-meta">
                   <div class="tj-sentinel-meta-tag">
                     <span>PROPERTY SENTINEL</span>
                     <b>NODE 014</b>
                   </div>
-                  <h3 class="tj-sentinel-name">THΛTJOINT Sentinel <em>Active Companion</em></h3>
-                  <div class="tj-sentinel-state-text" id="tjSentinelStateText">
+                  <h3 class="tj-sentinel-name">
+                    THΛTJOINT Sentinel
+                    <span class="tj-sentinel-tier-chip" id="sentinelTierBadge">${this.getTierLabel()}</span>
+                  </h3>
+                  <div class="tj-mascot-status-text" id="sentinelStatusText">
                     <span>Sentinel Ready</span> · <i>Active monitoring</i>
                   </div>
                 </div>
@@ -310,12 +285,12 @@
 
               <!-- Header Controls -->
               <div class="tj-sentinel-actions">
-                <button type="button" class="tj-theme-switch-btn" id="tjThemeSwitchBtn" title="Toggle Avatar Theme">
-                  <i aria-hidden="true">🦊/🐴</i>
-                  <span id="tjThemeLabel">Switch Avatar</span>
+                <button type="button" class="tj-tier-config-btn" id="btnOpenConfig" title="Configure Client Packaging Tiers">
+                  <i>⚙</i>
+                  <span>Packaging Tiers</span>
                 </button>
-                <button type="button" class="tj-sentinel-icon-btn" id="tjBtnClearChat" title="Reset chat history" aria-label="Clear session">↺</button>
-                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="tjBtnCloseDrawer" title="Close Companion [Esc]" aria-label="Close drawer">×</button>` : ''}
+                <button type="button" class="tj-sentinel-icon-btn" id="btnClearChat" title="Reset chat history" aria-label="Clear session">↺</button>
+                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="btnCloseDrawer" title="Close Companion [Esc]" aria-label="Close drawer">×</button>` : ''}
               </div>
             </div>
 
@@ -329,58 +304,67 @@
             </div>
           </header>
 
-          <!-- Main Chat Feed -->
-          <div class="tj-companion-body">
-            <div class="tj-companion-feed" id="tjChatFeed" role="log" aria-live="polite">
+          <!-- Main Chat Feed & Drop Area -->
+          <div class="tj-companion-body" id="companionBody">
+            <div class="tj-companion-feed" id="companionFeed" role="log" aria-live="polite">
               <!-- Messages stream here -->
             </div>
 
             <!-- Multi-Modal Input Suite -->
             <div class="tj-input-dock">
-              <!-- Pre-baked Quick Action Pills -->
-              <div class="tj-quick-pills" role="toolbar" aria-label="Quick operations queries">
-                <button type="button" class="tj-quick-pill" data-query="Inspect Home 014 Status">🏡 Home 014 Status</button>
-                <button type="button" class="tj-quick-pill" data-query="Analyze Uploaded Lease PDF">📄 Analyze Lease PDF</button>
-                <button type="button" class="tj-quick-pill" data-query="Dispatch HVAC Work Order">🔧 Dispatch HVAC Order</button>
-                <button type="button" class="tj-quick-pill" data-query="Calculate Rent & Escrow Dues">💳 Rent & Escrow Dues</button>
-                <button type="button" class="tj-quick-pill" data-query="Solar Microgrid Telemetry">☀️ Solar Telemetry</button>
+              <!-- Operational Prompt Chips -->
+              <div class="tj-quick-pills" role="toolbar" aria-label="Operational prompt chips">
+                <button type="button" class="tj-quick-pill" data-query="Ledger & Escrow">💳 Ledger & Escrow</button>
+                <button type="button" class="tj-quick-pill" data-query="HVAC Maintenance">🔧 HVAC Maintenance</button>
+                <button type="button" class="tj-quick-pill" data-query="Solar Telemetry">☀️ Solar Telemetry</button>
+                <button type="button" class="tj-quick-pill" data-query="Draft Renewal">📄 Draft Renewal</button>
+                <button type="button" class="tj-quick-pill" data-query="Home 014 Status">🏡 Home 014 Status</button>
+              </div>
+
+              <!-- Drag-and-Drop Strip for Lease Documents -->
+              <div class="tj-drop-strip" id="leaseDropStrip" role="button" tabindex="0" title="Click or drop lease agreement files here">
+                <div class="tj-drop-strip-left">
+                  <span class="icon">📄</span>
+                  <span>Drag & drop lease agreement, work order, or CSV document here</span>
+                </div>
+                <small>Browse files ↗</small>
               </div>
 
               <!-- Staged File Preview Tray -->
-              <div class="tj-staged-attachment" id="tjStagedAttachment">
+              <div class="tj-staged-attachment" id="stagedAttachment">
                 <div class="tj-staged-info">
-                  <span class="icon" id="tjStagedIcon">📄</span>
+                  <span class="icon" id="stagedFileIcon">📄</span>
                   <div>
-                    <strong id="tjStagedName">Document.pdf</strong>
-                    <small id="tjStagedSize">(240 KB)</small>
+                    <strong id="stagedFileName">Document.pdf</strong>
+                    <small id="stagedFileSize">(240 KB)</small>
                   </div>
                 </div>
-                <button type="button" class="tj-staged-remove-btn" id="tjStagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">×</button>
+                <button type="button" class="tj-staged-remove-btn" id="stagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">×</button>
               </div>
 
               <!-- Interactive Media Form -->
-              <form class="tj-media-form" id="tjChatForm" autocomplete="off">
-                <!-- Hidden native file input -->
-                <input type="file" id="tjHiddenFileInput" accept=".pdf,.png,.jpg,.jpeg,.csv,.docx" style="display: none;" />
-                
+              <form class="tj-media-form" id="chatForm" autocomplete="off">
+                <!-- Hidden file input -->
+                <input type="file" id="hiddenFileInput" accept=".pdf,.png,.jpg,.jpeg,.csv,.docx" style="display: none;" />
+
                 <!-- Paperclip Button -->
-                <button type="button" class="tj-attach-btn" id="tjAttachBtn" title="Attach Lease Agreement, Image, or CSV Document" aria-label="Attach file">
+                <button type="button" class="tj-attach-btn" id="btnAttachFile" title="Attach Lease Agreement, Image, or CSV Document" aria-label="Attach file">
                   📎
                 </button>
 
                 <!-- Voice Mic Button with Waveform Visualizer -->
-                <button type="button" class="tj-mic-btn" id="tjMicBtn" title="Voice Input (Speech-to-Text)" aria-label="Activate voice recognition">
+                <button type="button" class="tj-mic-btn" id="btnVoiceInput" title="Voice Dictation (Web Speech API)" aria-label="Activate voice dictation">
                   🎙️
                 </button>
-                <div class="tj-voice-live-waveform" id="tjVoiceWaveform" aria-hidden="true">
+                <div class="tj-voice-live-waveform" id="voiceWaveform" aria-hidden="true">
                   <span></span><span></span><span></span><span></span><span></span>
                 </div>
 
                 <!-- Textarea input -->
-                <textarea class="tj-companion-input" id="tjChatInput" rows="1" placeholder="Ask about Unit 014, upload a lease agreement, or tap the mic..." aria-label="Message Property Sentinel"></textarea>
+                <textarea class="tj-companion-input" id="chatInput" rows="1" placeholder="Ask about Unit 014, upload a lease agreement, or tap the mic..." aria-label="Message Property Sentinel"></textarea>
 
                 <!-- Submit Button -->
-                <button type="submit" class="tj-companion-send-btn" id="tjSendBtn">
+                <button type="submit" class="tj-companion-send-btn" id="btnSendMessage">
                   <span>Send</span>
                   <span aria-hidden="true">↗</span>
                 </button>
@@ -402,18 +386,87 @@
       }
 
       this.container.innerHTML = template;
-      this.feed = document.getElementById('tjChatFeed');
-      this.form = document.getElementById('tjChatForm');
-      this.input = document.getElementById('tjChatInput');
-      this.micBtn = document.getElementById('tjMicBtn');
-      this.voiceWaveform = document.getElementById('tjVoiceWaveform');
-      this.attachBtn = document.getElementById('tjAttachBtn');
-      this.fileInput = document.getElementById('tjHiddenFileInput');
-      this.stagedAttachment = document.getElementById('tjStagedAttachment');
-      this.dropzoneOverlay = document.getElementById('tjDropzoneOverlay');
-      this.companionView = document.getElementById('tjCompanionView');
     }
 
+    bindElements() {
+      this.companionView = document.getElementById('tjCompanionView');
+      this.companionBody = document.getElementById('companionBody');
+      this.feed = document.getElementById('companionFeed');
+      this.form = document.getElementById('chatForm');
+      this.input = document.getElementById('chatInput');
+      this.micBtn = document.getElementById('btnVoiceInput');
+      this.voiceWaveform = document.getElementById('voiceWaveform');
+      this.attachBtn = document.getElementById('btnAttachFile');
+      this.fileInput = document.getElementById('hiddenFileInput');
+      this.stagedAttachment = document.getElementById('stagedAttachment');
+      this.leaseDropStrip = document.getElementById('leaseDropStrip');
+      this.dropzoneOverlay = document.getElementById('tjDropzoneOverlay');
+      this.mascotWrapper = document.getElementById('sentinelMascotWrapper');
+      this.statusTextEl = document.getElementById('sentinelStatusText');
+    }
+
+    // ----------------------------------------------------------------
+    // Mascot State Engine
+    // ----------------------------------------------------------------
+    setMascotState(stateName, statusText) {
+      this.mascotState = stateName;
+      if (this.mascotWrapper) {
+        this.mascotWrapper.setAttribute('data-state', stateName);
+      }
+
+      if (this.statusTextEl) {
+        if (statusText) {
+          this.statusTextEl.innerHTML = statusText;
+        } else {
+          switch (stateName) {
+            case 'listening':
+              this.statusTextEl.innerHTML = `<span>Listening live...</span> · <i style="color:#A459FF">Audio captured</i>`;
+              break;
+            case 'thinking':
+              this.statusTextEl.innerHTML = `<span>Analyzing telemetry...</span> · <i style="color:#fbbf24">Processing</i>`;
+              break;
+            case 'speaking':
+              this.statusTextEl.innerHTML = `<span>Delivering insights...</span> · <i style="color:#38bdf8">Transmitting</i>`;
+              break;
+            case 'idle':
+            default:
+              this.statusTextEl.innerHTML = `<span>Sentinel Ready</span> · <i>Active monitoring</i>`;
+              break;
+          }
+        }
+      }
+    }
+
+    bindMouseTracking() {
+      if (!this.mascotWrapper) return;
+      window.addEventListener('mousemove', (e) => {
+        if (this.mascotState !== 'idle') return;
+        const rect = this.mascotWrapper.getBoundingClientRect();
+        const stageCenterX = rect.left + rect.width / 2;
+        const stageCenterY = rect.top + rect.height / 2;
+        const deltaX = (e.clientX - stageCenterX) / window.innerWidth;
+        const deltaY = (e.clientY - stageCenterY) / window.innerHeight;
+
+        const head = this.mascotWrapper.querySelector('#mascotHead');
+        const pupils = this.mascotWrapper.querySelectorAll('.mascot-pupil');
+
+        if (head) {
+          const rotDeg = Math.max(-6, Math.min(6, deltaX * 14));
+          const transY = Math.max(-2, Math.min(2, deltaY * 4));
+          head.style.transform = `rotate(${rotDeg}deg) translateY(${transY}px)`;
+        }
+
+        pupils.forEach(pupil => {
+          const pX = Math.max(-1.2, Math.min(1.2, deltaX * 3.5));
+          const pY = Math.max(-1.2, Math.min(1.2, deltaY * 3.5));
+          pupil.style.transform = `translate(${pX}px, ${pY}px)`;
+        });
+      }, { passive: true });
+    }
+
+    // ----------------------------------------------------------------
+    // Native Web Speech API Dictation
+    // ----------------------------------------------------------------
     initSpeechRecognition() {
       const SpeechClass = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (SpeechClass) {
@@ -425,9 +478,9 @@
 
           this.recognition.onstart = () => {
             this.isVoiceActive = true;
-            this.micBtn.classList.add('is-listening');
-            this.voiceWaveform.classList.add('is-active');
-            this.avatarController.setListening();
+            if (this.micBtn) this.micBtn.classList.add('is-listening');
+            if (this.voiceWaveform) this.voiceWaveform.classList.add('is-active');
+            this.setMascotState('listening');
           };
 
           this.recognition.onresult = (event) => {
@@ -442,7 +495,7 @@
             }
           };
 
-          this.recognition.onerror = () => {
+          this.recognition.onerror = (err) => {
             this.stopVoiceInput();
           };
 
@@ -460,7 +513,7 @@
 
     toggleVoiceInput() {
       if (!this.recognition) {
-        alert('Voice speech recognition is not supported or permitted in this browser window. Please use keyboard input.');
+        alert('Voice Speech Recognition is not available or permitted in this browser window. Please use keyboard input.');
         return;
       }
 
@@ -479,15 +532,47 @@
       this.isVoiceActive = false;
       if (this.micBtn) this.micBtn.classList.remove('is-listening');
       if (this.voiceWaveform) this.voiceWaveform.classList.remove('is-active');
-      if (this.avatarController && !this.isBusy) {
-        this.avatarController.setIdle();
+      if (!this.isBusy) {
+        this.setMascotState('idle');
       }
     }
 
+    // ----------------------------------------------------------------
+    // Document Upload & Drag-and-Drop Handling
+    // ----------------------------------------------------------------
+    stageFile(file) {
+      if (!file) return;
+      this.stagedFile = file;
+      if (!this.stagedAttachment) return;
+
+      const nameEl = document.getElementById('stagedFileName');
+      const sizeEl = document.getElementById('stagedFileSize');
+      const iconEl = document.getElementById('stagedFileIcon');
+
+      if (nameEl) nameEl.textContent = file.name;
+      if (sizeEl) sizeEl.textContent = `(${Math.round(file.size / 1024)} KB)`;
+      if (iconEl) {
+        if (file.name.endsWith('.pdf')) iconEl.textContent = '📄';
+        else if (file.name.match(/\.(png|jpg|jpeg)$/i)) iconEl.textContent = '🖼️';
+        else if (file.name.endsWith('.csv')) iconEl.textContent = '📊';
+        else iconEl.textContent = '📑';
+      }
+      this.stagedAttachment.classList.add('is-visible');
+    }
+
+    unstageFile() {
+      this.stagedFile = null;
+      if (this.stagedAttachment) this.stagedAttachment.classList.remove('is-visible');
+      if (this.fileInput) this.fileInput.value = '';
+    }
+
+    // ----------------------------------------------------------------
+    // Event Listeners Binding
+    // ----------------------------------------------------------------
     bindEvents() {
       if (!this.form || !this.input) return;
 
-      // Handle submit
+      // Submit Form
       this.form.addEventListener('submit', (e) => {
         e.preventDefault();
         this.submitQuery();
@@ -521,16 +606,21 @@
         });
       }
 
+      // Lease drop strip click
+      if (this.leaseDropStrip && this.fileInput) {
+        this.leaseDropStrip.addEventListener('click', () => this.fileInput.click());
+      }
+
       // Remove staged file button
-      const removeBtn = document.getElementById('tjStagedRemoveBtn');
+      const removeBtn = document.getElementById('stagedRemoveBtn');
       if (removeBtn) {
         removeBtn.addEventListener('click', () => this.unstageFile());
       }
 
       // Drag and Drop listeners
-      if (this.companionView && this.dropzoneOverlay) {
+      if (this.companionBody && this.dropzoneOverlay) {
         ['dragenter', 'dragover'].forEach(eventName => {
-          this.companionView.addEventListener(eventName, (e) => {
+          this.companionBody.addEventListener(eventName, (e) => {
             e.preventDefault();
             e.stopPropagation();
             this.dropzoneOverlay.classList.add('is-active');
@@ -538,21 +628,21 @@
         });
 
         ['dragleave', 'drop'].forEach(eventName => {
-          this.companionView.addEventListener(eventName, (e) => {
+          this.companionBody.addEventListener(eventName, (e) => {
             e.preventDefault();
             e.stopPropagation();
             this.dropzoneOverlay.classList.remove('is-active');
           });
         });
 
-        this.companionView.addEventListener('drop', (e) => {
+        this.companionBody.addEventListener('drop', (e) => {
           if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
             this.stageFile(e.dataTransfer.files[0]);
           }
         });
       }
 
-      // Quick action pills
+      // Operational Prompt Chips
       const pills = this.container.querySelectorAll('.tj-quick-pill');
       pills.forEach(pill => {
         pill.addEventListener('click', () => {
@@ -564,23 +654,8 @@
         });
       });
 
-      // Avatar click & theme toggle
-      const avatarStage = document.getElementById('tjAvatarStage');
-      const themeBtn = document.getElementById('tjThemeSwitchBtn');
-      const toggleHandler = () => {
-        if (this.avatarController) {
-          this.avatarController.toggleTheme();
-          const label = document.getElementById('tjThemeLabel');
-          if (label) {
-            label.textContent = this.avatarController.theme === 'red-panda' ? 'Red Panda Active' : 'Stallion Active';
-          }
-        }
-      };
-      if (avatarStage) avatarStage.addEventListener('click', toggleHandler);
-      if (themeBtn) themeBtn.addEventListener('click', toggleHandler);
-
       // Clear chat
-      const clearBtn = document.getElementById('tjBtnClearChat');
+      const clearBtn = document.getElementById('btnClearChat');
       if (clearBtn) {
         clearBtn.addEventListener('click', () => {
           if (this.feed) {
@@ -592,19 +667,37 @@
 
       // Drawer Close & Backdrop
       if (this.isDrawer) {
-        const closeBtn = document.getElementById('tjBtnCloseDrawer');
+        const closeBtn = document.getElementById('btnCloseDrawer');
         if (closeBtn) closeBtn.addEventListener('click', () => this.close());
         if (this.backdrop) this.backdrop.addEventListener('click', () => this.close());
       }
 
-      // Rich card actions delegation
-      this.feed.addEventListener('click', (e) => {
-        const btn = e.target.closest('.tj-card-btn');
-        if (!btn) return;
-        const action = btn.getAttribute('data-action');
-        const payload = btn.getAttribute('data-payload');
-        this.handleCardAction(action, payload);
-      });
+      // Settings modal trigger
+      const configBtn = document.getElementById('btnOpenConfig');
+      if (configBtn) {
+        configBtn.addEventListener('click', () => this.openConfigModal());
+      }
+
+      // Mascot interactive click
+      if (this.mascotWrapper) {
+        this.mascotWrapper.addEventListener('click', () => {
+          this.setMascotState('speaking', '<span>Sentinel Active</span> · <i>Listening for command</i>');
+          setTimeout(() => {
+            if (!this.isBusy) this.setMascotState('idle');
+          }, 1400);
+        });
+      }
+
+      // Rich card action delegation
+      if (this.feed) {
+        this.feed.addEventListener('click', (e) => {
+          const btn = e.target.closest('.tj-card-btn');
+          if (!btn) return;
+          const action = btn.getAttribute('data-action');
+          const payload = btn.getAttribute('data-payload');
+          this.handleCardAction(action, payload);
+        });
+      }
     }
 
     setupKeyboardShortcuts() {
@@ -617,30 +710,6 @@
           this.close();
         }
       });
-    }
-
-    stageFile(file) {
-      this.stagedFile = file;
-      if (!this.stagedAttachment) return;
-      const nameEl = document.getElementById('tjStagedName');
-      const sizeEl = document.getElementById('tjStagedSize');
-      const iconEl = document.getElementById('tjStagedIcon');
-
-      if (nameEl) nameEl.textContent = file.name;
-      if (sizeEl) sizeEl.textContent = `(${Math.round(file.size / 1024)} KB)`;
-      if (iconEl) {
-        if (file.name.endsWith('.pdf')) iconEl.textContent = '📄';
-        else if (file.name.match(/\.(png|jpg|jpeg)$/i)) iconEl.textContent = '🖼️';
-        else if (file.name.endsWith('.csv')) iconEl.textContent = '📊';
-        else iconEl.textContent = '📑';
-      }
-      this.stagedAttachment.classList.add('is-visible');
-    }
-
-    unstageFile() {
-      this.stagedFile = null;
-      if (this.stagedAttachment) this.stagedAttachment.classList.remove('is-visible');
-      if (this.fileInput) this.fileInput.value = '';
     }
 
     toggle() {
@@ -670,14 +739,198 @@
       this.emit('close');
     }
 
+    // ----------------------------------------------------------------
+    // Settings & Client Packaging Modal (<dialog id="configModal">)
+    // ----------------------------------------------------------------
+    ensureConfigModal() {
+      let modal = document.getElementById('configModal');
+      if (!modal) {
+        modal = document.createElement('dialog');
+        modal.id = 'configModal';
+        modal.innerHTML = `
+          <div class="config-modal-inner">
+            <div class="config-head">
+              <span>THΛTJOINT / <b>CLIENT PACKAGING TIERS</b></span>
+              <button type="button" class="config-close-btn" id="configCloseBtn" aria-label="Close modal">×</button>
+            </div>
+
+            <h2 class="config-title">SELECT CLIENT<br /><em>PACKAGING TIER.</em></h2>
+            <p class="config-desc">
+              Configure the execution layer for the Property Sentinel. Toggle between zero-config local heuristics for static hosting, bring-your-own frontier model API keys, or an enterprise property operations webhook.
+            </p>
+
+            <form id="configForm">
+              <div class="config-tier-grid">
+                <!-- Tier 1: Local Heuristic Engine -->
+                <div class="config-tier-card ${this.tierConfig.tier === 'tier1' ? 'is-selected' : ''}" data-tier="tier1">
+                  <div class="config-tier-header">
+                    <label>
+                      <input type="radio" name="packagingTier" value="tier1" ${this.tierConfig.tier === 'tier1' ? 'checked' : ''} />
+                      Tier 1: Local Heuristic Engine
+                    </label>
+                    <span class="config-tier-badge">Static Zero-Config</span>
+                  </div>
+                  <p>Grounded in verified local property records for Home 014 (lease covenants, rent schedule, HVAC SLA, and rooftop solar microgrid). Zero latency, works offline, and requires no API keys.</p>
+                </div>
+
+                <!-- Tier 2: BYO API Key -->
+                <div class="config-tier-card ${this.tierConfig.tier === 'tier2' ? 'is-selected' : ''}" data-tier="tier2">
+                  <div class="config-tier-header">
+                    <label>
+                      <input type="radio" name="packagingTier" value="tier2" ${this.tierConfig.tier === 'tier2' ? 'checked' : ''} />
+                      Tier 2: Bring-Your-Own API Key
+                    </label>
+                    <span class="config-tier-badge">Frontier Model BYOK</span>
+                  </div>
+                  <p>Connect Google Gemini or OpenAI GPT models for live multimodal document understanding and autonomous operational synthesis.</p>
+                  
+                  <div class="config-fields-block" id="tier2Fields">
+                    <div class="config-field-row">
+                      <label for="tier2Provider">Provider</label>
+                      <select id="tier2Provider">
+                        <option value="gemini" ${this.tierConfig.tier2Provider === 'gemini' ? 'selected' : ''}>Google Gemini (Gemini 1.5 / 2.0)</option>
+                        <option value="openai" ${this.tierConfig.tier2Provider === 'openai' ? 'selected' : ''}>OpenAI (GPT-4o / GPT-4o-mini)</option>
+                      </select>
+                    </div>
+                    <div class="config-field-row">
+                      <label for="tier2Key">API Key</label>
+                      <input type="password" id="tier2Key" placeholder="AIzaSy... or sk-..." value="${this.escapeHtml(this.tierConfig.tier2Key || '')}" />
+                    </div>
+                    <div class="config-field-row">
+                      <label for="tier2Model">Model Identifier</label>
+                      <input type="text" id="tier2Model" placeholder="gemini-1.5-flash" value="${this.escapeHtml(this.tierConfig.tier2Model || 'gemini-1.5-flash')}" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tier 3: Enterprise Webhook -->
+                <div class="config-tier-card ${this.tierConfig.tier === 'tier3' ? 'is-selected' : ''}" data-tier="tier3">
+                  <div class="config-tier-header">
+                    <label>
+                      <input type="radio" name="packagingTier" value="tier3" ${this.tierConfig.tier === 'tier3' ? 'checked' : ''} />
+                      Tier 3: Enterprise Webhook
+                    </label>
+                    <span class="config-tier-badge">Enterprise Endpoint</span>
+                  </div>
+                  <p>Stream real-time queries, lease uploads, and maintenance tickets directly to your organization's Yardi, RealPage, or private microservice bus.</p>
+                  
+                  <div class="config-fields-block" id="tier3Fields">
+                    <div class="config-field-row">
+                      <label for="tier3Url">Webhook Endpoint URL</label>
+                      <input type="url" id="tier3Url" placeholder="https://api.property-ops.internal/v1/sentinel" value="${this.escapeHtml(this.tierConfig.tier3Url || '')}" />
+                    </div>
+                    <div class="config-field-row">
+                      <label for="tier3Token">Authorization Token (Optional)</label>
+                      <input type="password" id="tier3Token" placeholder="Bearer eyJhbGci..." value="${this.escapeHtml(this.tierConfig.tier3Token || '')}" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="config-actions-row">
+                <button type="button" class="config-btn-reset" id="btnResetConfig">Reset to Defaults</button>
+                <button type="submit" class="config-btn-save" id="btnSaveConfig">Save Configuration</button>
+              </div>
+            </form>
+          </div>
+        `;
+        document.body.appendChild(modal);
+      }
+
+      this.configModal = modal;
+      this.bindConfigModalEvents();
+    }
+
+    bindConfigModalEvents() {
+      if (!this.configModal) return;
+
+      const closeBtn = this.configModal.querySelector('#configCloseBtn');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => this.configModal.close());
+      }
+
+      // Handle card selection styling
+      const cards = this.configModal.querySelectorAll('.config-tier-card');
+      const radios = this.configModal.querySelectorAll('input[name="packagingTier"]');
+
+      radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          cards.forEach(c => {
+            const isMatch = c.getAttribute('data-tier') === radio.value;
+            c.classList.toggle('is-selected', isMatch);
+          });
+        });
+      });
+
+      // Save form
+      const form = this.configModal.querySelector('#configForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const selectedTier = this.configModal.querySelector('input[name="packagingTier"]:checked')?.value || 'tier1';
+          const tier2Provider = this.configModal.querySelector('#tier2Provider')?.value || 'gemini';
+          const tier2Key = this.configModal.querySelector('#tier2Key')?.value.trim() || '';
+          const tier2Model = this.configModal.querySelector('#tier2Model')?.value.trim() || 'gemini-1.5-flash';
+          const tier3Url = this.configModal.querySelector('#tier3Url')?.value.trim() || '';
+          const tier3Token = this.configModal.querySelector('#tier3Token')?.value.trim() || '';
+
+          this.saveTierConfig({
+            tier: selectedTier,
+            tier2Provider,
+            tier2Key,
+            tier2Model,
+            tier3Url,
+            tier3Token
+          });
+
+          this.configModal.close();
+
+          this.appendMessage({
+            type: 'companion',
+            author: 'THΛTJOINT Sentinel · System Layer',
+            title: 'Intelligence Layer Updated',
+            body: `Operational tier switched to <strong>${this.getTierLabel()}</strong>. Subsystems and message dispatch are configured.`
+          });
+        });
+      }
+
+      // Reset
+      const resetBtn = this.configModal.querySelector('#btnResetConfig');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          this.resetTierConfig();
+          const t1Radio = this.configModal.querySelector('input[value="tier1"]');
+          if (t1Radio) {
+            t1Radio.checked = true;
+            t1Radio.dispatchEvent(new Event('change'));
+          }
+          const t2Key = this.configModal.querySelector('#tier2Key');
+          if (t2Key) t2Key.value = '';
+          const t3Url = this.configModal.querySelector('#tier3Url');
+          if (t3Url) t3Url.value = '';
+          this.configModal.close();
+        });
+      }
+    }
+
+    openConfigModal() {
+      this.ensureConfigModal();
+      if (this.configModal && typeof this.configModal.showModal === 'function') {
+        this.configModal.showModal();
+      }
+    }
+
+    // ----------------------------------------------------------------
+    // Welcome Card
+    // ----------------------------------------------------------------
     postWelcomeCard() {
       this.appendMessage({
         type: 'companion',
         author: 'THΛTJOINT Sentinel',
         title: 'Greetings. I am your Property Sentinel.',
-        body: `I keep continuous watch over <strong>${PROPERTY_DATA.unit} (${PROPERTY_DATA.community})</strong>. My intelligence core coordinates verified leases, rent collections, maintenance tickets, and solar microgrids. How can I assist your operations today?`,
+        body: `I keep track of <strong>${PROPERTY_DATA.unit}'s</strong> leases, rent cycles, maintenance tickets, and utility microgrids. How can I assist your operations today?`,
         richCard: {
-          title: 'Active Property Dossier · Node 014',
+          title: 'Active Property Dossier · Unit 014',
           badge: 'Verified Sentinel Sync',
           params: [
             { label: 'Resident', value: PROPERTY_DATA.resident.name, sub: PROPERTY_DATA.resident.status },
@@ -688,19 +941,22 @@
           actions: [
             { label: 'Inspect Home 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' },
             { label: 'Scan Lease Agreement', action: 'trigger-upload', payload: 'upload' },
-            { label: 'Review Maintenance SLA', action: 'query', payload: 'Dispatch HVAC Work Order' }
+            { label: 'Review Maintenance SLA', action: 'query', payload: 'HVAC Maintenance' }
           ]
         }
       });
     }
 
+    // ----------------------------------------------------------------
+    // Query Submission & Dispatcher Pipeline
+    // ----------------------------------------------------------------
     submitQuery() {
       if (this.isBusy || !this.input) return;
       const text = this.input.value.trim();
       const file = this.stagedFile;
       if (!text && !file) return;
 
-      // Post user message
+      // Render user message bubble
       this.appendMessage({
         type: 'user',
         author: 'Operations Director',
@@ -712,48 +968,203 @@
       this.input.style.height = 'auto';
       this.unstageFile();
 
-      // Process query through Generative Engine
-      this.processQuery(text, file);
+      // Process query through configured tier
+      this.dispatchQuery(text, file);
     }
 
-    processQuery(query, attachedFile) {
+    dispatchQuery(query, file) {
       this.isBusy = true;
-      this.avatarController.setThinking();
+      this.setMascotState('thinking', file
+        ? '<span>Analyzing document...</span> · <i style="color:#fbbf24">Parsing covenants</i>'
+        : '<span>Analyzing telemetry...</span> · <i style="color:#fbbf24">Processing</i>'
+      );
 
-      // Simulated generative / document-scanning delay
-      const latency = attachedFile ? 1400 : 700;
+      // Route based on active client tier
+      if (this.tierConfig.tier === 'tier2' && this.tierConfig.tier2Key) {
+        this.executeTier2BYOK(query, file);
+      } else if (this.tierConfig.tier === 'tier3' && this.tierConfig.tier3Url) {
+        this.executeTier3Webhook(query, file);
+      } else {
+        this.executeTier1Local(query, file);
+      }
+    }
 
+    // Tier 1: Local Heuristic Engine
+    executeTier1Local(query, file) {
+      const latency = file ? 1200 : 650;
       setTimeout(() => {
-        const response = this.generateResponse(query, attachedFile);
-        this.appendMessage(response);
-        this.avatarController.setSpeaking();
-
-        // Speak aloud briefly if speech synthesis is permitted
-        if ('speechSynthesis' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          try {
-            const utter = new SpeechSynthesisUtterance(response.voiceText || response.title || 'Operational report ready.');
-            utter.rate = 1.05;
-            utter.pitch = 1.0;
-            utter.onend = () => this.avatarController.setIdle();
-            window.speechSynthesis.speak(utter);
-          } catch (e) {
-            setTimeout(() => this.avatarController.setIdle(), 1200);
-          }
-        } else {
-          setTimeout(() => this.avatarController.setIdle(), 1500);
-        }
-
-        this.isBusy = false;
-        if (response.crossLinkZone) {
-          this.emit('selectZone3D', response.crossLinkZone);
-        }
+        const response = this.generateHeuristicResponse(query, file);
+        this.deliverResponse(response);
       }, latency);
     }
 
-    generateResponse(rawQuery, file) {
+    // Tier 2: Bring-Your-Own API Key (Gemini or OpenAI)
+    async executeTier2BYOK(query, file) {
+      const { tier2Provider, tier2Key, tier2Model } = this.tierConfig;
+      try {
+        let aiText = '';
+        const systemPrompt = `You are the THΛTJOINT Property Sentinel, an architectural AI companion managing Home 014 (Oakview Courtyard Residences, Maharashtra). Resident: Dr. A. Verma. Rent: ₹1,45,000/mo. Active Work Order: WO-8841 (HVAC filter audit today at 14:00 with Apex Climate). Rooftop Solar: 4.8 kW peak generation, 92% battery reserve. Lease: 01 Nov 2025 - 31 Oct 2026 (30 days remaining in renewal window, 5% escalation). Answer operationally, crisply, and with dark architectural elegance.`;
+
+        if (tier2Provider === 'gemini') {
+          const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(tier2Model || 'gemini-1.5-flash')}:generateContent?key=${encodeURIComponent(tier2Key)}`;
+          const payload = {
+            contents: [
+              {
+                role: 'user',
+                parts: [
+                  { text: `${systemPrompt}\n\nUser Operational Request: "${query}"${file ? ` (Attached document: ${file.name})` : ''}` }
+                ]
+              }
+            ]
+          };
+
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if (!res.ok) throw new Error(`Gemini HTTP error ${res.status}`);
+          const data = await res.json();
+          aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        } else {
+          // OpenAI endpoint
+          const res = await fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${tier2Key}`
+            },
+            body: JSON.stringify({
+              model: tier2Model || 'gpt-4o-mini',
+              messages: [
+                { role: 'system', content: systemPrompt },
+                { role: 'user', content: `${query}${file ? ` (Attached: ${file.name})` : ''}` }
+              ],
+              temperature: 0.3
+            })
+          });
+
+          if (!res.ok) throw new Error(`OpenAI HTTP error ${res.status}`);
+          const data = await res.json();
+          aiText = data.choices?.[0]?.message?.content || '';
+        }
+
+        if (aiText) {
+          const response = {
+            type: 'companion',
+            author: `THΛTJOINT Sentinel · BYO ${tier2Provider === 'openai' ? 'OpenAI' : 'Gemini'}`,
+            title: file ? 'Frontier Multimodal Document Analysis' : 'Operational Intelligence Synthesis',
+            voiceText: 'Frontier AI operational analysis completed.',
+            body: aiText.replace(/\n\n/g, '<br /><br />'),
+            docScan: Boolean(file),
+            richCard: {
+              title: `Telemetry Telecast · ${PROPERTY_DATA.unit}`,
+              badge: `Frontier BYOK (${tier2Model})`,
+              params: [
+                { label: 'Inference Layer', value: tier2Provider.toUpperCase(), sub: 'API BYOK Active' },
+                { label: 'Unit Status', value: 'Verified', sub: PROPERTY_DATA.unit },
+                { label: 'Security State', value: 'Active Pass', sub: 'Encrypted' }
+              ],
+              actions: [
+                { label: 'Inspect Home 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' },
+                { label: 'Configure Tiers', action: 'open-config', payload: 'config' }
+              ]
+            }
+          };
+          this.deliverResponse(response);
+          return;
+        }
+      } catch (err) {
+        // Graceful fallback to Tier 1 local heuristic on any failure
+        const fallback = this.generateHeuristicResponse(query, file);
+        fallback.title = `${fallback.title} (Tier 2 Fallback)`;
+        fallback.body = `<small style="display:block;margin-bottom:8px;color:#fbbf24;">[Notice: BYO API call uncontacted or timed out (${err.message}). Seamlessly resolved via Tier 1 Local Heuristics.]</small>${fallback.body}`;
+        this.deliverResponse(fallback);
+        return;
+      }
+
+      this.executeTier1Local(query, file);
+    }
+
+    // Tier 3: Enterprise Webhook
+    async executeTier3Webhook(query, file) {
+      const { tier3Url, tier3Token } = this.tierConfig;
+      try {
+        const headers = { 'Content-Type': 'application/json' };
+        if (tier3Token) headers['Authorization'] = `Bearer ${tier3Token}`;
+
+        const res = await fetch(tier3Url, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({
+            unit: PROPERTY_DATA.unit,
+            query,
+            fileName: file ? file.name : null,
+            timestamp: new Date().toISOString()
+          })
+        });
+
+        if (!res.ok) throw new Error(`Webhook HTTP error ${res.status}`);
+        const data = await res.json();
+
+        const response = {
+          type: 'companion',
+          author: 'THΛTJOINT Sentinel · Enterprise Webhook',
+          title: data.title || 'Enterprise Webhook Pipeline Complete',
+          body: data.message || data.body || 'Enterprise ERP records synchronized.',
+          docScan: Boolean(file),
+          richCard: data.richCard || {
+            title: 'Enterprise Pipeline Status',
+            badge: 'ERP 200 OK',
+            params: [
+              { label: 'Endpoint', value: 'Connected', sub: 'Webhook 200 OK' },
+              { label: 'Unit', value: PROPERTY_DATA.unit, sub: 'Synced' }
+            ]
+          }
+        };
+        this.deliverResponse(response);
+        return;
+      } catch (err) {
+        const fallback = this.generateHeuristicResponse(query, file);
+        fallback.title = `${fallback.title} (Tier 3 Fallback)`;
+        fallback.body = `<small style="display:block;margin-bottom:8px;color:#fbbf24;">[Notice: Enterprise webhook uncontacted (${err.message}). Seamlessly resolved via Tier 1 Local Heuristics.]</small>${fallback.body}`;
+        this.deliverResponse(fallback);
+      }
+    }
+
+    deliverResponse(response) {
+      this.appendMessage(response);
+      this.setMascotState('speaking', '<span>Delivering insights...</span> · <i style="color:#38bdf8">Transmitting</i>');
+
+      // Speech synthesis voice delivery (if supported and permitted)
+      if ('speechSynthesis' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        try {
+          const utter = new SpeechSynthesisUtterance(response.voiceText || response.title || 'Operational report ready.');
+          utter.rate = 1.05;
+          utter.pitch = 1.0;
+          utter.onend = () => this.setMascotState('idle');
+          window.speechSynthesis.speak(utter);
+        } catch (e) {
+          setTimeout(() => this.setMascotState('idle'), 1400);
+        }
+      } else {
+        setTimeout(() => this.setMascotState('idle'), 1400);
+      }
+
+      this.isBusy = false;
+      if (response.crossLinkZone) {
+        this.emit('selectZone3D', response.crossLinkZone);
+      }
+    }
+
+    // ----------------------------------------------------------------
+    // Tier 1 Grounded Heuristic Engine Responses
+    // ----------------------------------------------------------------
+    generateHeuristicResponse(rawQuery, file) {
       const q = (rawQuery || '').toLowerCase();
 
-      // 1. Document Upload / Lease Scanning
+      // 1. Document Upload / Lease Extraction
       if (file || q.includes('lease') || q.includes('upload') || q.includes('pdf') || q.includes('contract')) {
         const fileName = file ? file.name : 'Oakview_Executed_Lease_Form_R26.pdf';
         return {
@@ -773,67 +1184,41 @@
               { label: 'Index Escalation', value: PROPERTY_DATA.lease.escalationRate, sub: 'Effective Nov 2026' }
             ],
             actions: [
-              { label: 'Trigger Automated Renewal Notice', action: 'query', payload: 'Send 30-Day Renewal Form' },
+              { label: 'Draft 30-Day Renewal Form', action: 'query', payload: 'Draft Renewal' },
               { label: 'Inspect Home 014 3D Model', action: 'crosslink-3d', payload: '02 Living Quarters' }
             ]
           }
         };
       }
 
-      // 2. Unit 014 Status
-      if (q.includes('014') || q.includes('status') || q.includes('home') || q.includes('unit')) {
+      // 2. Draft Renewal
+      if (q.includes('draft renewal') || q.includes('renewal')) {
         return {
           type: 'companion',
-          author: 'THΛTJOINT Sentinel · Operational Core',
-          title: 'Unit 014 Living Quarters Telemetry',
-          voiceText: 'Unit 014 is operating normally. Lease is active, and routine HVAC filter inspection is scheduled for 14:00 today.',
-          body: `Unit 014 at <strong>${PROPERTY_DATA.community}</strong> is in nominal operating condition. Resident <strong>${PROPERTY_DATA.resident.name}</strong> is current on all dues. Routine filter inspection dispatched for today at 14:00.`,
+          author: 'THΛTJOINT Sentinel · Leasing Desk',
+          title: 'Residential Lease Renewal Agreement Draft',
+          voiceText: 'Draft renewal for Home 014 prepared. 5% indexing applied to new term.',
+          body: `Prepared formal renewal package for <strong>Dr. A. Verma</strong> for term <em>01 Nov 2026 – 31 Oct 2027</em>. Base rent adjusted by statutory 5% index to <strong>₹1,52,250/mo</strong>. Escrow replenishment scheduled.`,
           crossLinkZone: '02 Living Quarters',
           richCard: {
-            title: 'Home 014 Multi-System Overview',
-            badge: 'Subsystems Nominal',
+            title: 'Proposed Renewal Terms · Home 014',
+            badge: 'Renewal Ready',
             params: [
-              { label: 'Occupancy', value: 'Occupied', sub: PROPERTY_DATA.resident.name },
-              { label: 'Rent Status', value: 'Settled Oct 18', sub: 'Zero Arrears' },
-              { label: 'HVAC Airflow', value: '420 CFM', sub: 'Filter: 88% Clean' },
-              { label: 'Perimeter Access', value: 'Secured', sub: 'Smart Pass #014' }
+              { label: 'New Term', value: '12 Months', sub: 'Nov 2026 – Oct 2027' },
+              { label: 'Adjusted Rent', value: '₹1,52,250', sub: '+5.0% Indexing' },
+              { label: 'Escrow Reserve', value: '₹4,56,750', sub: '+₹21,750 Top-up' },
+              { label: 'Resident Status', value: 'Eligible', sub: 'Zero Infractions' }
             ],
             actions: [
-              { label: 'Highlight Unit 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' },
-              { label: 'Dispatch HVAC Order', action: 'query', payload: 'Dispatch HVAC Work Order' },
-              { label: 'Review Rent Ledger', action: 'query', payload: 'Calculate Rent & Escrow Dues' }
-            ]
-          }
-        };
-      }
-
-      // 3. Maintenance & Work Orders
-      if (q.includes('hvac') || q.includes('maintenance') || q.includes('repair') || q.includes('work order') || q.includes('dispatch')) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Dispatch Gateway',
-          title: 'Field Operations & Maintenance Queue',
-          voiceText: 'Work order 8841 is currently assigned to Apex Climate Solutions for 14:00 today.',
-          body: `Active ticket <strong>WO-8841 (Routine HVAC Air-Filter & Duct Review)</strong> is confirmed. Technician <strong>${PROPERTY_DATA.maintenance.vendor}</strong> is scheduled for <strong>${PROPERTY_DATA.maintenance.scheduledTime}</strong>.`,
-          richCard: {
-            title: 'Active Work Order #8841',
-            badge: 'Technician Assigned',
-            params: [
-              { label: 'Priority', value: 'Routine', sub: 'SLA < 4.0 Hours' },
-              { label: 'Assigned Vendor', value: 'Apex Climate', sub: 'Rajesh K. (Certified)' },
-              { label: 'Dispatch Slot', value: '14:00 Today', sub: 'Digital Gate Pass Issued' },
-              { label: 'Resident Notice', value: 'Delivered', sub: 'Dr. A. Verma' }
-            ],
-            actions: [
-              { label: 'Confirm Work Order Arrival', action: 'notice', payload: 'Vendor check-in logged' },
+              { label: 'Dispatch Digital Signature', action: 'notice', payload: 'Renewal agreement sent to Dr. A. Verma' },
               { label: 'View Living Quarters in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' }
             ]
           }
         };
       }
 
-      // 4. Rent, Dues & Escrow
-      if (q.includes('rent') || q.includes('dues') || q.includes('escrow') || q.includes('payment') || q.includes('ledger') || q.includes('deposit')) {
+      // 3. Ledger & Escrow
+      if (q.includes('ledger') || q.includes('escrow') || q.includes('rent') || q.includes('dues') || q.includes('deposit') || q.includes('payment')) {
         return {
           type: 'companion',
           author: 'THΛTJOINT Sentinel · Financial Core',
@@ -857,14 +1242,39 @@
         };
       }
 
-      // 5. Solar & Microgrid
+      // 4. HVAC & Maintenance
+      if (q.includes('hvac') || q.includes('maintenance') || q.includes('repair') || q.includes('work order') || q.includes('dispatch')) {
+        return {
+          type: 'companion',
+          author: 'THΛTJOINT Sentinel · Dispatch Gateway',
+          title: 'Field Operations & Maintenance Queue',
+          voiceText: 'Work order 8841 is assigned to Apex Climate Solutions for 14:00 today.',
+          body: `Active ticket <strong>WO-8841 (Routine HVAC Air-Filter & Duct Static Pressure Audit)</strong> is confirmed. Certified vendor <strong>${PROPERTY_DATA.maintenance.vendor}</strong> is dispatched for <strong>${PROPERTY_DATA.maintenance.scheduledTime}</strong>. Gate security pre-clearance granted.`,
+          richCard: {
+            title: 'Active Work Order #8841',
+            badge: 'Technician Assigned',
+            params: [
+              { label: 'Priority', value: 'Routine', sub: 'SLA < 4.0 Hours' },
+              { label: 'Assigned Vendor', value: 'Apex Climate', sub: 'Rajesh K. (Certified)' },
+              { label: 'Dispatch Slot', value: '14:00 Today', sub: 'Digital Gate Pass Issued' },
+              { label: 'Resident Notice', value: 'Delivered', sub: 'Dr. A. Verma' }
+            ],
+            actions: [
+              { label: 'Confirm Work Order Arrival', action: 'notice', payload: 'Vendor check-in logged' },
+              { label: 'View Living Quarters in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' }
+            ]
+          }
+        };
+      }
+
+      // 5. Solar Telemetry & Microgrid
       if (q.includes('solar') || q.includes('energy') || q.includes('power') || q.includes('microgrid') || q.includes('battery')) {
         return {
           type: 'companion',
           author: 'THΛTJOINT Sentinel · Clean Energy Gateway',
           title: 'Rooftop Microgrid & Energy Telemetry',
           voiceText: 'Rooftop solar is generating 4.8 kilowatts with battery storage at 92%.',
-          body: `Rooftop photovoltaic microgrid is operating under peak daylight irradiance. Instant generation: <strong>${PROPERTY_DATA.microgrid.solarGeneration}</strong>. Battery storage reserves: <strong>${PROPERTY_DATA.microgrid.batteryStorage}</strong>.`,
+          body: `Rooftop photovoltaic microgrid is operating under peak daylight irradiance. Instant generation: <strong>${PROPERTY_DATA.microgrid.solarGeneration}</strong>. Battery storage reserves: <strong>${PROPERTY_DATA.microgrid.batteryStorage}</strong>. Carbon offset score: <strong>${PROPERTY_DATA.microgrid.buildingOffset}</strong>.`,
           crossLinkZone: '03 Rooftop Terrace',
           richCard: {
             title: 'Rooftop Microgrid Performance',
@@ -873,10 +1283,37 @@
               { label: 'Peak Generation', value: PROPERTY_DATA.microgrid.solarGeneration, sub: '12 Panels Active' },
               { label: 'Daily Yield', value: PROPERTY_DATA.microgrid.dailyYield, sub: 'Offset: 94.2%' },
               { label: 'Battery Storage', value: PROPERTY_DATA.microgrid.batteryStorage, sub: '13.8 kWh reserve' },
-              { label: 'Grid Feed', value: '+1.6 kW', sub: 'Export Active' }
+              { label: 'Grid Export', value: '+1.6 kW', sub: 'Net Export Active' }
             ],
             actions: [
               { label: 'View Rooftop Terrace in 3D', action: 'crosslink-3d', payload: '03 Rooftop Terrace' }
+            ]
+          }
+        };
+      }
+
+      // 6. Home 014 Status
+      if (q.includes('014') || q.includes('status') || q.includes('home') || q.includes('unit')) {
+        return {
+          type: 'companion',
+          author: 'THΛTJOINT Sentinel · Operational Core',
+          title: 'Unit 014 Living Quarters Telemetry',
+          voiceText: 'Unit 014 is operating nominally with zero infractions.',
+          body: `Unit 014 at <strong>${PROPERTY_DATA.community}</strong> is in nominal operating condition. Resident <strong>${PROPERTY_DATA.resident.name}</strong> is current on all dues. Routine filter inspection dispatched for today at 14:00.`,
+          crossLinkZone: '02 Living Quarters',
+          richCard: {
+            title: 'Home 014 Multi-System Overview',
+            badge: 'Subsystems Nominal',
+            params: [
+              { label: 'Occupancy', value: 'Occupied', sub: PROPERTY_DATA.resident.name },
+              { label: 'Rent Status', value: 'Settled Oct 18', sub: 'Zero Arrears' },
+              { label: 'HVAC Airflow', value: '420 CFM', sub: 'Filter: 88% Clean' },
+              { label: 'Perimeter Access', value: 'Secured', sub: 'Smart Pass #014' }
+            ],
+            actions: [
+              { label: 'Highlight Unit 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' },
+              { label: 'Dispatch HVAC Order', action: 'query', payload: 'HVAC Maintenance' },
+              { label: 'Review Rent Ledger', action: 'query', payload: 'Ledger & Escrow' }
             ]
           }
         };
@@ -888,7 +1325,7 @@
         author: 'THΛTJOINT Sentinel',
         title: 'Operational Inquiry Resolved',
         voiceText: 'Telemetry inquiry resolved. All building subsystems and property records are aligned.',
-        body: `I have processed your operational request: <em>"${this.escapeHtml(rawQuery)}"</em>. Connected to verified records for <strong>${PROPERTY_DATA.address}</strong>. All building telemetry, ledger balances, and maintenance dispatch queues are active and in compliance with operations policy.`,
+        body: `Processed operational request: <em>"${this.escapeHtml(rawQuery)}"</em>. Connected to verified records for <strong>${PROPERTY_DATA.address}</strong>. All building telemetry, ledger balances, and maintenance dispatch queues are active and in compliance with operations policy.`,
         richCard: {
           title: 'Quick Operations Navigation',
           badge: 'Sentinel Active',
@@ -898,7 +1335,7 @@
             { label: 'System Edge', value: '12ms', sub: 'Live Telemetry' }
           ],
           actions: [
-            { label: 'Inspect Home 014 Status', action: 'query', payload: 'Inspect Home 014 Status' },
+            { label: 'Inspect Home 014 Status', action: 'query', payload: 'Home 014 Status' },
             { label: 'Scan Lease Agreement', action: 'trigger-upload', payload: 'upload' },
             { label: 'Open 3D Model', action: 'crosslink-3d', payload: '00 Complete Assembly' }
           ]
@@ -906,6 +1343,9 @@
       };
     }
 
+    // ----------------------------------------------------------------
+    // Message Rendering
+    // ----------------------------------------------------------------
     appendMessage(msg) {
       if (!this.feed) return;
       const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
@@ -972,6 +1412,8 @@
         this.emit('selectZone3D', payload);
       } else if (action === 'trigger-upload') {
         if (this.fileInput) this.fileInput.click();
+      } else if (action === 'open-config') {
+        this.openConfigModal();
       } else if (action === 'download-receipt') {
         alert('Receipt OCT-2026: Cryptographically signed property receipt downloaded (Prototype simulation).');
       } else if (action === 'notice') {
@@ -989,6 +1431,9 @@
         .replace(/'/g, '&#039;');
     }
 
+    // ----------------------------------------------------------------
+    // Event Bus (Cross-Module Sync)
+    // ----------------------------------------------------------------
     on(event, handler) {
       if (!this.listeners.has(event)) {
         this.listeners.set(event, []);
