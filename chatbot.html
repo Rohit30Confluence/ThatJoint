@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#161a1c" />
+  <meta name="theme-color" content="#181C1E" />
+  <meta name="description" content="THΛTJOINT Property Sentinel — Generative AI property companion with voice dictation, document parsing, and operational intelligence." />
   <title>THΛTJOINT / Property Sentinel AI Companion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +21,7 @@
       padding: 0;
       margin: 0;
       color: #f4f5f4;
+      font-family: var(--body, "DM Sans", Arial, sans-serif);
     }
     .companion-page-header {
       display: flex;
@@ -28,6 +30,8 @@
       padding: 16px 24px;
       background: #161a1c;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      z-index: 20;
     }
     .companion-page-nav {
       display: flex;
@@ -39,6 +43,7 @@
     }
     .companion-page-nav a {
       color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
       transition: color 0.2s;
     }
     .companion-page-nav a:hover,
@@ -60,6 +65,9 @@
       max-height: none;
     }
     @media (max-width: 768px) {
+      .companion-page-header {
+        padding: 12px 16px;
+      }
       .companion-wrapper-full {
         padding: 0;
       }
@@ -84,6 +92,95 @@
   <main class="companion-wrapper-full">
     <div id="companionApp" style="width: 100%;"></div>
   </main>
+
+  <!-- Client Packaging / Settings Modal -->
+  <dialog id="configModal" aria-labelledby="configTitle" aria-describedby="configDesc">
+    <div class="config-modal-inner">
+      <div class="config-head">
+        <span>THΛTJOINT / <b>CLIENT PACKAGING TIERS</b></span>
+        <button type="button" class="config-close-btn" id="configCloseBtn" aria-label="Close modal">×</button>
+      </div>
+
+      <h2 class="config-title" id="configTitle">SELECT CLIENT<br /><em>PACKAGING TIER.</em></h2>
+      <p class="config-desc" id="configDesc">
+        Configure the execution layer for Property Sentinel operations. Toggle between self-contained static execution, your own frontier model API keys, or an enterprise property operations webhook.
+      </p>
+
+      <form id="configForm">
+        <div class="config-tier-grid">
+          <!-- Tier 1: Local Heuristic Engine -->
+          <div class="config-tier-card is-selected" data-tier="tier1">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier1" checked />
+                Tier 1: Local Heuristic Engine
+              </label>
+              <span class="config-tier-badge">Static Zero-Config</span>
+            </div>
+            <p>Grounded in verified local property records for Home 014 (lease covenants, rent schedule, HVAC SLA, and rooftop solar microgrid). Zero latency, works offline, and requires no API keys.</p>
+          </div>
+
+          <!-- Tier 2: BYO API Key -->
+          <div class="config-tier-card" data-tier="tier2">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier2" />
+                Tier 2: Bring-Your-Own API Key
+              </label>
+              <span class="config-tier-badge">Frontier Model BYOK</span>
+            </div>
+            <p>Connect Google Gemini or OpenAI GPT models for live multimodal document understanding and autonomous operational synthesis.</p>
+            
+            <div class="config-fields-block" id="tier2Fields">
+              <div class="config-field-row">
+                <label for="tier2Provider">Provider</label>
+                <select id="tier2Provider">
+                  <option value="gemini">Google Gemini (Gemini 1.5 / 2.0)</option>
+                  <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
+                </select>
+              </div>
+              <div class="config-field-row">
+                <label for="tier2Key">API Key</label>
+                <input type="password" id="tier2Key" placeholder="AIzaSy... or sk-..." />
+              </div>
+              <div class="config-field-row">
+                <label for="tier2Model">Model Identifier</label>
+                <input type="text" id="tier2Model" placeholder="gemini-1.5-flash" value="gemini-1.5-flash" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Enterprise Webhook -->
+          <div class="config-tier-card" data-tier="tier3">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier3" />
+                Tier 3: Enterprise Webhook
+              </label>
+              <span class="config-tier-badge">Enterprise Endpoint</span>
+            </div>
+            <p>Stream real-time queries, lease uploads, and maintenance tickets directly to your organization's Yardi, RealPage, or private microservice bus.</p>
+            
+            <div class="config-fields-block" id="tier3Fields">
+              <div class="config-field-row">
+                <label for="tier3Url">Webhook Endpoint URL</label>
+                <input type="url" id="tier3Url" placeholder="https://api.property-ops.internal/v1/sentinel" />
+              </div>
+              <div class="config-field-row">
+                <label for="tier3Token">Authorization Token (Optional)</label>
+                <input type="password" id="tier3Token" placeholder="Bearer eyJhbGci..." />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="config-actions-row">
+          <button type="button" class="config-btn-reset" id="btnResetConfig">Reset to Defaults</button>
+          <button type="submit" class="config-btn-save" id="btnSaveConfig">Save Configuration</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
 
   <script src="chatbot.js"></script>
   <script>
