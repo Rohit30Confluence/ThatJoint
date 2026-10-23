@@ -74,7 +74,7 @@ em { font-weight: 400; }
 .hero-image { inset: 5% 0 5% 5%; width: 95%; height: 90%; object-fit: contain; object-position: right center; }
 .hero-shade { background: linear-gradient(90deg, rgba(47,70,76,.86), rgba(72,102,111,.43) 54%, rgba(43,43,43,.08)), linear-gradient(0deg, rgba(20,25,26,.64), transparent 52%); }
 .hero-meta { position: absolute; z-index: 2; top: 104px; right: 24px; left: 24px; display: flex; justify-content: space-between; font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
-.hero-title { position: absolute; z-index: 2; top: 39%; right: 24px; left: 24px; transform: translateY(-50%); font: 500 clamp(110px, 15.6vw, 250px)/.7 var(--display); letter-spacing: -.055em; text-transform: uppercase; }
+.hero-title { position: absolute; z-index: 2; top: 43%; right: 24px; left: 24px; transform: translateY(-50%); font: 500 clamp(110px, 15.6vw, 250px)/.7 var(--display); letter-spacing: -.055em; text-transform: uppercase; }
 .hero-title > span { display: block; overflow: hidden; padding: 0 .03em .09em 0; }
 .hero-title i { display: block; font-style: normal; }
 .motion-ready .hero-title i { transform: translateY(108%); }
