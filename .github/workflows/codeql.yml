@@ -1,0 +1,99 @@
+# ==============================================================================
+# GitHub Actions Workflow: CodeQL Security Scan
+# Purpose: Automated Static Application Security Testing (SAST) for ThatJoint.
+# Analyzes source code for vulnerabilities (DOM XSS, injection, credential leaks)
+# and reports actionable findings under your repository's "Security" tab.
+# ==============================================================================
+
+name: "CodeQL Security Scan"
+
+# ------------------------------------------------------------------------------
+# 1. Triggers: When should this scan execute?
+# ------------------------------------------------------------------------------
+on:
+  # Run automatically whenever code is pushed directly to the 'main' branch
+  push:
+    branches: [ "main" ]
+
+  # Run automatically on Pull Requests targeting 'main' to catch issues before merge
+  pull_request:
+    branches: [ "main" ]
+
+  # Run on a weekly recurring schedule to test against newly published CVEs/queries
+  # Cron format: Minute Hour Day-of-Month Month Day-of-Week (27 2 * * 6 = Every Saturday at 02:27 UTC)
+  schedule:
+    - cron: '27 2 * * 6'
+
+# ------------------------------------------------------------------------------
+# 2. Permissions: Least-privilege access token for this workflow
+# ------------------------------------------------------------------------------
+permissions:
+  # Allows the runner to pull and read repository source files
+  contents: read
+
+  # Allows CodeQL to upload SARIF vulnerability reports to GitHub's Security dashboard
+  security-events: write
+
+  # Allows CodeQL to read workflow definitions when auditing GitHub Action security
+  actions: read
+
+# ------------------------------------------------------------------------------
+# 3. Job Definition
+# ------------------------------------------------------------------------------
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    # Runs on standard, free GitHub-hosted Ubuntu Linux virtual environments
+    runs-on: ubuntu-latest
+    
+    # Kills the job if it hangs past 15 minutes (default is 360 min; protects runner minutes)
+    timeout-minutes: 15
+
+    # Strategy Matrix: Runs independent parallel jobs for each language in the list
+    strategy:
+      # If one language scan fails, do NOT cancel the other language scans
+      fail-fast: false
+      matrix:
+        include:
+          # 1) Scans frontend code (app.js, chatbot.js, building-tour.js)
+          # 'build-mode: none' tells CodeQL this is an interpreted language requiring no compilation
+          - language: javascript-typescript
+            build-mode: none
+
+          # 2) Scans backend helper scripts (e.g., scripts/check_site.py)
+          - language: python
+            build-mode: none
+
+          # 3) Scans .github/workflows/*.yml to detect insecure action configurations
+          - language: actions
+            build-mode: none
+
+    # --------------------------------------------------------------------------
+    # 4. Execution Steps
+    # --------------------------------------------------------------------------
+    steps:
+      # Step 1: Clone the repository files onto the GitHub Actions runner
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Download and initialize the CodeQL analysis engine
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          # Injects the target language for this parallel matrix runner
+          languages: ${{ matrix.language }}
+          
+          # Specifies no manual compiler steps are required
+          build-mode: ${{ matrix.build-mode }}
+          
+          # Enables expanded security rules and code quality checks
+          # (e.g., catches unsafe innerHTML injections, prototype pollution, dead code)
+          queries: security-extended,security-and-quality
+
+      # Step 3: Run the database query analysis across your code
+      # Compiles findings into a SARIF report and posts them to your Security alerts tab
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          # Tags the results by language so findings are cleanly categorized in the dashboard
+          category: "/language:${{ matrix.language }}"
