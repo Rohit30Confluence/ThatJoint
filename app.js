@@ -831,7 +831,7 @@
     }
 
     // Terminal launcher triggers
-    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal'];
+    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal', 'btnLaunchContext'];
     terminalTriggers.forEach(function (id) {
       var btn = document.getElementById(id);
       if (btn && terminal) {
@@ -841,11 +841,69 @@
         });
       }
     });
+
+    // Make portfolio signals interactive with Property Sentinel queries
+    var signals = document.querySelectorAll('.portfolio-signals li');
+    Array.prototype.forEach.call(signals, function (sig) {
+      sig.addEventListener('click', function () {
+        if (!terminal) return;
+        var text = (sig.innerText || '').toLowerCase();
+        var prompt = 'Home 014 Status & Telemetry';
+        if (text.indexOf('rent') !== -1 || text.indexOf('payment') !== -1) {
+          prompt = 'Ledger & Escrow for Home 014';
+        } else if (text.indexOf('repair') !== -1 || text.indexOf('review') !== -1) {
+          prompt = 'HVAC Maintenance ticket WO-8841 for Home 014';
+        } else if (text.indexOf('renewal') !== -1 || text.indexOf('lease') !== -1) {
+          prompt = 'Draft renewal agreement for Home 014';
+        }
+        terminal.open(prompt);
+      });
+      sig.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          sig.click();
+        }
+      });
+    });
+  }
+
+  /* Active navigation scroll-spy highlighting active section */
+  function initNavScrollSpy() {
+    var navLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
+    if (!navLinks.length || typeof IntersectionObserver === 'undefined') return;
+
+    var sections = document.querySelectorAll('main > section[id], section[id]');
+    if (!sections.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.getAttribute('id');
+          navLinks.forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (href === '#' + id) {
+              link.classList.add('is-active');
+            } else {
+              link.classList.remove('is-active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-10% 0px -40% 0px' });
+
+    sections.forEach(function (sec) {
+      observer.observe(sec);
+    });
+  }
+
+  function startAppFeatures() {
+    init3DTourAndTerminal();
+    initNavScrollSpy();
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init3DTourAndTerminal);
+    document.addEventListener('DOMContentLoaded', startAppFeatures);
   } else {
-    init3DTourAndTerminal();
+    startAppFeatures();
   }
 })();

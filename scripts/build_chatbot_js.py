@@ -2185,17 +2185,33 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
     }}
 
     // Drawer state controls
-    openDrawer() {{
+    openDrawer(query) {{
       if (!this.viewContainer) return;
       this.viewContainer.classList.add('is-open');
       if (this.backdrop) this.backdrop.classList.add('is-open');
-      if (this.input) setTimeout(() => this.input.focus(), 150);
+      if (this.input) {{
+        setTimeout(() => {{
+          this.input.focus();
+          if (query) {{
+            this.input.value = query;
+            this.submitQuery();
+          }}
+        }}, 150);
+      }}
+    }}
+
+    open(query) {{
+      this.openDrawer(query);
     }}
 
     closeDrawer() {{
       if (!this.viewContainer) return;
       this.viewContainer.classList.remove('is-open');
       if (this.backdrop) this.backdrop.classList.remove('is-open');
+    }}
+
+    close() {{
+      this.closeDrawer();
     }}
 
     toggleDrawer() {{
@@ -2205,6 +2221,10 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
       }} else {{
         this.openDrawer();
       }}
+    }}
+
+    toggle() {{
+      this.toggleDrawer();
     }}
 
     escapeHtml(str) {{

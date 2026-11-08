@@ -22,12 +22,12 @@
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="#terminalDrawer" id="navTerminalTrigger" class="nav-terminal-pill"><i></i>Property Sentinel [⌘K]</a></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="chatbot.html" id="navTerminalTrigger" class="nav-terminal-pill" title="Launch Property Sentinel AI [⌘K]"><i></i>Property Sentinel [⌘K]</a></nav>
     <button class="header-cta open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button>
     <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
   </header>
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#intelligence"><span>05</span>Intelligence</a><a href="#terminalDrawer" id="mobileTerminalTrigger"><span>06</span>Property Sentinel [⌘K]</a></nav>
+    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#intelligence"><span>05</span>Intelligence</a><a href="chatbot.html" id="mobileTerminalTrigger"><span>06</span>Property Sentinel [⌘K] ↗</a></nav>
     <button class="button button-light open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button><p>One system for the whole property.</p>
   </aside>
 
@@ -160,7 +160,24 @@
     </section>
 
     <section class="intelligence section-pad" id="intelligence" aria-labelledby="intelligence-title">
-      <div class="intelligence-copy"><p class="eyebrow reveal"><span>05</span><b>Connected intelligence</b></p><h2 class="display split-heading" id="intelligence-title">The answer,<br /><em>already in context.</em></h2><p class="reveal">Daily operations create useful signals. THΛTJOINT keeps those signals close to the records behind them, so teams can review what needs attention without losing the human story.</p><div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px;"><button class="button button-dark open-demo reveal" type="button">Explore a pilot <span aria-hidden="true">↗</span></button><button class="button button-light reveal" id="btnLaunchTerminal" type="button">Ask Property Sentinel [⌘K] <span aria-hidden="true">↗</span></button></div></div>
+      <div class="intelligence-copy">
+        <p class="eyebrow reveal"><span>05</span><b>Connected intelligence</b></p>
+        <div class="intelligence-live-badge reveal" aria-label="Live Intelligence Layer Status">
+          <span class="live-pulse-dot" aria-hidden="true"></span>
+          <strong>INTELLIGENCE ACTIVE</strong>
+          <span>·</span>
+          <span>274 Units Synchronized</span>
+          <span>·</span>
+          <span>Home 014 Live</span>
+        </div>
+        <h2 class="display split-heading" id="intelligence-title">The answer,<br /><em>already in context.</em></h2>
+        <p class="reveal">Daily operations create useful signals. THΛTJOINT keeps those signals close to the records behind them, so teams can review what needs attention without losing the human story.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 38px;">
+          <button class="button button-purple reveal" id="btnLaunchTerminal" type="button">Ask Property Sentinel [⌘K] <span aria-hidden="true">↗</span></button>
+          <a href="chatbot.html" class="button button-light reveal" style="display:inline-flex; align-items:center; text-decoration:none;">Dedicated Companion View <span aria-hidden="true">↗</span></a>
+          <button class="button button-dark open-demo reveal" type="button">Explore a pilot <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
       <div class="intelligence-visual reveal">
         <figure class="portfolio-stage">
           <picture>
@@ -170,19 +187,19 @@
           </picture>
           <figcaption><span><i aria-hidden="true"></i>Living portfolio</span><b>04 properties / 01 shared context</b></figcaption>
           <ol class="portfolio-signals" aria-label="Example connected portfolio signals">
-            <li class="signal-payment"><span>Rent</span><strong>Payment received</strong><small>Just now</small></li>
-            <li class="signal-repair"><span>Repair</span><strong>Needs review</strong><small>Home 014</small></li>
-            <li class="signal-renewal"><span>Lease</span><strong>Renewal approaching</strong><small>In 30 days</small></li>
+            <li class="signal-payment" role="button" tabindex="0" title="Click to inspect in Property Sentinel [⌘K]"><span>Rent</span><strong>Payment received</strong><small>Just now</small></li>
+            <li class="signal-repair" role="button" tabindex="0" title="Click to inspect in Property Sentinel [⌘K]"><span>Repair</span><strong>Needs review</strong><small>Home 014</small></li>
+            <li class="signal-renewal" role="button" tabindex="0" title="Click to inspect in Property Sentinel [⌘K]"><span>Lease</span><strong>Renewal approaching</strong><small>In 30 days</small></li>
           </ol>
         </figure>
-        <div class="portfolio-context"><span>Every signal remains attached to the property, people, and history behind it.</span><b>Context travels with the work <i aria-hidden="true">→</i></b></div>
+        <div class="portfolio-context"><span>Click any live signal on the map to inspect in Property Sentinel. Context travels with the work.</span><b id="btnLaunchContext" role="button" tabindex="0" style="cursor:pointer;">Context travels with the work <i aria-hidden="true">→</i></b></div>
       </div>
     </section>
 
     <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><p class="eyebrow eyebrow-light reveal"><span>06</span><b>Next step</b></p><h2 class="split-heading" id="contact-title">Make the whole<br />portfolio click.</h2><div class="contact-foot reveal"><p>Start with one property, one workflow, or one operational pain point. Build from a shared view.</p><button class="contact-button open-demo" type="button"><span>Request a pilot</span><b aria-hidden="true">↗</b></button></div></section>
   </main>
 
-  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="chatbot.html">Property Sentinel AI ↗</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
 
   <dialog id="demoDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription"><form method="dialog" id="demoForm"><div class="dialog-head"><span>THΛTJOINT / PILOT REQUEST</span><button class="dialog-close" value="cancel" type="submit" formnovalidate aria-label="Close dialog">×</button></div><h2 id="dialogTitle">Start with<br /><em>one property.</em></h2><p id="dialogDescription">Tell us where your team loses time today.</p><div class="form-grid"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name" /><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" /><label for="focus">Pilot focus</label><select id="focus" name="focus" required><option value="">Choose a workflow</option><option>Rent and payments</option><option>Resident operations</option><option>Repairs and maintenance</option><option>Documents and records</option><option>Connected portfolio view</option></select></div><button class="submit-button" type="submit"><span>Request a pilot</span><b aria-hidden="true">↗</b></button><small>This prototype form does not transmit or store information.</small></form></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite">Thanks—this prototype request was completed locally.</div>
