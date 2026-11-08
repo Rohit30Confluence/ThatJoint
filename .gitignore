@@ -6,3 +6,6 @@ _site/
 # Python validation caches
 __pycache__/
 *.py[cod]
+
+# Local submodules / external workspaces
+ndap/

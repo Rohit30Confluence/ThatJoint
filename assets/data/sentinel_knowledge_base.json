@@ -1,0 +1,6411 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "generator": "THATJOINT Autonomous Property Intelligence Engine",
+    "dataset": "Pacific Grove Municipal Listing Inventory",
+    "record_count": 274
+  },
+  "summary": {
+    "market": "Pacific Grove & Monterey Peninsula, CA",
+    "total_properties": 274,
+    "total_hosts": 114,
+    "pricing": {
+      "currency": "USD",
+      "median_nightly": 351.0,
+      "mean_nightly": 485.02,
+      "min_nightly": 58.0,
+      "max_nightly": 2867.0,
+      "avg_monthly_midterm": 7224.93
+    },
+    "regulatory_str_split": {
+      "thirty_day_plus_flexible": 112,
+      "short_term_str": 162,
+      "str_compliance_ratio": "40.9% 30-day covenant compliance"
+    },
+    "room_type_distribution": {
+      "Entire home/apt": 219,
+      "Private room": 43,
+      "Hotel room": 12
+    },
+    "key_operators": [
+      {
+        "host": "Sanctuary Vacation Rentals",
+        "listings_count": 49
+      },
+      {
+        "host": "Monterey Rentals",
+        "listings_count": 21
+      },
+      {
+        "host": "Kyle",
+        "listings_count": 13
+      },
+      {
+        "host": "Pacific",
+        "listings_count": 11
+      },
+      {
+        "host": "Angela",
+        "listings_count": 9
+      },
+      {
+        "host": "The Charles Pacific Grove",
+        "listings_count": 8
+      },
+      {
+        "host": "Green Gables Inn",
+        "listings_count": 5
+      },
+      {
+        "host": "Tracy",
+        "listings_count": 5
+      },
+      {
+        "host": "Alex",
+        "listings_count": 4
+      },
+      {
+        "host": "Carmel Coast Estate",
+        "listings_count": 4
+      }
+    ],
+    "submarket_clusters": {
+      "lovers_point": 15,
+      "asilomar": 8,
+      "cannery_aquarium": 15,
+      "downtown": 32,
+      "coastal_ocean_view": 133,
+      "luxury_estates": 31
+    }
+  },
+  "properties": [
+    {
+      "id": "22772",
+      "name": "Stay-Awhile  at Lovers Pt. Pacific Grv",
+      "host": "Amie",
+      "host_id": "87827",
+      "room_type": "Entire home/apt",
+      "price_usd": 247.0,
+      "monthly_est_usd": 7410,
+      "minimum_nights": 30,
+      "reviews": 62,
+      "reviews_per_month": 0.31,
+      "availability_365": 83,
+      "occupancy_rate_est": "77.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62202,
+        "lng": -121.91775
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "41014",
+      "name": "Ocean front 6-bedroom masterpiece",
+      "host": "Kirstie",
+      "host_id": "174738",
+      "room_type": "Entire home/apt",
+      "price_usd": 1768.0,
+      "monthly_est_usd": 53040,
+      "minimum_nights": 5,
+      "reviews": 124,
+      "reviews_per_month": 0.66,
+      "availability_365": 154,
+      "occupancy_rate_est": "57.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63096,
+        "lng": -121.93652
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "44515",
+      "name": "Pet-Friendly* Cottage Near Beach for 30+ day stays",
+      "host": "Blake",
+      "host_id": "195732",
+      "room_type": "Entire home/apt",
+      "price_usd": 101.0,
+      "monthly_est_usd": 3030,
+      "minimum_nights": 1,
+      "reviews": 974,
+      "reviews_per_month": 4.96,
+      "availability_365": 133,
+      "occupancy_rate_est": "63.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62475,
+        "lng": -121.93491
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Pet-Friendly",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "89210",
+      "name": "CA Dreaming w/Ocean View, Fire pit and Gardens",
+      "host": "Sarah",
+      "host_id": "130577",
+      "room_type": "Entire home/apt",
+      "price_usd": 237.0,
+      "monthly_est_usd": 7110,
+      "minimum_nights": 1,
+      "reviews": 1436,
+      "reviews_per_month": 7.63,
+      "availability_365": 45,
+      "occupancy_rate_est": "87.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60421,
+        "lng": -121.92524
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "129723",
+      "name": "Modern Victorian with ocean view (1 month minimum)",
+      "host": "Birgit",
+      "host_id": "639623",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 19,
+      "reviews_per_month": 0.13,
+      "availability_365": 125,
+      "occupancy_rate_est": "65.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62008,
+        "lng": -121.90993
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "1031734",
+      "name": "Ocean View Designer Home",
+      "host": "Dan",
+      "host_id": "227482",
+      "room_type": "Entire home/apt",
+      "price_usd": 733.0,
+      "monthly_est_usd": 21990,
+      "minimum_nights": 30,
+      "reviews": 237,
+      "reviews_per_month": 1.45,
+      "availability_365": 365,
+      "occupancy_rate_est": "0.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60368,
+        "lng": -121.92721
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1721186",
+      "name": "Beautiful Villa With Ocean View",
+      "host": "Barb",
+      "host_id": "9073236",
+      "room_type": "Entire home/apt",
+      "price_usd": 601.0,
+      "monthly_est_usd": 18030,
+      "minimum_nights": 1,
+      "reviews": 559,
+      "reviews_per_month": 3.56,
+      "availability_365": 320,
+      "occupancy_rate_est": "12.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62468,
+        "lng": -121.91711
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "3029273",
+      "name": "Modern Beach House",
+      "host": "James",
+      "host_id": "15429359",
+      "room_type": "Private room",
+      "price_usd": 304.0,
+      "monthly_est_usd": 9120,
+      "minimum_nights": 1,
+      "reviews": 786,
+      "reviews_per_month": 5.34,
+      "availability_365": 174,
+      "occupancy_rate_est": "52.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6333,
+        "lng": -121.92406
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "3821616",
+      "name": "Bright Beach Cottage, Center of town, 30-day",
+      "host": "Alka",
+      "host_id": "16838120",
+      "room_type": "Entire home/apt",
+      "price_usd": 145.0,
+      "monthly_est_usd": 4350,
+      "minimum_nights": 30,
+      "reviews": 470,
+      "reviews_per_month": 3.2,
+      "availability_365": 212,
+      "occupancy_rate_est": "41.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62262,
+        "lng": -121.91895
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "3836973",
+      "name": "Lovely House in Pacific Grove (Long term rental)",
+      "host": "Paul",
+      "host_id": "19763195",
+      "room_type": "Entire home/apt",
+      "price_usd": 227.0,
+      "monthly_est_usd": 6810,
+      "minimum_nights": 30,
+      "reviews": 478,
+      "reviews_per_month": 3.24,
+      "availability_365": 365,
+      "occupancy_rate_est": "0.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60589,
+        "lng": -121.92924
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "4099680",
+      "name": "The Monarch Home - Cozy & Relaxing",
+      "host": "Anne",
+      "host_id": "5508442",
+      "room_type": "Entire home/apt",
+      "price_usd": 181.0,
+      "monthly_est_usd": 5430,
+      "minimum_nights": 30,
+      "reviews": 468,
+      "reviews_per_month": 3.24,
+      "availability_365": 251,
+      "occupancy_rate_est": "31.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62322,
+        "lng": -121.92883
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "4582398",
+      "name": "Furnished Victorian Cottage (30 days minimum)",
+      "host": "Birgit",
+      "host_id": "639623",
+      "room_type": "Entire home/apt",
+      "price_usd": 117.0,
+      "monthly_est_usd": 3510,
+      "minimum_nights": 30,
+      "reviews": 15,
+      "reviews_per_month": 0.13,
+      "availability_365": 279,
+      "occupancy_rate_est": "23.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62028,
+        "lng": -121.90982
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Heritage / Victorian Architecture",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "5185545",
+      "name": "Peaceful Cozy Beach Cottage",
+      "host": "Sarah",
+      "host_id": "21424068",
+      "room_type": "Entire home/apt",
+      "price_usd": 336.0,
+      "monthly_est_usd": 10080,
+      "minimum_nights": 1,
+      "reviews": 440,
+      "reviews_per_month": 3.12,
+      "availability_365": 191,
+      "occupancy_rate_est": "47.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63195,
+        "lng": -121.92545
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "5238711",
+      "name": "~Downtown PG Penthouses, Two Blocks to Beach~",
+      "host": "Kristina Isabella",
+      "host_id": "14806795",
+      "room_type": "Entire home/apt",
+      "price_usd": 858.0,
+      "monthly_est_usd": 25740,
+      "minimum_nights": 3,
+      "reviews": 135,
+      "reviews_per_month": 0.99,
+      "availability_365": 192,
+      "occupancy_rate_est": "47.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61981,
+        "lng": -121.91558
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "6018499",
+      "name": "Lovely ocean view house walk to coffee and beach!",
+      "host": "Marianne",
+      "host_id": "1769997",
+      "room_type": "Entire home/apt",
+      "price_usd": 200.0,
+      "monthly_est_usd": 6000,
+      "minimum_nights": 2,
+      "reviews": 88,
+      "reviews_per_month": 0.63,
+      "availability_365": 193,
+      "occupancy_rate_est": "47.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61722,
+        "lng": -121.91489
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "6646306",
+      "name": "Peaceful Space near DLI + Cannery Row",
+      "host": "Seth",
+      "host_id": "33787736",
+      "room_type": "Private room",
+      "price_usd": 69.0,
+      "monthly_est_usd": 2070,
+      "minimum_nights": 30,
+      "reviews": 250,
+      "reviews_per_month": 1.82,
+      "availability_365": 178,
+      "occupancy_rate_est": "51.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61305,
+        "lng": -121.91538
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "6715036",
+      "name": "Cute & Stylish Cottage +HOT TUB",
+      "host": "Toni",
+      "host_id": "35157242",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 34,
+      "reviews_per_month": 0.39,
+      "availability_365": 358,
+      "occupancy_rate_est": "1.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60167,
+        "lng": -121.93163
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Wellness & Spa"
+      ]
+    },
+    {
+      "id": "11210583",
+      "name": "Bungalow-by-the-Sea",
+      "host": "Michelle Frances",
+      "host_id": "58388459",
+      "room_type": "Entire home/apt",
+      "price_usd": 525.0,
+      "monthly_est_usd": 15750,
+      "minimum_nights": 3,
+      "reviews": 227,
+      "reviews_per_month": 1.84,
+      "availability_365": 332,
+      "occupancy_rate_est": "9.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62294,
+        "lng": -121.91968
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "11562419",
+      "name": "Beautiful Home Beach/Forest Area",
+      "host": "Richard",
+      "host_id": "61071397",
+      "room_type": "Entire home/apt",
+      "price_usd": 163.0,
+      "monthly_est_usd": 4890,
+      "minimum_nights": 31,
+      "reviews": 118,
+      "reviews_per_month": 0.94,
+      "availability_365": 217,
+      "occupancy_rate_est": "40.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62282,
+        "lng": -121.92969
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "13428610",
+      "name": "Romantic Private  Master Suite & Gardens #0427",
+      "host": "Jeanne",
+      "host_id": "22933425",
+      "room_type": "Private room",
+      "price_usd": 459.0,
+      "monthly_est_usd": 13770,
+      "minimum_nights": 2,
+      "reviews": 47,
+      "reviews_per_month": 0.38,
+      "availability_365": 82,
+      "occupancy_rate_est": "77.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63323,
+        "lng": -121.92557
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "13902577",
+      "name": "Charming Victorian Home Near Beach",
+      "host": "W",
+      "host_id": "82415359",
+      "room_type": "Entire home/apt",
+      "price_usd": 653.0,
+      "monthly_est_usd": 19590,
+      "minimum_nights": 3,
+      "reviews": 248,
+      "reviews_per_month": 2.01,
+      "availability_365": 212,
+      "occupancy_rate_est": "41.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62511,
+        "lng": -121.91704
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "14266085",
+      "name": "Cottage Retreat Steps from the Sea",
+      "host": "Viveca And Jim",
+      "host_id": "10851823",
+      "room_type": "Entire home/apt",
+      "price_usd": 442.0,
+      "monthly_est_usd": 13260,
+      "minimum_nights": 1,
+      "reviews": 855,
+      "reviews_per_month": 6.91,
+      "availability_365": 157,
+      "occupancy_rate_est": "57.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62094,
+        "lng": -121.91302
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "14388930",
+      "name": "Guest Quarters Near Asilomar & Pebble Beach #0335",
+      "host": "Richard",
+      "host_id": "14882503",
+      "room_type": "Entire home/apt",
+      "price_usd": 241.0,
+      "monthly_est_usd": 7230,
+      "minimum_nights": 5,
+      "reviews": 125,
+      "reviews_per_month": 1.07,
+      "availability_365": 57,
+      "occupancy_rate_est": "84.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62253,
+        "lng": -121.93406
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Asilomar Corridor"
+      ]
+    },
+    {
+      "id": "14403615",
+      "name": "Dolphin House - Great Location! *30 day min stay*",
+      "host": "Beverlee",
+      "host_id": "88554111",
+      "room_type": "Entire home/apt",
+      "price_usd": 167.0,
+      "monthly_est_usd": 5010,
+      "minimum_nights": 30,
+      "reviews": 132,
+      "reviews_per_month": 1.07,
+      "availability_365": 301,
+      "occupancy_rate_est": "17.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61825,
+        "lng": -121.9118
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "14539067",
+      "name": "Pacific Grove, Pebble Beach, Carmel, Monterey",
+      "host": "Dimitra",
+      "host_id": "85355446",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 2,
+      "reviews": 428,
+      "reviews_per_month": 3.48,
+      "availability_365": 3,
+      "occupancy_rate_est": "99.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62533,
+        "lng": -121.93089
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "15165034",
+      "name": "No shared space! Guest suite! PGLic#0405",
+      "host": "Angi",
+      "host_id": "35048383",
+      "room_type": "Entire home/apt",
+      "price_usd": 118.0,
+      "monthly_est_usd": 3540,
+      "minimum_nights": 1,
+      "reviews": 1204,
+      "reviews_per_month": 9.96,
+      "availability_365": 193,
+      "occupancy_rate_est": "47.1%",
+      "license": "PG License #0405",
+      "coordinates": {
+        "lat": 36.60376,
+        "lng": -121.92731
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "15649395",
+      "name": "Casa Mariposa - The Live-In Museum",
+      "host": "Jon & Julie",
+      "host_id": "100986890",
+      "room_type": "Entire home/apt",
+      "price_usd": 203.0,
+      "monthly_est_usd": 6090,
+      "minimum_nights": 30,
+      "reviews": 36,
+      "reviews_per_month": 0.3,
+      "availability_365": 209,
+      "occupancy_rate_est": "42.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62003,
+        "lng": -121.92591
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "15857785",
+      "name": "Heart of PG Cottage (#0365)",
+      "host": "Roeya",
+      "host_id": "598237630",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 2,
+      "reviews": 532,
+      "reviews_per_month": 4.44,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61916,
+        "lng": -121.91824
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "15942471",
+      "name": "Serene Retreat: Remodeled Home Near Everything",
+      "host": "Lisa",
+      "host_id": "102438701",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 67,
+      "reviews_per_month": 0.56,
+      "availability_365": 314,
+      "occupancy_rate_est": "14.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60083,
+        "lng": -121.93155
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "16542967",
+      "name": "Lovers Point Beach House - 30 Steps to Beach #0125",
+      "host": "Larry",
+      "host_id": "99683621",
+      "room_type": "Entire home/apt",
+      "price_usd": 761.0,
+      "monthly_est_usd": 22830,
+      "minimum_nights": 2,
+      "reviews": 145,
+      "reviews_per_month": 1.24,
+      "availability_365": 54,
+      "occupancy_rate_est": "85.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62447,
+        "lng": -121.91658
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "16884158",
+      "name": "Wake up to crashing waves!",
+      "host": "Evelyn",
+      "host_id": "58271767",
+      "room_type": "Entire home/apt",
+      "price_usd": 294.0,
+      "monthly_est_usd": 8820,
+      "minimum_nights": 1,
+      "reviews": 130,
+      "reviews_per_month": 1.13,
+      "availability_365": 160,
+      "occupancy_rate_est": "56.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63600158691406,
+        "lng": -121.9303207397461
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "17479137",
+      "name": "Pacific Grove Cottage, Entire House [30 days min]",
+      "host": "Joe",
+      "host_id": "118403797",
+      "room_type": "Entire home/apt",
+      "price_usd": 141.0,
+      "monthly_est_usd": 4230,
+      "minimum_nights": 29,
+      "reviews": 50,
+      "reviews_per_month": 0.43,
+      "availability_365": 161,
+      "occupancy_rate_est": "55.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62027,
+        "lng": -121.9245
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "17623471",
+      "name": "Pacific Grove Mid Century Near Beach",
+      "host": "Dave & Lee",
+      "host_id": "4591051",
+      "room_type": "Entire home/apt",
+      "price_usd": 597.0,
+      "monthly_est_usd": 17910,
+      "minimum_nights": 1,
+      "reviews": 669,
+      "reviews_per_month": 5.78,
+      "availability_365": 63,
+      "occupancy_rate_est": "82.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62243,
+        "lng": -121.92963
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "18731829",
+      "name": "Monarch Garden Cottage (30 day rental)",
+      "host": "Suzanne",
+      "host_id": "21807468",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 31,
+      "reviews": 70,
+      "reviews_per_month": 0.61,
+      "availability_365": 1,
+      "occupancy_rate_est": "99.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61673,
+        "lng": -121.90999
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "18917071",
+      "name": "Cozy Pacific Grove Post-Adobe Charmer 2/1 #0387",
+      "host": "Carolyn",
+      "host_id": "128301422",
+      "room_type": "Entire home/apt",
+      "price_usd": 400.0,
+      "monthly_est_usd": 12000,
+      "minimum_nights": 2,
+      "reviews": 366,
+      "reviews_per_month": 3.22,
+      "availability_365": 141,
+      "occupancy_rate_est": "61.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60623550415039,
+        "lng": -121.92169952392578
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "19137340",
+      "name": "Pacific Grove Willis House, Walk to Town and Beach",
+      "host": "Chris",
+      "host_id": "133766053",
+      "room_type": "Entire home/apt",
+      "price_usd": 829.0,
+      "monthly_est_usd": 24870,
+      "minimum_nights": 2,
+      "reviews": 121,
+      "reviews_per_month": 1.07,
+      "availability_365": 12,
+      "occupancy_rate_est": "96.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61793,
+        "lng": -121.92364
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "19606480",
+      "name": "Mermaid's Delight",
+      "host": "Terri",
+      "host_id": "137859136",
+      "room_type": "Entire home/apt",
+      "price_usd": 658.0,
+      "monthly_est_usd": 19740,
+      "minimum_nights": 1,
+      "reviews": 294,
+      "reviews_per_month": 2.63,
+      "availability_365": 254,
+      "occupancy_rate_est": "30.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62559,
+        "lng": -121.91967
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "19736001",
+      "name": "Furnished Studio/Cottage In Pacific Grove",
+      "host": "Dolly",
+      "host_id": "1010770",
+      "room_type": "Entire home/apt",
+      "price_usd": 105.0,
+      "monthly_est_usd": 3150,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 0.04,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61672,
+        "lng": -121.92502
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "19789713",
+      "name": "Steps to the Beach + Ocean Views + Walk Everywhere",
+      "host": "Tommy & Mallary",
+      "host_id": "139737993",
+      "room_type": "Entire home/apt",
+      "price_usd": 740.0,
+      "monthly_est_usd": 22200,
+      "minimum_nights": 2,
+      "reviews": 443,
+      "reviews_per_month": 3.98,
+      "availability_365": 274,
+      "occupancy_rate_est": "24.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62603,
+        "lng": -121.91822
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "19830907",
+      "name": "Your month-long vacation on the California coast!",
+      "host": "Julie",
+      "host_id": "26564284",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 69,
+      "reviews_per_month": 0.62,
+      "availability_365": 211,
+      "occupancy_rate_est": "42.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62556,
+        "lng": -121.92263
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "19910607",
+      "name": "\"Mainstay Cottage\" Just Steps To Beach & Town!",
+      "host": "Marci",
+      "host_id": "85335077",
+      "room_type": "Entire home/apt",
+      "price_usd": 1178.0,
+      "monthly_est_usd": 35340,
+      "minimum_nights": 1,
+      "reviews": 226,
+      "reviews_per_month": 2.06,
+      "availability_365": 76,
+      "occupancy_rate_est": "79.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62439,
+        "lng": -121.91942
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "20190642",
+      "name": "Outback Bungalow",
+      "host": "Michelle Frances",
+      "host_id": "58388459",
+      "room_type": "Entire home/apt",
+      "price_usd": 508.0,
+      "monthly_est_usd": 15240,
+      "minimum_nights": 2,
+      "reviews": 246,
+      "reviews_per_month": 2.37,
+      "availability_365": 315,
+      "occupancy_rate_est": "13.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62465,
+        "lng": -121.91996
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "20229666",
+      "name": "3743 Pelican Peaks ~ Near Aquarium, Beach & Town",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 73,
+      "reviews_per_month": 0.8,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619986,
+        "lng": -121.908223
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "20229673",
+      "name": "3729 Ocean Park Sanctuary ~ Short Walk to the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 320.0,
+      "monthly_est_usd": 9600,
+      "minimum_nights": 30,
+      "reviews": 8,
+      "reviews_per_month": 0.07,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620008,
+        "lng": -121.921036
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "20229679",
+      "name": "3705 Oceanview Serenity ~ Oceanfront, Bay View",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 377.0,
+      "monthly_est_usd": 11310,
+      "minimum_nights": 30,
+      "reviews": 4,
+      "reviews_per_month": 0.04,
+      "availability_365": 61,
+      "occupancy_rate_est": "83.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.626947,
+        "lng": -121.919538
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "20229689",
+      "name": "3704 Ship's Watch ~ Walk to Restaurants and Shops",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 235.0,
+      "monthly_est_usd": 7050,
+      "minimum_nights": 30,
+      "reviews": 16,
+      "reviews_per_month": 0.15,
+      "availability_365": 255,
+      "occupancy_rate_est": "30.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620155,
+        "lng": -121.921967
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "20229693",
+      "name": "3715 Bliss by the Sea ~  Beach/Trails/Aquarium",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 233.0,
+      "monthly_est_usd": 6990,
+      "minimum_nights": 30,
+      "reviews": 6,
+      "reviews_per_month": 0.06,
+      "availability_365": 244,
+      "occupancy_rate_est": "33.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618089,
+        "lng": -121.910526
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "20229698",
+      "name": "3703 La Gloria Cottage-by-the-Sea ~ Near the Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 325.0,
+      "monthly_est_usd": 9750,
+      "minimum_nights": 30,
+      "reviews": 8,
+      "reviews_per_month": 0.08,
+      "availability_365": 201,
+      "occupancy_rate_est": "44.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621795,
+        "lng": -121.920669
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "20229711",
+      "name": "3263 Villa by the Sea ~ Newly Remodeled, Bay View",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1148.0,
+      "monthly_est_usd": 34440,
+      "minimum_nights": 1,
+      "reviews": 83,
+      "reviews_per_month": 0.75,
+      "availability_365": 310,
+      "occupancy_rate_est": "15.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619973222135215,
+        "lng": -121.907522708004
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "20229712",
+      "name": "3646 Seashore Retreat ~ Walk to the Beach and Town",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 188,
+      "occupancy_rate_est": "48.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62084,
+        "lng": -121.915183
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "20279454",
+      "name": "Studio Blu in Pacific Grove",
+      "host": "Brian",
+      "host_id": "12030507",
+      "room_type": "Entire home/apt",
+      "price_usd": 95.0,
+      "monthly_est_usd": 2850,
+      "minimum_nights": 30,
+      "reviews": 30,
+      "reviews_per_month": 0.27,
+      "availability_365": 147,
+      "occupancy_rate_est": "59.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61594,
+        "lng": -121.91262
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "20404083",
+      "name": "3096 Sanctuary by the Bay ~ Remodeled, Bay View!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 349.0,
+      "monthly_est_usd": 10470,
+      "minimum_nights": 30,
+      "reviews": 9,
+      "reviews_per_month": 0.08,
+      "availability_365": 184,
+      "occupancy_rate_est": "49.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62000766639408,
+        "lng": -121.9076326785736
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "21981955",
+      "name": "Sunset Inn Pacific Grove",
+      "host": "Rishi",
+      "host_id": "160495920",
+      "room_type": "Hotel room",
+      "price_usd": 307.0,
+      "monthly_est_usd": 9210,
+      "minimum_nights": 1,
+      "reviews": 327,
+      "reviews_per_month": 3.04,
+      "availability_365": 342,
+      "occupancy_rate_est": "6.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63018,
+        "lng": -121.93234
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "22178195",
+      "name": "Pacific Suite (PG License # 0420)",
+      "host": "George",
+      "host_id": "162016726",
+      "room_type": "Entire home/apt",
+      "price_usd": 389.0,
+      "monthly_est_usd": 11670,
+      "minimum_nights": 1,
+      "reviews": 541,
+      "reviews_per_month": 5.07,
+      "availability_365": 205,
+      "occupancy_rate_est": "43.8%",
+      "license": "PG License #0420",
+      "coordinates": {
+        "lat": 36.62051,
+        "lng": -121.91453
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "22292297",
+      "name": "Pacific Grove 2 bed charmer",
+      "host": "Josh",
+      "host_id": "162398854",
+      "room_type": "Entire home/apt",
+      "price_usd": 227.0,
+      "monthly_est_usd": 6810,
+      "minimum_nights": 30,
+      "reviews": 30,
+      "reviews_per_month": 0.29,
+      "availability_365": 252,
+      "occupancy_rate_est": "31.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61319,
+        "lng": -121.92476
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "22666758",
+      "name": "Perfect location in Pacific Grove (Lic #0403)",
+      "host": "Carolyn",
+      "host_id": "128301422",
+      "room_type": "Entire home/apt",
+      "price_usd": 400.0,
+      "monthly_est_usd": 12000,
+      "minimum_nights": 3,
+      "reviews": 329,
+      "reviews_per_month": 3.13,
+      "availability_365": 218,
+      "occupancy_rate_est": "40.3%",
+      "license": "PG License #0403",
+      "coordinates": {
+        "lat": 36.60569,
+        "lng": -121.92101
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "22747634",
+      "name": "3759 Pacific Grove Retreat ~ 1 Block to Bay Trail",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.01,
+      "availability_365": 250,
+      "occupancy_rate_est": "31.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618918,
+        "lng": -121.90869
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "23768786",
+      "name": "Mermaid Crossing License #0473",
+      "host": "Rhonda",
+      "host_id": "110664679",
+      "room_type": "Entire home/apt",
+      "price_usd": 529.0,
+      "monthly_est_usd": 15870,
+      "minimum_nights": 1,
+      "reviews": 340,
+      "reviews_per_month": 3.3,
+      "availability_365": 71,
+      "occupancy_rate_est": "80.5%",
+      "license": "PG License #0473",
+      "coordinates": {
+        "lat": 36.62678,
+        "lng": -121.91914
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "24059256",
+      "name": "Forest Home on 1/4  Acre",
+      "host": "Tamara",
+      "host_id": "181127429",
+      "room_type": "Entire home/apt",
+      "price_usd": 124.0,
+      "monthly_est_usd": 3720,
+      "minimum_nights": 31,
+      "reviews": 104,
+      "reviews_per_month": 1.06,
+      "availability_365": 241,
+      "occupancy_rate_est": "34.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61963,
+        "lng": -121.93336
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "24773264",
+      "name": "Monterey Peninsula Ideal Accommodation",
+      "host": "Kat",
+      "host_id": "72001105",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 5,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 338,
+      "occupancy_rate_est": "7.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62156,
+        "lng": -121.91825
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "25281531",
+      "name": "Rosedale Inn & Suites - King Suite",
+      "host": "Anjali",
+      "host_id": "190984125",
+      "room_type": "Hotel room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 28,
+      "reviews_per_month": 0.28,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61961,
+        "lng": -121.93631
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "26468647",
+      "name": "Sallie\u2019s Cottage",
+      "host": "Elizabeth",
+      "host_id": "43389940",
+      "room_type": "Entire home/apt",
+      "price_usd": 608.0,
+      "monthly_est_usd": 18240,
+      "minimum_nights": 2,
+      "reviews": 567,
+      "reviews_per_month": 5.65,
+      "availability_365": 199,
+      "occupancy_rate_est": "45.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62311,
+        "lng": -121.91876
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "27092841",
+      "name": "Charming house between downtown and the beach",
+      "host": "Ashley",
+      "host_id": "6763862",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 12,
+      "reviews_per_month": 0.13,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62372,
+        "lng": -121.91901
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "31169667",
+      "name": "Spectacular Award Winning Ocean Front 2 Bed 2 Bath",
+      "host": "Jane",
+      "host_id": "62428944",
+      "room_type": "Entire home/apt",
+      "price_usd": 985.0,
+      "monthly_est_usd": 29550,
+      "minimum_nights": 2,
+      "reviews": 373,
+      "reviews_per_month": 3.97,
+      "availability_365": 209,
+      "occupancy_rate_est": "42.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62038268144633,
+        "lng": -121.9069418932686
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "32237119",
+      "name": "3118 Yellow House Main - Walk to the Aquarium!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1028.0,
+      "monthly_est_usd": 30840,
+      "minimum_nights": 4,
+      "reviews": 24,
+      "reviews_per_month": 0.32,
+      "availability_365": 307,
+      "occupancy_rate_est": "15.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620371,
+        "lng": -121.909139
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Aquarium & Cannery Row",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "33396484",
+      "name": "Standard King Room",
+      "host": "Anjali",
+      "host_id": "190984125",
+      "room_type": "Hotel room",
+      "price_usd": 350.0,
+      "monthly_est_usd": 10500,
+      "minimum_nights": 1,
+      "reviews": 26,
+      "reviews_per_month": 0.31,
+      "availability_365": 177,
+      "occupancy_rate_est": "51.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61892,
+        "lng": -121.93459
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "35950153",
+      "name": "BLOCKS FROM OCEAN -COZY QUEEN-A GETAWAY FOR TWO",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 309.0,
+      "monthly_est_usd": 9270,
+      "minimum_nights": 1,
+      "reviews": 814,
+      "reviews_per_month": 9.24,
+      "availability_365": 328,
+      "occupancy_rate_est": "10.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "36006241",
+      "name": "WALK TO OCEAN from our Premium KING BED ROOMS",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 158.0,
+      "monthly_est_usd": 4740,
+      "minimum_nights": 1,
+      "reviews": 347,
+      "reviews_per_month": 3.94,
+      "availability_365": 303,
+      "occupancy_rate_est": "17.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "36006645",
+      "name": "TEENY View of OCEAN-WALK to OCEAN - KING BEDROOM",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 163.0,
+      "monthly_est_usd": 4890,
+      "minimum_nights": 1,
+      "reviews": 147,
+      "reviews_per_month": 1.67,
+      "availability_365": 332,
+      "occupancy_rate_est": "9.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "36007109",
+      "name": "CROSS Ocean View from Balcony-RELAX-QUEEN BEDROOM",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 158.0,
+      "monthly_est_usd": 4740,
+      "minimum_nights": 1,
+      "reviews": 150,
+      "reviews_per_month": 1.71,
+      "availability_365": 324,
+      "occupancy_rate_est": "11.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "36007581",
+      "name": "WALK TO OCEAN- Queen bed with BONUS TWIN BED:)",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 447,
+      "reviews_per_month": 5.14,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62012,
+        "lng": -121.91887
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "36008146",
+      "name": "Blocks from Ocean - KING BEDROOM SUITE",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 206.0,
+      "monthly_est_usd": 6180,
+      "minimum_nights": 1,
+      "reviews": 191,
+      "reviews_per_month": 2.17,
+      "availability_365": 318,
+      "occupancy_rate_est": "12.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "36045923",
+      "name": "Ocean Views,ROMANTIC QUEEN BEDROOM",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 37,
+      "reviews_per_month": 0.42,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "36046495",
+      "name": "AMAZING OCEAN VIEWS - QUEEN, TWIN & LIVING ROOM",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 266,
+      "reviews_per_month": 3.02,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "36046892",
+      "name": "WALK TO OCEAN, KING WITH TWO TWINS",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Hotel room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 221,
+      "reviews_per_month": 2.51,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61867,
+        "lng": -121.91911
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "37393944",
+      "name": "3747 Bungalow by-the-Sea - Adorable, Cozy Cottage",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 137,
+      "occupancy_rate_est": "62.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623969,
+        "lng": -121.927618
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "38239130",
+      "name": "Mermaid Hideaway\n30 Day Rental",
+      "host": "Jordan",
+      "host_id": "284809622",
+      "room_type": "Entire home/apt",
+      "price_usd": 172.0,
+      "monthly_est_usd": 5160,
+      "minimum_nights": 3,
+      "reviews": 47,
+      "reviews_per_month": 0.75,
+      "availability_365": 343,
+      "occupancy_rate_est": "6.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62612,
+        "lng": -121.91973
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "38539935",
+      "name": "3792 The Lavender House ~ Walk to Town & Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 973.0,
+      "monthly_est_usd": 29190,
+      "minimum_nights": 1,
+      "reviews": 67,
+      "reviews_per_month": 0.8,
+      "availability_365": 318,
+      "occupancy_rate_est": "12.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623297,
+        "lng": -121.921272
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "39131210",
+      "name": "La Piccola Casa \"The Little House\"   Lic. # 0446",
+      "host": "Joe",
+      "host_id": "299581636",
+      "room_type": "Entire home/apt",
+      "price_usd": 541.0,
+      "monthly_est_usd": 16230,
+      "minimum_nights": 1,
+      "reviews": 253,
+      "reviews_per_month": 2.98,
+      "availability_365": 257,
+      "occupancy_rate_est": "29.6%",
+      "license": "PG License #0446",
+      "coordinates": {
+        "lat": 36.62178,
+        "lng": -121.91851
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "39537770",
+      "name": "Otters Cove/Ocean Views-Walk to Beach/Aquarium",
+      "host": "Charleen",
+      "host_id": "303782959",
+      "room_type": "Entire home/apt",
+      "price_usd": 406.0,
+      "monthly_est_usd": 12180,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.02,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61671,
+        "lng": -121.91375
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "40032768",
+      "name": "3788 Seagull's Nest ~ Walk to Town and the Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1195.0,
+      "monthly_est_usd": 35850,
+      "minimum_nights": 1,
+      "reviews": 80,
+      "reviews_per_month": 1.17,
+      "availability_365": 335,
+      "occupancy_rate_est": "8.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619326,
+        "lng": -121.917411
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "41156259",
+      "name": "Charming Cottage Steps to Ocean!",
+      "host": "Anne",
+      "host_id": "46858016",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 26,
+      "reviews_per_month": 0.36,
+      "availability_365": 177,
+      "occupancy_rate_est": "51.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62364,
+        "lng": -121.91592
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "42454978",
+      "name": "3804 Mermaid Loft ~ Near Ocean & Recreation Trail",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 615.0,
+      "monthly_est_usd": 18450,
+      "minimum_nights": 1,
+      "reviews": 97,
+      "reviews_per_month": 1.27,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62738402509727,
+        "lng": -121.92094034722136
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "42561512",
+      "name": "Queen Bed with Bunk bed",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Private room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 56,
+      "reviews_per_month": 0.73,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61947,
+        "lng": -121.91806
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "43126039",
+      "name": "Rare Find! Beautiful Historic Home. Walk to Ocean!",
+      "host": "Karyn",
+      "host_id": "40957845",
+      "room_type": "Entire home/apt",
+      "price_usd": 241.0,
+      "monthly_est_usd": 7230,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.02,
+      "availability_365": 147,
+      "occupancy_rate_est": "59.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62076,
+        "lng": -121.9189
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "43580733",
+      "name": "Private Stand-alone Cottages near Ocean & Beach",
+      "host": "Alex",
+      "host_id": "347917130",
+      "room_type": "Private room",
+      "price_usd": 999.0,
+      "monthly_est_usd": 29970,
+      "minimum_nights": 1,
+      "reviews": 160,
+      "reviews_per_month": 2.19,
+      "availability_365": 254,
+      "occupancy_rate_est": "30.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62256,
+        "lng": -121.91821
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "43743300",
+      "name": "Victorian Premier Queen Room near Ocean & Beach",
+      "host": "Alex",
+      "host_id": "347917130",
+      "room_type": "Private room",
+      "price_usd": 999.0,
+      "monthly_est_usd": 29970,
+      "minimum_nights": 1,
+      "reviews": 846,
+      "reviews_per_month": 11.06,
+      "availability_365": 254,
+      "occupancy_rate_est": "30.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62256,
+        "lng": -121.91821
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Heritage / Victorian Architecture",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "43757076",
+      "name": "Two Twin beds in a Historic Victorian Hotel",
+      "host": "Alex",
+      "host_id": "347917130",
+      "room_type": "Private room",
+      "price_usd": 999.0,
+      "monthly_est_usd": 29970,
+      "minimum_nights": 1,
+      "reviews": 121,
+      "reviews_per_month": 1.61,
+      "availability_365": 254,
+      "occupancy_rate_est": "30.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62256,
+        "lng": -121.91821
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Heritage / Victorian Architecture",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "43820284",
+      "name": "Garden Room \"Honeymoon Suite\" near Lover's Point",
+      "host": "Alex",
+      "host_id": "347917130",
+      "room_type": "Private room",
+      "price_usd": 999.0,
+      "monthly_est_usd": 29970,
+      "minimum_nights": 1,
+      "reviews": 136,
+      "reviews_per_month": 1.84,
+      "availability_365": 252,
+      "occupancy_rate_est": "31.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62256,
+        "lng": -121.91821
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "44808129",
+      "name": "Oceanview Studio, 2-Blocks to Cannery Row",
+      "host": "Dennis",
+      "host_id": "359484123",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 25,
+      "reviews_per_month": 0.35,
+      "availability_365": 341,
+      "occupancy_rate_est": "6.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6186,
+        "lng": -121.90669
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "44844957",
+      "name": "#JewelboxCottages\ud83d\udc51MAIN\ud83d\udd314-Poster King\ud83c\udfd6Walk to Beach",
+      "host": "Mel, Tripmogul",
+      "host_id": "8334086",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 5,
+      "reviews_per_month": 0.07,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61509,
+        "lng": -121.9131
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "45710558",
+      "name": "2-Block Walk to Cannery Row/Aquarium @ Evans Place",
+      "host": "Dennis",
+      "host_id": "359484123",
+      "room_type": "Entire home/apt",
+      "price_usd": 159.0,
+      "monthly_est_usd": 4770,
+      "minimum_nights": 30,
+      "reviews": 30,
+      "reviews_per_month": 0.43,
+      "availability_365": 233,
+      "occupancy_rate_est": "36.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61781,
+        "lng": -121.90594
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "45928538",
+      "name": "Seagull House Downtown Pacific Grove",
+      "host": "Ahnalisa",
+      "host_id": "4622744",
+      "room_type": "Entire home/apt",
+      "price_usd": 762.0,
+      "monthly_est_usd": 22860,
+      "minimum_nights": 2,
+      "reviews": 194,
+      "reviews_per_month": 2.68,
+      "availability_365": 127,
+      "occupancy_rate_est": "65.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61945,
+        "lng": -121.91674
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "46561318",
+      "name": "3812 Little House - Historic Home, Walk to the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1059.0,
+      "monthly_est_usd": 31770,
+      "minimum_nights": 1,
+      "reviews": 99,
+      "reviews_per_month": 1.45,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621181,
+        "lng": -121.911657
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Heritage / Victorian Architecture",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "46927425",
+      "name": "2-Block Walk to Cannery Row/Aquarium @ Lighthouse",
+      "host": "Dennis",
+      "host_id": "359484123",
+      "room_type": "Entire home/apt",
+      "price_usd": 165.0,
+      "monthly_est_usd": 4950,
+      "minimum_nights": 30,
+      "reviews": 9,
+      "reviews_per_month": 0.14,
+      "availability_365": 272,
+      "occupancy_rate_est": "25.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61707,
+        "lng": -121.90737
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "47812234",
+      "name": "3813 Point Break ~ Walk to Lover's Point Beach!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1428.0,
+      "monthly_est_usd": 42840,
+      "minimum_nights": 1,
+      "reviews": 91,
+      "reviews_per_month": 1.32,
+      "availability_365": 310,
+      "occupancy_rate_est": "15.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623718,
+        "lng": -121.917713
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Lovers Point",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "48803024",
+      "name": "3684 Jewel by the Sea ~ Walk to Town and the Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 397.0,
+      "monthly_est_usd": 11910,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 141,
+      "occupancy_rate_est": "61.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621746,
+        "lng": -121.921281
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "48803070",
+      "name": "3817 Caledonia Bay Lookout - Walk to Bay and Park",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1463.0,
+      "monthly_est_usd": 43890,
+      "minimum_nights": 1,
+      "reviews": 82,
+      "reviews_per_month": 1.29,
+      "availability_365": 327,
+      "occupancy_rate_est": "10.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623779,
+        "lng": -121.919206
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "48995459",
+      "name": "Three Mermaid\u2019s Cove ( License #0459) Penthouse",
+      "host": "Rhonda",
+      "host_id": "110664679",
+      "room_type": "Entire home/apt",
+      "price_usd": 380.0,
+      "monthly_est_usd": 11400,
+      "minimum_nights": 1,
+      "reviews": 286,
+      "reviews_per_month": 4.31,
+      "availability_365": 74,
+      "occupancy_rate_est": "79.7%",
+      "license": "PG License #0459",
+      "coordinates": {
+        "lat": 36.62601,
+        "lng": -121.92125
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "49413685",
+      "name": "3814 Surf's Up! Walk to the Beach, Downtown & Park",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 731.0,
+      "monthly_est_usd": 21930,
+      "minimum_nights": 1,
+      "reviews": 119,
+      "reviews_per_month": 1.82,
+      "availability_365": 325,
+      "occupancy_rate_est": "11.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623633,
+        "lng": -121.91865
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "49619172",
+      "name": "*Newly built\u2019 Cottage near aquarium/cannery row",
+      "host": "Rajas",
+      "host_id": "226221616",
+      "room_type": "Entire home/apt",
+      "price_usd": 136.0,
+      "monthly_est_usd": 4080,
+      "minimum_nights": 30,
+      "reviews": 8,
+      "reviews_per_month": 0.13,
+      "availability_365": 266,
+      "occupancy_rate_est": "27.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61529,
+        "lng": -121.90922
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "49950545",
+      "name": "Endless Summer Home Steps To Lovers Point Beach",
+      "host": "Ellen MARIE",
+      "host_id": "152844993",
+      "room_type": "Entire home/apt",
+      "price_usd": 587.0,
+      "monthly_est_usd": 17610,
+      "minimum_nights": 1,
+      "reviews": 327,
+      "reviews_per_month": 5.03,
+      "availability_365": 217,
+      "occupancy_rate_est": "40.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62239,
+        "lng": -121.91684
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "50000524",
+      "name": "3822 Cannery Row ~Luxury, Ocean View, Near the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 214,
+      "occupancy_rate_est": "41.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621386,
+        "lng": -121.916875
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "50567200",
+      "name": "Shell's Treasure: Fully Updated Three bedroom home",
+      "host": "Carmel Coast Estate",
+      "host_id": "161014914",
+      "room_type": "Entire home/apt",
+      "price_usd": 340.0,
+      "monthly_est_usd": 10200,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 0.04,
+      "availability_365": 209,
+      "occupancy_rate_est": "42.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6331417,
+        "lng": -121.9242222
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "50864110",
+      "name": "3828 The 9th Green - Near Golf Links & Bay Trail",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 62,
+      "occupancy_rate_est": "83.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.634191,
+        "lng": -121.930766
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "51003171",
+      "name": "Christmas Vacation *Penthouse* Pacific Grove Plaza",
+      "host": "John",
+      "host_id": "343316498",
+      "room_type": "Private room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 3,
+      "reviews": 2,
+      "reviews_per_month": 0.04,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62267,
+        "lng": -121.91841
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "51086425",
+      "name": "Pet Friendly Cozy Pacific Grove Getaway  Lic#0388",
+      "host": "Carolyn",
+      "host_id": "128301422",
+      "room_type": "Entire home/apt",
+      "price_usd": 445.0,
+      "monthly_est_usd": 13350,
+      "minimum_nights": 3,
+      "reviews": 184,
+      "reviews_per_month": 2.95,
+      "availability_365": 215,
+      "occupancy_rate_est": "41.1%",
+      "license": "PG License #0388",
+      "coordinates": {
+        "lat": 36.60623,
+        "lng": -121.92071
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "51351238",
+      "name": "Newly Remodeled Home Near Aquarium and Cannery Row",
+      "host": "Rajas",
+      "host_id": "226221616",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 10,
+      "reviews_per_month": 0.17,
+      "availability_365": 168,
+      "occupancy_rate_est": "54.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61483,
+        "lng": -121.91002
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "52829050",
+      "name": "Whale Watch Balcony at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 402.0,
+      "monthly_est_usd": 12060,
+      "minimum_nights": 1,
+      "reviews": 34,
+      "reviews_per_month": 0.57,
+      "availability_365": 268,
+      "occupancy_rate_est": "26.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62115,
+        "lng": -121.91026
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "52885376",
+      "name": "Bay View Room at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 414.0,
+      "monthly_est_usd": 12420,
+      "minimum_nights": 1,
+      "reviews": 25,
+      "reviews_per_month": 0.42,
+      "availability_365": 277,
+      "occupancy_rate_est": "24.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62128,
+        "lng": -121.91103
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "52886744",
+      "name": "Cape Cod Room at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 247.0,
+      "monthly_est_usd": 7410,
+      "minimum_nights": 1,
+      "reviews": 17,
+      "reviews_per_month": 0.29,
+      "availability_365": 271,
+      "occupancy_rate_est": "25.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61994,
+        "lng": -121.91185
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "52887087",
+      "name": "Land's End at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 220.0,
+      "monthly_est_usd": 6600,
+      "minimum_nights": 1,
+      "reviews": 112,
+      "reviews_per_month": 1.89,
+      "availability_365": 253,
+      "occupancy_rate_est": "30.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61916,
+        "lng": -121.91122
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "52887371",
+      "name": "Newport Room at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 287.0,
+      "monthly_est_usd": 8610,
+      "minimum_nights": 1,
+      "reviews": 38,
+      "reviews_per_month": 0.64,
+      "availability_365": 271,
+      "occupancy_rate_est": "25.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62059,
+        "lng": -121.9102
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "52887567",
+      "name": "Otter Cove at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 246.0,
+      "monthly_est_usd": 7380,
+      "minimum_nights": 1,
+      "reviews": 55,
+      "reviews_per_month": 0.92,
+      "availability_365": 269,
+      "occupancy_rate_est": "26.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61985,
+        "lng": -121.90969
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "53132392",
+      "name": "Nantucket Room at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 220.0,
+      "monthly_est_usd": 6600,
+      "minimum_nights": 1,
+      "reviews": 54,
+      "reviews_per_month": 0.91,
+      "availability_365": 271,
+      "occupancy_rate_est": "25.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62079,
+        "lng": -121.91056
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "53133142",
+      "name": "Garden Gable Room at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 322.0,
+      "monthly_est_usd": 9660,
+      "minimum_nights": 1,
+      "reviews": 16,
+      "reviews_per_month": 0.27,
+      "availability_365": 297,
+      "occupancy_rate_est": "18.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61974,
+        "lng": -121.911
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "53133671",
+      "name": "Crow's Nest at The Old St. Angela Inn",
+      "host": "Angela",
+      "host_id": "36177924",
+      "room_type": "Private room",
+      "price_usd": 287.0,
+      "monthly_est_usd": 8610,
+      "minimum_nights": 1,
+      "reviews": 27,
+      "reviews_per_month": 0.45,
+      "availability_365": 274,
+      "occupancy_rate_est": "24.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62072,
+        "lng": -121.9111
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "53546916",
+      "name": "Quintessential Pacific Grove with Modern Comforts!",
+      "host": "Kathleen",
+      "host_id": "433610036",
+      "room_type": "Entire home/apt",
+      "price_usd": 246.0,
+      "monthly_est_usd": 7380,
+      "minimum_nights": 30,
+      "reviews": 10,
+      "reviews_per_month": 0.18,
+      "availability_365": 364,
+      "occupancy_rate_est": "0.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62199,
+        "lng": -121.92251
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "53863626",
+      "name": "Light-filled home near Pebble Beach/Asilomar",
+      "host": "Mara",
+      "host_id": "9018490",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 3,
+      "reviews_per_month": 0.08,
+      "availability_365": 272,
+      "occupancy_rate_est": "25.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61694,
+        "lng": -121.9322
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Asilomar Corridor"
+      ]
+    },
+    {
+      "id": "557212564041000775",
+      "name": "*OCT/NOV avail Walk to Downtown, Beach, Trail",
+      "host": "Carol",
+      "host_id": "390590280",
+      "room_type": "Entire home/apt",
+      "price_usd": 207.0,
+      "monthly_est_usd": 6210,
+      "minimum_nights": 29,
+      "reviews": 7,
+      "reviews_per_month": 0.17,
+      "availability_365": 221,
+      "occupancy_rate_est": "39.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62042033204166,
+        "lng": -121.921435713768
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "564443155898110904",
+      "name": "PG Retreat - a 2 BR Cottage Near Beach & Town",
+      "host": "Dave & Lee",
+      "host_id": "4591051",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 22,
+      "reviews_per_month": 0.41,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61988,
+        "lng": -121.91132
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "575386907507888297",
+      "name": "Bright Pacific Grove Retreat_Walk to Beach & Town!",
+      "host": "Kyle",
+      "host_id": "10619708",
+      "room_type": "Entire home/apt",
+      "price_usd": 182.0,
+      "monthly_est_usd": 5460,
+      "minimum_nights": 1,
+      "reviews": 9,
+      "reviews_per_month": 0.18,
+      "availability_365": 167,
+      "occupancy_rate_est": "54.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62046432495117,
+        "lng": -121.92179107666016
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "579603922194777208",
+      "name": "Pet friendly Historic PG",
+      "host": "Thomas",
+      "host_id": "184021204",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 8,
+      "reviews_per_month": 0.2,
+      "availability_365": 289,
+      "occupancy_rate_est": "20.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61975,
+        "lng": -121.91905
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Heritage / Victorian Architecture",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "584244668012154218",
+      "name": "Beach Cottage - walk to beach and restaurants",
+      "host": "Ismael",
+      "host_id": "231876424",
+      "room_type": "Entire home/apt",
+      "price_usd": 601.0,
+      "monthly_est_usd": 18030,
+      "minimum_nights": 1,
+      "reviews": 239,
+      "reviews_per_month": 4.48,
+      "availability_365": 288,
+      "occupancy_rate_est": "21.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6235,
+        "lng": -121.91737
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "587711256303177865",
+      "name": "Welcome to Sea-Glass House! 1BR (PG License #0478)",
+      "host": "Sue",
+      "host_id": "450657170",
+      "room_type": "Private room",
+      "price_usd": 358.0,
+      "monthly_est_usd": 10740,
+      "minimum_nights": 1,
+      "reviews": 607,
+      "reviews_per_month": 11.17,
+      "availability_365": 21,
+      "occupancy_rate_est": "94.2%",
+      "license": "PG License #0478",
+      "coordinates": {
+        "lat": 36.63425,
+        "lng": -121.92469
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "589997411964604458",
+      "name": "#JewelboxCottages\ud83c\udfd6CARRIAGE HOUSE\ud83d\udc51Queen\ud83d\udec1PrivateBath",
+      "host": "Mel, Tripmogul",
+      "host_id": "8334086",
+      "room_type": "Entire home/apt",
+      "price_usd": 92.0,
+      "monthly_est_usd": 2760,
+      "minimum_nights": 30,
+      "reviews": 4,
+      "reviews_per_month": 0.1,
+      "availability_365": 30,
+      "occupancy_rate_est": "91.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61582,
+        "lng": -121.91168
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "648034558163632199",
+      "name": "Remodeled Victorian near downtown Pacific Grove",
+      "host": "James",
+      "host_id": "15429359",
+      "room_type": "Entire home/apt",
+      "price_usd": 453.0,
+      "monthly_est_usd": 13590,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.02,
+      "availability_365": 365,
+      "occupancy_rate_est": "0.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62127,
+        "lng": -121.91617
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Downtown Core",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "654376990660517969",
+      "name": "3859 Beach Bungalow ~ Walk to Bay and Restaurants",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 187.0,
+      "monthly_est_usd": 5610,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 293,
+      "occupancy_rate_est": "19.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619722,
+        "lng": -121.90887
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "663527596243608771",
+      "name": "3858 Oasis by the Sea - Walk to Shops & Dining",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 245.0,
+      "monthly_est_usd": 7350,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.07,
+      "availability_365": 304,
+      "occupancy_rate_est": "16.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620052,
+        "lng": -121.92643
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "663847654921511495",
+      "name": "Beach Cottage with Ocean Peek-a-View for 30+nights",
+      "host": "Courtney",
+      "host_id": "86763870",
+      "room_type": "Entire home/apt",
+      "price_usd": 212.0,
+      "monthly_est_usd": 6360,
+      "minimum_nights": 30,
+      "reviews": 15,
+      "reviews_per_month": 0.3,
+      "availability_365": 165,
+      "occupancy_rate_est": "54.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63006,
+        "lng": -121.9241
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "708639157230123006",
+      "name": "Oceanfront Panoramic Ocean and Monterey Bay Views",
+      "host": "Gayle",
+      "host_id": "478036315",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 5,
+      "reviews_per_month": 0.13,
+      "availability_365": 269,
+      "occupancy_rate_est": "26.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63027421983373,
+        "lng": -121.9224703116394
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "711435093441286850",
+      "name": "3866 Skipper ~ Bay View, Walk to Downtown & Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 304,
+      "occupancy_rate_est": "16.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.613123271325456,
+        "lng": -121.91943508465576
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "745562708839740258",
+      "name": "SeaClusion: Remodeled 3 Bedroom 2 Bath Nestled is",
+      "host": "Carmel Coast Estate",
+      "host_id": "161014914",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 29,
+      "reviews": 4,
+      "reviews_per_month": 0.12,
+      "availability_365": 300,
+      "occupancy_rate_est": "17.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6038,
+        "lng": -121.92577
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "808273804035038794",
+      "name": "Coastal Oaks Craftsman",
+      "host": "Jennifer",
+      "host_id": "7471973",
+      "room_type": "Entire home/apt",
+      "price_usd": 1916.0,
+      "monthly_est_usd": 57480,
+      "minimum_nights": 4,
+      "reviews": 33,
+      "reviews_per_month": 0.75,
+      "availability_365": 9,
+      "occupancy_rate_est": "97.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62155010606474,
+        "lng": -121.91265367538324
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "842747609845874917",
+      "name": "3860 Escabar Escape - Bay View, Old World Charm",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 351.0,
+      "monthly_est_usd": 10530,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.04,
+      "availability_365": 93,
+      "occupancy_rate_est": "74.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620342,
+        "lng": -121.907139
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "854345612665578066",
+      "name": "The Shafter House",
+      "host": "Evelyn",
+      "host_id": "398938178",
+      "room_type": "Entire home/apt",
+      "price_usd": 211.0,
+      "monthly_est_usd": 6330,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 362,
+      "occupancy_rate_est": "0.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60127,
+        "lng": -121.9328
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "856592878049086180",
+      "name": "*Asilomarhouse* Wk2 Beach, Hot Tub, Big Yard",
+      "host": "Laura",
+      "host_id": "98921156",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 29,
+      "reviews": 1,
+      "reviews_per_month": 0.03,
+      "availability_365": 364,
+      "occupancy_rate_est": "0.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61772,
+        "lng": -121.9339
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Asilomar Corridor",
+        "Wellness & Spa"
+      ]
+    },
+    {
+      "id": "868710091988066065",
+      "name": "3881 Pacific Gem - Just a Short Stroll to the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 272.0,
+      "monthly_est_usd": 8160,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 276,
+      "occupancy_rate_est": "24.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.631588,
+        "lng": -121.926835
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "871717955892996876",
+      "name": "3887 Just Coast'n - Just a Few Steps to the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 274.0,
+      "monthly_est_usd": 8220,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 1.0,
+      "availability_365": 185,
+      "occupancy_rate_est": "49.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620101,
+        "lng": -121.908164
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "879279503944467183",
+      "name": "Spanish Sanctuary",
+      "host": "Monika",
+      "host_id": "30022902",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 31,
+      "reviews": 11,
+      "reviews_per_month": 0.49,
+      "availability_365": 84,
+      "occupancy_rate_est": "77.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60235,
+        "lng": -121.93317
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "882689689386652619",
+      "name": "3803 Sweet Thursday ~ Luxury Ocean View Condo",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 458.0,
+      "monthly_est_usd": 13740,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 246,
+      "occupancy_rate_est": "32.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621174726989764,
+        "lng": -121.91658169080735
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "886952517504399964",
+      "name": "PG House: Modern Ocean Bungalow Amazing Location",
+      "host": "Mimi",
+      "host_id": "9432352",
+      "room_type": "Entire home/apt",
+      "price_usd": 874.0,
+      "monthly_est_usd": 26220,
+      "minimum_nights": 2,
+      "reviews": 125,
+      "reviews_per_month": 3.64,
+      "availability_365": 110,
+      "occupancy_rate_est": "69.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62047,
+        "lng": -121.90526
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "887838447373873195",
+      "name": "Pearl by the Sea in Asilomar, Pacific Grove",
+      "host": "Linda",
+      "host_id": "105349308",
+      "room_type": "Entire home/apt",
+      "price_usd": 486.0,
+      "monthly_est_usd": 14580,
+      "minimum_nights": 3,
+      "reviews": 13,
+      "reviews_per_month": 0.35,
+      "availability_365": 135,
+      "occupancy_rate_est": "63.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62533,
+        "lng": -121.93495
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Asilomar Corridor"
+      ]
+    },
+    {
+      "id": "910124947116022766",
+      "name": "3893 Sweet Seventeenth - Near Downtown & Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1073.0,
+      "monthly_est_usd": 32190,
+      "minimum_nights": 1,
+      "reviews": 42,
+      "reviews_per_month": 1.09,
+      "availability_365": 332,
+      "occupancy_rate_est": "9.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620499,
+        "lng": -121.919464
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "933173065545771068",
+      "name": "Sunburst Cottage",
+      "host": "Paul",
+      "host_id": "57406565",
+      "room_type": "Entire home/apt",
+      "price_usd": 1221.0,
+      "monthly_est_usd": 36630,
+      "minimum_nights": 3,
+      "reviews": 7,
+      "reviews_per_month": 0.18,
+      "availability_365": 333,
+      "occupancy_rate_est": "8.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6223172,
+        "lng": -121.9177818
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "933455916078918115",
+      "name": "Presidio Casita (w/ sauna)",
+      "host": "Natalie",
+      "host_id": "42937418",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 20,
+      "reviews_per_month": 0.52,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60418,
+        "lng": -121.92996
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Wellness & Spa"
+      ]
+    },
+    {
+      "id": "940717280067603969",
+      "name": "3894 Seacake - Bay View and Just Steps to the Sea",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 326.0,
+      "monthly_est_usd": 9780,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 95,
+      "occupancy_rate_est": "74.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.635526,
+        "lng": -121.929311
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "965241307518489125",
+      "name": "3905 Oceano Azul - Near Butterfly Sanctuary, Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 318.0,
+      "monthly_est_usd": 9540,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 277,
+      "occupancy_rate_est": "24.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.628848,
+        "lng": -121.931886
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "966275804147440557",
+      "name": "Private Room",
+      "host": "Faye",
+      "host_id": "10752409",
+      "room_type": "Private room",
+      "price_usd": 58.0,
+      "monthly_est_usd": 1740,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 1.25,
+      "availability_365": 270,
+      "occupancy_rate_est": "26.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60429,
+        "lng": -121.931
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1005024310075425769",
+      "name": "US OPEN Special \nUpdated and Spacious",
+      "host": "Michelle",
+      "host_id": "389510684",
+      "room_type": "Entire home/apt",
+      "price_usd": 2867.0,
+      "monthly_est_usd": 86010,
+      "minimum_nights": 5,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 362,
+      "occupancy_rate_est": "0.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61365674525382,
+        "lng": -121.92140978358493
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1025589748925418589",
+      "name": "Ain't Life Grand? Downtown Oasis",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 470.0,
+      "monthly_est_usd": 14100,
+      "minimum_nights": 1,
+      "reviews": 73,
+      "reviews_per_month": 2.12,
+      "availability_365": 218,
+      "occupancy_rate_est": "40.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62134,
+        "lng": -121.91842
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1025604649934814205",
+      "name": "A Tiny House - Two Blocks to the Beach!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 438.0,
+      "monthly_est_usd": 13140,
+      "minimum_nights": 1,
+      "reviews": 55,
+      "reviews_per_month": 1.68,
+      "availability_365": 186,
+      "occupancy_rate_est": "49.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62458,
+        "lng": -121.92187
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1026245119220707284",
+      "name": "Lover's Point 6 - Prime Beach Location",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 668.0,
+      "monthly_est_usd": 20040,
+      "minimum_nights": 1,
+      "reviews": 54,
+      "reviews_per_month": 1.58,
+      "availability_365": 212,
+      "occupancy_rate_est": "41.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62362,
+        "lng": -121.91622
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "1026263523763027719",
+      "name": "Fountain Avenue - By the Beach!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 445.0,
+      "monthly_est_usd": 13350,
+      "minimum_nights": 1,
+      "reviews": 51,
+      "reviews_per_month": 1.47,
+      "availability_365": 64,
+      "occupancy_rate_est": "82.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62266,
+        "lng": -121.91526
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1035683605362677222",
+      "name": "Hipster Vibe - Downtown, two blocks to the beach!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 419.0,
+      "monthly_est_usd": 12570,
+      "minimum_nights": 2,
+      "reviews": 60,
+      "reviews_per_month": 1.79,
+      "availability_365": 222,
+      "occupancy_rate_est": "39.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62035,
+        "lng": -121.91807
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1050805310792689932",
+      "name": "3917 Casa Blanca-Updated Bungalow with Bonus Room",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1248.0,
+      "monthly_est_usd": 37440,
+      "minimum_nights": 1,
+      "reviews": 70,
+      "reviews_per_month": 2.2,
+      "availability_365": 324,
+      "occupancy_rate_est": "11.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6214485168457,
+        "lng": -121.91130065917969
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1068359558976920980",
+      "name": "Cozy home in the heart of Monterey Bay",
+      "host": "Erik Cushman",
+      "host_id": "188307379",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 28,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 362,
+      "occupancy_rate_est": "0.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60092,
+        "lng": -121.9337
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1073858014090285003",
+      "name": "Angel Hill compound near beach",
+      "host": "Veronika",
+      "host_id": "1440554",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 3,
+      "reviews": 2,
+      "reviews_per_month": 0.08,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61283626921698,
+        "lng": -121.91929159760313
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1098170157074983333",
+      "name": "Private PG oasis",
+      "host": "Rachel",
+      "host_id": "137325480",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 269,
+      "occupancy_rate_est": "26.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6013112,
+        "lng": -121.9347339
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1105456677564323636",
+      "name": "Mid-Term Downtown Hideaway",
+      "host": "Brij",
+      "host_id": "73096594",
+      "room_type": "Entire home/apt",
+      "price_usd": 186.0,
+      "monthly_est_usd": 5580,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61993,
+        "lng": -121.91553
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Downtown Core",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1109584824450507267",
+      "name": "Picturesque Historic Victorian",
+      "host": "Carolee",
+      "host_id": "565262080",
+      "room_type": "Entire home/apt",
+      "price_usd": 192.0,
+      "monthly_est_usd": 5760,
+      "minimum_nights": 31,
+      "reviews": 7,
+      "reviews_per_month": 0.25,
+      "availability_365": 199,
+      "occupancy_rate_est": "45.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62078988431048,
+        "lng": -121.91486061268878
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Heritage / Victorian Architecture",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1110347519067097201",
+      "name": "3922 Pelican Gate - Walk to Beach & Coastal Trail",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1162.0,
+      "monthly_est_usd": 34860,
+      "minimum_nights": 1,
+      "reviews": 50,
+      "reviews_per_month": 1.69,
+      "availability_365": 305,
+      "occupancy_rate_est": "16.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62998580932617,
+        "lng": -121.93340301513672
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1116144005742917984",
+      "name": "Petit Maison: Two bedroom w dedicated workspace",
+      "host": "Catherine",
+      "host_id": "15572126",
+      "room_type": "Entire home/apt",
+      "price_usd": 219.0,
+      "monthly_est_usd": 6570,
+      "minimum_nights": 23,
+      "reviews": 8,
+      "reviews_per_month": 0.28,
+      "availability_365": 85,
+      "occupancy_rate_est": "76.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61939,
+        "lng": -121.92063
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "1131236667175326315",
+      "name": "Saltbox - In the Heart of Pacific Grove",
+      "host": "Michael",
+      "host_id": "548747207",
+      "room_type": "Entire home/apt",
+      "price_usd": 753.0,
+      "monthly_est_usd": 22590,
+      "minimum_nights": 1,
+      "reviews": 40,
+      "reviews_per_month": 1.46,
+      "availability_365": 270,
+      "occupancy_rate_est": "26.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62335704317952,
+        "lng": -121.91875816195812
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1131255910980483031",
+      "name": "Gingerbread - Close to the beach",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 694.0,
+      "monthly_est_usd": 20820,
+      "minimum_nights": 2,
+      "reviews": 55,
+      "reviews_per_month": 2.1,
+      "availability_365": 241,
+      "occupancy_rate_est": "34.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.622719766537394,
+        "lng": -121.91926346794818
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1131256594530573174",
+      "name": "The White House - Best Location Lover's Point!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 965.0,
+      "monthly_est_usd": 28950,
+      "minimum_nights": 1,
+      "reviews": 67,
+      "reviews_per_month": 2.46,
+      "availability_365": 287,
+      "occupancy_rate_est": "21.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.624336254924444,
+        "lng": -121.91738617692566
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1131257317917474953",
+      "name": "Beachouse - Luxury at Asilomar",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 926.0,
+      "monthly_est_usd": 27780,
+      "minimum_nights": 1,
+      "reviews": 60,
+      "reviews_per_month": 2.12,
+      "availability_365": 214,
+      "occupancy_rate_est": "41.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62337898077188,
+        "lng": -121.93747708912032
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Asilomar Corridor",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1131459320992924360",
+      "name": "Modern Cabin near Lover's Point",
+      "host": "Anna",
+      "host_id": "11239964",
+      "room_type": "Entire home/apt",
+      "price_usd": 663.0,
+      "monthly_est_usd": 19890,
+      "minimum_nights": 3,
+      "reviews": 21,
+      "reviews_per_month": 0.81,
+      "availability_365": 124,
+      "occupancy_rate_est": "66.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62169,
+        "lng": -121.92117
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "1136256728572419222",
+      "name": "Sweet Pea - Cottage by the Sea",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 459.0,
+      "monthly_est_usd": 13770,
+      "minimum_nights": 1,
+      "reviews": 43,
+      "reviews_per_month": 1.54,
+      "availability_365": 261,
+      "occupancy_rate_est": "28.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.622959760382315,
+        "lng": -121.91742827565686
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1136257082350257155",
+      "name": "Blue Horizons: On a Clear Day, You Can See Forever",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 1230.0,
+      "monthly_est_usd": 36900,
+      "minimum_nights": 1,
+      "reviews": 63,
+      "reviews_per_month": 2.26,
+      "availability_365": 286,
+      "occupancy_rate_est": "21.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.627807885253524,
+        "lng": -121.92134849758291
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1136262908735100103",
+      "name": "Daffodil House - A Block to the Beach!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 665.0,
+      "monthly_est_usd": 19950,
+      "minimum_nights": 1,
+      "reviews": 44,
+      "reviews_per_month": 1.63,
+      "availability_365": 43,
+      "occupancy_rate_est": "88.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623196977009535,
+        "lng": -121.91710360102326
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1136263334254484468",
+      "name": "Beach Club - Two Blocks to the Ocean",
+      "host": "Michelle",
+      "host_id": "572556535",
+      "room_type": "Entire home/apt",
+      "price_usd": 1299.0,
+      "monthly_est_usd": 38970,
+      "minimum_nights": 1,
+      "reviews": 46,
+      "reviews_per_month": 1.85,
+      "availability_365": 255,
+      "occupancy_rate_est": "30.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62167595676445,
+        "lng": -121.91482456922532
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1136263775328172735",
+      "name": "Gratitude Inn - Downtown, Walk to the Beach!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 599.0,
+      "monthly_est_usd": 17970,
+      "minimum_nights": 2,
+      "reviews": 42,
+      "reviews_per_month": 1.53,
+      "availability_365": 314,
+      "occupancy_rate_est": "14.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62069755543468,
+        "lng": -121.9158187853554
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1136286711699136738",
+      "name": "Seafarer - The ocean is your backyard!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 1082.0,
+      "monthly_est_usd": 32460,
+      "minimum_nights": 1,
+      "reviews": 58,
+      "reviews_per_month": 2.11,
+      "availability_365": 298,
+      "occupancy_rate_est": "18.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620253300562666,
+        "lng": -121.90785411479844
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1142214258811770206",
+      "name": "Boathouse - Aye, Aye, Captain!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 232.0,
+      "monthly_est_usd": 6960,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 155,
+      "occupancy_rate_est": "57.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.625513537190045,
+        "lng": -121.92577471381902
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1142216274682452511",
+      "name": "Latitude Adjustment - Oceanview deck, pet friendly",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 4,
+      "reviews_per_month": 0.25,
+      "availability_365": 274,
+      "occupancy_rate_est": "24.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61351319409598,
+        "lng": -121.91388376376096
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "1143731069655683058",
+      "name": "Bellisima - Portofino in Pacific Grove!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 29,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 208,
+      "occupancy_rate_est": "43.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62937461908551,
+        "lng": -121.9229840190588
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1143731970831904418",
+      "name": "Butterfly Haven - Near Asilomar Beach!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 197.0,
+      "monthly_est_usd": 5910,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 252,
+      "occupancy_rate_est": "31.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62842507707562,
+        "lng": -121.93383906132647
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Asilomar Corridor",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1143732157444839791",
+      "name": "Cannery Row Cottage - Walk to the Aquarium!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.07,
+      "availability_365": 260,
+      "occupancy_rate_est": "28.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61668891775566,
+        "lng": -121.9060510635376
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "1143732677806252314",
+      "name": "Casa Simpatico - Lover's Point Beach",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 0.19,
+      "availability_365": 261,
+      "occupancy_rate_est": "28.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62408610612026,
+        "lng": -121.91671261566024
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "1143733457125469859",
+      "name": "Fourth Tee - Ocean & Golf Views",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 242,
+      "occupancy_rate_est": "33.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.628597323614144,
+        "lng": -121.9265054840103
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1143734060655808499",
+      "name": "Harmony Home - Perfect Pacific Grove location",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 237,
+      "occupancy_rate_est": "35.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61675940975052,
+        "lng": -121.91393408963849
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1143736284934826935",
+      "name": "Monarch - Luxury oceanview",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 219.0,
+      "monthly_est_usd": 6570,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 235,
+      "occupancy_rate_est": "35.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62740705682075,
+        "lng": -121.9280237197876
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1143740787409568406",
+      "name": "Riviera - On Top of the World!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 273,
+      "occupancy_rate_est": "25.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6060616301973,
+        "lng": -121.9249308786008
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1143741292632723594",
+      "name": "Sailaway - Oceanview, Walk to Beach",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 171,
+      "occupancy_rate_est": "53.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6178267348345,
+        "lng": -121.90938139604853
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1143741843016092024",
+      "name": "Simple Pleasures - Chill, Baby, Chill!",
+      "host": "Michael",
+      "host_id": "548747207",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.05,
+      "availability_365": 149,
+      "occupancy_rate_est": "59.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62167054656311,
+        "lng": -121.92556757264799
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1143742162744265949",
+      "name": "Snuggle Up: studio cottage one mile from the beach",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 97.0,
+      "monthly_est_usd": 2910,
+      "minimum_nights": 30,
+      "reviews": 4,
+      "reviews_per_month": 0.23,
+      "availability_365": 316,
+      "occupancy_rate_est": "13.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61549208877226,
+        "lng": -121.91932798320411
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1143742398758909994",
+      "name": "Sunset Drive - Asilomar Beach across the street!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 259,
+      "occupancy_rate_est": "29.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61584987613967,
+        "lng": -121.93297043297368
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Asilomar Corridor"
+      ]
+    },
+    {
+      "id": "1143742668325615150",
+      "name": "Tea for Two - Upper Pacific Grove",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 113,
+      "occupancy_rate_est": "69.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.605708200140846,
+        "lng": -121.92332448959351
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1143743517306638629",
+      "name": "Victorian Dollhouse - Beach and Town",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 174,
+      "occupancy_rate_est": "52.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623083978227115,
+        "lng": -121.91935704331974
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "1143743744118021814",
+      "name": "Zatara - Ocean Views!",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 157,
+      "occupancy_rate_est": "57.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.632920178480695,
+        "lng": -121.92356664278066
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1150832711055711354",
+      "name": "Five O'clock Somewhere - Walk to the Beach!",
+      "host": "Kyle",
+      "host_id": "529781693",
+      "room_type": "Entire home/apt",
+      "price_usd": 669.0,
+      "monthly_est_usd": 20070,
+      "minimum_nights": 1,
+      "reviews": 62,
+      "reviews_per_month": 2.34,
+      "availability_365": 280,
+      "occupancy_rate_est": "23.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61986861877182,
+        "lng": -121.91557878720789
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1162239634880358531",
+      "name": "Green Gables Inn, A Four Sisters Inn, The Lacy su.",
+      "host": "Green Gables Inn",
+      "host_id": "576172734",
+      "room_type": "Private room",
+      "price_usd": 431.0,
+      "monthly_est_usd": 12930,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 74,
+      "occupancy_rate_est": "79.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6205885,
+        "lng": -121.9094642
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1162239635077874324",
+      "name": "Green Gables Inn, A Four Sisters Inn, The carriag.",
+      "host": "Green Gables Inn",
+      "host_id": "576172734",
+      "room_type": "Private room",
+      "price_usd": 422.0,
+      "monthly_est_usd": 12660,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 96,
+      "occupancy_rate_est": "73.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6205885,
+        "lng": -121.9094642
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1162240166122696213",
+      "name": "Green Gables Inn, A Four Sisters Inn, The sandpip.",
+      "host": "Green Gables Inn",
+      "host_id": "576172734",
+      "room_type": "Private room",
+      "price_usd": 382.0,
+      "monthly_est_usd": 11460,
+      "minimum_nights": 1,
+      "reviews": 9,
+      "reviews_per_month": 2.05,
+      "availability_365": 82,
+      "occupancy_rate_est": "77.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6205885,
+        "lng": -121.9094642
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1162240176899696417",
+      "name": "Green Gables Inn, A Four Sisters Inn, The carriag.",
+      "host": "Green Gables Inn",
+      "host_id": "576172734",
+      "room_type": "Private room",
+      "price_usd": 477.0,
+      "monthly_est_usd": 14310,
+      "minimum_nights": 1,
+      "reviews": 9,
+      "reviews_per_month": 2.05,
+      "availability_365": 89,
+      "occupancy_rate_est": "75.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6205885,
+        "lng": -121.9094642
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1162240403628483167",
+      "name": "Green Gables Inn, A Four Sisters Inn, The pacific.",
+      "host": "Green Gables Inn",
+      "host_id": "576172734",
+      "room_type": "Private room",
+      "price_usd": 382.0,
+      "monthly_est_usd": 11460,
+      "minimum_nights": 1,
+      "reviews": 9,
+      "reviews_per_month": 2.05,
+      "availability_365": 79,
+      "occupancy_rate_est": "78.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6205885,
+        "lng": -121.9094642
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1163100947286808136",
+      "name": "New, bright, private 1/1 cottage w/qn sofa sleeper",
+      "host": "Catherine",
+      "host_id": "440214273",
+      "room_type": "Entire home/apt",
+      "price_usd": 161.0,
+      "monthly_est_usd": 4830,
+      "minimum_nights": 5,
+      "reviews": 12,
+      "reviews_per_month": 0.45,
+      "availability_365": 271,
+      "occupancy_rate_est": "25.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6146346,
+        "lng": -121.9240823
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1169185454120309042",
+      "name": "Pacific Grove Retreat w/ Hot Tub",
+      "host": "Catherine",
+      "host_id": "110463163",
+      "room_type": "Entire home/apt",
+      "price_usd": 715.0,
+      "monthly_est_usd": 21450,
+      "minimum_nights": 1,
+      "reviews": 93,
+      "reviews_per_month": 3.36,
+      "availability_365": 244,
+      "occupancy_rate_est": "33.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6122339,
+        "lng": -121.923672
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Wellness & Spa"
+      ]
+    },
+    {
+      "id": "1179050545942260141",
+      "name": "3941 Casaletto at 17 Mile Drive ~ Cozy and Updated",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 201.0,
+      "monthly_est_usd": 6030,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 0.09,
+      "availability_365": 275,
+      "occupancy_rate_est": "24.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.625144958496094,
+        "lng": -121.92780303955078
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1183011317341746919",
+      "name": "Designer Cottage ~ Pacific Grove",
+      "host": "Lisa",
+      "host_id": "15111298",
+      "room_type": "Entire home/apt",
+      "price_usd": 189.0,
+      "monthly_est_usd": 5670,
+      "minimum_nights": 30,
+      "reviews": 9,
+      "reviews_per_month": 0.36,
+      "availability_365": 172,
+      "occupancy_rate_est": "52.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6228304,
+        "lng": -121.9172744
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1184796000990994176",
+      "name": "Pacific Grove 1 BR Walk to Lovers Point &\nDowntown",
+      "host": "Gratia",
+      "host_id": "17084954",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 10,
+      "reviews_per_month": 0.39,
+      "availability_365": 169,
+      "occupancy_rate_est": "53.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6224589,
+        "lng": -121.9221396
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Lovers Point",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1187770695888358789",
+      "name": "Coastal Haven near Lover's Point",
+      "host": "Anna",
+      "host_id": "11239964",
+      "room_type": "Entire home/apt",
+      "price_usd": 80.0,
+      "monthly_est_usd": 2400,
+      "minimum_nights": 5,
+      "reviews": 8,
+      "reviews_per_month": 0.33,
+      "availability_365": 245,
+      "occupancy_rate_est": "32.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6213724,
+        "lng": -121.9207852
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1194099128559476706",
+      "name": "3943 Rad Beach House - Near Beach & Coastal Trail",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1061.0,
+      "monthly_est_usd": 31830,
+      "minimum_nights": 1,
+      "reviews": 27,
+      "reviews_per_month": 1.21,
+      "availability_365": 315,
+      "occupancy_rate_est": "13.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.624481,
+        "lng": -121.918902
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1206532012959254380",
+      "name": "Oceanfront Pacific Grove Home Near Pebble Beach",
+      "host": "Grand Welcome",
+      "host_id": "475453576",
+      "room_type": "Entire home/apt",
+      "price_usd": 301.0,
+      "monthly_est_usd": 9030,
+      "minimum_nights": 28,
+      "reviews": 3,
+      "reviews_per_month": 0.16,
+      "availability_365": 129,
+      "occupancy_rate_est": "64.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63584672,
+        "lng": -121.92930462
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1212963736910431053",
+      "name": "3946 Listen to the Waves - Oceanfront, Bay View",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 803.0,
+      "monthly_est_usd": 24090,
+      "minimum_nights": 1,
+      "reviews": 47,
+      "reviews_per_month": 1.82,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.621116638183594,
+        "lng": -121.91044616699219
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1213851972337572222",
+      "name": "Lighthouse Lodge and Cottages, Selected by hotel",
+      "host": "Lighthouse Lodge And Cottages",
+      "host_id": "577971599",
+      "room_type": "Private room",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 264,
+      "reviews_per_month": 10.14,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6306737,
+        "lng": -121.9307782
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1214820875588666513",
+      "name": "Studio Apt on Ocean View Blvd, Views and Location!",
+      "host": "Justin",
+      "host_id": "114046202",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 2,
+      "reviews": 8,
+      "reviews_per_month": 0.31,
+      "availability_365": 0,
+      "occupancy_rate_est": "100.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.626855569541746,
+        "lng": -121.91905237734318
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1222708469305395405",
+      "name": "Cozy bedroom in Monterey Bay",
+      "host": "Faye",
+      "host_id": "10752409",
+      "room_type": "Private room",
+      "price_usd": 148.0,
+      "monthly_est_usd": 4440,
+      "minimum_nights": 1,
+      "reviews": 18,
+      "reviews_per_month": 1.37,
+      "availability_365": 77,
+      "occupancy_rate_est": "78.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60469,
+        "lng": -121.931
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1278325977977274305",
+      "name": "Gorgeous Studio Close to All",
+      "host": "Anya",
+      "host_id": "659580853",
+      "room_type": "Entire home/apt",
+      "price_usd": 315.0,
+      "monthly_est_usd": 9450,
+      "minimum_nights": 1,
+      "reviews": 40,
+      "reviews_per_month": 1.74,
+      "availability_365": 29,
+      "occupancy_rate_est": "92.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61273904282698,
+        "lng": -121.92461240606941
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1287714878773685654",
+      "name": "Pacific Grove Home Walk to Lovers Point Sleeps 4",
+      "host": "Grand Welcome",
+      "host_id": "475453576",
+      "room_type": "Entire home/apt",
+      "price_usd": 127.0,
+      "monthly_est_usd": 3810,
+      "minimum_nights": 28,
+      "reviews": 3,
+      "reviews_per_month": 0.15,
+      "availability_365": 298,
+      "occupancy_rate_est": "18.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6243992,
+        "lng": -121.9185039
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Lovers Point",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1293749033179292513",
+      "name": "Charming Pacific Grove Retreat 3bd/2bath",
+      "host": "Tracy",
+      "host_id": "159689110",
+      "room_type": "Entire home/apt",
+      "price_usd": 668.0,
+      "monthly_est_usd": 20040,
+      "minimum_nights": 1,
+      "reviews": 112,
+      "reviews_per_month": 5.01,
+      "availability_365": 149,
+      "occupancy_rate_est": "59.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60212,
+        "lng": -121.93115
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1301579566788009129",
+      "name": "Renovated ocean-view oasis",
+      "host": "Shahin",
+      "host_id": "658677244",
+      "room_type": "Private room",
+      "price_usd": 246.0,
+      "monthly_est_usd": 7380,
+      "minimum_nights": 1,
+      "reviews": 1,
+      "reviews_per_month": 0.07,
+      "availability_365": 363,
+      "occupancy_rate_est": "0.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.606571981932866,
+        "lng": -121.92331189982717
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1303042343705389540",
+      "name": "Charming Tudor, one block to seashore, 30-day min",
+      "host": "Blake",
+      "host_id": "195732",
+      "room_type": "Entire home/apt",
+      "price_usd": 243.0,
+      "monthly_est_usd": 7290,
+      "minimum_nights": 27,
+      "reviews": 6,
+      "reviews_per_month": 0.33,
+      "availability_365": 44,
+      "occupancy_rate_est": "87.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62506216577112,
+        "lng": -121.93604311982419
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "1305211138058635292",
+      "name": "3957 Lighthouse Landing ~ Walk to Dining and Beach",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 884.0,
+      "monthly_est_usd": 26520,
+      "minimum_nights": 1,
+      "reviews": 23,
+      "reviews_per_month": 1.14,
+      "availability_365": 346,
+      "occupancy_rate_est": "5.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.622884,
+        "lng": -121.921014
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1308783140523718238",
+      "name": "Charming home near downtown and beach",
+      "host": "Leticia",
+      "host_id": "3564809",
+      "room_type": "Entire home/apt",
+      "price_usd": 558.0,
+      "monthly_est_usd": 16740,
+      "minimum_nights": 2,
+      "reviews": 16,
+      "reviews_per_month": 0.74,
+      "availability_365": 89,
+      "occupancy_rate_est": "75.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62408616849449,
+        "lng": -121.9250451834451
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1332627055572197181",
+      "name": "Charming PG Cottage with Ocean Views!",
+      "host": "Carmel Coast Estate",
+      "host_id": "161014914",
+      "room_type": "Entire home/apt",
+      "price_usd": 297.0,
+      "monthly_est_usd": 8910,
+      "minimum_nights": 30,
+      "reviews": 6,
+      "reviews_per_month": 0.36,
+      "availability_365": 79,
+      "occupancy_rate_est": "78.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6039539,
+        "lng": -121.9177115
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1334121990060114372",
+      "name": "Casa Hatch: Downtown Hideaway",
+      "host": "Brij",
+      "host_id": "73096594",
+      "room_type": "Entire home/apt",
+      "price_usd": 555.0,
+      "monthly_est_usd": 16650,
+      "minimum_nights": 2,
+      "reviews": 85,
+      "reviews_per_month": 4.72,
+      "availability_365": 296,
+      "occupancy_rate_est": "18.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6200807,
+        "lng": -121.9159941
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1343698856513261679",
+      "name": "Charming One Bedroom Duplex",
+      "host": "Evelyn",
+      "host_id": "398938178",
+      "room_type": "Entire home/apt",
+      "price_usd": 134.0,
+      "monthly_est_usd": 4020,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.36,
+      "availability_365": 250,
+      "occupancy_rate_est": "31.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60116,
+        "lng": -121.93144
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1345819065299510936",
+      "name": "3119 Yellow House Guest - Almost Oceanfront!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 241.0,
+      "monthly_est_usd": 7230,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 365,
+      "occupancy_rate_est": "0.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620371,
+        "lng": -121.909139
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1350817878527713956",
+      "name": "Pacific Grove Bungalow near Bay",
+      "host": "Anna",
+      "host_id": "11239964",
+      "room_type": "Entire home/apt",
+      "price_usd": 303.0,
+      "monthly_est_usd": 9090,
+      "minimum_nights": 4,
+      "reviews": 6,
+      "reviews_per_month": 0.36,
+      "availability_365": 359,
+      "occupancy_rate_est": "1.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6135732,
+        "lng": -121.9140857
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1355835907051199620",
+      "name": "Seawatch - Monterey Bay Beauty",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.08,
+      "availability_365": 1,
+      "occupancy_rate_est": "99.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61617,
+        "lng": -121.90822
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1390823637877640361",
+      "name": "3970 Wave Watcher - Panoramic Oceanfront Bay Views",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 338.0,
+      "monthly_est_usd": 10140,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 210,
+      "occupancy_rate_est": "42.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63603,
+        "lng": -121.930059
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1424719855650397471",
+      "name": "Cozy Coastal Cottage",
+      "host": "Susan",
+      "host_id": "130003926",
+      "room_type": "Entire home/apt",
+      "price_usd": 114.0,
+      "monthly_est_usd": 3420,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.83,
+      "availability_365": 333,
+      "occupancy_rate_est": "8.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.627943890840676,
+        "lng": -121.93424947437805
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1426172996599751724",
+      "name": "Otter Cove Beach Front House",
+      "host": "Thomas",
+      "host_id": "13638921",
+      "room_type": "Entire home/apt",
+      "price_usd": 648.0,
+      "monthly_est_usd": 19440,
+      "minimum_nights": 1,
+      "reviews": 17,
+      "reviews_per_month": 1.11,
+      "availability_365": 195,
+      "occupancy_rate_est": "46.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6279368,
+        "lng": -121.921577
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1431320208882452504",
+      "name": "Queen Bed Near Beach",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 212.0,
+      "monthly_est_usd": 6360,
+      "minimum_nights": 1,
+      "reviews": 1,
+      "reviews_per_month": 0.51,
+      "availability_365": 333,
+      "occupancy_rate_est": "8.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6186738,
+        "lng": -121.919066
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1431351604906578703",
+      "name": "Queen Suite with Sea View (Upstairs)",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 300.0,
+      "monthly_est_usd": 9000,
+      "minimum_nights": 1,
+      "reviews": 1,
+      "reviews_per_month": 0.15,
+      "availability_365": 311,
+      "occupancy_rate_est": "14.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61896873626985,
+        "lng": -121.91977902936512
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1431351687495064782",
+      "name": "Queen, Twin & Sofa Bed plus View (Top Floor)",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 324.0,
+      "monthly_est_usd": 9720,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 328,
+      "occupancy_rate_est": "10.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61932167042702,
+        "lng": -121.91817400786628
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1431423159673907424",
+      "name": "Queen Bed  Partial Accessible",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 436.0,
+      "monthly_est_usd": 13080,
+      "minimum_nights": 1,
+      "reviews": 2,
+      "reviews_per_month": 0.19,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6186738,
+        "lng": -121.919066
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1432682178740146431",
+      "name": "Queen with Twin Bed near beach (Upstairs)",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 234.0,
+      "monthly_est_usd": 7020,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 316,
+      "occupancy_rate_est": "13.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619382595227165,
+        "lng": -121.91867390332649
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1434356907883300438",
+      "name": "King Bedroom Near beach",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 223.0,
+      "monthly_est_usd": 6690,
+      "minimum_nights": 1,
+      "reviews": 10,
+      "reviews_per_month": 0.65,
+      "availability_365": 340,
+      "occupancy_rate_est": "6.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61808716442019,
+        "lng": -121.91796906009375
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1434362893694633070",
+      "name": "Cellar Family Suite \u2013 King Bed & 2 Twin Beds",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 256.0,
+      "monthly_est_usd": 7680,
+      "minimum_nights": 1,
+      "reviews": 14,
+      "reviews_per_month": 0.94,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6186738,
+        "lng": -121.919066
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1434368348248238825",
+      "name": "Cellar Suite\u2013Queen Bed with Bunk Bed Dog-Friendly",
+      "host": "The Charles Pacific Grove",
+      "host_id": "697713337",
+      "room_type": "Private room",
+      "price_usd": 256.0,
+      "monthly_est_usd": 7680,
+      "minimum_nights": 1,
+      "reviews": 4,
+      "reviews_per_month": 0.71,
+      "availability_365": 341,
+      "occupancy_rate_est": "6.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61865657757452,
+        "lng": -121.91910891534424
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "1435569376116405983",
+      "name": "3962 High Tide -Close to Downtown, Peek of the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 288.0,
+      "monthly_est_usd": 8640,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.63,
+      "availability_365": 365,
+      "occupancy_rate_est": "0.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618602,
+        "lng": -121.909721
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1436294202650440675",
+      "name": "3963 Low Tide - Walk to Aquarium, Bay and Downtown",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 223.0,
+      "monthly_est_usd": 6690,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 216,
+      "occupancy_rate_est": "40.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618602,
+        "lng": -121.909721
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Aquarium & Cannery Row",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1439576861326046470",
+      "name": "Serene Pacific Grove Getaway",
+      "host": "Tracy",
+      "host_id": "159689110",
+      "room_type": "Entire home/apt",
+      "price_usd": 542.0,
+      "monthly_est_usd": 16260,
+      "minimum_nights": 2,
+      "reviews": 58,
+      "reviews_per_month": 3.79,
+      "availability_365": 151,
+      "occupancy_rate_est": "58.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60487,
+        "lng": -121.92709
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1442182954773083829",
+      "name": "3965 Marine Gardens - Oceanfront with Bay Views",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1149.0,
+      "monthly_est_usd": 34470,
+      "minimum_nights": 1,
+      "reviews": 21,
+      "reviews_per_month": 1.52,
+      "availability_365": 319,
+      "occupancy_rate_est": "12.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.626985,
+        "lng": -121.91964
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1470476258143471749",
+      "name": "Cottage - Walk to Town & Beach.",
+      "host": "Sal",
+      "host_id": "708783277",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 29,
+      "reviews": 1,
+      "reviews_per_month": 1.0,
+      "availability_365": 167,
+      "occupancy_rate_est": "54.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61752,
+        "lng": -121.92222
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1473215117548130546",
+      "name": "Coastal Living in Pacific Grove",
+      "host": "Ben",
+      "host_id": "29133340",
+      "room_type": "Entire home/apt",
+      "price_usd": 214.0,
+      "monthly_est_usd": 6420,
+      "minimum_nights": 31,
+      "reviews": 2,
+      "reviews_per_month": 0.22,
+      "availability_365": 285,
+      "occupancy_rate_est": "21.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6170181,
+        "lng": -121.9217607
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1473448085683688186",
+      "name": "Compass Rose - Beach Getaway",
+      "host": "Dave & Lee",
+      "host_id": "4591051",
+      "room_type": "Entire home/apt",
+      "price_usd": 312.0,
+      "monthly_est_usd": 9360,
+      "minimum_nights": 30,
+      "reviews": 1,
+      "reviews_per_month": 0.11,
+      "availability_365": 364,
+      "occupancy_rate_est": "0.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.63046,
+        "lng": -121.92408
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1492172065397068215",
+      "name": "3976 Beach House on Asilomar~ Oceanfront View Home",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1603.0,
+      "monthly_est_usd": 48090,
+      "minimum_nights": 1,
+      "reviews": 8,
+      "reviews_per_month": 0.77,
+      "availability_365": 274,
+      "occupancy_rate_est": "24.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.623217,
+        "lng": -121.939929
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Asilomar Corridor",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1531910546359693118",
+      "name": "Nancy's Cottage 2BR 1.5BA Pacific Grove",
+      "host": "Carmel Coast Estate",
+      "host_id": "161014914",
+      "room_type": "Entire home/apt",
+      "price_usd": 229.0,
+      "monthly_est_usd": 6870,
+      "minimum_nights": 30,
+      "reviews": 2,
+      "reviews_per_month": 0.28,
+      "availability_365": 242,
+      "occupancy_rate_est": "33.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62816,
+        "lng": -121.92665
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1532733634874818268",
+      "name": "Cozy Cottage with Hot Tub",
+      "host": "Kiki",
+      "host_id": "74218322",
+      "room_type": "Entire home/apt",
+      "price_usd": 637.0,
+      "monthly_est_usd": 19110,
+      "minimum_nights": 3,
+      "reviews": 38,
+      "reviews_per_month": 3.36,
+      "availability_365": 264,
+      "occupancy_rate_est": "27.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6007269,
+        "lng": -121.9321783
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Wellness & Spa"
+      ]
+    },
+    {
+      "id": "1538487527717645956",
+      "name": "3987 Lovers Point Whitewater Cottage, Bay View!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1287.0,
+      "monthly_est_usd": 38610,
+      "minimum_nights": 1,
+      "reviews": 27,
+      "reviews_per_month": 2.79,
+      "availability_365": 313,
+      "occupancy_rate_est": "14.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62232971191406,
+        "lng": -121.91429901123047
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1561710545646548152",
+      "name": "3988 Cannery Cottage - Coastal Living Near the Bay",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 1156.0,
+      "monthly_est_usd": 34680,
+      "minimum_nights": 1,
+      "reviews": 10,
+      "reviews_per_month": 1.36,
+      "availability_365": 323,
+      "occupancy_rate_est": "11.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.619476318359375,
+        "lng": -121.90673065185547
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Aquarium & Cannery Row",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1565253235475170331",
+      "name": "Park Street Gem \u2013 Cozy, Bright Retreat by the Sea",
+      "host": "Anna",
+      "host_id": "11239964",
+      "room_type": "Entire home/apt",
+      "price_usd": 99.0,
+      "monthly_est_usd": 2970,
+      "minimum_nights": 5,
+      "reviews": 6,
+      "reviews_per_month": 0.77,
+      "availability_365": 173,
+      "occupancy_rate_est": "52.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62101,
+        "lng": -121.92132
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1571282702886814270",
+      "name": "Coastal Retreat. Ocean View. Walk to Beach & Dine",
+      "host": "Faris",
+      "host_id": "7283194",
+      "room_type": "Entire home/apt",
+      "price_usd": 451.0,
+      "monthly_est_usd": 13530,
+      "minimum_nights": 1,
+      "reviews": 67,
+      "reviews_per_month": 7.1,
+      "availability_365": 117,
+      "occupancy_rate_est": "67.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6217004,
+        "lng": -121.9159766
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1580199012148566723",
+      "name": "Central Perch\n\nSTR Lic #0507",
+      "host": "Tom",
+      "host_id": "27360215",
+      "room_type": "Entire home/apt",
+      "price_usd": 1178.0,
+      "monthly_est_usd": 35340,
+      "minimum_nights": 2,
+      "reviews": 26,
+      "reviews_per_month": 2.87,
+      "availability_365": 279,
+      "occupancy_rate_est": "23.6%",
+      "license": "PG License #0507",
+      "coordinates": {
+        "lat": 36.6208383,
+        "lng": -121.9117169
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Luxury Estate"
+      ]
+    },
+    {
+      "id": "1597263071189135619",
+      "name": "4054 Casita Del Mar II, Bay View Mediterranean Gem",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 305.0,
+      "monthly_est_usd": 9150,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 32,
+      "occupancy_rate_est": "91.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618202209472656,
+        "lng": -121.91326904296875
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1608841749392581728",
+      "name": "30+ day Spacious pet friendly Pacific Grove Home",
+      "host": "Thomas",
+      "host_id": "184021204",
+      "room_type": "Entire home/apt",
+      "price_usd": 167.0,
+      "monthly_est_usd": 5010,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 298,
+      "occupancy_rate_est": "18.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6204164,
+        "lng": -121.9200851
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Pet-Friendly",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1617405093103095065",
+      "name": "Cypress in Sunlight",
+      "host": "David",
+      "host_id": "336466079",
+      "room_type": "Entire home/apt",
+      "price_usd": 217.0,
+      "monthly_est_usd": 6510,
+      "minimum_nights": 29,
+      "reviews": 1,
+      "reviews_per_month": 0.13,
+      "availability_365": 86,
+      "occupancy_rate_est": "76.4%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620173,
+        "lng": -121.9222109
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1625819417157736370",
+      "name": "Potter's Cottage",
+      "host": "Roeya",
+      "host_id": "598237630",
+      "room_type": "Entire home/apt",
+      "price_usd": 576.0,
+      "monthly_est_usd": 17280,
+      "minimum_nights": 1,
+      "reviews": 33,
+      "reviews_per_month": 4.93,
+      "availability_365": 264,
+      "occupancy_rate_est": "27.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6201879,
+        "lng": -121.919269
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1628359708352164014",
+      "name": "3997 Oceanview Oasis - Stunning Monterey Bay View",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 433.0,
+      "monthly_est_usd": 12990,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 208,
+      "occupancy_rate_est": "43.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61982727050781,
+        "lng": -121.90670776367188
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1640345896375474086",
+      "name": "Queen Bed - Basement No window (Dog friendly)",
+      "host": "Pacific",
+      "host_id": "270423498",
+      "room_type": "Private room",
+      "price_usd": 384.0,
+      "monthly_est_usd": 11520,
+      "minimum_nights": 1,
+      "reviews": 8,
+      "reviews_per_month": 2.2,
+      "availability_365": 321,
+      "occupancy_rate_est": "12.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61837,
+        "lng": -121.91922
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Pet-Friendly"
+      ]
+    },
+    {
+      "id": "1648668523305685955",
+      "name": "3998 Pacific Nirvana - 3 Blocks from the Beach!",
+      "host": "Sanctuary Vacation Rentals",
+      "host_id": "140243627",
+      "room_type": "Entire home/apt",
+      "price_usd": 300.0,
+      "monthly_est_usd": 9000,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 335,
+      "occupancy_rate_est": "8.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.620994567871094,
+        "lng": -121.91229248046875
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1653278294090624801",
+      "name": "Cozy Comfort - Minutes From Cannery Row & Ocean",
+      "host": "Tracy",
+      "host_id": "159689110",
+      "room_type": "Entire home/apt",
+      "price_usd": 459.0,
+      "monthly_est_usd": 13770,
+      "minimum_nights": 1,
+      "reviews": 16,
+      "reviews_per_month": 3.36,
+      "availability_365": 125,
+      "occupancy_rate_est": "65.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62058,
+        "lng": -121.91385
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Aquarium & Cannery Row"
+      ]
+    },
+    {
+      "id": "1657393381754457583",
+      "name": "Monterey Bay Getaway",
+      "host": "Arta",
+      "host_id": "102432057",
+      "room_type": "Entire home/apt",
+      "price_usd": 856.0,
+      "monthly_est_usd": 25680,
+      "minimum_nights": 1,
+      "reviews": 1,
+      "reviews_per_month": 0.67,
+      "availability_365": 32,
+      "occupancy_rate_est": "91.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61681,
+        "lng": -121.92612
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1657448904586135681",
+      "name": "Lovers Point Hideaway \u2014 Coastal Retreat",
+      "host": "Tracy",
+      "host_id": "159689110",
+      "room_type": "Entire home/apt",
+      "price_usd": 213.0,
+      "monthly_est_usd": 6390,
+      "minimum_nights": 1,
+      "reviews": 15,
+      "reviews_per_month": 2.88,
+      "availability_365": 161,
+      "occupancy_rate_est": "55.9%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60412970873357,
+        "lng": -121.9287795984902
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point"
+      ]
+    },
+    {
+      "id": "1660408248925085464",
+      "name": "Lover's Point Victorian",
+      "host": "Rhonda",
+      "host_id": "110664679",
+      "room_type": "Entire home/apt",
+      "price_usd": 450.0,
+      "monthly_est_usd": 13500,
+      "minimum_nights": 2,
+      "reviews": 19,
+      "reviews_per_month": 5.18,
+      "availability_365": 36,
+      "occupancy_rate_est": "90.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62288,
+        "lng": -121.92203
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Heritage / Victorian Architecture"
+      ]
+    },
+    {
+      "id": "1675785664247851553",
+      "name": "Outside Inn - Downtown, Walk to the Beach",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 717.0,
+      "monthly_est_usd": 21510,
+      "minimum_nights": 2,
+      "reviews": 11,
+      "reviews_per_month": 2.56,
+      "availability_365": 308,
+      "occupancy_rate_est": "15.6%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61969453985717,
+        "lng": -121.91626502193893
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1679420005297947245",
+      "name": "Bedroom in Cottage Near Downtown and Lover's Point",
+      "host": "Leticia",
+      "host_id": "3564809",
+      "room_type": "Private room",
+      "price_usd": 110.0,
+      "monthly_est_usd": 3300,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 357,
+      "occupancy_rate_est": "2.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.62419544509788,
+        "lng": -121.92541934610006
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Lovers Point",
+        "Downtown Core",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1689350328179931584",
+      "name": "Surf and Stroll Suite/walk to beach & downtown",
+      "host": "Tim & Laurel",
+      "host_id": "85109993",
+      "room_type": "Entire home/apt",
+      "price_usd": 272.0,
+      "monthly_est_usd": 8160,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 364,
+      "occupancy_rate_est": "0.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6232227,
+        "lng": -121.9320064
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View",
+        "Downtown Core"
+      ]
+    },
+    {
+      "id": "1717681764739798627",
+      "name": "Never lived in new studio apartment in PG",
+      "host": "Anthony",
+      "host_id": "262861057",
+      "room_type": "Entire home/apt",
+      "price_usd": 253.0,
+      "monthly_est_usd": 7590,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 362,
+      "occupancy_rate_est": "0.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6060197,
+        "lng": -121.9209629
+      },
+      "tags": [
+        "30-Day Flexible Tenancy"
+      ]
+    },
+    {
+      "id": "1740776118928602585",
+      "name": "Pacific Grove Ocean View Dream",
+      "host": "Ann",
+      "host_id": "712775787",
+      "room_type": "Entire home/apt",
+      "price_usd": 420.0,
+      "monthly_est_usd": 12600,
+      "minimum_nights": 3,
+      "reviews": 1,
+      "reviews_per_month": 0.64,
+      "availability_365": 242,
+      "occupancy_rate_est": "33.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.61851,
+        "lng": -121.91671
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1744619755588903581",
+      "name": "Pacific Grove Nest (30 day or more rental only)",
+      "host": "Sarah",
+      "host_id": "92310585",
+      "room_type": "Entire home/apt",
+      "price_usd": 163.0,
+      "monthly_est_usd": 4890,
+      "minimum_nights": 7,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 124,
+      "occupancy_rate_est": "66.0%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.618352757394405,
+        "lng": -121.92146466627044
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1747285899795413100",
+      "name": "Monarch Pines 55+ at the Beach",
+      "host": "Monterey Rentals",
+      "host_id": "25773171",
+      "room_type": "Entire home/apt",
+      "price_usd": 0.0,
+      "monthly_est_usd": null,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 248,
+      "occupancy_rate_est": "32.1%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.626146376549066,
+        "lng": -121.9189471244812
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1749432451386832459",
+      "name": "Crespi Room",
+      "host": "Seven Gables Inn, A Kirkwood C",
+      "host_id": "1749432414474717348",
+      "room_type": "Private room",
+      "price_usd": 423.0,
+      "monthly_est_usd": 12690,
+      "minimum_nights": 1,
+      "reviews": 50,
+      "reviews_per_month": 0.4,
+      "availability_365": 65,
+      "occupancy_rate_est": "82.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6238396,
+        "lng": -121.9154994
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1749432451443474510",
+      "name": "Chautauqua Room Accessible",
+      "host": "Seven Gables Inn, A Kirkwood C",
+      "host_id": "1749432414474717348",
+      "room_type": "Private room",
+      "price_usd": 614.0,
+      "monthly_est_usd": 18420,
+      "minimum_nights": 1,
+      "reviews": 100,
+      "reviews_per_month": 0.76,
+      "availability_365": 76,
+      "occupancy_rate_est": "79.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6238396,
+        "lng": -121.9154994
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1749432451767777761",
+      "name": "Gable Room",
+      "host": "Seven Gables Inn, A Kirkwood C",
+      "host_id": "1749432414474717348",
+      "room_type": "Private room",
+      "price_usd": 375.0,
+      "monthly_est_usd": 11250,
+      "minimum_nights": 1,
+      "reviews": 100,
+      "reviews_per_month": 0.76,
+      "availability_365": 83,
+      "occupancy_rate_est": "77.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6238396,
+        "lng": -121.9154994
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1749432453385466442",
+      "name": "Carriage House Cottage",
+      "host": "Seven Gables Inn, A Kirkwood C",
+      "host_id": "1749432414474717348",
+      "room_type": "Private room",
+      "price_usd": 423.0,
+      "monthly_est_usd": 12690,
+      "minimum_nights": 1,
+      "reviews": 50,
+      "reviews_per_month": 0.4,
+      "availability_365": 72,
+      "occupancy_rate_est": "80.3%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6238396,
+        "lng": -121.9154994
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1749515595451626191",
+      "name": "Cedar Room",
+      "host": "Centrella Hotel, A Kirkwood Co",
+      "host_id": "1749515377220772143",
+      "room_type": "Private room",
+      "price_usd": 155.0,
+      "monthly_est_usd": 4650,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 87,
+      "occupancy_rate_est": "76.2%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6225307,
+        "lng": -121.918224
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Budget / Value Tier"
+      ]
+    },
+    {
+      "id": "1753112808719320043",
+      "name": "NEW studio apartment walk to restaurants/starbucks",
+      "host": "Briana",
+      "host_id": "276598804",
+      "room_type": "Entire home/apt",
+      "price_usd": 254.0,
+      "monthly_est_usd": 7620,
+      "minimum_nights": 4,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 355,
+      "occupancy_rate_est": "2.7%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6060197,
+        "lng": -121.9209629
+      },
+      "tags": [
+        "Short-Term Vacation"
+      ]
+    },
+    {
+      "id": "1777790575755831016",
+      "name": "New Luxury Coastal Home ~ 1 Block from the Ocean",
+      "host": "Rick Hadlock",
+      "host_id": "19120950",
+      "room_type": "Entire home/apt",
+      "price_usd": 284.0,
+      "monthly_est_usd": 8520,
+      "minimum_nights": 30,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 333,
+      "occupancy_rate_est": "8.8%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.6328397,
+        "lng": -121.9244005
+      },
+      "tags": [
+        "30-Day Flexible Tenancy",
+        "Coastal / Ocean View"
+      ]
+    },
+    {
+      "id": "1780200967287147798",
+      "name": "Sunset Cove \u2014 Pacific Grove by the Sea",
+      "host": "Tracy",
+      "host_id": "159689110",
+      "room_type": "Entire home/apt",
+      "price_usd": 545.0,
+      "monthly_est_usd": 16350,
+      "minimum_nights": 1,
+      "reviews": 0,
+      "reviews_per_month": 0.0,
+      "availability_365": 345,
+      "occupancy_rate_est": "5.5%",
+      "license": "",
+      "coordinates": {
+        "lat": 36.60027,
+        "lng": -121.9346
+      },
+      "tags": [
+        "Short-Term Vacation",
+        "Coastal / Ocean View"
+      ]
+    }
+  ]
+}

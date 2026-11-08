@@ -1,0 +1,60 @@
+name: CI & Automated Code Review
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main", "feature/**"]
+  workflow_dispatch:
+
+# Apply least privilege: default no permissions, declare explicitly in jobs
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  code-review:
+    name: Code Review & Quality Audit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      checks: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify JavaScript syntax & Sentinel AI test suite
+        run: |
+          node --check app.js
+          node --check chatbot.js
+          node --check building-tour.js
+          node scripts/test_sentinel_ai.js
+
+      - name: Run automated code review & security audit
+        run: |
+          python3 scripts/code_review.py
+
+      - name: Verify site references in workspace
+        run: |
+          python3 scripts/check_site.py .
+
+      - name: Test packaging & artifact integrity
+        run: |
+          mkdir -p _site
+          cp -R assets _site/
+          cp *.html *.css *.js .nojekyll _site/ 2>/dev/null || cp *.html *.css *.js _site/
+          cp _config.yml _site/ 2>/dev/null || true
+          python3 scripts/check_site.py _site
