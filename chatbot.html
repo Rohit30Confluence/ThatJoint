@@ -97,10 +97,10 @@
   <main class="companion-wrapper-full">
     <!-- Editorial Intro matching THATJOINT Design System -->
     <div class="companion-hero-intro">
-      <p class="eyebrow"><span>05</span><b>Connected Intelligence Layer · 274 Units Active</b></p>
-      <h1 class="companion-display-title">The whole property & coastal market,<br /><em>already in context.</em></h1>
+      <p class="eyebrow"><span>05</span><b>Connected Intelligence Layer · 40 Tech Residents · 274 Units Active</b></p>
+      <h1 class="companion-display-title">ThatJoint Co-Living & Sentinel Engine,<br /><em>already in context.</em></h1>
       <p class="companion-intro-copy">
-        Continuous operational monitoring, verified tenancy covenants, instant work order dispatch, and live municipal knowledge base for <strong>Home 014 (Oakview Courtyard)</strong> & <strong>Pacific Grove Coastal Portfolio (274 Properties)</strong>.
+        Autonomous operations and chatbot service grounded in <strong>3-Year Co-Living KYC & Billing Data</strong> (40 tech corridor residents, ₹26.9M revenue, Form C & DPDP Act compliance) and <strong>Pacific Grove Coastal Portfolio (274 Properties)</strong>.
       </p>
     </div>
 
@@ -122,16 +122,34 @@
 
       <form id="configForm">
         <div class="config-tier-grid">
-          <!-- Tier 1: Local Heuristic Engine -->
-          <div class="config-tier-card is-selected" data-tier="tier1">
+          <!-- Tier 0: ThatJoint AI Grounded Backend Service -->
+          <div class="config-tier-card is-selected" data-tier="backend">
             <div class="config-tier-header">
               <label>
-                <input type="radio" name="packagingTier" value="tier1" checked />
-                Tier 1: Local Heuristic Engine
+                <input type="radio" name="packagingTier" value="backend" checked />
+                Tier 0: ThatJoint AI Co-Living Backend
               </label>
-              <span class="config-tier-badge">Static Zero-Config</span>
+              <span class="config-tier-badge">Live Server (Port 8000)</span>
             </div>
-            <p>Grounded in verified local property records for Home 014 (lease covenants, rent schedule, HVAC SLA, and rooftop solar microgrid). Zero latency, works offline, and requires no API keys.</p>
+            <p>Connects to the ThatJoint Python backend engine grounded in <code>coliving_3year_full_kyc_billing.sql</code>. Live SQL execution, full resident KYC dossiers (FRRO Form C, FEMA, DPDP Act 2023), and 3-year financial audits.</p>
+            <div class="config-fields-block" id="backendFields">
+              <div class="config-field-row">
+                <label for="backendUrl">Backend API Endpoint</label>
+                <input type="url" id="backendUrl" placeholder="http://localhost:8000/api/chat" value="http://localhost:8000/api/chat" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 1: Local Heuristic Engine -->
+          <div class="config-tier-card" data-tier="tier1">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier1" />
+                Tier 1: Standalone Embedded Engine
+              </label>
+              <span class="config-tier-badge">Zero-Config Offline</span>
+            </div>
+            <p>Runs in-browser with zero external network calls. Pre-loaded with embedded co-living aggregates, Home 014 lease covenants, and Pacific Grove portfolio analytics.</p>
           </div>
 
           <!-- Tier 2: BYO API Key -->

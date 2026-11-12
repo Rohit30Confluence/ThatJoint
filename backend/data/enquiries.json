@@ -1,0 +1,58 @@
+[
+  {
+    "id": "ENQ-1794482481548",
+    "timestamp": "2026-11-12T11:21:21.548891Z",
+    "mode": "Schedule Demo",
+    "name": "Tariq Al-Mansoor",
+    "email": "tariq@gulfprop.ae",
+    "phone": "+971 50 123 4567",
+    "organization": "Gulf Co-Living Real Estate LLC",
+    "message": "Interested in deployment across Dubai & Riyadh facilities.",
+    "tier": "Growth Portfolio",
+    "currency": "AED",
+    "target_email": "dinde.infosec@gmail.com",
+    "status": "RECEIVED"
+  },
+  {
+    "id": "ENQ-1794482513362",
+    "timestamp": "2026-11-12T11:21:53.362381Z",
+    "mode": "Schedule Demo",
+    "name": "Tariq Al-Mansoor",
+    "email": "tariq@gulfprop.ae",
+    "phone": "+971 50 123 4567",
+    "organization": "Gulf Co-Living Real Estate LLC",
+    "message": "Interested in deployment across Dubai & Riyadh facilities.",
+    "tier": "Growth Portfolio",
+    "currency": "AED",
+    "target_email": "dinde.infosec@gmail.com",
+    "status": "RECEIVED"
+  },
+  {
+    "id": "ENQ-1794482694854",
+    "timestamp": "2026-11-12T11:24:54.854411Z",
+    "mode": "Schedule Demo",
+    "name": "Tariq Al-Mansoor",
+    "email": "tariq@gulfprop.ae",
+    "phone": "+971 50 123 4567",
+    "organization": "Gulf Co-Living Real Estate LLC",
+    "message": "Interested in deployment across Dubai & Riyadh facilities.",
+    "tier": "Growth Portfolio",
+    "currency": "AED",
+    "target_email": "dinde.infosec@gmail.com",
+    "status": "RECEIVED"
+  },
+  {
+    "id": "ENQ-1794482711892",
+    "timestamp": "2026-11-12T11:25:11.892792Z",
+    "mode": "Schedule Demo",
+    "name": "Tariq Al-Mansoor",
+    "email": "tariq@gulfprop.ae",
+    "phone": "+971 50 123 4567",
+    "organization": "Gulf Co-Living Real Estate LLC",
+    "message": "Interested in deployment across Dubai & Riyadh facilities.",
+    "tier": "Growth Portfolio",
+    "currency": "AED",
+    "target_email": "dinde.infosec@gmail.com",
+    "status": "RECEIVED"
+  }
+]

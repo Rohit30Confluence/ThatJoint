@@ -22,13 +22,13 @@
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="chatbot.html" id="navTerminalTrigger" class="nav-terminal-pill" title="Launch Property Sentinel AI [⌘K]"><i></i>Property Sentinel [⌘K]</a></nav>
-    <button class="header-cta open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="#pricing">Pricing</a><a href="chatbot.html" id="navTerminalTrigger" class="nav-terminal-pill" title="Launch Property Sentinel AI [⌘K]"><i></i>Property Sentinel [⌘K]</a></nav>
+    <button class="header-cta open-demo" type="button" data-mode="Schedule Demo">Schedule Demo <span aria-hidden="true">↗</span></button>
     <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
   </header>
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#intelligence"><span>05</span>Intelligence</a><a href="chatbot.html" id="mobileTerminalTrigger"><span>06</span>Property Sentinel [⌘K] ↗</a></nav>
-    <button class="button button-light open-demo" type="button">Request a pilot <span aria-hidden="true">↗</span></button><p>One system for the whole property.</p>
+    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#intelligence"><span>05</span>Intelligence</a><a href="#pricing"><span>06</span>Pricing</a><a href="chatbot.html" id="mobileTerminalTrigger"><span>07</span>Property Sentinel [⌘K] ↗</a></nav>
+    <button class="button button-light open-demo" type="button" data-mode="Schedule Demo">Schedule Demo <span aria-hidden="true">↗</span></button><p>One system for the whole property.</p>
   </aside>
 
   <main id="main">
@@ -196,13 +196,182 @@
       </div>
     </section>
 
-    <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><p class="eyebrow eyebrow-light reveal"><span>06</span><b>Next step</b></p><h2 class="split-heading" id="contact-title">Make the whole<br />portfolio click.</h2><div class="contact-foot reveal"><p>Start with one property, one workflow, or one operational pain point. Build from a shared view.</p><button class="contact-button open-demo" type="button"><span>Request a pilot</span><b aria-hidden="true">↗</b></button></div></section>
+    <!-- Pricing & Sovereign Currency Deployment (Gulf & Global Focus) -->
+    <section class="pricing section-pad" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-head reveal">
+        <p class="eyebrow"><span>06</span><b>Transparent Global Pricing · Gulf & Sovereign Deployments</b></p>
+        <h2 class="display split-heading" id="pricing-title">Predictable investment,<br /><em>built for scale.</em></h2>
+        <p class="pricing-lede">Tailored for property operators, co-living developers, and hospitality portfolios across the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman), India, and global markets.</p>
+        
+        <!-- Currency Switcher & Billing Toggle -->
+        <div class="pricing-controls">
+          <div class="currency-picker-wrap">
+            <label for="currencySelect">Currency:</label>
+            <select id="currencySelect" class="currency-select" aria-label="Select pricing currency">
+              <option value="AED" selected>🇦🇪 AED — UAE Dirham (د.إ)</option>
+              <option value="SAR">🇸🇦 SAR — Saudi Riyal (ر.س)</option>
+              <option value="QAR">🇶🇦 QAR — Qatari Riyal (ر.ق)</option>
+              <option value="KWD">🇰🇼 KWD — Kuwaiti Dinar (د.ك)</option>
+              <option value="BHD">🇧🇭 BHD — Bahraini Dinar (.د.ب)</option>
+              <option value="OMR">🇴🇲 OMR — Omani Rial (ر.ع.)</option>
+              <option value="USD">🇺🇸 USD — US Dollar ($)</option>
+              <option value="EUR">🇪🇺 EUR — Euro (€)</option>
+              <option value="GBP">🇬🇧 GBP — British Pound (£)</option>
+              <option value="INR">🇮🇳 INR — Indian Rupee (₹)</option>
+            </select>
+          </div>
+          <div class="billing-cycle-toggle" role="group" aria-label="Billing frequency">
+            <button type="button" class="billing-toggle-btn is-active" data-cycle="monthly">Monthly</button>
+            <button type="button" class="billing-toggle-btn" data-cycle="annual">Annual <span class="discount-badge">Save 20%</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Tier Cards -->
+      <div class="pricing-grid reveal">
+        <!-- Tier 1: Single Property Pilot -->
+        <div class="pricing-card" data-tier="pilot">
+          <div class="pricing-card-top">
+            <span class="pricing-tier-tag">Pilot Deploy</span>
+            <h3>Single Building</h3>
+            <p>For independent landlords, boutique apartments, and initial prototype pilots.</p>
+          </div>
+          <div class="pricing-card-amount">
+            <span class="currency-sym">AED </span>
+            <span class="currency-val" data-base-usd="249">914</span>
+            <small class="currency-period">/ month</small>
+          </div>
+          <ul class="pricing-features">
+            <li><b>✓</b> Up to 50 Units / Beds</li>
+            <li><b>✓</b> Property Sentinel AI Companion (Local Engine)</li>
+            <li><b>✓</b> Automated Rent & Repairs Dashboard</li>
+            <li><b>✓</b> Tenant KYC & Police Verification Checklist</li>
+            <li><b>✓</b> Standard Operations Support (24h SLA)</li>
+          </ul>
+          <button type="button" class="pricing-cta open-demo" data-tier-name="Single Building Pilot" data-mode="Schedule Demo">
+            <span>Schedule Demo</span><b aria-hidden="true">↗</b>
+          </button>
+        </div>
+
+        <!-- Tier 2: Growth Portfolio (Featured) -->
+        <div class="pricing-card is-featured" data-tier="growth">
+          <div class="pricing-badge">Most Popular in GCC</div>
+          <div class="pricing-card-top">
+            <span class="pricing-tier-tag">Multi-Unit Scale</span>
+            <h3>Growth Portfolio</h3>
+            <p>For co-living communities, student housing, and expanding residential corridors.</p>
+          </div>
+          <div class="pricing-card-amount">
+            <span class="currency-sym">AED </span>
+            <span class="currency-val" data-base-usd="699">2,567</span>
+            <small class="currency-period">/ month</small>
+          </div>
+          <ul class="pricing-features">
+            <li><b>✓</b> Up to 250 Units / Beds</li>
+            <li><b>✓</b> Multi-Gateway Rails (e-NACH, UPI AutoPay, Stripe, Virtual VAN)</li>
+            <li><b>✓</b> Late-Night Delivery Webhooks (Swiggy / Zomato / Talabat)</li>
+            <li><b>✓</b> Foreign National Form C & DPDP Act 2023 Digital Auditing</li>
+            <li><b>✓</b> 3D Interactive Building Tour Synchronization</li>
+            <li><b>✓</b> Priority Operations Desk (WhatsApp & Phone)</li>
+          </ul>
+          <button type="button" class="pricing-cta open-demo" data-tier-name="Growth Portfolio" data-mode="Schedule Demo">
+            <span>Start Growth Pilot</span><b aria-hidden="true">↗</b>
+          </button>
+        </div>
+
+        <!-- Tier 3: Enterprise Sovereign Cloud -->
+        <div class="pricing-card" data-tier="enterprise">
+          <div class="pricing-card-top">
+            <span class="pricing-tier-tag">Sovereign & Dedicated</span>
+            <h3>Enterprise Sovereign</h3>
+            <p>For major real estate holding groups, hotel chains, and sovereign developers.</p>
+          </div>
+          <div class="pricing-card-amount">
+            <span class="currency-sym">AED </span>
+            <span class="currency-val" data-base-usd="1499">5,505</span>
+            <small class="currency-period">/ month</small>
+          </div>
+          <ul class="pricing-features">
+            <li><b>✓</b> Unlimited Units, Towers & Campuses</li>
+            <li><b>✓</b> Dedicated Sovereign Database Instance (GCC / On-Prem)</li>
+            <li><b>✓</b> Custom Enterprise Webhook (Yardi / RealPage / SAP ERP)</li>
+            <li><b>✓</b> Full Custom Frontier LLM Fine-Tuning & RAG Engine</li>
+            <li><b>✓</b> Dedicated Technical Account Architect & 99.99% SLA</li>
+            <li><b>✓</b> Bespoke Local Currency & Gateway Customization</li>
+          </ul>
+          <button type="button" class="pricing-cta open-demo" data-tier-name="Enterprise Sovereign Cloud" data-mode="Have a Talk">
+            <span>Have a Talk</span><b aria-hidden="true">↗</b>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><p class="eyebrow eyebrow-light reveal"><span>07</span><b>Next step</b></p><h2 class="split-heading" id="contact-title">Make the whole<br />portfolio click.</h2><div class="contact-foot reveal"><p>Start with one property, one workflow, or one operational pain point. Build from a shared view.</p><button class="contact-button open-demo" type="button" data-mode="Schedule Demo"><span>Schedule a demo</span><b aria-hidden="true">↗</b></button></div></section>
   </main>
 
-  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="chatbot.html">Property Sentinel AI ↗</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#intelligence">Intelligence</a><a href="#pricing">Pricing</a><a href="chatbot.html">Property Sentinel AI ↗</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
 
-  <dialog id="demoDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription"><form method="dialog" id="demoForm"><div class="dialog-head"><span>THΛTJOINT / PILOT REQUEST</span><button class="dialog-close" value="cancel" type="submit" formnovalidate aria-label="Close dialog">×</button></div><h2 id="dialogTitle">Start with<br /><em>one property.</em></h2><p id="dialogDescription">Tell us where your team loses time today.</p><div class="form-grid"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name" /><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" /><label for="focus">Pilot focus</label><select id="focus" name="focus" required><option value="">Choose a workflow</option><option>Rent and payments</option><option>Resident operations</option><option>Repairs and maintenance</option><option>Documents and records</option><option>Connected portfolio view</option></select></div><button class="submit-button" type="submit"><span>Request a pilot</span><b aria-hidden="true">↗</b></button><small>This prototype form does not transmit or store information.</small></form></dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite">Thanks—this prototype request was completed locally.</div>
+  <dialog id="demoDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+    <form method="dialog" id="demoForm">
+      <div class="dialog-head">
+        <span>THΛTJOINT / BUSINESS INQUIRY & DEMO</span>
+        <button class="dialog-close" value="cancel" type="submit" formnovalidate aria-label="Close dialog">×</button>
+      </div>
+
+      <!-- Mode Selector Tabs: Schedule Demo / Have a Talk / Business Query -->
+      <div class="dialog-modes" role="tablist" aria-label="Inquiry Type">
+        <button type="button" class="dialog-mode-btn is-active" data-mode="Schedule Demo" role="tab" aria-selected="true">📅 Schedule Demo</button>
+        <button type="button" class="dialog-mode-btn" data-mode="Have a Talk" role="tab" aria-selected="false">💬 Have a Talk</button>
+        <button type="button" class="dialog-mode-btn" data-mode="Business Query" role="tab" aria-selected="false">💼 Business Query</button>
+      </div>
+      <input type="hidden" id="inquiryMode" name="mode" value="Schedule Demo" />
+      <input type="hidden" id="selectedTier" name="tier" value="Growth Portfolio" />
+
+      <h2 id="dialogTitle">Let's connect your<br /><em>whole property.</em></h2>
+      <p id="dialogDescription">Direct dispatch to our executive solutions team. Select your preferred consultation mode above.</p>
+
+      <div class="form-grid">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" autocomplete="name" required placeholder="E.g. Tariq Al-Mansoor / Rohit Verma" />
+
+        <label for="email">Business Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@company.com" />
+
+        <label for="phone">Phone / WhatsApp</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+971 50 123 4567 or +91 98200..." />
+
+        <label for="region">Region / Market</label>
+        <select id="region" name="region">
+          <option value="UAE" selected>🇦🇪 United Arab Emirates (Dubai / Abu Dhabi)</option>
+          <option value="Saudi Arabia">🇸🇦 Saudi Arabia (Riyadh / Jeddah / NEOM)</option>
+          <option value="Qatar">🇶🇦 Qatar (Doha)</option>
+          <option value="Kuwait">🇰🇼 Kuwait</option>
+          <option value="Bahrain">🇧🇭 Bahrain</option>
+          <option value="Oman">🇴🇲 Oman (Muscat)</option>
+          <option value="India">🇮🇳 India (Pune / Bangalore / Mumbai / Delhi)</option>
+          <option value="International">🌐 International / Other</option>
+        </select>
+
+        <label for="focus">Workflow Focus</label>
+        <select id="focus" name="focus" required>
+          <option value="Connected Portfolio View & Multi-Building OS">Connected Portfolio View & Multi-Building OS</option>
+          <option value="Automated Rent Collection & Multi-Gateway Rails">Automated Rent Collection & Multi-Gateway Rails</option>
+          <option value="Co-Living & Resident Operations (KYC / Form C / DPDP)">Co-Living & Resident Operations (KYC / Form C / DPDP)</option>
+          <option value="Repairs, Maintenance & Late-Night Delivery Lockers">Repairs, Maintenance & Late-Night Delivery Lockers</option>
+          <option value="Enterprise Sovereign Cloud & Custom ERP Webhook">Enterprise Sovereign Cloud & Custom ERP Webhook</option>
+        </select>
+
+        <label for="notes">Requirements</label>
+        <input id="notes" name="notes" placeholder="Tell us about your portfolio units, timeline, or questions..." />
+      </div>
+
+      <button class="submit-button" id="btnSubmitEnquiry" type="submit">
+        <span id="btnSubmitText">Confirm Request</span><b aria-hidden="true">↗</b>
+      </button>
+      <small>Direct executive priority dispatch · Response within 2 business hours</small>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite">Your Request is processed , Thanks for interest!</div>
   <div id="terminalDrawerRoot"></div>
   <script src="assets/vendor/three.min.js" defer></script>
   <script src="assets/vendor/OrbitControls.js" defer></script>

@@ -447,7 +447,7 @@
   });
 
   /* ------------------------------------------------------------------ *
-   *  Pilot-request dialog + confirmation toast                          *
+   *  Business Inquiry, Demo Scheduling & Executive Dispatch             *
    * ------------------------------------------------------------------ */
   var dialog = document.getElementById('demoDialog');
   var form = document.getElementById('demoForm');
@@ -456,21 +456,62 @@
   var dialogTrigger = null;
   var confirmPending = false;
 
-  function showToast() {
+  function showToast(customMessage) {
     if (!toast) return;
+    if (customMessage) {
+      toast.textContent = customMessage;
+    } else {
+      toast.textContent = "Your Request is processed , Thanks for interest!";
+    }
     toast.classList.add('show');
     window.clearTimeout(toastTimer);
     toastTimer = window.setTimeout(function () {
       toast.classList.remove('show');
-    }, 4200);
+    }, 4500);
+  }
+
+  function setDialogMode(mode) {
+    var modeInput = document.getElementById('inquiryMode');
+    var dialogTitle = document.getElementById('dialogTitle');
+    var btnSubmitText = document.getElementById('btnSubmitText');
+    var modeBtns = document.querySelectorAll('.dialog-mode-btn');
+
+    if (modeInput) modeInput.value = mode;
+
+    modeBtns.forEach(function (btn) {
+      var isTarget = btn.getAttribute('data-mode') === mode;
+      btn.classList.toggle('is-active', isTarget);
+      btn.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+    });
+
+    if (dialogTitle && btnSubmitText) {
+      if (mode === 'Schedule Demo') {
+        dialogTitle.innerHTML = "Schedule a live<br /><em>platform demo.</em>";
+        btnSubmitText.textContent = "Confirm Demo Schedule";
+      } else if (mode === 'Have a Talk') {
+        dialogTitle.innerHTML = "Have a direct<br /><em>executive talk.</em>";
+        btnSubmitText.textContent = "Book Consultation Call";
+      } else {
+        dialogTitle.innerHTML = "Submit your<br /><em>business query.</em>";
+        btnSubmitText.textContent = "Submit Business Query";
+      }
+    }
   }
 
   function openDialog(trigger) {
     if (!dialog) return;
-    /* a trigger inside the closed mobile menu can't take focus back */
     dialogTrigger = (trigger && mobileMenu && mobileMenu.contains(trigger) && menuToggle)
       ? menuToggle
       : (trigger || null);
+
+    var requestedMode = (trigger && trigger.getAttribute('data-mode')) || 'Schedule Demo';
+    var requestedTier = (trigger && trigger.getAttribute('data-tier-name')) || 'Growth Portfolio';
+
+    setDialogMode(requestedMode);
+
+    var tierInput = document.getElementById('selectedTier');
+    if (tierInput) tierInput.value = requestedTier;
+
     closeMenu();
     if (typeof dialog.showModal === 'function') {
       dialog.showModal();
@@ -495,7 +536,7 @@
     if (confirmPending) {
       confirmPending = false;
       if (form && typeof form.reset === 'function') form.reset();
-      showToast();
+      showToast("Your Request is processed , Thanks for interest!");
     }
     if (dialogTrigger && typeof dialogTrigger.focus === 'function') {
       dialogTrigger.focus();
@@ -503,8 +544,16 @@
     dialogTrigger = null;
   }
 
+  // Bind mode toggle buttons inside dialog
   document.addEventListener('click', function (event) {
-    if (!event.target || typeof event.target.closest !== 'function') return;
+    if (!event.target) return;
+    var modeBtn = event.target.closest('.dialog-mode-btn');
+    if (modeBtn) {
+      var mode = modeBtn.getAttribute('data-mode');
+      if (mode) setDialogMode(mode);
+      return;
+    }
+
     var trigger = event.target.closest('.open-demo');
     if (trigger) openDialog(trigger);
   });
@@ -515,12 +564,114 @@
 
   if (form) {
     form.addEventListener('submit', function (event) {
-      /* the dialog's close button (value="cancel") closes silently */
       if (event.submitter && event.submitter.value === 'cancel') return;
-      /* constraint validation has passed at this point */
+      event.preventDefault();
+
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+      var phoneInput = document.getElementById('phone');
+      var regionInput = document.getElementById('region');
+      var focusInput = document.getElementById('focus');
+      var notesInput = document.getElementById('notes');
+      var modeInput = document.getElementById('inquiryMode');
+      var tierInput = document.getElementById('selectedTier');
+      var currSelect = document.getElementById('currencySelect');
+
+      var payload = {
+        mode: modeInput ? modeInput.value : 'Schedule Demo',
+        tier: tierInput ? tierInput.value : 'Growth Portfolio',
+        name: nameInput ? nameInput.value : '',
+        email: emailInput ? emailInput.value : '',
+        phone: phoneInput ? phoneInput.value : '',
+        organization: regionInput ? regionInput.value : 'GCC',
+        focus: focusInput ? focusInput.value : '',
+        message: notesInput ? notesInput.value : '',
+        currency: currSelect ? currSelect.value : 'AED',
+        target_destination: 'dinde.infosec@gmail.com',
+        timestamp: new Date().toISOString()
+      };
+
+      // Asynchronously send to ThatJoint backend endpoint
+      fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function () {});
+
+      // Asynchronously dispatch to email receiving webhook for dinde.infosec@gmail.com
+      try {
+        fetch('https://formsubmit.co/ajax/dinde.infosec@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function () {});
+      } catch (e) {}
+
       confirmPending = true;
+      closeDialog();
     });
   }
+
+  /* ------------------------------------------------------------------ *
+   *  Multi-Currency Global Pricing (Gulf Currencies & Sovereign Rates)  *
+   * ------------------------------------------------------------------ */
+  var CURRENCY_RATES = {
+    AED: { rate: 3.6725, sym: 'AED ', suffix: ' د.إ', decimals: 0 },
+    SAR: { rate: 3.75,   sym: 'SAR ', suffix: ' ر.س', decimals: 0 },
+    QAR: { rate: 3.64,   sym: 'QAR ', suffix: ' ر.ق', decimals: 0 },
+    KWD: { rate: 0.308,  sym: 'KWD ', suffix: ' د.ك', decimals: 0 },
+    BHD: { rate: 0.377,  sym: 'BHD ', suffix: ' .د.ب', decimals: 0 },
+    OMR: { rate: 0.385,  sym: 'OMR ', suffix: ' ر.ع.', decimals: 0 },
+    USD: { rate: 1.0,    sym: '$',    suffix: '',      decimals: 0 },
+    EUR: { rate: 0.92,   sym: '€',    suffix: '',      decimals: 0 },
+    GBP: { rate: 0.79,   sym: '£',    suffix: '',      decimals: 0 },
+    INR: { rate: 84.5,   sym: '₹',    suffix: '',      decimals: 0 }
+  };
+
+  var activeCurrency = 'AED';
+  var activeCycle = 'monthly';
+
+  function updatePricingDisplay() {
+    var config = CURRENCY_RATES[activeCurrency] || CURRENCY_RATES['USD'];
+    var discount = activeCycle === 'annual' ? 0.80 : 1.0;
+    var periodText = activeCycle === 'annual' ? '/ month (billed annually)' : '/ month';
+
+    var valEls = document.querySelectorAll('.pricing-card-amount .currency-val');
+    var symEls = document.querySelectorAll('.pricing-card-amount .currency-sym');
+    var periodEls = document.querySelectorAll('.pricing-card-amount .currency-period');
+
+    valEls.forEach(function (el) {
+      var baseUsd = parseFloat(el.getAttribute('data-base-usd')) || 249;
+      var converted = Math.round(baseUsd * config.rate * discount);
+      el.textContent = converted.toLocaleString('en-US');
+    });
+
+    symEls.forEach(function (el) {
+      el.textContent = config.sym;
+    });
+
+    periodEls.forEach(function (el) {
+      el.textContent = periodText;
+    });
+  }
+
+  var currencySelect = document.getElementById('currencySelect');
+  if (currencySelect) {
+    currencySelect.addEventListener('change', function () {
+      activeCurrency = this.value;
+      updatePricingDisplay();
+    });
+  }
+
+  var cycleBtns = document.querySelectorAll('.billing-toggle-btn');
+  cycleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      cycleBtns.forEach(function (b) { b.classList.remove('is-active'); });
+      this.classList.add('is-active');
+      activeCycle = this.getAttribute('data-cycle') || 'monthly';
+      updatePricingDisplay();
+    });
+  });
 
   /* ------------------------------------------------------------------ *
    *  Platform tabs — one operating system, four rental models           *
