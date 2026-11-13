@@ -192,10 +192,6 @@
               <button type="button" class="tj-tour-action-btn" id="tjBtnResetCam">
                 <span>Reset View</span>
               </button>
-              <button type="button" class="tj-tour-action-btn" id="tjBtnOpenChatbot">
-                <span>Ask Property Sentinel</span>
-                <i>↗</i>
-              </button>
             </div>
           </div>
         </div>
@@ -503,21 +499,11 @@
             </div>
             <h5>${data.title}</h5>
             <p>${data.signal}</p>
-            <button type="button" class="tj-hotspot-popover-btn" data-prompt="${data.prompt}">
-              <span>Ask Sentinel</span>
-              <span aria-hidden="true">↗</span>
-            </button>
           </div>
         `;
 
-        el.addEventListener('click', (e) => {
-          const btn = e.target.closest('.tj-hotspot-popover-btn');
-          if (btn) {
-            const prompt = btn.getAttribute('data-prompt');
-            this.emit('queryTerminal', prompt);
-          } else {
-            this.toggleHotspot(el);
-          }
+        el.addEventListener('click', () => {
+          this.toggleHotspot(el);
         });
 
         this.hotspotContainer.appendChild(el);
@@ -554,14 +540,6 @@
       if (btnReset) {
         btnReset.addEventListener('click', () => {
           this.switchZone('assembly');
-        });
-      }
-
-      // Query Unit in Chatbot Button
-      const btnChatbot = document.getElementById('tjBtnOpenChatbot');
-      if (btnChatbot) {
-        btnChatbot.addEventListener('click', () => {
-          this.emit('queryTerminal', 'Status Home 014');
         });
       }
 

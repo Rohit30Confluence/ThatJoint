@@ -937,85 +937,17 @@
   });
 
   /* ------------------------------------------------------------------ *
-   *  3D Building Tour & Operational Intelligence Terminal Integration   *
+   *  3D Building Tour Integration                                     *
    * ------------------------------------------------------------------ */
-  function init3DTourAndTerminal() {
-    var tour = null;
-    var terminal = null;
-
-    var terminalRoot = document.getElementById('terminalDrawerRoot');
-    if (terminalRoot && typeof ThatJointChatbot !== 'undefined') {
-      terminal = new ThatJointChatbot({
-        containerId: terminalRoot,
-        isDrawer: true,
-        activeUnit: 'Home 014'
-      });
-    }
-
-    // A WebGL failure must not prevent the chatbot from opening.
+  function init3DTour() {
     var tourRoot = document.getElementById('embeddedBuildingTour');
     if (tourRoot && typeof ThatJointBuildingTour !== 'undefined') {
       try {
-        tour = new ThatJointBuildingTour({ containerId: tourRoot });
+        new ThatJointBuildingTour({ containerId: tourRoot });
       } catch (error) {
         console.error('Building tour could not start:', error);
       }
     }
-
-    // Connect tour hotspot clicks to terminal queries
-    if (tour && terminal) {
-      tour.on('queryTerminal', function (prompt) {
-        terminal.open();
-        if (terminal.input) {
-          terminal.input.value = prompt;
-          terminal.submitQuery();
-        }
-      });
-
-      terminal.on('selectZone3D', function (zoneLabel) {
-        var zoneKey = 'assembly';
-        if (zoneLabel.indexOf('01') !== -1 || zoneLabel.toLowerCase().indexOf('courtyard') !== -1) zoneKey = 'courtyard';
-        if (zoneLabel.indexOf('02') !== -1 || zoneLabel.toLowerCase().indexOf('living') !== -1 || zoneLabel.indexOf('014') !== -1) zoneKey = 'living';
-        if (zoneLabel.indexOf('03') !== -1 || zoneLabel.toLowerCase().indexOf('rooftop') !== -1) zoneKey = 'rooftop';
-        tour.switchZone(zoneKey);
-      });
-    }
-
-    // Assistant launcher triggers
-    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal', 'btnLaunchContext', 'navChatTrigger', 'mobileChatTrigger', 'tjFloatingChatBtn'];
-    terminalTriggers.forEach(function (id) {
-      var btn = document.getElementById(id);
-      if (btn && terminal) {
-        btn.addEventListener('click', function (e) {
-          e.preventDefault();
-          terminal.toggle();
-        });
-      }
-    });
-
-    // Make portfolio signals interactive with Property Sentinel queries
-    var signals = document.querySelectorAll('.portfolio-signals li');
-    Array.prototype.forEach.call(signals, function (sig) {
-      sig.addEventListener('click', function () {
-        if (!terminal) return;
-        var text = (sig.innerText || '').toLowerCase();
-        var prompt = 'Home 014 Status & Telemetry';
-        if (text.indexOf('rent') !== -1 || text.indexOf('payment') !== -1) {
-          prompt = 'Ledger & Escrow for Home 014';
-        } else if (text.indexOf('repair') !== -1 || text.indexOf('review') !== -1) {
-          prompt = 'HVAC Maintenance ticket WO-8841 for Home 014';
-        } else if (text.indexOf('renewal') !== -1 || text.indexOf('lease') !== -1) {
-          prompt = 'Draft renewal agreement for Home 014';
-        }
-        terminal.open(prompt);
-      });
-      sig.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          sig.click();
-        }
-      });
-    });
   }
 
   /* Active navigation scroll-spy highlighting active section */
@@ -1048,7 +980,7 @@
   }
 
   function startAppFeatures() {
-    init3DTourAndTerminal();
+    init3DTour();
     initNavScrollSpy();
   }
 

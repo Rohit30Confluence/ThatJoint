@@ -13,7 +13,6 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css?v=20261023-1" />
   <link rel="stylesheet" href="building-tour.css" />
-  <link rel="stylesheet" href="chatbot.css" />
   <noscript><style>.loader { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -22,12 +21,12 @@
 
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="chatbot.html" class="nav-terminal-pill" id="navChatTrigger" title="Open ThatJoint Assistant"><i></i>Chat Assistant</a></nav>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
     <button class="header-cta open-demo" type="button" data-mode="Schedule Demo">Schedule Demo <span aria-hidden="true">↗</span></button>
     <button class="menu-toggle" id="menuToggle" type="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu"><i></i><i></i></button>
   </header>
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#pricing"><span>05</span>Pricing</a><a href="#contact"><span>06</span>Contact</a><a href="chatbot.html" id="mobileChatTrigger"><span>07</span>Chat Assistant ↗</a></nav>
+    <nav aria-label="Mobile navigation"><a href="#platform"><span>01</span>Platform</a><a href="#tour"><span>02</span>3D Tour</a><a href="#process"><span>03</span>Operations</a><a href="#rollout"><span>04</span>Rollout</a><a href="#pricing"><span>05</span>Pricing</a><a href="#contact"><span>06</span>Contact</a></nav>
     <button class="button button-light open-demo" type="button" data-mode="Schedule Demo">Schedule Demo <span aria-hidden="true">↗</span></button><p>One system for the whole property.</p>
   </aside>
 
@@ -272,7 +271,7 @@
     <section class="contact section-pad" id="contact" aria-labelledby="contact-title"><p class="eyebrow eyebrow-light reveal"><span>06</span><b>Next step</b></p><h2 class="split-heading" id="contact-title">Make the whole<br />portfolio click.</h2><div class="contact-foot reveal"><p>Start with one property, one workflow, or one operational pain point. Build from a shared view.</p><button class="contact-button open-demo" type="button" data-mode="Schedule Demo"><span>Schedule a demo</span><b aria-hidden="true">↗</b></button></div></section>
   </main>
 
-  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a><a href="chatbot.html">Chat Assistant ↗</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
+  <footer><div class="footer-grid"><p>Rental operations,<br />connected.</p><nav aria-label="Footer navigation"><a href="#platform">Platform</a><a href="#tour">3D Tour</a><a href="#process">Operations</a><a href="#rollout">Rollout</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav><p><a href="mailto:hello@thatjoint.com">hello@thatjoint.com</a><br />Location discussed during planning</p></div><p class="footer-wordmark" aria-label="THATJOINT">THΛTJOINT<span>.</span></p><div class="footer-bottom"><span>© 2026 THΛTJOINT</span><span>Rental operations, connected</span><a href="#top">Back to top ↑</a></div></footer>
 
   <dialog id="demoDialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
     <form method="dialog" id="demoForm">
@@ -336,20 +335,9 @@
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite">Your Request is processed , Thanks for interest!</div>
 
-  <!-- Floating ThatJoint Assistant Button -->
-  <button type="button" class="tj-chat-floating-btn" id="tjFloatingChatBtn" aria-label="Open Chat Assistant" title="Chat with ThatJoint Assistant">
-    <span class="tj-chat-btn-pulse" aria-hidden="true"></span>
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-    <span>Chat with us</span>
-  </button>
-
-  <div id="terminalDrawerRoot"></div>
   <script src="assets/vendor/three.min.js" defer></script>
   <script src="assets/vendor/OrbitControls.js" defer></script>
   <script src="building-tour.js" defer></script>
-  <script src="chatbot.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="app.js?v=20261020-1" defer></script>
 </body>
 </html>

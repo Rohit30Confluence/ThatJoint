@@ -11,7 +11,6 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css?v=20260927-2" />
   <link rel="stylesheet" href="building-tour.css" />
-  <link rel="stylesheet" href="chatbot.css" />
   <style>
     body {
       background: #eef1f3;
@@ -40,6 +39,7 @@
     }
     .tour-page-nav a {
       color: var(--grey, #7A7A7A);
+      text-decoration: none;
       transition: color 0.2s;
     }
     .tour-page-nav a:hover,
@@ -77,7 +77,8 @@
     <nav class="tour-page-nav" aria-label="Tour Page Navigation">
       <a href="index.html">← Back to Overview</a>
       <a href="building-tour.html" class="is-current">3D Building Tour</a>
-      <a href="chatbot.html">Property Sentinel AI ↗</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
@@ -85,44 +86,15 @@
     <div id="buildingTourApp"></div>
   </main>
 
-  <!-- Synchronized Drawer Chatbot Terminal -->
-  <div id="drawerChatbotRoot"></div>
-
   <!-- Vendor Three.js & OrbitControls -->
   <script src="assets/vendor/three.min.js"></script>
   <script src="assets/vendor/OrbitControls.js"></script>
   <script src="building-tour.js"></script>
-  <script src="chatbot.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Initialize 3D Building Tour
       var tour = new ThatJointBuildingTour({
         containerId: 'buildingTourApp'
-      });
-
-      // Initialize Synchronized Chatbot Terminal Drawer
-      var terminal = new ThatJointChatbot({
-        containerId: 'drawerChatbotRoot',
-        isDrawer: true,
-        activeUnit: 'Home 014'
-      });
-
-      // Synchronize Tour Hotspot Click -> Terminal Query
-      tour.on('queryTerminal', function (prompt) {
-        terminal.open();
-        if (terminal.input) {
-          terminal.input.value = prompt;
-          terminal.submitQuery();
-        }
-      });
-
-      // Synchronize Terminal Unit Selection -> Tour Highlight
-      terminal.on('selectZone3D', function (zoneLabel) {
-        var zoneKey = 'assembly';
-        if (zoneLabel.indexOf('01') !== -1 || zoneLabel.toLowerCase().indexOf('courtyard') !== -1) zoneKey = 'courtyard';
-        if (zoneLabel.indexOf('02') !== -1 || zoneLabel.toLowerCase().indexOf('living') !== -1 || zoneLabel.indexOf('014') !== -1) zoneKey = 'living';
-        if (zoneLabel.indexOf('03') !== -1 || zoneLabel.toLowerCase().indexOf('rooftop') !== -1) zoneKey = 'rooftop';
-        tour.switchZone(zoneKey);
       });
 
       // Check URL search params for direct zone linking (e.g. ?zone=02%20Living%20Quarters)
