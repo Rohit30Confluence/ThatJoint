@@ -6,6 +6,7 @@ Tests the relational database, query engine, REST API handlers, and natural lang
 
 import unittest
 import json
+import os
 from io import BytesIO
 from pathlib import Path
 
@@ -224,20 +225,31 @@ class TestHttpServerEndpoints(unittest.TestCase):
         self.assertIn("overview", data["analytics"])
 
     def test_api_enquiry(self):
-        status, data = simulate_http_request("POST", "/api/enquiry", {
-            "mode": "Schedule Demo",
-            "name": "Tariq Al-Mansoor",
-            "email": "tariq@gulfprop.ae",
-            "phone": "+971 50 123 4567",
-            "organization": "Gulf Co-Living Real Estate LLC",
-            "tier": "Growth Portfolio",
-            "currency": "AED",
-            "message": "Interested in deployment across Dubai & Riyadh facilities."
-        })
-        self.assertEqual(status, 200)
-        self.assertTrue(data["ok"])
-        self.assertEqual(data["message"], "Your Request is processed , Thanks for interest!")
-        self.assertTrue(data["enquiry_id"].startswith("ENQ-"))
+        enquiries_path = os.path.join(os.path.dirname(__file__), "data", "enquiries.json")
+        orig_content = None
+        if os.path.exists(enquiries_path):
+            with open(enquiries_path, "r", encoding="utf-8") as f:
+                orig_content = f.read()
+
+        try:
+            status, data = simulate_http_request("POST", "/api/enquiry", {
+                "mode": "Schedule Demo",
+                "name": "Tariq Al-Mansoor",
+                "email": "tariq@gulfprop.ae",
+                "phone": "+971 50 123 4567",
+                "organization": "Gulf Co-Living Real Estate LLC",
+                "tier": "Growth Portfolio",
+                "currency": "AED",
+                "message": "Interested in deployment across Dubai & Riyadh facilities."
+            })
+            self.assertEqual(status, 200)
+            self.assertTrue(data["ok"])
+            self.assertEqual(data["message"], "Your Request is processed , Thanks for interest!")
+            self.assertTrue(data["enquiry_id"].startswith("ENQ-"))
+        finally:
+            if orig_content is not None:
+                with open(enquiries_path, "w", encoding="utf-8") as f:
+                    f.write(orig_content)
 
     def test_api_static_file(self):
         status, data = simulate_http_request("GET", "/index.html")

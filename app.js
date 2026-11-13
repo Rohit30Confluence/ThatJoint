@@ -981,14 +981,14 @@
       });
     }
 
-    // Terminal launcher triggers
-    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal', 'btnLaunchContext'];
+    // Assistant launcher triggers
+    var terminalTriggers = ['navTerminalTrigger', 'mobileTerminalTrigger', 'btnLaunchTerminal', 'btnLaunchContext', 'navChatTrigger', 'mobileChatTrigger', 'tjFloatingChatBtn'];
     terminalTriggers.forEach(function (id) {
       var btn = document.getElementById(id);
       if (btn && terminal) {
         btn.addEventListener('click', function (e) {
           e.preventDefault();
-          terminal.open();
+          terminal.toggle();
         });
       }
     });
