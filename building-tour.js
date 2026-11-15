@@ -52,6 +52,28 @@
     }
   };
 
+  // Real-world tour videos embedded inside 3D tour box
+  const TOUR_VIDEOS = {
+    'terrace': {
+      id: 'terrace',
+      name: 'Terrace',
+      subtitle: 'Rooftop sunset deck & pergola lounge',
+      src: 'assets/videos/rooftop-terrace-sunset.mp4',
+      poster: 'assets/videos/rooftop-terrace-poster.jpg',
+      nextKey: 'outview',
+      nextLabel: 'Outview Building'
+    },
+    'outview': {
+      id: 'outview',
+      name: 'Outview Building',
+      subtitle: 'Exterior residential facade & architectural volume',
+      src: 'assets/videos/residential-facade-units.mp4',
+      poster: 'assets/videos/residential-facade-poster.jpg',
+      nextKey: 'terrace',
+      nextLabel: 'Terrace'
+    }
+  };
+
   // Hotspots anchored in 3D world space
   const HOTSPOTS_DATA = [
     {
@@ -155,6 +177,62 @@
           <!-- Hotspots Projection Layer -->
           <div class="tj-hotspot-container" id="tjHotspotContainer"></div>
 
+          <!-- In-Tour Video Player Screen (Inside 3D View Box) -->
+          <div class="tj-tour-video-screen" id="tjTourVideoScreen" style="display: none;" aria-hidden="true">
+            <video class="tj-tour-active-video" id="tjTourActiveVideo" playsinline loop muted controls></video>
+            <div class="tj-tour-video-topbar">
+              <div class="tj-tour-video-meta">
+                <span class="tj-tour-video-badge">● Real-World Video</span>
+                <strong class="tj-tour-video-title" id="tjTourVideoTitle">Terrace</strong>
+                <span class="tj-tour-video-subtitle" id="tjTourVideoSubtitle">Rooftop sunset deck & pergola lounge</span>
+              </div>
+              <div class="tj-tour-video-actions">
+                <button type="button" class="tj-tour-video-switch-btn" id="tjBtnSwitchVideo">Switch to Outview Building ↗</button>
+                <button type="button" class="tj-tour-video-close-btn" id="tjBtnCloseVideo" title="Back to 3D Assembly">✕ Back to 3D</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assembly Video Thumbnails Overlay (Inside 3D View Box on Complete Assembly) -->
+          <div class="tj-assembly-video-cards" id="tjAssemblyVideoCards" role="region" aria-label="Complete Assembly Real Videos">
+            <div class="tj-assembly-cards-header">
+              <div class="tj-assembly-cards-title">
+                <span class="tj-pulse-dot" aria-hidden="true"></span>
+                <span>Complete Assembly · Real Videos</span>
+              </div>
+              <button type="button" class="tj-assembly-cards-dismiss" id="tjDismissThumbnails" title="Hide thumbnails" aria-label="Hide thumbnails">✕</button>
+            </div>
+            <div class="tj-video-thumbs-row">
+              <!-- Thumbnail 1: Terrace -->
+              <button type="button" class="tj-video-thumb-card" data-video="terrace" id="tjThumbTerrace" aria-label="Watch Terrace Video">
+                <div class="tj-thumb-img-wrap">
+                  <img src="assets/videos/rooftop-terrace-poster.jpg" alt="Terrace Video Thumbnail" />
+                  <span class="tj-thumb-play-icon" aria-hidden="true">▶</span>
+                  <span class="tj-thumb-duration">0:10</span>
+                </div>
+                <div class="tj-thumb-details">
+                  <span class="tj-thumb-label">01 / Rooftop</span>
+                  <strong class="tj-thumb-name">Terrace</strong>
+                  <small>Sunset lounge & sky deck</small>
+                </div>
+              </button>
+
+              <!-- Thumbnail 2: Outview Building -->
+              <button type="button" class="tj-video-thumb-card" data-video="outview" id="tjThumbOutview" aria-label="Watch Outview Building Video">
+                <div class="tj-thumb-img-wrap">
+                  <img src="assets/videos/residential-facade-poster.jpg" alt="Outview Building Video Thumbnail" />
+                  <span class="tj-thumb-play-icon" aria-hidden="true">▶</span>
+                  <span class="tj-thumb-duration">0:15</span>
+                </div>
+                <div class="tj-thumb-details">
+                  <span class="tj-thumb-label">02 / Facade</span>
+                  <strong class="tj-thumb-name">Outview Building</strong>
+                  <small>Exterior architectural view</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
           <!-- Top HUD: Badge + Floor/Zone Selector -->
           <div class="tj-tour-hud-top">
             <div class="tj-tour-title-badge">
@@ -185,10 +263,13 @@
               <span aria-hidden="true">·</span>
               <span>Scroll to zoom</span>
               <span aria-hidden="true">·</span>
-              <b>Click hotspots for signals</b>
+              <b>Click Complete Assembly for Real Videos</b>
             </div>
 
             <div class="tj-tour-actions">
+              <button type="button" class="tj-tour-action-btn" id="tjBtnToggleRealVideos" title="Toggle Real Videos">
+                <span>▶ Videos</span>
+              </button>
               <button type="button" class="tj-tour-action-btn" id="tjBtnResetCam">
                 <span>Reset View</span>
               </button>
@@ -197,9 +278,22 @@
         </div>
       `;
 
-      this.canvasContainer = document.getElementById('tjCanvasContainer');
-      this.hotspotContainer = document.getElementById('tjHotspotContainer');
-      this.currentZoneTitle = document.getElementById('tjTourCurrentZoneTitle');
+      this.canvasContainer = this.container.querySelector('#tjCanvasContainer') || document.getElementById('tjCanvasContainer');
+      this.hotspotContainer = this.container.querySelector('#tjHotspotContainer') || document.getElementById('tjHotspotContainer');
+      this.currentZoneTitle = this.container.querySelector('#tjTourCurrentZoneTitle') || document.getElementById('tjTourCurrentZoneTitle');
+
+      // Video elements
+      this.videoScreen = this.container.querySelector('#tjTourVideoScreen');
+      this.activeVideo = this.container.querySelector('#tjTourActiveVideo');
+      this.videoTitle = this.container.querySelector('#tjTourVideoTitle');
+      this.videoSubtitle = this.container.querySelector('#tjTourVideoSubtitle');
+      this.btnSwitchVideo = this.container.querySelector('#tjBtnSwitchVideo');
+      this.btnCloseVideo = this.container.querySelector('#tjBtnCloseVideo');
+      this.assemblyVideoCards = this.container.querySelector('#tjAssemblyVideoCards');
+      this.btnDismissThumbs = this.container.querySelector('#tjDismissThumbnails');
+      this.btnToggleRealVideos = this.container.querySelector('#tjBtnToggleRealVideos');
+      this.thumbTerrace = this.container.querySelector('#tjThumbTerrace');
+      this.thumbOutview = this.container.querySelector('#tjThumbOutview');
     }
 
     initThreeScene() {
@@ -536,10 +630,63 @@
       });
 
       // Reset Camera Button
-      const btnReset = document.getElementById('tjBtnResetCam');
+      const btnReset = this.container.querySelector('#tjBtnResetCam') || document.getElementById('tjBtnResetCam');
       if (btnReset) {
         btnReset.addEventListener('click', () => {
           this.switchZone('assembly');
+        });
+      }
+
+      // Real-World Video Thumbnails (Terrace & Outview Building)
+      if (this.thumbTerrace) {
+        this.thumbTerrace.addEventListener('click', () => {
+          this.playVideo('terrace');
+        });
+      }
+
+      if (this.thumbOutview) {
+        this.thumbOutview.addEventListener('click', () => {
+          this.playVideo('outview');
+        });
+      }
+
+      // Video Player Controls
+      if (this.btnCloseVideo) {
+        this.btnCloseVideo.addEventListener('click', () => {
+          this.closeVideo();
+        });
+      }
+
+      if (this.btnSwitchVideo) {
+        this.btnSwitchVideo.addEventListener('click', () => {
+          const nextTarget = this.btnSwitchVideo.getAttribute('data-target') || 'terrace';
+          this.playVideo(nextTarget);
+        });
+      }
+
+      // Dismiss Thumbnails
+      if (this.btnDismissThumbs) {
+        this.btnDismissThumbs.addEventListener('click', () => {
+          if (this.assemblyVideoCards) {
+            this.assemblyVideoCards.style.display = 'none';
+          }
+        });
+      }
+
+      // Toggle Real Videos button in bottom HUD
+      if (this.btnToggleRealVideos) {
+        this.btnToggleRealVideos.addEventListener('click', () => {
+          if (this.videoScreen && this.videoScreen.style.display !== 'none') {
+            this.closeVideo();
+            return;
+          }
+          if (this.currentZone !== 'assembly') {
+            this.switchZone('assembly');
+          }
+          if (this.assemblyVideoCards) {
+            const isHidden = this.assemblyVideoCards.style.display === 'none';
+            this.assemblyVideoCards.style.display = isHidden ? 'flex' : 'none';
+          }
         });
       }
 
@@ -554,11 +701,91 @@
       }
     }
 
+    playVideo(videoKey) {
+      const vidData = TOUR_VIDEOS[videoKey];
+      if (!vidData || !this.videoScreen || !this.activeVideo) return;
+
+      this.currentVideoKey = videoKey;
+
+      if (this.videoTitle) {
+        this.videoTitle.textContent = vidData.name;
+      }
+      if (this.videoSubtitle) {
+        this.videoSubtitle.textContent = vidData.subtitle;
+      }
+      if (this.btnSwitchVideo) {
+        this.btnSwitchVideo.textContent = `Switch to ${vidData.nextLabel} ↗`;
+        this.btnSwitchVideo.setAttribute('data-target', vidData.nextKey);
+      }
+
+      // Hide 3D canvas and hotspots, hide thumbnails overlay
+      if (this.canvasContainer) this.canvasContainer.style.opacity = '0';
+      if (this.hotspotContainer) this.hotspotContainer.style.opacity = '0';
+      if (this.assemblyVideoCards) this.assemblyVideoCards.style.display = 'none';
+
+      // Show video screen
+      this.videoScreen.style.display = 'flex';
+      this.videoScreen.setAttribute('aria-hidden', 'false');
+
+      // Set video source
+      if (!this.activeVideo.src || !this.activeVideo.src.endsWith(vidData.src)) {
+        this.activeVideo.src = vidData.src;
+        this.activeVideo.poster = vidData.poster;
+        this.activeVideo.load();
+      }
+
+      this.activeVideo.currentTime = 0;
+      const playPromise = this.activeVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          this.activeVideo.muted = true;
+          this.activeVideo.play().catch(() => {});
+        });
+      }
+
+      this.emit('videoPlay', { videoKey: videoKey, data: vidData });
+    }
+
+    closeVideo() {
+      if (this.activeVideo) {
+        this.activeVideo.pause();
+      }
+
+      if (this.videoScreen) {
+        this.videoScreen.style.display = 'none';
+        this.videoScreen.setAttribute('aria-hidden', 'true');
+      }
+
+      if (this.canvasContainer) this.canvasContainer.style.opacity = '1';
+      if (this.hotspotContainer) this.hotspotContainer.style.opacity = '1';
+
+      // Restore thumbnails if on assembly zone
+      if (this.currentZone === 'assembly' && this.assemblyVideoCards) {
+        this.assemblyVideoCards.style.display = 'flex';
+      }
+
+      this.emit('videoClose');
+    }
+
     switchZone(zoneKey) {
       const zone = TOUR_ZONES[zoneKey];
       if (!zone || !this.camera) return;
 
       this.currentZone = zoneKey;
+
+      // Close video if currently playing
+      if (this.videoScreen && this.videoScreen.style.display !== 'none') {
+        this.closeVideo();
+      }
+
+      // Show/hide assembly video thumbnails based on zone
+      if (this.assemblyVideoCards) {
+        if (zoneKey === 'assembly') {
+          this.assemblyVideoCards.style.display = 'flex';
+        } else {
+          this.assemblyVideoCards.style.display = 'none';
+        }
+      }
 
       // Update button states
       const zoneButtons = this.container.querySelectorAll('.tj-tour-zone-btn');
@@ -698,6 +925,10 @@
             }
           }
         });
+      }
+      if (this.activeVideo) {
+        this.activeVideo.pause();
+        this.activeVideo.src = '';
       }
       if (this.renderer) {
         this.renderer.dispose();
