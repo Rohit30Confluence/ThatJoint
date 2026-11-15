@@ -9,3 +9,4 @@ __pycache__/
 
 # Local submodules / external workspaces
 ndap/
+sentinel/
