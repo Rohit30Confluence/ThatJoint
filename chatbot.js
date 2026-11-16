@@ -338,105 +338,48 @@ CONVERSATIONAL RULES:
 
     render() {
       const template = `
-        <div class="tj-companion-container ${this.isDrawer ? 'tj-companion-drawer' : ''}" id="tjCompanionView" role="region" aria-label="THΛTJOINT Property Sentinel AI">
+        <div class="tj-companion-container ${this.isDrawer ? 'tj-companion-drawer' : ''}" id="tjCompanionView" role="region" aria-label="THΛTJOINT AI">
           <!-- Drag and Drop Overlay -->
           <div class="tj-dropzone-overlay" id="tjDropzoneOverlay" aria-hidden="true">
-            <span>📄</span>
-            <strong>Drop Lease, Agreement, or CSV Listing</strong>
-            <p>PDF, images, CSVs, or agreements parsed automatically</p>
+            <span class="icon">📄</span>
+            <strong>Drop Lease or Document</strong>
+            <p>PDF, images, CSVs, or agreements analyzed automatically</p>
           </div>
 
-          <!-- Sentinel Header Banner -->
-          <header class="tj-sentinel-header">
+          <!-- Minimal Elegant Topbar -->
+          <header class="tj-sentinel-header tj-clean-header">
             <div class="tj-sentinel-topline">
               <div class="tj-sentinel-profile">
-                <!-- Mascot Wrapper & Reactive States -->
-                <div class="tj-mascot-wrapper" id="sentinelMascotWrapper" data-state="idle" role="button" tabindex="0" title="The Property Sentinel">
-                  <div class="tj-mascot-voice-rings" aria-hidden="true"></div>
-                  <div class="tj-mascot-thinking-halo" aria-hidden="true"></div>
-                  ${RED_PANDA_SVG}
-                  <span class="tj-mascot-status-dot" aria-hidden="true"></span>
+                <div class="tj-clean-avatar" aria-hidden="true">
+                  <span class="tj-avatar-sparkle">✦</span>
                 </div>
-
                 <div class="tj-sentinel-meta">
-                  <div class="tj-sentinel-meta-tag">
-                    <span>PROPERTY SENTINEL</span>
-                    <b>AI OS 2.2</b>
-                  </div>
-                  <h3 class="tj-sentinel-name">
-                    THΛTJOINT Sentinel
-                    <span class="tj-sentinel-tier-chip" id="sentinelTierBadge">${this.getTierLabel()}</span>
-                  </h3>
-                  <div class="tj-mascot-status-text" id="sentinelStatusText">
-                    <span>Sentinel Ready</span> · <i>Autonomous Monitoring</i>
+                  <h3 class="tj-sentinel-name">THΛTJOINT AI</h3>
+                  <div class="tj-clean-status">
+                    <span class="tj-status-dot"></span>
+                    <span id="sentinelStatusText">Ready · Connected</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Header Controls -->
+              <!-- Sleek Controls: Clear & Close -->
               <div class="tj-sentinel-actions">
-                <button type="button" class="tj-kb-explorer-btn" id="btnOpenKnowledgeBase" title="Explore Pacific Grove Real Estate Knowledge Base (274 Properties)">
-                  <i>📂</i>
-                  <span>Listings (274)</span>
-                </button>
-                <button type="button" class="tj-tier-config-btn" id="btnOpenConfig" title="Configure Client Packaging Tiers">
-                  <i>⚙</i>
-                  <span>Tiers</span>
-                </button>
-                <button type="button" class="tj-sentinel-icon-btn" id="btnCommandHelp" title="View Directives & Commands [?]" aria-label="Command Help">?</button>
-                <button type="button" class="tj-sentinel-icon-btn" id="btnClearChat" title="Reset chat session" aria-label="Clear session">↺</button>
-                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="btnCloseDrawer" title="Close Companion [Esc]" aria-label="Close drawer">×</button>` : ''}
+                <button type="button" class="tj-sentinel-icon-btn" id="btnClearChat" title="Clear chat session" aria-label="Clear chat">↺</button>
+                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="btnCloseDrawer" title="Close [Esc]" aria-label="Close drawer">✕</button>` : ''}
               </div>
-            </div>
-
-            <!-- Telemetry Status Bar -->
-            <div class="tj-sentinel-telemetry" id="sentinelTelemetryBar">
-              <span class="tj-telemetry-chip highlight" id="backendStatusChip"><b>⚡ BACKEND</b> <span id="backendStatusText">Checking...</span></span>
-              <span class="tj-telemetry-chip highlight"><b>🇮🇳 CO-LIVING</b> 40 Tech Residents</span>
-              <span class="tj-telemetry-chip"><b>💰 3-YR REVENUE</b> ₹2.69 Cr</span>
-              <span class="tj-telemetry-chip"><b>🍕 LATE-NIGHT</b> 10,471 Orders</span>
-              <span class="tj-telemetry-chip"><b>📍 COASTAL</b> 274 Units</span>
-              <span class="tj-telemetry-chip"><b>🔒 STATUTORY</b> DPDP & Form C</span>
             </div>
           </header>
 
-          <!-- Main Chat Feed & Drop Area -->
+          <!-- Main Chat Feed & Stream -->
           <div class="tj-companion-body" id="companionBody">
             <div class="tj-companion-feed" id="companionFeed" role="log" aria-live="polite">
-              <!-- Messages stream here -->
+              <!-- Messages & Welcome Hub stream here -->
             </div>
 
-            <!-- Multi-Modal Input Suite -->
-            <div class="tj-input-dock">
-              <!-- Scrollable Interactive Quick Ribbon -->
-              <div class="tj-quick-ribbon-wrap">
-                <button type="button" class="tj-ribbon-arrow left" id="ribbonScrollLeft" aria-label="Scroll left">‹</button>
-                <div class="tj-quick-pills" id="quickPillsRibbon" role="toolbar" aria-label="Operational prompt chips">
-                  <button type="button" class="tj-quick-pill highlight" data-query="Co-Living 3-Year Overview">🏢 Co-Living Overview</button>
-                  <button type="button" class="tj-quick-pill" data-query="Resident KYC: Lukas Weber (FRRO Form C)">👤 Lukas Weber (FRRO)</button>
-                  <button type="button" class="tj-quick-pill" data-query="What is the total revenue over 3 years?">💰 ₹2.69 Cr Revenue</button>
-                  <button type="button" class="tj-quick-pill" data-query="Who are the top 5 spenders?">🏆 Top 5 Spenders</button>
-                  <button type="button" class="tj-quick-pill" data-query="Swiggy and Zomato late-night delivery webhooks">🍕 Late-Night Orders</button>
-                  <button type="button" class="tj-quick-pill" data-query="Explain DPDP Act 2023 and Indian statutory compliance">⚖️ DPDP & Indian Laws</button>
-                  <button type="button" class="tj-quick-pill" data-query="What payment gateways and e-NACH rails are used?">💳 Payment Rails</button>
-                  <button type="button" class="tj-quick-pill" data-query="Pacific Grove Market Overview">📊 Coastal Market (274)</button>
-                  <button type="button" class="tj-quick-pill" data-action="open-kb">📂 Browse 274 Properties</button>
-                  <button type="button" class="tj-quick-pill" data-action="open-help">❓ Directives Guide</button>
-                </div>
-                <button type="button" class="tj-ribbon-arrow right" id="ribbonScrollRight" aria-label="Scroll right">›</button>
-              </div>
-
-              <!-- Drag-and-Drop Strip for Lease Documents -->
-              <div class="tj-drop-strip" id="leaseDropStrip" role="button" tabindex="0" title="Click or drop lease agreement files here">
-                <div class="tj-drop-strip-left">
-                  <span class="icon">📄</span>
-                  <span>Drag & drop lease agreement, CSV listing, or inspection report here</span>
-                </div>
-                <small>Browse files ↗</small>
-              </div>
-
+            <!-- Sleek Input Dock -->
+            <div class="tj-input-dock tj-clean-dock">
               <!-- Staged File Preview Tray -->
-              <div class="tj-staged-attachment" id="stagedAttachment">
+              <div class="tj-staged-attachment" id="stagedAttachment" style="display: none;">
                 <div class="tj-staged-info">
                   <span class="icon" id="stagedFileIcon">📄</span>
                   <div>
@@ -444,45 +387,36 @@ CONVERSATIONAL RULES:
                     <small id="stagedFileSize">(240 KB)</small>
                   </div>
                 </div>
-                <button type="button" class="tj-staged-remove-btn" id="stagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">×</button>
+                <button type="button" class="tj-staged-remove-btn" id="stagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">✕</button>
               </div>
 
-              <!-- Interactive Media Form -->
-              <form class="tj-media-form" id="chatForm" autocomplete="off">
-                <!-- Hidden file input -->
+              <!-- Clean Form -->
+              <form class="tj-media-form tj-clean-form" id="chatForm" autocomplete="off">
                 <input type="file" id="hiddenFileInput" accept=".pdf,.png,.jpg,.jpeg,.csv,.docx" style="display: none;" />
 
-                <!-- Paperclip Button -->
-                <button type="button" class="tj-attach-btn" id="btnAttachFile" title="Attach Lease Agreement, Image, or CSV Document" aria-label="Attach file">
-                  📎
+                <button type="button" class="tj-attach-btn" id="btnAttachFile" title="Attach file or lease" aria-label="Attach file">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"></path></svg>
                 </button>
 
-                <!-- Voice Mic Button with Waveform Visualizer -->
-                <button type="button" class="tj-mic-btn" id="btnVoiceInput" title="Hold or tap to dictate voice query" aria-label="Dictate query">
-                  <div class="mic-icon">🎤</div>
-                  <div class="mic-waveform" aria-hidden="true">
-                    <span></span><span></span><span></span><span></span>
-                  </div>
+                <button type="button" class="tj-mic-btn" id="btnVoiceInput" title="Dictate voice query" aria-label="Dictate query">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"></path><path d="M19 10v2a7 7 0 01-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                 </button>
 
-                <!-- Multimodal Expanding Textarea -->
                 <div class="tj-textarea-wrapper">
                   <textarea
                     id="chatInput"
                     rows="1"
-                    placeholder="Ask about Pacific Grove listings, 30-day rules, Unit 014, or type '/' for commands..."
-                    aria-label="Ask Sentinel AI"></textarea>
+                    placeholder="Ask ThatJoint AI anything..."
+                    aria-label="Ask ThatJoint AI"></textarea>
                 </div>
 
-                <!-- Submit Button -->
-                <button type="submit" class="tj-send-btn" id="btnSend" title="Dispatch Operational Directive" aria-label="Send query">
-                  <span>Send</span>
-                  <i>↗</i>
+                <button type="submit" class="tj-send-btn" id="btnSend" title="Send message" aria-label="Send">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </form>
 
-              <div class="tj-input-hint">
-                <span>Press <strong>Enter</strong> to send · <strong>Shift+Enter</strong> for newline · <strong>/</strong> for commands · <strong>Esc</strong> to close</span>
+              <div class="tj-clean-footer-hint">
+                <span>Press <strong>Enter</strong> to send · <strong>Esc</strong> to close</span>
               </div>
             </div>
           </div>
@@ -578,20 +512,9 @@ CONVERSATIONAL RULES:
 
       if (this.isDrawer) {
         this.container.innerHTML = `
-          <button type="button" class="tj-sentinel-launcher-btn" id="tjSentinelLauncher" aria-label="Open Sentinel AI Side Window" title="Open Sentinel AI [?]">
+          <button type="button" class="tj-sentinel-launcher-btn" id="tjSentinelLauncher" aria-label="Open ThatJoint AI Side Window" title="Open ThatJoint AI [?]">
             <span class="tj-launcher-pulse" aria-hidden="true"></span>
-            <span class="tj-launcher-avatar" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" class="tj-launcher-mascot-svg">
-                <circle cx="32" cy="32" r="28" fill="#D45D3A"/>
-                <path d="M20 28C20 20 28 16 32 16C36 16 44 20 44 28C44 38 38 44 32 44C26 44 20 38 20 28Z" fill="#2B2B2B"/>
-                <circle cx="28" cy="27" r="3" fill="#FFFFFF"/>
-                <circle cx="36" cy="27" r="3" fill="#FFFFFF"/>
-                <circle cx="28" cy="27" r="1.5" fill="#000000"/>
-                <circle cx="36" cy="27" r="1.5" fill="#000000"/>
-                <polygon points="32,32 30,35 34,35" fill="#D45D3A"/>
-              </svg>
-            </span>
-            <span class="tj-launcher-text">Sentinel AI</span>
+            <span class="tj-launcher-text">ThatJoint AI</span>
             <span class="tj-launcher-kbd" aria-hidden="true">?</span>
           </button>
           <div class="tj-companion-backdrop" id="tjBackdrop" aria-hidden="true"></div>
@@ -1421,49 +1344,57 @@ CONVERSATIONAL RULES:
     renderWelcomeHub() {
       if (!this.feed) return;
       const hubWrap = document.createElement('div');
-      hubWrap.className = 'tj-welcome-hub';
+      hubWrap.className = 'tj-welcome-clean';
       hubWrap.innerHTML = `
-        <div class="tj-welcome-banner">
-          <p class="eyebrow"><span>05</span><b>Autonomous Real Estate Sentinel</b></p>
-          <h2 class="welcome-heading">The whole property & coastal market,<br /><em>already in context.</em></h2>
-          <p class="welcome-sub">
-            Continuous operational monitoring, verified tenancy covenants, instant work order dispatch, and live municipal knowledge base for <strong>Home 014</strong> & <strong>Pacific Grove Coastal Portfolio (274 Properties)</strong>.
-          </p>
+        <div class="tj-welcome-badge">
+          <span>● AI Operations</span>
         </div>
+        <h2 class="tj-welcome-title">How can I help you today?</h2>
+        <p class="tj-welcome-desc">
+          Ask questions about building operations, Home 014, co-living KYC, billing schedules, or property portfolios.
+        </p>
 
-        <div class="tj-welcome-grid">
-          <div class="tj-welcome-card" data-query="Pacific Grove Market Overview" role="button" tabindex="0">
-            <div class="card-icon">📊</div>
-            <h4>Pacific Grove Market Analysis</h4>
-            <p>Explore 274 properties across 114 operators with median rate $351/night and zoning covenant statistics.</p>
-            <span class="card-action">Analyze Market ↗</span>
-          </div>
+        <div class="tj-clean-starter-grid">
+          <button type="button" class="tj-clean-starter-card" data-query="Co-Living 3-Year Overview">
+            <span class="card-icon">🏢</span>
+            <div class="card-text">
+              <strong>Co-Living Overview</strong>
+              <small>40 tech residents · 3-year performance</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
 
-          <div class="tj-welcome-card" data-query="Oceanfront & Luxury Villas" role="button" tabindex="0">
-            <div class="card-icon">🌊</div>
-            <h4>Oceanfront & Luxury Estates</h4>
-            <p>Inspect oceanfront 6-bedroom masterpiece, Lovers Point beach houses, and Asilomar coastal estates.</p>
-            <span class="card-action">Explore Villas ↗</span>
-          </div>
+          <button type="button" class="tj-clean-starter-card" data-query="Home 014 Status & Telemetry">
+            <span class="card-icon">🏡</span>
+            <div class="card-text">
+              <strong>Home 014 Operations</strong>
+              <small>HVAC SLA · rooftop solar · lease active</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
 
-          <div class="tj-welcome-card" data-query="Explain 30-day minimum stay rule" role="button" tabindex="0">
-            <div class="card-icon">📜</div>
-            <h4>STR Compliance & 30-Day Covenants</h4>
-            <p>Understand why 40.9% of units mandate 30+ nights under local municipal code Chapter 23.90.</p>
-            <span class="card-action">Audit Covenants ↗</span>
-          </div>
+          <button type="button" class="tj-clean-starter-card" data-query="What is the total revenue over 3 years?">
+            <span class="card-icon">💳</span>
+            <div class="card-text">
+              <strong>3-Year Billing & KYC</strong>
+              <small>₹2.69 Cr revenue · Swiggy/Zomato · Form C</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
 
-          <div class="tj-welcome-card" data-query="Home 014 Status & Telemetry" role="button" tabindex="0">
-            <div class="card-icon">🏡</div>
-            <h4>Unit 014 Live Operations</h4>
-            <p>Access live rooftop solar microgrid, active HVAC maintenance WO-8841, and rent indexing math.</p>
-            <span class="card-action">Inspect Unit 014 ↗</span>
-          </div>
+          <button type="button" class="tj-clean-starter-card" data-query="Pacific Grove Market Overview">
+            <span class="card-icon">📊</span>
+            <div class="card-text">
+              <strong>Market & Listings</strong>
+              <small>274 coastal units · 30-day covenants</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
         </div>
       `;
 
       hubWrap.addEventListener('click', (e) => {
-        const card = e.target.closest('.tj-welcome-card');
+        const card = e.target.closest('.tj-clean-starter-card') || e.target.closest('.tj-welcome-card');
         if (card) {
           const query = card.getAttribute('data-query');
           if (query) {
