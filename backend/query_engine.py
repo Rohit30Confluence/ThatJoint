@@ -34,6 +34,10 @@ class ColivingQueryEngine:
         q = query.strip()
         q_lower = q.lower()
 
+        # 0. Co-Living Booking & Intake Concierge Flow
+        if any(term in q_lower for term in ["book", "booking", "reserve", "reservation", "rent a room", "rent a flat", "want to stay", "looking to stay", "intake"]) and not any(term in q_lower for term in ["overview", "revenue", "history"]):
+            return self.answer_booking_intake(q)
+
         # 1. Foreign Nationals & FRRO / Immigration
         if any(term in q_lower for term in ["foreign", "frro", "expat", "visa", "form c", "lukas", "elena", "kenji", "nationality", "german", "russian", "japanese"]):
             if "lukas" in q_lower:
@@ -89,6 +93,46 @@ class ColivingQueryEngine:
 
         # 9. Generic Co-Living Overview Fallback
         return self.answer_general_overview(q)
+
+    # -------------------------------------------------------------
+    # Co-Living Booking & Intake Concierge Handler
+    # -------------------------------------------------------------
+    def answer_booking_intake(self, query: str) -> Dict[str, Any]:
+        """Provides interactive Co-Living Tenancy Booking & Intake questionnaire."""
+        text = """### 🏡 ThatJoint Co-Living Reservation Concierge · Tenancy Intake
+
+Welcome! I will guide you through finding and reserving your ideal co-living residence. To curate matching spaces according to your requirements, please provide your initial details:
+
+1. 👤 **Full Legal Name**
+2. 📍 **Origin Address** (Permanent hometown, state, or country)
+3. 🏙️ **Current Location** (Where you are currently residing or working)
+4. 🎯 **Interested Area for Living** (e.g., *Hinjawadi Tech Park, Kharadi, Viman Nagar, Magarpatta, Baner, or Pacific Grove*)
+
+---
+#### 📋 Next Steps in Intake:
+- **Price Ranges**: Shared Pod (₹8,000–₹12,000), Private Studio (₹14,000–₹18,000), Luxury Suite (₹18,000–₹26,000).
+- **Facilities & Requirements**: High-speed fiber WiFi, chef meal plans, ergonomic desk, gym, rooftop solar backup, move-in date.
+- **Document Proof & KYC**: Aadhaar / Passport / Corporate Offer Letter / Form C.
+- **Site Selection**: Instant hold reservation across verified units (Home 014, Unit 008, Unit 022).
+"""
+        return {
+            "type": "booking_intake",
+            "title": "Co-Living Tenancy Intake · Personal & Location Details",
+            "badge": "Stage 1: Applicant Details Required",
+            "text": text,
+            "data": {
+                "step": 1,
+                "total_steps": 3,
+                "required_fields": ["name", "origin_address", "current_location", "interested_area"],
+                "available_areas": ["Hinjawadi", "Kharadi", "Viman Nagar", "Magarpatta", "Baner", "Pacific Grove"]
+            },
+            "suggested_questions": [
+                "My name is Rahul, from Delhi, currently in Mumbai, interested in Hinjawadi",
+                "Name: Sneha Patel, Origin: Bangalore, Current: Pune, Area: Kharadi",
+                "Area: Viman Nagar (Single Room)",
+                "Show available room types and monthly tariffs"
+            ]
+        }
 
     # -------------------------------------------------------------
     # Resident Dossier Handler

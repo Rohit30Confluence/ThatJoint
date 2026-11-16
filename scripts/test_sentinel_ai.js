@@ -143,8 +143,91 @@ for (const test of TEST_QUERIES) {
 }
 
 console.log(`\nResults: ${TEST_QUERIES.length - failed}/${TEST_QUERIES.length} passed.`);
+
+// -------------------------------------------------------------
+// Interactive Multi-Step Co-Living Booking Flow Test Suite
+// -------------------------------------------------------------
+console.log('\nRunning Interactive Co-Living Booking Flow multi-turn test suite...\n');
+
+const bookingBot = new ThatJointChatbot();
+
+// Stage 1: Trigger booking
+const t1 = bookingBot.generateGenerativeResponse('I want to book a room', null);
+const t1Pass = t1 && t1.title && t1.title.includes('Co-Living Tenancy Intake') &&
+  t1.richCard && t1.richCard.badge === 'Applicant Details Required' &&
+  t1.body.includes('Full Legal Name') && t1.body.includes('Origin Address') &&
+  t1.body.includes('Current Location') && t1.body.includes('Interested Area for Living');
+
+if (t1Pass) {
+  console.log('[PASS] Booking Stage 1: Intake initiated & questions asked (Name, Origin, Location, Area)');
+} else {
+  failed++;
+  console.error('[FAIL] Booking Stage 1 failed');
+}
+
+// Stage 2: Provide applicant personal & geographical details
+const t2 = bookingBot.generateGenerativeResponse('My name is Rohit Sharma, origin from Delhi, currently in Mumbai, interested in Hinjawadi', null);
+const t2Pass = t2 && t2.title && t2.title.includes('Rohit Sharma') &&
+  t2.richCard && t2.richCard.badge === 'Step 2 / 3: Preferences & KYC' &&
+  t2.body.includes('Monthly Price Range / Budget') &&
+  t2.body.includes('Desired Facilities & Amenities') &&
+  t2.body.includes('Document Proof (KYC Verification)');
+
+if (t2Pass) {
+  console.log('[PASS] Booking Stage 2: Recorded profile & asked preferences, budget, facilities, and KYC document proof');
+} else {
+  failed++;
+  console.error('[FAIL] Booking Stage 2 failed');
+}
+
+// Stage 3: Provide preferences, budget, and document proof
+const t3 = bookingBot.generateGenerativeResponse('Budget is ₹14,000 - ₹18,000, need high-speed fiber WiFi and gym, moving in next week, Aadhaar card attached', null);
+const t3Pass = t3 && t3.title && t3.title.includes('Curated Residences') &&
+  t3.richCard && t3.richCard.badge === 'Step 3 / 3: Select Site' &&
+  t3.body.includes('ThatJoint Home 014') &&
+  t3.body.includes('ThatJoint Unit 008') &&
+  t3.body.includes('ThatJoint Unit 022') &&
+  t3.richCard.actions.some(a => a.action === 'select-site');
+
+if (t3Pass) {
+  console.log('[PASS] Booking Stage 3: Curated matching residences displayed with select-site action buttons');
+} else {
+  failed++;
+  console.error('[FAIL] Booking Stage 3 failed');
+}
+
+// Stage 4: Site selection & reservation hold confirmation
+const t4 = bookingBot.generateGenerativeResponse('Select and reserve Home 014', null);
+const t4Pass = t4 && t4.title && t4.title.includes('Reservation Confirmed') &&
+  t4.richCard && t4.richCard.badge.includes('Hold Active') &&
+  t4.body.includes('Booking Reference:') &&
+  t4.body.includes('Home 014') &&
+  t4.body.includes('Rohit Sharma');
+
+if (t4Pass) {
+  console.log('[PASS] Booking Stage 4: Reservation hold confirmed with booking reference and complete summary');
+} else {
+  failed++;
+  console.error('[FAIL] Booking Stage 4 failed');
+}
+
+// Cancellation / Reset check
+const resetBot = new ThatJointChatbot();
+resetBot.generateGenerativeResponse('I want to book a room', null);
+const tReset = resetBot.generateGenerativeResponse('cancel booking', null);
+const resetPass = tReset && tReset.title && tReset.title.includes('Booking Inquiry Reset') &&
+  resetBot.bookingState.active === false;
+
+if (resetPass) {
+  console.log('[PASS] Booking Reset & Cancellation handler');
+} else {
+  failed++;
+  console.error('[FAIL] Booking Reset failed');
+}
+
+console.log(`\nFinal Test Result: ${TEST_QUERIES.length + 5 - failed}/${TEST_QUERIES.length + 5} passed.`);
 if (failed > 0) {
   process.exit(1);
 } else {
-  console.log('All Sentinel AI intent and knowledge base tests passed successfully!');
+  console.log('All Sentinel AI intent, knowledge base, and booking flow tests passed successfully!');
 }

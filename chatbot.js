@@ -267,6 +267,24 @@ CONVERSATIONAL RULES:
       this.isListening = false;
       this.knowledgeBase = PACIFIC_GROVE_KB;
 
+      // Multi-step Co-Living & Tenancy Booking State Machine
+      this.bookingState = {
+        active: false,
+        step: 0,
+        data: {
+          name: '',
+          originAddress: '',
+          currentLocation: '',
+          interestedArea: '',
+          budgetRange: '',
+          facilities: [],
+          requirements: '',
+          documentProof: null,
+          selectedSite: null,
+          bookingRef: null
+        }
+      };
+
       // Safe LocalStorage accessor for SSR / Node environments
       const storage = typeof localStorage !== 'undefined'
         ? localStorage
@@ -302,6 +320,25 @@ CONVERSATIONAL RULES:
       } catch (e) {
         // Running offline or embedded mode - embedded PACIFIC_GROVE_KB is already active
       }
+    }
+
+    resetBookingState() {
+      this.bookingState = {
+        active: false,
+        step: 0,
+        data: {
+          name: '',
+          originAddress: '',
+          currentLocation: '',
+          interestedArea: '',
+          budgetRange: '',
+          facilities: [],
+          requirements: '',
+          documentProof: null,
+          selectedSite: null,
+          bookingRef: null
+        }
+      };
     }
 
     init() {
@@ -926,6 +963,7 @@ CONVERSATIONAL RULES:
       if (clearBtn) {
         clearBtn.addEventListener('click', () => {
           this.conversationHistory = [];
+          this.resetBookingState();
           if (this.feed) this.feed.innerHTML = '';
           this.renderWelcomeHub();
           this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Session reset</i>');
@@ -1429,6 +1467,16 @@ CONVERSATIONAL RULES:
         content: query || (file ? `Attached document: ${file.name}` : '')
       });
 
+      // Interactive Booking & Tenancy Flow Interception
+      const lowerQ = (query || '').toLowerCase();
+      if (this.isBookingTrigger(lowerQ) || (this.bookingState && this.bookingState.active)) {
+        setTimeout(() => {
+          const resp = this.handleBookingFlow(query, file);
+          this.deliverResponse(resp);
+        }, 280);
+        return;
+      }
+
       const tier = this.clientConfig.tier;
       if (tier === 'tier2' && this.clientConfig.tier2Key) {
         this.callTier2Model(query, file);
@@ -1592,6 +1640,426 @@ CONVERSATIONAL RULES:
     }
 
     // ----------------------------------------------------------------
+    // Co-Living Booking & Intake Conversational Flow Engine
+    // ----------------------------------------------------------------
+    isBookingTrigger(lower) {
+      if (!lower) return false;
+      const notBooking = /(overview|revenue|history|covenant|who\s+are|statutory|rules|compliance)/i.test(lower);
+      if (notBooking) return false;
+      return /\b(book|booking|reserve|reservation|rent\s+a\s+(?:room|flat|apartment|unit|suite|bed)|looking\s+to\s+stay|want\s+to\s+stay|how\s+to\s+book|tenancy\s+application|intake|book\s+now)\b/i.test(lower);
+    }
+
+    extractApplicantDetails(text) {
+      const data = {};
+      if (!text) return data;
+
+      // Full Legal Name
+      const nameM = text.match(/(?:my\s*name\s*is|name\s*[:=-]|i\s*am|i'm)\s+([A-Za-z\s.'-]+?)(?=\s+(?:from|origin|current|currently|living|looking|interested)|,|$|\n)/i);
+      if (nameM && nameM[1].trim().length > 1) {
+        data.name = nameM[1].trim();
+      }
+
+      // Origin Address
+      const originM = text.match(/(?:origin\s*(?:address)?\s*[:=-]|from|hometown\s*(?:is|[:=-])?|permanent\s*(?:address)?\s*[:=-])\s+([A-Za-z0-9\s,.'-]+?)(?=\s+(?:current|currently|living|looking|interested|area)|,|$|\n)/i);
+      if (originM && originM[1].trim().length > 1) {
+        data.originAddress = originM[1].trim();
+      }
+
+      // Current Location
+      const currentM = text.match(/(?:current\s*(?:location)?\s*[:=-]|currently\s*(?:in|at|living in)|living\s*(?:at|in)|now\s*in)\s+([A-Za-z0-9\s,.'-]+?)(?=\s+(?:interested|looking|for living|area|budget)|,|$|\n)/i);
+      if (currentM && currentM[1].trim().length > 1) {
+        data.currentLocation = currentM[1].trim();
+      }
+
+      // Interested Area
+      const areaM = text.match(/(?:interested\s+(?:in|area\s*[:=-]?)|looking\s*(?:to live in|for living in|in)|area\s*[:=-]|locality\s*[:=-])\s+([A-Za-z0-9\s.'-]+?)(?=\s+(?:with|budget|price|and)|,|$|\n)/i);
+      if (areaM && areaM[1].trim().length > 1) {
+        data.interestedArea = areaM[1].trim();
+      } else {
+        const knownAreas = ['Hinjawadi', 'Kharadi', 'Viman Nagar', 'Magarpatta', 'Baner', 'Balewadi', 'Pacific Grove', 'Aundh', 'Kalyani Nagar'];
+        for (const area of knownAreas) {
+          if (new RegExp('\\b' + area + '\\b', 'i').test(text)) {
+            data.interestedArea = area;
+            break;
+          }
+        }
+      }
+
+      // Comma-separated fallback e.g. "Rahul Sharma, Delhi, Mumbai, Hinjawadi"
+      if ((!data.name || !data.originAddress) && text.includes(',')) {
+        const parts = text.split(',').map(p => p.trim()).filter(Boolean);
+        if (parts.length >= 4) {
+          if (!data.name) data.name = parts[0].replace(/^(i am|i'm|my name is)\s+/i, '');
+          if (!data.originAddress) data.originAddress = parts[1].replace(/^(from|origin:?)\s+/i, '');
+          if (!data.currentLocation) data.currentLocation = parts[2].replace(/^(currently in|current:?)\s+/i, '');
+          if (!data.interestedArea) data.interestedArea = parts[3].replace(/^(interested in|area:?)\s+/i, '');
+        } else if (parts.length === 3) {
+          if (!data.name) data.name = parts[0].replace(/^(i am|i'm|my name is)\s+/i, '');
+          if (!data.originAddress) data.originAddress = parts[1].replace(/^(from|origin:?)\s+/i, '');
+          if (!data.interestedArea) data.interestedArea = parts[2].replace(/^(interested in|area:?)\s+/i, '');
+        }
+      }
+
+      return data;
+    }
+
+    extractPreferences(text, file) {
+      const prefs = {
+        budget: '',
+        facilities: [],
+        requirements: text || '',
+        docProof: file ? `${file.name} (${(file.size / 1024).toFixed(0)} KB)` : null
+      };
+
+      // Budget detection
+      if (/(shared|twin|8\s*k|8000|10\s*k|10000|12\s*k|12000)/i.test(text)) {
+        prefs.budget = 'Shared Executive Pod (₹8,000 – ₹12,000 / mo)';
+      } else if (/(private|single|14\s*k|14000|15\s*k|15000|16\s*k|16000|18\s*k|18000)/i.test(text)) {
+        prefs.budget = 'Private Studio Suite (₹14,000 – ₹18,000 / mo)';
+      } else if (/(suite|penthouse|luxury|20\s*k|20000|25\s*k|25000)/i.test(text)) {
+        prefs.budget = 'Luxury Penthouse Residence (₹18,000 – ₹26,000 / mo)';
+      } else {
+        prefs.budget = 'Standard Executive Studio (₹14,000 – ₹18,000 / mo)';
+      }
+
+      // Facilities detection
+      const facilityMap = [
+        { name: 'High-speed Fiber WiFi', pattern: /(wifi|internet|fiber|speed)/i },
+        { name: 'Chef Meal Subscription', pattern: /(meal|food|chef|dining|kitchen)/i },
+        { name: 'Ergonomic Workstation', pattern: /(workstation|desk|chair|wfh|workspace)/i },
+        { name: 'Gym & Fitness Club', pattern: /(gym|fitness|workout|pool)/i },
+        { name: 'Solar Microgrid Backup', pattern: /(power|backup|solar|inverter|electric)/i },
+        { name: 'Private Balcony', pattern: /(balcony|terrace|patio|deck)/i },
+        { name: 'Covered Parking', pattern: /(parking|car|bike|vehicle)/i },
+        { name: 'Daily Housekeeping', pattern: /(housekeeping|cleaning|maid|linen)/i }
+      ];
+
+      for (const f of facilityMap) {
+        if (f.pattern.test(text)) prefs.facilities.push(f.name);
+      }
+
+      if (prefs.facilities.length === 0) {
+        prefs.facilities = ['High-speed Fiber WiFi', 'Daily Housekeeping', 'Solar Microgrid Backup', 'Ergonomic Workstation'];
+      }
+
+      // Document proof detection in text
+      if (!prefs.docProof && /(aadhaar|passport|voter|pan|id|document|license|offer\s*letter|form\s*c)/i.test(text)) {
+        prefs.docProof = 'Government KYC ID Provided (Digital Verification ✓)';
+      }
+
+      return prefs;
+    }
+
+    handleBookingFlow(rawQuery, file) {
+      const q = (rawQuery || '').trim();
+      const lower = q.toLowerCase();
+
+      // Reset / cancellation check
+      if (/(cancel\s+booking|exit\s+booking|stop\s+booking|restart\s+booking|reset\s+booking)/i.test(lower)) {
+        this.resetBookingState();
+        return {
+          type: 'companion',
+          author: 'ThatJoint Tenancy Concierge',
+          title: 'Booking Inquiry Reset',
+          body: 'Your tenancy intake session has been reset. You can ask about general co-living amenities, Home 014 telemetry, or start a new booking anytime.',
+          richCard: {
+            title: 'Concierge Ready',
+            badge: 'Session Reset',
+            params: [
+              { label: 'Booking Status', value: 'Reset', sub: 'Ready' },
+              { label: 'Support', value: 'Live', sub: 'Concierge On-call' }
+            ],
+            actions: [
+              { label: 'Start New Booking', action: 'query', payload: 'I want to book a room' },
+              { label: 'Explore Knowledge Base', action: 'open-kb' }
+            ]
+          }
+        };
+      }
+
+      // If finished (Stage 4) and user enters a new query
+      if (this.bookingState.step === 4) {
+        if (this.isBookingTrigger(lower)) {
+          this.resetBookingState();
+          this.bookingState.active = true;
+          this.bookingState.step = 1;
+          return this.generateStage1Response();
+        }
+        this.bookingState.active = false;
+        return this.generateGenerativeResponse(rawQuery, file);
+      }
+
+      // Fresh Trigger
+      if (!this.bookingState.active) {
+        this.bookingState.active = true;
+        const upfrontDetails = this.extractApplicantDetails(q);
+        if (upfrontDetails.name) this.bookingState.data.name = upfrontDetails.name;
+        if (upfrontDetails.originAddress) this.bookingState.data.originAddress = upfrontDetails.originAddress;
+        if (upfrontDetails.currentLocation) this.bookingState.data.currentLocation = upfrontDetails.currentLocation;
+        if (upfrontDetails.interestedArea) this.bookingState.data.interestedArea = upfrontDetails.interestedArea;
+
+        // If user already gave name and interested area upfront, skip directly to Stage 2!
+        if (this.bookingState.data.name && this.bookingState.data.interestedArea) {
+          this.bookingState.step = 2;
+          return this.generateStage2Response(this.bookingState.data);
+        }
+
+        this.bookingState.step = 1;
+        return this.generateStage1Response();
+      }
+
+      // Stage 1: Collecting Personal & Geographical Details
+      if (this.bookingState.step === 1) {
+        const extracted = this.extractApplicantDetails(q);
+        if (extracted.name) this.bookingState.data.name = extracted.name;
+        if (extracted.originAddress) this.bookingState.data.originAddress = extracted.originAddress;
+        if (extracted.currentLocation) this.bookingState.data.currentLocation = extracted.currentLocation;
+        if (extracted.interestedArea) this.bookingState.data.interestedArea = extracted.interestedArea;
+
+        // Smart fallbacks if user typed concise answers
+        if (!this.bookingState.data.name && extracted.name) this.bookingState.data.name = extracted.name;
+        if (!this.bookingState.data.interestedArea) {
+          const areaMatch = q.match(/(hinjawadi|kharadi|viman nagar|magarpatta|baner|balewadi|pacific grove)/i);
+          if (areaMatch) this.bookingState.data.interestedArea = areaMatch[0];
+        }
+
+        this.bookingState.step = 2;
+        return this.generateStage2Response(this.bookingState.data);
+      }
+
+      // Stage 2: Collecting Preferences, Budget, Facilities & Document Proof
+      if (this.bookingState.step === 2) {
+        const prefs = this.extractPreferences(q, file);
+        if (prefs.budget) this.bookingState.data.budgetRange = prefs.budget;
+        if (prefs.facilities && prefs.facilities.length) this.bookingState.data.facilities = prefs.facilities;
+        if (prefs.requirements) this.bookingState.data.requirements = prefs.requirements;
+        if (prefs.docProof) this.bookingState.data.documentProof = prefs.docProof;
+
+        this.bookingState.step = 3;
+        return this.generateStage3Response(this.bookingState.data);
+      }
+
+      // Stage 3: Site Selection
+      if (this.bookingState.step === 3) {
+        let selectedSite = 'Home 014 (Executive Studio Suite)';
+        if (/unit\s*008|008|garden|site\s*2/i.test(lower)) {
+          selectedSite = 'Unit 008 (Premium Garden Residence)';
+        } else if (/unit\s*022|022|shared|pod|site\s*3/i.test(lower)) {
+          selectedSite = 'Unit 022 (Smart Shared Tech Pod)';
+        } else if (/home\s*014|014|studio|site\s*1/i.test(lower)) {
+          selectedSite = 'Home 014 (Executive Studio Suite)';
+        }
+
+        // If file uploaded in Stage 3 as proof
+        if (file) {
+          this.bookingState.data.documentProof = `${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
+        }
+
+        this.bookingState.data.selectedSite = selectedSite;
+        this.bookingState.data.bookingRef = 'TJ-BK-' + Math.floor(100000 + Math.random() * 900000);
+        this.bookingState.step = 4;
+        return this.generateStage4Confirmation(selectedSite);
+      }
+
+      // Default fallback
+      return this.generateStage1Response();
+    }
+
+    generateStage1Response() {
+      return {
+        type: 'companion',
+        author: 'ThatJoint Co-Living Concierge · Tenancy Onboarding',
+        title: 'Co-Living Tenancy Intake · Personal & Location Details',
+        body: `<strong>Welcome to ThatJoint Co-Living Reservation Concierge!</strong><br />
+I am here to find and configure your ideal co-living residence. To tailor matching sites according to your needs, please provide the following details:<br /><br />
+1. 👤 <strong>Full Legal Name</strong><br />
+2. 📍 <strong>Origin Address</strong> (Permanent hometown, state, or country)<br />
+3. 🏙️ <strong>Current Location</strong> (Where you are currently residing or working)<br />
+4. 🎯 <strong>Interested Area for Living</strong> (e.g., <em>Hinjawadi Tech Park, Kharadi, Viman Nagar, Magarpatta, Baner, or Pacific Grove</em>)<br /><br />
+<em>You can reply in one message (e.g. "Rohit Sharma, Delhi, Mumbai, Hinjawadi") or select your preferred living hub below:</em>`,
+        richCard: {
+          title: 'Tenancy Intake: Step 1 of 3',
+          badge: 'Applicant Details Required',
+          params: [
+            { label: 'Intake Stage', value: 'Step 1 of 3', sub: 'Personal & Geo Details' },
+            { label: 'Available Hubs', value: '4 Tech Corridors', sub: 'Pune & Monterey' },
+            { label: 'Covenants', value: 'Flexible / 11-Mo', sub: 'Zero Brokerage' }
+          ],
+          actions: [
+            { label: '📍 Hinjawadi Phase 1', action: 'query', payload: 'Area: Hinjawadi Phase 1' },
+            { label: '📍 Kharadi IT Park', action: 'query', payload: 'Area: Kharadi IT Corridor' },
+            { label: '📍 Viman Nagar', action: 'query', payload: 'Area: Viman Nagar' },
+            { label: '📍 Baner Tech Hub', action: 'query', payload: 'Area: Baner Tech Hub' }
+          ]
+        },
+        followUps: [
+          'My name is Rahul, from Delhi, currently in Mumbai, interested in Hinjawadi',
+          'Name: Sneha Patel, Origin: Bangalore, Current: Pune, Area: Kharadi',
+          'Area: Viman Nagar (Single Room)'
+        ]
+      };
+    }
+
+    generateStage2Response(data) {
+      const name = data.name || 'Valued Resident';
+      const origin = data.originAddress || 'Registered Hometown';
+      const current = data.currentLocation || 'Current City';
+      const area = data.interestedArea || 'Pune Tech Corridor';
+
+      return {
+        type: 'companion',
+        author: 'ThatJoint Co-Living Concierge · Preferences & Verification',
+        title: `Profile Recorded: ${name} · Step 2 of 3`,
+        body: `Thank you, <strong>${this.escapeHtml(name)}</strong>! We have registered your preliminary applicant dossier:<br /><br />
+• 📍 <strong>Origin Address:</strong> ${this.escapeHtml(origin)}<br />
+• 🏙️ <strong>Current Location:</strong> ${this.escapeHtml(current)}<br />
+• 🎯 <strong>Target Living Area:</strong> ${this.escapeHtml(area)}<br /><br />
+Now, let\'s sort matching residences by configuring your living preferences and KYC verification:<br /><br />
+1. 💵 <strong>Monthly Price Range / Budget:</strong><br />
+   • <em>Shared Executive Pod:</em> ₹8,000 – ₹12,000 / month<br />
+   • <em>Private Studio Suite:</em> ₹14,000 – ₹18,000 / month<br />
+   • <em>Luxury Penthouse:</em> ₹18,000 – ₹26,000 / month<br /><br />
+2. ⚡ <strong>Desired Facilities & Amenities:</strong><br />
+   • Dedicated high-speed fiber WiFi, chef meal plans, ergonomic workstation, gym & pool access, private balcony, rooftop solar microgrid.<br /><br />
+3. 📋 <strong>Special or Specific Requirements:</strong><br />
+   • Target move-in date, lease flexibility (monthly vs 11-mo covenant), 2-wheeler or 4-wheeler parking, quiet floor preference.<br /><br />
+4. 📑 <strong>Document Proof (KYC Verification):</strong><br />
+   • As per Maharashtra Tenancy & DPDP 2023 compliance, please upload or attach your Government ID / Document Proof (<em>Aadhaar Card, Passport, Corporate Offer Letter, or Form C for expats</em>).<br />
+   • Click <strong>[Attach KYC Document 📎]</strong> below, use the paperclip icon, or drop your file into this window.`,
+        richCard: {
+          title: 'Preferences & Document Verification',
+          badge: 'Step 2 / 3: Preferences & KYC',
+          params: [
+            { label: 'Applicant', value: name, sub: origin },
+            { label: 'Target Area', value: area, sub: 'Sorted Inventory' },
+            { label: 'KYC Document', value: data.documentProof ? 'Uploaded ✓' : 'Awaiting Proof', sub: 'DPDP & Police Verification' }
+          ],
+          actions: [
+            { label: '💵 Shared (₹8k–₹12k)', action: 'query', payload: 'Budget: Shared ₹8,000 - ₹12,000, high-speed WiFi and meals' },
+            { label: '💵 Private (₹14k–₹18k)', action: 'query', payload: 'Budget: Private Studio ₹14,000 - ₹18,000, workstation & balcony' },
+            { label: '💵 Suite (₹18k–₹25k)', action: 'query', payload: 'Budget: Luxury Suite ₹18,000 - ₹25,000, all amenities included' },
+            { label: '📎 Attach KYC Document', action: 'trigger-upload' }
+          ]
+        },
+        followUps: [
+          'Budget: ₹14,000 - ₹18,000, need high-speed WiFi, gym, and parking',
+          'Shared room under ₹12,000 with chef meal plan',
+          'Luxury studio suite with balcony and move-in by 1st next month'
+        ]
+      };
+    }
+
+    generateStage3Response(data) {
+      const name = data.name || 'Valued Resident';
+      const area = data.interestedArea || 'Hinjawadi Tech Hub';
+      const budget = data.budgetRange || 'Private Studio (₹14,000 – ₹18,000 / mo)';
+      const facilitiesStr = (data.facilities && data.facilities.length)
+        ? data.facilities.join(', ')
+        : 'Fiber WiFi, Solar Backup, Ergonomic Desk, Daily Housekeeping';
+      const docStatus = data.documentProof
+        ? `Verified ✓ (${this.escapeHtml(data.documentProof)})`
+        : 'Pending Digital Handover (Submit prior to check-in)';
+
+      return {
+        type: 'companion',
+        author: 'ThatJoint Co-Living Concierge · Site Selection',
+        title: `Curated Residences for ${name} in ${area}`,
+        body: `<strong>Matching Co-Living Residences Curated for Your Profile:</strong><br />
+We have filtered our portfolio according to your location (<strong>${this.escapeHtml(area)}</strong>), budget (<strong>${this.escapeHtml(budget)}</strong>), and requested amenities (<em>${this.escapeHtml(facilitiesStr)}</em>).<br /><br />
+• 📄 <strong>KYC Verification:</strong> ${docStatus}<br /><br />
+<strong>Please review and select your preferred residence below to lock in your reservation hold:</strong><br /><br />
+
+1. 🏡 <strong>ThatJoint Home 014 - Executive Studio Suite</strong><br />
+   • <strong>Location:</strong> ${this.escapeHtml(area)} · Central Quadrangle (3 min to Tech Parks)<br />
+   • <strong>Tariff:</strong> <strong>₹16,500 / month</strong> (All-inclusive utilities & maintenance)<br />
+   • <strong>Amenities:</strong> 500 Mbps Fiber WiFi, ergonomic workstation, 4.8 kW rooftop solar microgrid, private balcony, gym & clubhouse access.<br />
+   • <strong>Availability:</strong> Immediate Move-in · Unit Inspected & Sanitized<br /><br />
+
+2. 🌿 <strong>ThatJoint Unit 008 - Premium Garden Residence</strong><br />
+   • <strong>Location:</strong> ${this.escapeHtml(area)} · East Boulevard<br />
+   • <strong>Tariff:</strong> <strong>₹18,500 / month</strong> (Inclusive of Chef Meal Subscription)<br />
+   • <strong>Amenities:</strong> Landscaped garden patio, biometrically locked smart entry, covered vehicle parking, weekly linen service.<br />
+   • <strong>Availability:</strong> Available from 1st of next month<br /><br />
+
+3. ⚡ <strong>ThatJoint Unit 022 - Smart Shared Tech Pod</strong><br />
+   • <strong>Location:</strong> ${this.escapeHtml(area)} · Innovation Quadrangle<br />
+   • <strong>Tariff:</strong> <strong>₹10,500 / month</strong> (Zero Lock-in Deposit option)<br />
+   • <strong>Amenities:</strong> Sound-isolated acoustic workstation pod, 24/7 cafe pantry, high-speed WiFi, co-working lounge.<br />
+   • <strong>Availability:</strong> Immediate Move-in<br /><br />
+<em>Click on any of the buttons below to confirm your booking and generate your tenancy reservation pass:</em>`,
+        richCard: {
+          title: 'Select Residence to Reserve',
+          badge: 'Step 3 / 3: Select Site',
+          params: [
+            { label: 'Site 1', value: 'Home 014', sub: '₹16,500 / mo · Studio' },
+            { label: 'Site 2', value: 'Unit 008', sub: '₹18,500 / mo · Garden' },
+            { label: 'Site 3', value: 'Unit 022', sub: '₹10,500 / mo · Shared' }
+          ],
+          actions: [
+            { label: '✓ Select Home 014', action: 'select-site', payload: 'Home 014' },
+            { label: '✓ Select Unit 008', action: 'select-site', payload: 'Unit 008' },
+            { label: '✓ Select Unit 022', action: 'select-site', payload: 'Unit 022' },
+            { label: '📎 Attach Document Proof', action: 'trigger-upload' }
+          ]
+        },
+        followUps: [
+          'Select and reserve Home 014',
+          'Select and reserve Unit 008',
+          'Select and reserve Unit 022'
+        ]
+      };
+    }
+
+    generateStage4Confirmation(siteName) {
+      const d = this.bookingState.data;
+      const name = d.name || 'Valued Resident';
+      const site = siteName || d.selectedSite || 'Home 014 (Executive Studio Suite)';
+      const ref = d.bookingRef || ('TJ-BK-' + Math.floor(100000 + Math.random() * 900000));
+      const tariff = site.includes('008') ? '₹18,500 / month' : site.includes('022') ? '₹10,500 / month' : '₹16,500 / month';
+      const docStatus = d.documentProof ? `Verified ✓ (${this.escapeHtml(d.documentProof)})` : 'Pending Handover (Aadhaar / ID verification prior to key handover)';
+
+      return {
+        type: 'companion',
+        author: 'ThatJoint Co-Living Concierge · Booking Confirmation',
+        title: `Reservation Confirmed · Ref #${ref}`,
+        body: `🎉 <strong>Congratulations, ${this.escapeHtml(name)}! Your reservation hold is officially confirmed.</strong><br /><br />
+Here is your official tenancy onboarding dossier:<br />
+• 🔖 <strong>Booking Reference:</strong> <code>#${ref}</code><br />
+• 🏠 <strong>Reserved Residence:</strong> <strong>${this.escapeHtml(site)}</strong><br />
+• 📍 <strong>Tenant Origin:</strong> ${this.escapeHtml(d.originAddress || 'Registered Hometown')}<br />
+• 🏙️ <strong>Current Location:</strong> ${this.escapeHtml(d.currentLocation || 'Current City')}<br />
+• 🎯 <strong>Living Area:</strong> ${this.escapeHtml(d.interestedArea || 'Tech Corridor')}<br />
+• 💵 <strong>Monthly Tariff:</strong> <strong>${tariff}</strong> (All-inclusive: Fiber WiFi, Power Backup, Housekeeping)<br />
+• 📑 <strong>KYC Verification:</strong> ${docStatus}<br />
+• 🔒 <strong>Security Deposit:</strong> 100% Escrow-backed refundable deposit covenant<br /><br />
+<strong>Onboarding & Next Steps:</strong><br />
+1. A digital tenancy agreement and smart pass receipt have been queued.<br />
+2. Your community onboarding manager will reach out via WhatsApp/email within 2 hours to confirm your move-in slot and luggage transit.<br />
+3. Your biometric / smart pass access will be activated on your check-in day.`,
+        richCard: {
+          title: `Booking Hold: ${site.split(' ')[0]} ${site.split(' ')[1] || ''}`,
+          badge: `Hold Active · #${ref}`,
+          params: [
+            { label: 'Booking Ref', value: ref, sub: 'Confirmed Hold' },
+            { label: 'Residence', value: site.split(' ')[1] || 'Home 014', sub: tariff },
+            { label: 'Tenant', value: name, sub: d.originAddress || 'Verified' },
+            { label: 'Status', value: 'Active Reservation', sub: 'Zero Brokerage' }
+          ],
+          actions: [
+            { label: '🏡 View 3D Tour', action: 'crosslink-3d', payload: 'complete-assembly' },
+            { label: '📄 Download Covenant Draft', action: 'query', payload: 'Draft renewal agreement' },
+            { label: '↺ New Booking Inquiry', action: 'query', payload: 'I want to book a room' }
+          ]
+        },
+        followUps: [
+          'Home 014 Status & Telemetry',
+          'What is the total revenue over 3 years?',
+          'Draft renewal agreement'
+        ]
+      };
+    }
+
+    // ----------------------------------------------------------------
     // Autonomous Generative Synthesis Engine (Knowledge Base Aware)
     // ----------------------------------------------------------------
     generateGenerativeResponse(rawQuery, file) {
@@ -1615,6 +2083,11 @@ CONVERSATIONAL RULES:
             ]
           }
         };
+      }
+
+      // 1.5 Interactive Co-Living Booking & Intake State Machine
+      if (this.isBookingTrigger(lower) || (this.bookingState && this.bookingState.active)) {
+        return this.handleBookingFlow(q, file);
       }
 
       // 2. Document & CSV File Upload Processing
@@ -2563,6 +3036,10 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
           this.input.value = payload;
           this.submitQuery();
         }
+      } else if (action === 'select-site') {
+        this.dispatchQuery(`Select and reserve ${payload}`);
+      } else if (action === 'trigger-upload') {
+        if (this.fileInput) this.fileInput.click();
       } else if (action === 'open-kb') {
         this.openKnowledgeBaseModal();
       } else if (action === 'open-help') {

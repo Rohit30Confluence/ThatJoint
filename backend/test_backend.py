@@ -158,6 +158,15 @@ class TestColivingQueryEngine(unittest.TestCase):
         self.assertIn("Infosys Phase 2", res["text"])
         self.assertIn("Siemens Technology India", res["text"])
 
+    def test_booking_intake(self):
+        res = self.engine.ask("I want to book a room in ThatJoint co-living")
+        self.assertEqual(res["type"], "booking_intake")
+        self.assertIn("Full Legal Name", res["text"])
+        self.assertIn("Origin Address", res["text"])
+        self.assertIn("Current Location", res["text"])
+        self.assertIn("Interested Area", res["text"])
+        self.assertEqual(res["data"]["step"], 1)
+
     def test_raw_sql_safety(self):
         # Valid SELECT
         val = self.engine.execute_raw_sql("SELECT count(*) as cnt FROM residents_master WHERE nationality='Indian'")
@@ -186,6 +195,13 @@ class TestHttpServerEndpoints(unittest.TestCase):
         self.assertTrue(data["success"])
         self.assertIn("KPIT Technologies", data["response"]["text"])
         self.assertEqual(data["response"]["data"]["resident"]["nationality"], "Japanese")
+
+    def test_api_chat_booking(self):
+        status, data = simulate_http_request("POST", "/api/chat", {"query": "booking inquiry for a room"})
+        self.assertEqual(status, 200)
+        self.assertTrue(data["success"])
+        self.assertEqual(data["response"]["type"], "booking_intake")
+        self.assertIn("Full Legal Name", data["response"]["text"])
 
     def test_api_residents_filter(self):
         status, data = simulate_http_request("GET", "/api/residents?nationality=German")
