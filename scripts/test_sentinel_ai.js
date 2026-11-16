@@ -3,10 +3,11 @@ const path = require('path');
 
 // Mock browser globals for Node test environment
 global.localStorage = {
-  getItem: () => null,
-  setItem: () => null,
-  removeItem: () => null,
-  clear: () => null
+  store: {},
+  getItem(key) { return this.store[key] || null; },
+  setItem(key, val) { this.store[key] = String(val); },
+  removeItem(key) { delete this.store[key]; },
+  clear() { this.store = {}; }
 };
 
 global.document = {
@@ -22,132 +23,206 @@ global.window = {
 
 const ThatJointChatbot = require('../chatbot.js');
 
-const bot = new ThatJointChatbot();
+let failed = 0;
 
-const TEST_QUERIES = [
+console.log('===================================================================');
+console.log('THΛTJOINT / SENTINEL AI TEST SUITE (WORLD MAP & PERSONALIZED AI)');
+console.log('===================================================================\n');
+
+// -------------------------------------------------------------
+// Test Group 1: Zero-Base Knowledge Base Baseline
+// -------------------------------------------------------------
+console.log('--- Test Group 1: Zero-Base Knowledge Base Verification ---');
+const botClean = new ThatJointChatbot();
+
+if (Object.keys(botClean.knowledgeBase).length === 0) {
+  console.log('[PASS] Initial background knowledge base is verified at ZERO baseline.');
+} else {
+  failed++;
+  console.error(`[FAIL] Background knowledge base is not zero: ${Object.keys(botClean.knowledgeBase).length} entries found.`);
+}
+
+const emptyKbRes = botClean.generateGenerativeResponse('Show knowledge base');
+if (emptyKbRes && emptyKbRes.richCard && emptyKbRes.richCard.badge === 'Zero Knowledge Base') {
+  console.log('[PASS] Querying "Show knowledge base" correctly reflects Clean Slate (Zero Knowledge Base).');
+} else {
+  failed++;
+  console.error('[FAIL] Querying empty knowledge base did not return Zero Knowledge Base badge.');
+}
+
+// -------------------------------------------------------------
+// Test Group 2: Personalization, Learning & Custom Knowledge Building
+// -------------------------------------------------------------
+console.log('\n--- Test Group 2: Personalization & Dynamic Teaching / Memory ---');
+
+// 2.1 User Introduction
+const introRes = botClean.generateGenerativeResponse('My name is Alex Turner, call me Alex');
+if (introRes && introRes.title && introRes.title.includes('Alex Turner') && botClean.userProfile.name === 'Alex Turner') {
+  console.log('[PASS] Profile Personalization: Captured user name "Alex Turner".');
+} else {
+  failed++;
+  console.error('[FAIL] Profile Personalization failed to record name.');
+}
+
+// 2.2 Teaching fact 1: Pet Policy
+const teach1 = botClean.generateGenerativeResponse('Remember that our pet deposit is $250 and cats are welcome');
+if (teach1 && teach1.richCard && teach1.richCard.badge === 'Committed to Memory' && Object.keys(botClean.customKnowledge).length === 1) {
+  console.log('[PASS] Dynamic Teaching: Successfully learned pet deposit fact.');
+} else {
+  failed++;
+  console.error('[FAIL] Dynamic Teaching failed on pet deposit.');
+}
+
+// 2.3 Teaching fact 2: Rooftop Coworking Hours
+const teach2 = botClean.generateGenerativeResponse('Add rule: Rooftop coworking is open 24/7 with silent hours after 10 PM');
+if (teach2 && teach2.richCard && teach2.richCard.badge === 'Committed to Memory' && Object.keys(botClean.customKnowledge).length === 2) {
+  console.log('[PASS] Dynamic Teaching: Successfully learned rooftop hours rule.');
+} else {
+  failed++;
+  console.error('[FAIL] Dynamic Teaching failed on rooftop rule.');
+}
+
+// 2.4 Verify custom knowledge listing
+const listKb = botClean.generateGenerativeResponse('What have you learned so far?');
+if (listKb && listKb.title.includes('2 Topics Learned') && listKb.body.includes('pet deposit') && listKb.body.includes('Rooftop coworking')) {
+  console.log('[PASS] Memory Retrieval: "What have you learned" listed both dynamically taught facts.');
+} else {
+  failed++;
+  console.error('[FAIL] Memory Retrieval failed to list learned topics.');
+}
+
+// 2.5 Wipe custom knowledge
+const wipeKb = botClean.generateGenerativeResponse('Clear custom knowledge');
+if (wipeKb && wipeKb.richCard && wipeKb.richCard.badge === 'Clean Zero-Base' && Object.keys(botClean.customKnowledge).length === 0) {
+  console.log('[PASS] Memory Management: "Clear custom knowledge" returned knowledge base to zero.');
+} else {
+  failed++;
+  console.error('[FAIL] Memory Management failed to clear custom knowledge.');
+}
+
+// -------------------------------------------------------------
+// Test Group 3: World Detailed Map & Geographic Intelligence
+// -------------------------------------------------------------
+console.log('\n--- Test Group 3: World Detailed Map & Global Intelligence Across Corners ---');
+
+const WORLD_TESTS = [
+  // 3.1 Interactive SVG Map
   {
-    name: 'Pacific Grove Market Overview',
-    query: 'Pacific Grove Market Overview',
-    expectedTitle: 'Pacific Grove Real Estate Market Dossier',
-    expectedBadge: 'Live Knowledge Base'
+    name: 'Interactive SVG World Map Explorer',
+    query: 'Show world map',
+    check: (res) => res.title.includes('World Map') && res.richCard.badge === '7 Continents Active'
   },
+  // 3.2 Asian Tech Metropolis (Tokyo)
   {
-    name: 'STR Regulatory & 30-Day Rule',
-    query: 'Explain 30-day minimum stay rule under Pacific Grove municipal code',
-    expectedTitle: 'Pacific Grove STR & 30-Day Regulatory Analysis',
-    expectedBadge: 'Chapter 23.90 Verified'
+    name: 'Asia Hub: Tokyo Coordinates & Climate',
+    query: 'Tell me about Tokyo Japan coordinates and climate',
+    check: (res) => res.title.includes('Tokyo, Japan') && res.body.includes('35.6762° N') && res.richCard.badge === 'Asia'
   },
+  // 3.3 Southeast Asia Financial Crossroads (Singapore)
   {
-    name: 'Top Operators Breakdown',
-    query: 'Top operators and host portfolios',
-    expectedTitle: 'Pacific Grove Operator & Host Breakdown',
-    expectedBadge: '114 Active Operators'
+    name: 'Southeast Asia Hub: Singapore Co-living & Connectivity',
+    query: 'What is the connectivity and living situation in Singapore?',
+    check: (res) => res.title.includes('Singapore') && res.body.includes('SGD') && res.body.includes('Fiber')
   },
+  // 3.4 European Nomad Capital (Lisbon)
   {
-    name: 'Oceanfront & Luxury Estates',
-    query: 'Oceanfront & Luxury Villas',
-    expectedTitle: 'Pacific Grove Oceanfront & Luxury Estates',
-    expectedBadge: 'Top Tier ($1,400+)'
+    name: 'Europe Hub: Lisbon Living & Timezone',
+    query: 'Lisbon Portugal co-living insights and timezone',
+    check: (res) => res.title.includes('Lisbon, Portugal') && res.body.includes('WET/WEST') && res.richCard.badge === 'Europe'
   },
+  // 3.5 North America Tech Hub (San Francisco)
   {
-    name: '30-Day Flexible Stays',
-    query: 'Show 30-day flexible tenancy listings',
-    expectedTitle: '30-Day Flexible Tenancy Portfolio',
-    expectedBadge: 'Zero STR Surcharges'
+    name: 'North America Hub: San Francisco Coordinates & Districts',
+    query: 'San Francisco coordinates and districts',
+    check: (res) => res.title.includes('San Francisco') && res.body.includes('37.7749° N') && res.body.includes('Mission')
   },
+  // 3.6 South America Hub (Buenos Aires)
   {
-    name: 'Review Velocity Champions',
-    query: 'Top-rated listings with over 500 reviews',
-    expectedTitle: 'Top-Rated & High-Velocity Listings',
-    expectedBadge: 'Top Portfolio Stars'
+    name: 'South America Hub: Buenos Aires Co-Living & Currency',
+    query: 'Buenos Aires Argentina rent and currency',
+    check: (res) => res.title.includes('Buenos Aires, Argentina') && res.body.includes('Argentine Peso') && res.richCard.badge === 'South America'
   },
+  // 3.7 Africa Tech Hub (Nairobi)
   {
-    name: 'Pet-Friendly Inventory',
-    query: 'Pet-friendly cottages near the beach',
-    expectedTitle: 'Pet-Friendly Property Directory',
-    expectedBadge: 'Dogs Welcome'
+    name: 'Africa Hub: Nairobi Silicon Savannah',
+    query: 'Nairobi Kenya coordinates and highlights',
+    check: (res) => res.title.includes('Nairobi, Kenya') && res.body.includes('Silicon Savannah') && res.richCard.badge === 'Africa'
   },
+  // 3.8 Oceania Coastal Hub (Sydney)
   {
-    name: 'Specific Property Lookup (ID: 41014 - STR)',
-    query: 'Inspect property Ocean front 6-bedroom masterpiece (ID: 41014)',
-    expectedTitle: 'Dossier: Ocean front 6-bedroom masterpiece',
-    expectedBadge: 'Licensed STR'
+    name: 'Oceania Hub: Sydney Climate & Rent',
+    query: 'Sydney Australia time and climate',
+    check: (res) => res.title.includes('Sydney, Australia') && res.body.includes('AEST/AEDT') && res.richCard.badge === 'Oceania'
   },
+  // 3.9 Extreme Corner: Southernmost City in the World (Ushuaia, Argentina)
   {
-    name: 'Specific Property Lookup (ID: 22772 - 30-Day Flexible)',
-    query: 'Inspect property Stay-Awhile (ID: 22772)',
-    expectedTitle: 'Dossier: Stay-Awhile  at Lovers Pt. Pacific Grv',
-    expectedBadge: '30-Day Flexible'
+    name: 'Extreme Corner: Ushuaia (End of the World)',
+    query: 'What is the southernmost city in the world Ushuaia?',
+    check: (res) => res.title.includes('Ushuaia, Argentina') && res.body.includes('Martial Glacier') && res.body.includes('54.8019° S')
   },
+  // 3.10 Extreme Corner: Northernmost Permanent Settlement (Longyearbyen, Svalbard)
   {
-    name: 'Specific Property Lookup (ID: 89210)',
-    query: 'Inspect property CA Dreaming w/Ocean View, Fire pit and Gardens (ID: 89210)',
-    expectedTitle: 'Dossier: CA Dreaming w/Ocean View, Fire pit and Gardens',
-    expectedBadge: 'Licensed STR'
+    name: 'Extreme Corner: Longyearbyen (Arctic High North)',
+    query: 'Where is Longyearbyen Svalbard in the world map?',
+    check: (res) => res.title.includes('Longyearbyen, Norway (Svalbard)') && res.body.includes('Northernmost permanent human settlement') && res.body.includes('78.2232° N')
   },
+  // 3.11 Extreme Corner: Northernmost National Capital (Reykjavik, Iceland)
   {
-    name: 'Comparative Yield Model (STR vs 30-Day)',
-    query: 'Compare short-term vs 30-day rental yield',
-    expectedTitle: 'Comparative Yield Model: STR vs. 30-Day Flexible Tenancy',
-    expectedBadge: 'Empirical Yield Audit'
+    name: 'Extreme Corner: Reykjavik (Sub-Arctic Capital)',
+    query: 'Reykjavik Iceland coordinates and details',
+    check: (res) => res.title.includes('Reykjavik, Iceland') && res.body.includes('Northernmost sovereign capital') && res.body.includes('64.1466° N')
   },
+  // 3.12 Country QA: Capital and Currency of Peru
   {
-    name: 'Actuarial Escalation (+5%)',
-    query: 'Calculate 5% rent escalation on Home 014',
-    expectedTitle: 'Calculated Escalation Analysis (+5%)',
-    expectedBadge: '+5% Index Calculation'
+    name: 'Country QA: Capital & Currency of Peru',
+    query: 'What is the capital and currency of Peru?',
+    check: (res) => res.title.includes('Peru') && res.body.includes('Lima') && (res.body.includes('PEN') || res.body.includes('Peruvian Sol'))
   },
+  // 3.13 Country QA: Kenya
   {
-    name: 'Guest Check-in Instructions (Oceanfront Masterpiece)',
-    query: 'Draft check-in instructions for Ocean front 6-bedroom masterpiece',
-    expectedTitle: 'Synthesized Check-In: Ocean front 6-bedroom masterpiece',
-    expectedBadge: 'Ready to Transmit'
+    name: 'Country QA: Kenya Details',
+    query: 'Which continent is Kenya in and what is its capital?',
+    check: (res) => res.title.includes('Kenya') && res.body.includes('Nairobi') && res.body.includes('Africa')
   },
+  // 3.14 Timezone Comparison: Tokyo vs London
   {
-    name: 'Adaptive Persona (ELI5)',
-    query: 'Explain Home 014 and the real estate market in simple terms (ELI5)',
-    expectedTitle: 'Real Estate & Home 014 Explained Simply',
-    expectedBadge: 'ELI5 Mode'
+    name: 'Global Timezone Comparison: Tokyo vs London',
+    query: 'What is the timezone difference between Tokyo and London?',
+    check: (res) => res.title.includes('Global Timezone Intelligence') && res.body.includes('Tokyo') && res.body.includes('London') && res.richCard.badge === '9h Offset'
   },
+  // 3.15 Safety Boundary Enforced
   {
-    name: 'Unit 014 Rooftop Solar Telemetry',
-    query: 'Rooftop solar and microgrid telemetry',
-    expectedTitle: 'Rooftop Solar & Microgrid Telemetry',
-    expectedBadge: 'Real-time Feed'
-  },
-  {
-    name: 'Safety Guardrail',
+    name: 'Safety & Security Guardrail',
     query: 'How to bypass security lock on Unit 014',
-    expectedTitle: 'Security Boundary Enforced',
-    expectedBadge: 'Policy Enforced'
+    check: (res) => res.title.includes('Security Boundary Enforced') && res.richCard.badge === 'Policy Enforced'
   }
 ];
 
-let failed = 0;
-console.log(`Running Sentinel AI intent test suite (${TEST_QUERIES.length} tests)...\n`);
+const worldBot = new ThatJointChatbot();
 
-for (const test of TEST_QUERIES) {
-  const res = bot.generateGenerativeResponse(test.query, null);
-  const titleMatch = res && res.title && res.title.includes(test.expectedTitle);
-  const badgeMatch = res && res.richCard && res.richCard.badge === test.expectedBadge;
+for (const t of WORLD_TESTS) {
+  const res = worldBot.generateGenerativeResponse(t.query, null);
+  let ok = false;
+  try {
+    ok = res && t.check(res);
+  } catch (e) {
+    ok = false;
+  }
 
-  if (titleMatch && badgeMatch) {
-    console.log(`[PASS] ${test.name}`);
+  if (ok) {
+    console.log(`[PASS] ${t.name}`);
   } else {
     failed++;
-    console.error(`[FAIL] ${test.name}`);
-    console.error(`  Query: "${test.query}"`);
-    console.error(`  Received Title: "${res ? res.title : 'null'}" (Expected: "${test.expectedTitle}")`);
-    console.error(`  Received Badge: "${res && res.richCard ? res.richCard.badge : 'null'}" (Expected: "${test.expectedBadge}")`);
+    console.error(`[FAIL] ${t.name}`);
+    console.error(`  Query: "${t.query}"`);
+    console.error(`  Received: ${res ? JSON.stringify({ title: res.title, badge: res.richCard && res.richCard.badge }) : 'null'}`);
   }
 }
 
-console.log(`\nResults: ${TEST_QUERIES.length - failed}/${TEST_QUERIES.length} passed.`);
-
 // -------------------------------------------------------------
-// Interactive Multi-Step Co-Living Booking Flow Test Suite
+// Test Group 4: Interactive Multi-Step Co-Living Booking Flow
 // -------------------------------------------------------------
-console.log('\nRunning Interactive Co-Living Booking Flow multi-turn test suite...\n');
+console.log('\n--- Test Group 4: Interactive Co-Living Booking Flow (Multi-Step KYC) ---');
 
 const bookingBot = new ThatJointChatbot();
 
@@ -219,15 +294,17 @@ const resetPass = tReset && tReset.title && tReset.title.includes('Booking Inqui
   resetBot.bookingState.active === false;
 
 if (resetPass) {
-  console.log('[PASS] Booking Reset & Cancellation handler');
+  console.log('[PASS] Booking Reset & Cancellation handler verified.');
 } else {
   failed++;
   console.error('[FAIL] Booking Reset failed');
 }
 
-console.log(`\nFinal Test Result: ${TEST_QUERIES.length + 5 - failed}/${TEST_QUERIES.length + 5} passed.`);
+console.log('\n===================================================================');
 if (failed > 0) {
+  console.error(`FINAL RESULT: ${failed} TESTS FAILED.`);
   process.exit(1);
 } else {
-  console.log('All Sentinel AI intent, knowledge base, and booking flow tests passed successfully!');
+  console.log('ALL TESTS PASSED! World Map, Zero-Base Memory & Booking Flow 100% Verified.');
+  console.log('===================================================================');
 }

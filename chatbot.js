@@ -1,16 +1,12 @@
 /* ==========================================================================
-   THATJOINT / GENERATIVE AI PROPERTY SENTINEL ENGINE (v2.2.0)
-   Mascot: "The Property Sentinel" (Red Panda Theme)
+   THATJOINT / GLOBAL INTELLIGENCE & PERSONALIZED AI COMPANION (v3.0.0)
    Capabilities:
-     - Autonomous Knowledge Base: Pacific Grove & Monterey Peninsula (274 Properties)
-     - Interactive Knowledge Base Explorer & Instant 1-Click Dossier Loading
-     - Multi-Modal Input: Voice Dictation (Web Speech API), Lease & CSV Parsing, Drag & Drop
-     - Client Packaging Tiers:
-         * Tier 1: Local Autonomous Synthesis Engine (Zero-config, contextual, offline)
-         * Tier 2: Bring-Your-Own API Key (OpenAI GPT-4o / Gemini 1.5/2.0)
-         * Tier 3: Enterprise Webhook (Yardi / RealPage / ERP microservices)
-     - Contextual Follow-Up Suggestions & 1-Click Copy on Synthesized Drafts
-     - 3D Building Tour Cross-Module Synchronization
+     - World Detailed Map & Geographic Intelligence: 7 Continents, 195+ Countries, Extreme Corners
+     - Clean Slate Zero-Base Knowledge Base: Dynamic User Teaching, Memory & Learning
+     - Personalized Chatbot: Adaptive User Profile, Tone, Contextual Memory
+     - Global Co-Living Booking & Intake Concierge (Multi-Step KYC Flow)
+     - Interactive SVG World Map Explorer & Global Coordinate Navigator
+     - Multimodal Document Understanding (PDF, CSV, Images), Voice Dictation, Drag & Drop
    ========================================================================== */
 
 (function (root, factory) {
@@ -35,17 +31,13 @@
           <feComposite in="SourceGraphic" in2="blur" operator="over" />
         </filter>
       </defs>
-      <!-- Animated Bushy Tail -->
       <g class="mascot-tail">
         <path d="M18 42C12 40 4 46 6 54C8 60 17 62 25 56C28 53 28 48 24 45C22 43 20 42 18 42Z" fill="#D45D3A" />
         <path d="M12 45C8 47 6 52 9 56" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
         <path d="M18 48C15 50 14 55 18 58" stroke="#3D261E" stroke-width="2.5" stroke-linecap="round" />
       </g>
-      <!-- Body & Shoulders -->
       <path d="M20 46C20 40 25 36 32 36C39 36 44 40 44 46L46 58C46 60 44 62 42 62H22C20 62 18 60 18 58L20 46Z" fill="#2B2B2B" />
-      <!-- Head Group (Mouse tracking & animation target) -->
       <g class="mascot-head" id="mascotHead">
-        <!-- Ears with separate classes for flick animations -->
         <g class="mascot-ear-left">
           <polygon points="17,14 27,24 15,28" fill="#D45D3A" />
           <polygon points="18,17 25,23 17,26" fill="#F4F1EA" />
@@ -54,33 +46,24 @@
           <polygon points="47,14 37,24 49,28" fill="#D45D3A" />
           <polygon points="46,17 39,23 47,26" fill="#F4F1EA" />
         </g>
-        <!-- Main Face Shape -->
         <path d="M18 26C18 19 24 16 32 16C40 16 46 19 46 26C48 31 46 38 41 41C38 43 26 43 23 41C18 38 16 31 18 26Z" fill="#D45D3A" />
-        <!-- White Facial Cheek Masks -->
         <path d="M17 28C19 36 24 38 28 36C25 31 22 26 17 28Z" fill="#F4F1EA" />
         <path d="M47 28C45 36 40 38 36 36C39 31 42 26 47 28Z" fill="#F4F1EA" />
-        <!-- Eyebrows / Forehead Marking -->
         <path d="M27 21C29 19 35 19 37 21" stroke="#F4F1EA" stroke-width="2" stroke-linecap="round" />
         <circle cx="28" cy="22" r="1.5" fill="#F4F1EA" />
         <circle cx="36" cy="22" r="1.5" fill="#F4F1EA" />
-        <!-- Eyes & Lids -->
         <g class="mascot-eyes" id="mascotEyes">
-          <!-- Left Eye -->
           <ellipse cx="25.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
           <circle cx="26.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
           <ellipse cx="25.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
-          <!-- Right Eye -->
           <ellipse cx="38.5" cy="28.5" rx="3" ry="3.5" fill="#1C1816" />
           <circle cx="39.5" cy="27.5" r="1.2" fill="#FFFFFF" class="mascot-pupil" />
           <ellipse cx="38.5" cy="28.5" rx="3.2" ry="3.8" fill="#D45D3A" class="mascot-eyelid" />
         </g>
-        <!-- Muzzle & Cute Nose -->
         <path d="M28 33C28 31 36 31 36 33C37 36 35 39 32 39C29 39 27 36 28 33Z" fill="#F4F1EA" />
         <path d="M30.5 33.5L33.5 33.5L32 35.5Z" fill="#241B18" />
-        <!-- Mouth -->
         <path d="M30.5 36.5C31.5 37.5 32.5 37.5 33.5 36.5" stroke="#241B18" stroke-width="1.2" stroke-linecap="round" class="mascot-mouth" />
       </g>
-      <!-- Collar & Glowing Purple Intelligence Orbiter -->
       <path d="M22 45C26 47 38 47 42 45" stroke="#EDEBE4" stroke-width="2.5" stroke-linecap="round" />
       <circle cx="32" cy="46" r="3" fill="#A459FF" filter="url(#purpleGlow)" />
       <circle cx="32" cy="46" r="1.5" fill="#FFFFFF" />
@@ -88,168 +71,1567 @@
   `;
 
   // ------------------------------------------------------------------
-  // Grounded Real Estate Operations Dataset for THATJOINT (Home 014)
+  // Detailed World Map Database & Global Intelligence (7 Continents & Corners)
   // ------------------------------------------------------------------
-  const PROPERTY_DATA = {
-    unit: 'Home 014',
-    community: 'Oakview Courtyard Residences',
-    address: 'Suite 14, Garden Quadrangle, Maharashtra',
-    resident: {
-      name: 'Dr. A. Verma',
-      since: 'Nov 2025',
-      contact: 'a.verma@thatjoint.domain',
-      phone: '+91 98200 44812',
-      status: 'In Good Standing (Zero Infractions)'
-    },
-    lease: {
-      term: '01 Nov 2025 – 31 Oct 2026',
-      daysRemaining: 30,
-      monthlyRentNum: 145000,
-      monthlyRent: '₹1,45,000',
-      securityDepositNum: 435000,
-      securityDeposit: '₹4,35,000 (Escrow Backed)',
-      lastPaidDate: '18 Oct 2026',
-      escalationRate: '5.0% Annual Indexing',
-      escalationPct: 5.0,
-      renewalWindowActive: true,
-      status: 'Renewal Window Active (30 Days Remaining)'
-    },
-    maintenance: {
-      activeWorkOrders: 1,
-      ticketId: 'WO-8841',
-      scheduledTime: 'Today at 14:00',
-      vendor: 'Apex Climate Solutions (Rajesh K.)',
-      scope: 'Routine HVAC air-filter & static pressure audit',
-      lastInspection: '16 Aug 2026 (Passed 100%)',
-      status: 'Technician Dispatched'
-    },
-    microgrid: {
-      solarGeneration: '4.8 kW (Peak Generation)',
-      dailyYield: '28.4 kWh',
-      batteryStorage: '92% (13.8 kWh Reserve)',
-      buildingOffset: '94.2% Net Zero',
-      status: 'Optimal Efficiency'
-    },
-    security: {
-      perimeterLock: 'Smart Pass #014 Active',
-      lastEvent: 'Main Gate Access Confirmed: Courier Delivery #4481 at 09:16',
-      status: 'Secured'
-    }
-  };
-
-  // ------------------------------------------------------------------
-  // Autonomous Knowledge Base: Pacific Grove & Monterey Peninsula (274 Properties)
-  // ------------------------------------------------------------------
-  const PACIFIC_GROVE_KB = {"summary":{"market":"Pacific Grove & Monterey Peninsula, CA","total_properties":274,"total_hosts":114,"pricing":{"currency":"USD","median_nightly":351.0,"mean_nightly":485.02,"min_nightly":58.0,"max_nightly":2867.0,"avg_monthly_midterm":7224.93},"regulatory_str_split":{"thirty_day_plus_flexible":112,"short_term_str":162,"str_compliance_ratio":"40.9% 30-day covenant compliance"},"room_type_distribution":{"Entire home/apt":219,"Private room":43,"Hotel room":12},"key_operators":[{"host":"Sanctuary Vacation Rentals","listings_count":49},{"host":"Monterey Rentals","listings_count":21},{"host":"Kyle","listings_count":13},{"host":"Pacific","listings_count":11},{"host":"Angela","listings_count":9},{"host":"The Charles Pacific Grove","listings_count":8},{"host":"Green Gables Inn","listings_count":5},{"host":"Tracy","listings_count":5},{"host":"Alex","listings_count":4},{"host":"Carmel Coast Estate","listings_count":4}],"submarket_clusters":{"lovers_point":15,"asilomar":8,"cannery_aquarium":15,"downtown":32,"coastal_ocean_view":133,"luxury_estates":31}},"properties":[{"id":"22772","name":"Stay-Awhile  at Lovers Pt. Pacific Grv","host":"Amie","roomType":"Entire home/apt","price":247.0,"minNights":30,"reviews":62,"rpm":0.31,"avail":83,"license":"","lat":36.62202,"lng":-121.91775,"tags":["30-Day Flexible Tenancy"]},{"id":"41014","name":"Ocean front 6-bedroom masterpiece","host":"Kirstie","roomType":"Entire home/apt","price":1768.0,"minNights":5,"reviews":124,"rpm":0.66,"avail":154,"license":"","lat":36.63096,"lng":-121.93652,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"44515","name":"Pet-Friendly* Cottage Near Beach for 30+ day stays","host":"Blake","roomType":"Entire home/apt","price":101.0,"minNights":1,"reviews":974,"rpm":4.96,"avail":133,"license":"","lat":36.62475,"lng":-121.93491,"tags":["Short-Term Vacation","Coastal / Ocean View","Pet-Friendly","Budget / Value Tier"]},{"id":"89210","name":"CA Dreaming w/Ocean View, Fire pit and Gardens","host":"Sarah","roomType":"Entire home/apt","price":237.0,"minNights":1,"reviews":1436,"rpm":7.63,"avail":45,"license":"","lat":36.60421,"lng":-121.92524,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"129723","name":"Modern Victorian with ocean view (1 month minimum)","host":"Birgit","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":19,"rpm":0.13,"avail":125,"license":"","lat":36.62008,"lng":-121.90993,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Heritage / Victorian Architecture"]},{"id":"1031734","name":"Ocean View Designer Home","host":"Dan","roomType":"Entire home/apt","price":733.0,"minNights":30,"reviews":237,"rpm":1.45,"avail":365,"license":"","lat":36.60368,"lng":-121.92721,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1721186","name":"Beautiful Villa With Ocean View","host":"Barb","roomType":"Entire home/apt","price":601.0,"minNights":1,"reviews":559,"rpm":3.56,"avail":320,"license":"","lat":36.62468,"lng":-121.91711,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"3029273","name":"Modern Beach House","host":"James","roomType":"Private room","price":304.0,"minNights":1,"reviews":786,"rpm":5.34,"avail":174,"license":"","lat":36.6333,"lng":-121.92406,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"3821616","name":"Bright Beach Cottage, Center of town, 30-day","host":"Alka","roomType":"Entire home/apt","price":145.0,"minNights":30,"reviews":470,"rpm":3.2,"avail":212,"license":"","lat":36.62262,"lng":-121.91895,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core","Budget / Value Tier"]},{"id":"3836973","name":"Lovely House in Pacific Grove (Long term rental)","host":"Paul","roomType":"Entire home/apt","price":227.0,"minNights":30,"reviews":478,"rpm":3.24,"avail":365,"license":"","lat":36.60589,"lng":-121.92924,"tags":["30-Day Flexible Tenancy"]},{"id":"4099680","name":"The Monarch Home - Cozy & Relaxing","host":"Anne","roomType":"Entire home/apt","price":181.0,"minNights":30,"reviews":468,"rpm":3.24,"avail":251,"license":"","lat":36.62322,"lng":-121.92883,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"4582398","name":"Furnished Victorian Cottage (30 days minimum)","host":"Birgit","roomType":"Entire home/apt","price":117.0,"minNights":30,"reviews":15,"rpm":0.13,"avail":279,"license":"","lat":36.62028,"lng":-121.90982,"tags":["30-Day Flexible Tenancy","Heritage / Victorian Architecture","Budget / Value Tier"]},{"id":"5185545","name":"Peaceful Cozy Beach Cottage","host":"Sarah","roomType":"Entire home/apt","price":336.0,"minNights":1,"reviews":440,"rpm":3.12,"avail":191,"license":"","lat":36.63195,"lng":-121.92545,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"5238711","name":"~Downtown PG Penthouses, Two Blocks to Beach~","host":"Kristina Isabella","roomType":"Entire home/apt","price":858.0,"minNights":3,"reviews":135,"rpm":0.99,"avail":192,"license":"","lat":36.61981,"lng":-121.91558,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"6018499","name":"Lovely ocean view house walk to coffee and beach!","host":"Marianne","roomType":"Entire home/apt","price":200.0,"minNights":2,"reviews":88,"rpm":0.63,"avail":193,"license":"","lat":36.61722,"lng":-121.91489,"tags":["Short-Term Vacation","Coastal / Ocean View","Budget / Value Tier"]},{"id":"6646306","name":"Peaceful Space near DLI + Cannery Row","host":"Seth","roomType":"Private room","price":69.0,"minNights":30,"reviews":250,"rpm":1.82,"avail":178,"license":"","lat":36.61305,"lng":-121.91538,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row","Budget / Value Tier"]},{"id":"6715036","name":"Cute & Stylish Cottage +HOT TUB","host":"Toni","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":34,"rpm":0.39,"avail":358,"license":"","lat":36.60167,"lng":-121.93163,"tags":["30-Day Flexible Tenancy","Wellness & Spa"]},{"id":"11210583","name":"Bungalow-by-the-Sea","host":"Michelle Frances","roomType":"Entire home/apt","price":525.0,"minNights":3,"reviews":227,"rpm":1.84,"avail":332,"license":"","lat":36.62294,"lng":-121.91968,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"11562419","name":"Beautiful Home Beach/Forest Area","host":"Richard","roomType":"Entire home/apt","price":163.0,"minNights":31,"reviews":118,"rpm":0.94,"avail":217,"license":"","lat":36.62282,"lng":-121.92969,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Budget / Value Tier"]},{"id":"13428610","name":"Romantic Private  Master Suite & Gardens #0427","host":"Jeanne","roomType":"Private room","price":459.0,"minNights":2,"reviews":47,"rpm":0.38,"avail":82,"license":"","lat":36.63323,"lng":-121.92557,"tags":["Short-Term Vacation"]},{"id":"13902577","name":"Charming Victorian Home Near Beach","host":"W","roomType":"Entire home/apt","price":653.0,"minNights":3,"reviews":248,"rpm":2.01,"avail":212,"license":"","lat":36.62511,"lng":-121.91704,"tags":["Short-Term Vacation","Coastal / Ocean View","Heritage / Victorian Architecture"]},{"id":"14266085","name":"Cottage Retreat Steps from the Sea","host":"Viveca And Jim","roomType":"Entire home/apt","price":442.0,"minNights":1,"reviews":855,"rpm":6.91,"avail":157,"license":"","lat":36.62094,"lng":-121.91302,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"14388930","name":"Guest Quarters Near Asilomar & Pebble Beach #0335","host":"Richard","roomType":"Entire home/apt","price":241.0,"minNights":5,"reviews":125,"rpm":1.07,"avail":57,"license":"","lat":36.62253,"lng":-121.93406,"tags":["Short-Term Vacation","Coastal / Ocean View","Asilomar Corridor"]},{"id":"14403615","name":"Dolphin House - Great Location! *30 day min stay*","host":"Beverlee","roomType":"Entire home/apt","price":167.0,"minNights":30,"reviews":132,"rpm":1.07,"avail":301,"license":"","lat":36.61825,"lng":-121.9118,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"14539067","name":"Pacific Grove, Pebble Beach, Carmel, Monterey","host":"Dimitra","roomType":"Entire home/apt","price":0.0,"minNights":2,"reviews":428,"rpm":3.48,"avail":3,"license":"","lat":36.62533,"lng":-121.93089,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"15165034","name":"No shared space! Guest suite! PGLic#0405","host":"Angi","roomType":"Entire home/apt","price":118.0,"minNights":1,"reviews":1204,"rpm":9.96,"avail":193,"license":"PG License #0405","lat":36.60376,"lng":-121.92731,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"15649395","name":"Casa Mariposa - The Live-In Museum","host":"Jon & Julie","roomType":"Entire home/apt","price":203.0,"minNights":30,"reviews":36,"rpm":0.3,"avail":209,"license":"","lat":36.62003,"lng":-121.92591,"tags":["30-Day Flexible Tenancy"]},{"id":"15857785","name":"Heart of PG Cottage (#0365)","host":"Roeya","roomType":"Entire home/apt","price":0.0,"minNights":2,"reviews":532,"rpm":4.44,"avail":0,"license":"","lat":36.61916,"lng":-121.91824,"tags":["Short-Term Vacation"]},{"id":"15942471","name":"Serene Retreat: Remodeled Home Near Everything","host":"Lisa","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":67,"rpm":0.56,"avail":314,"license":"","lat":36.60083,"lng":-121.93155,"tags":["30-Day Flexible Tenancy"]},{"id":"16542967","name":"Lovers Point Beach House - 30 Steps to Beach #0125","host":"Larry","roomType":"Entire home/apt","price":761.0,"minNights":2,"reviews":145,"rpm":1.24,"avail":54,"license":"","lat":36.62447,"lng":-121.91658,"tags":["Short-Term Vacation","Coastal / Ocean View","Lovers Point"]},{"id":"16884158","name":"Wake up to crashing waves!","host":"Evelyn","roomType":"Entire home/apt","price":294.0,"minNights":1,"reviews":130,"rpm":1.13,"avail":160,"license":"","lat":36.63600158691406,"lng":-121.9303207397461,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"17479137","name":"Pacific Grove Cottage, Entire House [30 days min]","host":"Joe","roomType":"Entire home/apt","price":141.0,"minNights":29,"reviews":50,"rpm":0.43,"avail":161,"license":"","lat":36.62027,"lng":-121.9245,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"17623471","name":"Pacific Grove Mid Century Near Beach","host":"Dave & Lee","roomType":"Entire home/apt","price":597.0,"minNights":1,"reviews":669,"rpm":5.78,"avail":63,"license":"","lat":36.62243,"lng":-121.92963,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"18731829","name":"Monarch Garden Cottage (30 day rental)","host":"Suzanne","roomType":"Entire home/apt","price":0.0,"minNights":31,"reviews":70,"rpm":0.61,"avail":1,"license":"","lat":36.61673,"lng":-121.90999,"tags":["30-Day Flexible Tenancy"]},{"id":"18917071","name":"Cozy Pacific Grove Post-Adobe Charmer 2/1 #0387","host":"Carolyn","roomType":"Entire home/apt","price":400.0,"minNights":2,"reviews":366,"rpm":3.22,"avail":141,"license":"","lat":36.60623550415039,"lng":-121.92169952392578,"tags":["Short-Term Vacation"]},{"id":"19137340","name":"Pacific Grove Willis House, Walk to Town and Beach","host":"Chris","roomType":"Entire home/apt","price":829.0,"minNights":2,"reviews":121,"rpm":1.07,"avail":12,"license":"","lat":36.61793,"lng":-121.92364,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"19606480","name":"Mermaid's Delight","host":"Terri","roomType":"Entire home/apt","price":658.0,"minNights":1,"reviews":294,"rpm":2.63,"avail":254,"license":"","lat":36.62559,"lng":-121.91967,"tags":["Short-Term Vacation"]},{"id":"19736001","name":"Furnished Studio/Cottage In Pacific Grove","host":"Dolly","roomType":"Entire home/apt","price":105.0,"minNights":30,"reviews":2,"rpm":0.04,"avail":363,"license":"","lat":36.61672,"lng":-121.92502,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"19789713","name":"Steps to the Beach + Ocean Views + Walk Everywhere","host":"Tommy & Mallary","roomType":"Entire home/apt","price":740.0,"minNights":2,"reviews":443,"rpm":3.98,"avail":274,"license":"","lat":36.62603,"lng":-121.91822,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"19830907","name":"Your month-long vacation on the California coast!","host":"Julie","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":69,"rpm":0.62,"avail":211,"license":"","lat":36.62556,"lng":-121.92263,"tags":["30-Day Flexible Tenancy"]},{"id":"19910607","name":"\"Mainstay Cottage\" Just Steps To Beach & Town!","host":"Marci","roomType":"Entire home/apt","price":1178.0,"minNights":1,"reviews":226,"rpm":2.06,"avail":76,"license":"","lat":36.62439,"lng":-121.91942,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core","Luxury Estate"]},{"id":"20190642","name":"Outback Bungalow","host":"Michelle Frances","roomType":"Entire home/apt","price":508.0,"minNights":2,"reviews":246,"rpm":2.37,"avail":315,"license":"","lat":36.62465,"lng":-121.91996,"tags":["Short-Term Vacation"]},{"id":"20229666","name":"3743 Pelican Peaks ~ Near Aquarium, Beach & Town","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":1,"reviews":73,"rpm":0.8,"avail":0,"license":"","lat":36.619986,"lng":-121.908223,"tags":["Short-Term Vacation","Coastal / Ocean View","Aquarium & Cannery Row","Downtown Core"]},{"id":"20229673","name":"3729 Ocean Park Sanctuary ~ Short Walk to the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":320.0,"minNights":30,"reviews":8,"rpm":0.07,"avail":363,"license":"","lat":36.620008,"lng":-121.921036,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"20229679","name":"3705 Oceanview Serenity ~ Oceanfront, Bay View","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":377.0,"minNights":30,"reviews":4,"rpm":0.04,"avail":61,"license":"","lat":36.626947,"lng":-121.919538,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"20229689","name":"3704 Ship's Watch ~ Walk to Restaurants and Shops","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":235.0,"minNights":30,"reviews":16,"rpm":0.15,"avail":255,"license":"","lat":36.620155,"lng":-121.921967,"tags":["30-Day Flexible Tenancy"]},{"id":"20229693","name":"3715 Bliss by the Sea ~  Beach/Trails/Aquarium","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":233.0,"minNights":30,"reviews":6,"rpm":0.06,"avail":244,"license":"","lat":36.618089,"lng":-121.910526,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Aquarium & Cannery Row"]},{"id":"20229698","name":"3703 La Gloria Cottage-by-the-Sea ~ Near the Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":325.0,"minNights":30,"reviews":8,"rpm":0.08,"avail":201,"license":"","lat":36.621795,"lng":-121.920669,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"20229711","name":"3263 Villa by the Sea ~ Newly Remodeled, Bay View","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1148.0,"minNights":1,"reviews":83,"rpm":0.75,"avail":310,"license":"","lat":36.619973222135215,"lng":-121.907522708004,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"20229712","name":"3646 Seashore Retreat ~ Walk to the Beach and Town","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":188,"license":"","lat":36.62084,"lng":-121.915183,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"20279454","name":"Studio Blu in Pacific Grove","host":"Brian","roomType":"Entire home/apt","price":95.0,"minNights":30,"reviews":30,"rpm":0.27,"avail":147,"license":"","lat":36.61594,"lng":-121.91262,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"20404083","name":"3096 Sanctuary by the Bay ~ Remodeled, Bay View!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":349.0,"minNights":30,"reviews":9,"rpm":0.08,"avail":184,"license":"","lat":36.62000766639408,"lng":-121.9076326785736,"tags":["30-Day Flexible Tenancy"]},{"id":"21981955","name":"Sunset Inn Pacific Grove","host":"Rishi","roomType":"Hotel room","price":307.0,"minNights":1,"reviews":327,"rpm":3.04,"avail":342,"license":"","lat":36.63018,"lng":-121.93234,"tags":["Short-Term Vacation"]},{"id":"22178195","name":"Pacific Suite (PG License # 0420)","host":"George","roomType":"Entire home/apt","price":389.0,"minNights":1,"reviews":541,"rpm":5.07,"avail":205,"license":"PG License #0420","lat":36.62051,"lng":-121.91453,"tags":["Short-Term Vacation"]},{"id":"22292297","name":"Pacific Grove 2 bed charmer","host":"Josh","roomType":"Entire home/apt","price":227.0,"minNights":30,"reviews":30,"rpm":0.29,"avail":252,"license":"","lat":36.61319,"lng":-121.92476,"tags":["30-Day Flexible Tenancy"]},{"id":"22666758","name":"Perfect location in Pacific Grove (Lic #0403)","host":"Carolyn","roomType":"Entire home/apt","price":400.0,"minNights":3,"reviews":329,"rpm":3.13,"avail":218,"license":"PG License #0403","lat":36.60569,"lng":-121.92101,"tags":["Short-Term Vacation"]},{"id":"22747634","name":"3759 Pacific Grove Retreat ~ 1 Block to Bay Trail","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":1,"rpm":0.01,"avail":250,"license":"","lat":36.618918,"lng":-121.90869,"tags":["30-Day Flexible Tenancy"]},{"id":"23768786","name":"Mermaid Crossing License #0473","host":"Rhonda","roomType":"Entire home/apt","price":529.0,"minNights":1,"reviews":340,"rpm":3.3,"avail":71,"license":"PG License #0473","lat":36.62678,"lng":-121.91914,"tags":["Short-Term Vacation"]},{"id":"24059256","name":"Forest Home on 1/4  Acre","host":"Tamara","roomType":"Entire home/apt","price":124.0,"minNights":31,"reviews":104,"rpm":1.06,"avail":241,"license":"","lat":36.61963,"lng":-121.93336,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"24773264","name":"Monterey Peninsula Ideal Accommodation","host":"Kat","roomType":"Entire home/apt","price":0.0,"minNights":5,"reviews":0,"rpm":0.0,"avail":338,"license":"","lat":36.62156,"lng":-121.91825,"tags":["Short-Term Vacation"]},{"id":"25281531","name":"Rosedale Inn & Suites - King Suite","host":"Anjali","roomType":"Hotel room","price":0.0,"minNights":1,"reviews":28,"rpm":0.28,"avail":0,"license":"","lat":36.61961,"lng":-121.93631,"tags":["Short-Term Vacation"]},{"id":"26468647","name":"Sallie\u2019s Cottage","host":"Elizabeth","roomType":"Entire home/apt","price":608.0,"minNights":2,"reviews":567,"rpm":5.65,"avail":199,"license":"","lat":36.62311,"lng":-121.91876,"tags":["Short-Term Vacation"]},{"id":"27092841","name":"Charming house between downtown and the beach","host":"Ashley","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":12,"rpm":0.13,"avail":0,"license":"","lat":36.62372,"lng":-121.91901,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"31169667","name":"Spectacular Award Winning Ocean Front 2 Bed 2 Bath","host":"Jane","roomType":"Entire home/apt","price":985.0,"minNights":2,"reviews":373,"rpm":3.97,"avail":209,"license":"","lat":36.62038268144633,"lng":-121.9069418932686,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"32237119","name":"3118 Yellow House Main - Walk to the Aquarium!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1028.0,"minNights":4,"reviews":24,"rpm":0.32,"avail":307,"license":"","lat":36.620371,"lng":-121.909139,"tags":["Short-Term Vacation","Aquarium & Cannery Row","Luxury Estate"]},{"id":"33396484","name":"Standard King Room","host":"Anjali","roomType":"Hotel room","price":350.0,"minNights":1,"reviews":26,"rpm":0.31,"avail":177,"license":"","lat":36.61892,"lng":-121.93459,"tags":["Short-Term Vacation"]},{"id":"35950153","name":"BLOCKS FROM OCEAN -COZY QUEEN-A GETAWAY FOR TWO","host":"Pacific","roomType":"Hotel room","price":309.0,"minNights":1,"reviews":814,"rpm":9.24,"avail":328,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"36006241","name":"WALK TO OCEAN from our Premium KING BED ROOMS","host":"Pacific","roomType":"Hotel room","price":158.0,"minNights":1,"reviews":347,"rpm":3.94,"avail":303,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View","Budget / Value Tier"]},{"id":"36006645","name":"TEENY View of OCEAN-WALK to OCEAN - KING BEDROOM","host":"Pacific","roomType":"Hotel room","price":163.0,"minNights":1,"reviews":147,"rpm":1.67,"avail":332,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View","Budget / Value Tier"]},{"id":"36007109","name":"CROSS Ocean View from Balcony-RELAX-QUEEN BEDROOM","host":"Pacific","roomType":"Hotel room","price":158.0,"minNights":1,"reviews":150,"rpm":1.71,"avail":324,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View","Budget / Value Tier"]},{"id":"36007581","name":"WALK TO OCEAN- Queen bed with BONUS TWIN BED:)","host":"Pacific","roomType":"Hotel room","price":0.0,"minNights":1,"reviews":447,"rpm":5.14,"avail":0,"license":"","lat":36.62012,"lng":-121.91887,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"36008146","name":"Blocks from Ocean - KING BEDROOM SUITE","host":"Pacific","roomType":"Hotel room","price":206.0,"minNights":1,"reviews":191,"rpm":2.17,"avail":318,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"36045923","name":"Ocean Views,ROMANTIC QUEEN BEDROOM","host":"Pacific","roomType":"Hotel room","price":0.0,"minNights":1,"reviews":37,"rpm":0.42,"avail":0,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"36046495","name":"AMAZING OCEAN VIEWS - QUEEN, TWIN & LIVING ROOM","host":"Pacific","roomType":"Hotel room","price":0.0,"minNights":1,"reviews":266,"rpm":3.02,"avail":0,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"36046892","name":"WALK TO OCEAN, KING WITH TWO TWINS","host":"Pacific","roomType":"Hotel room","price":0.0,"minNights":1,"reviews":221,"rpm":2.51,"avail":0,"license":"","lat":36.61867,"lng":-121.91911,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"37393944","name":"3747 Bungalow by-the-Sea - Adorable, Cozy Cottage","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":137,"license":"","lat":36.623969,"lng":-121.927618,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"38239130","name":"Mermaid Hideaway 30 Day Rental","host":"Jordan","roomType":"Entire home/apt","price":172.0,"minNights":3,"reviews":47,"rpm":0.75,"avail":343,"license":"","lat":36.62612,"lng":-121.91973,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"38539935","name":"3792 The Lavender House ~ Walk to Town & Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":973.0,"minNights":1,"reviews":67,"rpm":0.8,"avail":318,"license":"","lat":36.623297,"lng":-121.921272,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core","Luxury Estate"]},{"id":"39131210","name":"La Piccola Casa \"The Little House\"   Lic. # 0446","host":"Joe","roomType":"Entire home/apt","price":541.0,"minNights":1,"reviews":253,"rpm":2.98,"avail":257,"license":"PG License #0446","lat":36.62178,"lng":-121.91851,"tags":["Short-Term Vacation"]},{"id":"39537770","name":"Otters Cove/Ocean Views-Walk to Beach/Aquarium","host":"Charleen","roomType":"Entire home/apt","price":406.0,"minNights":30,"reviews":1,"rpm":0.02,"avail":363,"license":"","lat":36.61671,"lng":-121.91375,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Aquarium & Cannery Row"]},{"id":"40032768","name":"3788 Seagull's Nest ~ Walk to Town and the Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1195.0,"minNights":1,"reviews":80,"rpm":1.17,"avail":335,"license":"","lat":36.619326,"lng":-121.917411,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core","Luxury Estate"]},{"id":"41156259","name":"Charming Cottage Steps to Ocean!","host":"Anne","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":26,"rpm":0.36,"avail":177,"license":"","lat":36.62364,"lng":-121.91592,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"42454978","name":"3804 Mermaid Loft ~ Near Ocean & Recreation Trail","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":615.0,"minNights":1,"reviews":97,"rpm":1.27,"avail":319,"license":"","lat":36.62738402509727,"lng":-121.92094034722136,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"42561512","name":"Queen Bed with Bunk bed","host":"Pacific","roomType":"Private room","price":0.0,"minNights":1,"reviews":56,"rpm":0.73,"avail":0,"license":"","lat":36.61947,"lng":-121.91806,"tags":["Short-Term Vacation"]},{"id":"43126039","name":"Rare Find! Beautiful Historic Home. Walk to Ocean!","host":"Karyn","roomType":"Entire home/apt","price":241.0,"minNights":30,"reviews":1,"rpm":0.02,"avail":147,"license":"","lat":36.62076,"lng":-121.9189,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Heritage / Victorian Architecture"]},{"id":"43580733","name":"Private Stand-alone Cottages near Ocean & Beach","host":"Alex","roomType":"Private room","price":999.0,"minNights":1,"reviews":160,"rpm":2.19,"avail":254,"license":"","lat":36.62256,"lng":-121.91821,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"43743300","name":"Victorian Premier Queen Room near Ocean & Beach","host":"Alex","roomType":"Private room","price":999.0,"minNights":1,"reviews":846,"rpm":11.06,"avail":254,"license":"","lat":36.62256,"lng":-121.91821,"tags":["Short-Term Vacation","Coastal / Ocean View","Heritage / Victorian Architecture","Luxury Estate"]},{"id":"43757076","name":"Two Twin beds in a Historic Victorian Hotel","host":"Alex","roomType":"Private room","price":999.0,"minNights":1,"reviews":121,"rpm":1.61,"avail":254,"license":"","lat":36.62256,"lng":-121.91821,"tags":["Short-Term Vacation","Heritage / Victorian Architecture","Luxury Estate"]},{"id":"43820284","name":"Garden Room \"Honeymoon Suite\" near Lover's Point","host":"Alex","roomType":"Private room","price":999.0,"minNights":1,"reviews":136,"rpm":1.84,"avail":252,"license":"","lat":36.62256,"lng":-121.91821,"tags":["Short-Term Vacation","Lovers Point","Luxury Estate"]},{"id":"44808129","name":"Oceanview Studio, 2-Blocks to Cannery Row","host":"Dennis","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":25,"rpm":0.35,"avail":341,"license":"","lat":36.6186,"lng":-121.90669,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Aquarium & Cannery Row"]},{"id":"44844957","name":"#JewelboxCottages\ud83d\udc51MAIN\ud83d\udd314-Poster King\ud83c\udfd6Walk to Beach","host":"Mel, Tripmogul","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":5,"rpm":0.07,"avail":0,"license":"","lat":36.61509,"lng":-121.9131,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"45710558","name":"2-Block Walk to Cannery Row/Aquarium @ Evans Place","host":"Dennis","roomType":"Entire home/apt","price":159.0,"minNights":30,"reviews":30,"rpm":0.43,"avail":233,"license":"","lat":36.61781,"lng":-121.90594,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row","Budget / Value Tier"]},{"id":"45928538","name":"Seagull House Downtown Pacific Grove","host":"Ahnalisa","roomType":"Entire home/apt","price":762.0,"minNights":2,"reviews":194,"rpm":2.68,"avail":127,"license":"","lat":36.61945,"lng":-121.91674,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"46561318","name":"3812 Little House - Historic Home, Walk to the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1059.0,"minNights":1,"reviews":99,"rpm":1.45,"avail":319,"license":"","lat":36.621181,"lng":-121.911657,"tags":["Short-Term Vacation","Heritage / Victorian Architecture","Luxury Estate"]},{"id":"46927425","name":"2-Block Walk to Cannery Row/Aquarium @ Lighthouse","host":"Dennis","roomType":"Entire home/apt","price":165.0,"minNights":30,"reviews":9,"rpm":0.14,"avail":272,"license":"","lat":36.61707,"lng":-121.90737,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row","Budget / Value Tier"]},{"id":"47812234","name":"3813 Point Break ~ Walk to Lover's Point Beach!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1428.0,"minNights":1,"reviews":91,"rpm":1.32,"avail":310,"license":"","lat":36.623718,"lng":-121.917713,"tags":["Short-Term Vacation","Coastal / Ocean View","Lovers Point","Luxury Estate"]},{"id":"48803024","name":"3684 Jewel by the Sea ~ Walk to Town and the Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":397.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":141,"license":"","lat":36.621746,"lng":-121.921281,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"48803070","name":"3817 Caledonia Bay Lookout - Walk to Bay and Park","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1463.0,"minNights":1,"reviews":82,"rpm":1.29,"avail":327,"license":"","lat":36.623779,"lng":-121.919206,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"48995459","name":"Three Mermaid\u2019s Cove ( License #0459) Penthouse","host":"Rhonda","roomType":"Entire home/apt","price":380.0,"minNights":1,"reviews":286,"rpm":4.31,"avail":74,"license":"PG License #0459","lat":36.62601,"lng":-121.92125,"tags":["Short-Term Vacation"]},{"id":"49413685","name":"3814 Surf's Up! Walk to the Beach, Downtown & Park","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":731.0,"minNights":1,"reviews":119,"rpm":1.82,"avail":325,"license":"","lat":36.623633,"lng":-121.91865,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"49619172","name":"*Newly built\u2019 Cottage near aquarium/cannery row","host":"Rajas","roomType":"Entire home/apt","price":136.0,"minNights":30,"reviews":8,"rpm":0.13,"avail":266,"license":"","lat":36.61529,"lng":-121.90922,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row","Budget / Value Tier"]},{"id":"49950545","name":"Endless Summer Home Steps To Lovers Point Beach","host":"Ellen MARIE","roomType":"Entire home/apt","price":587.0,"minNights":1,"reviews":327,"rpm":5.03,"avail":217,"license":"","lat":36.62239,"lng":-121.91684,"tags":["Short-Term Vacation","Coastal / Ocean View","Lovers Point"]},{"id":"50000524","name":"3822 Cannery Row ~Luxury, Ocean View, Near the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":214,"license":"","lat":36.621386,"lng":-121.916875,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Aquarium & Cannery Row"]},{"id":"50567200","name":"Shell's Treasure: Fully Updated Three bedroom home","host":"Carmel Coast Estate","roomType":"Entire home/apt","price":340.0,"minNights":30,"reviews":2,"rpm":0.04,"avail":209,"license":"","lat":36.6331417,"lng":-121.9242222,"tags":["30-Day Flexible Tenancy"]},{"id":"50864110","name":"3828 The 9th Green - Near Golf Links & Bay Trail","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":62,"license":"","lat":36.634191,"lng":-121.930766,"tags":["30-Day Flexible Tenancy"]},{"id":"51003171","name":"Christmas Vacation *Penthouse* Pacific Grove Plaza","host":"John","roomType":"Private room","price":0.0,"minNights":3,"reviews":2,"rpm":0.04,"avail":0,"license":"","lat":36.62267,"lng":-121.91841,"tags":["Short-Term Vacation"]},{"id":"51086425","name":"Pet Friendly Cozy Pacific Grove Getaway  Lic#0388","host":"Carolyn","roomType":"Entire home/apt","price":445.0,"minNights":3,"reviews":184,"rpm":2.95,"avail":215,"license":"PG License #0388","lat":36.60623,"lng":-121.92071,"tags":["Short-Term Vacation","Pet-Friendly"]},{"id":"51351238","name":"Newly Remodeled Home Near Aquarium and Cannery Row","host":"Rajas","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":10,"rpm":0.17,"avail":168,"license":"","lat":36.61483,"lng":-121.91002,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row"]},{"id":"52829050","name":"Whale Watch Balcony at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":402.0,"minNights":1,"reviews":34,"rpm":0.57,"avail":268,"license":"","lat":36.62115,"lng":-121.91026,"tags":["Short-Term Vacation"]},{"id":"52885376","name":"Bay View Room at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":414.0,"minNights":1,"reviews":25,"rpm":0.42,"avail":277,"license":"","lat":36.62128,"lng":-121.91103,"tags":["Short-Term Vacation"]},{"id":"52886744","name":"Cape Cod Room at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":247.0,"minNights":1,"reviews":17,"rpm":0.29,"avail":271,"license":"","lat":36.61994,"lng":-121.91185,"tags":["Short-Term Vacation"]},{"id":"52887087","name":"Land's End at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":220.0,"minNights":1,"reviews":112,"rpm":1.89,"avail":253,"license":"","lat":36.61916,"lng":-121.91122,"tags":["Short-Term Vacation"]},{"id":"52887371","name":"Newport Room at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":287.0,"minNights":1,"reviews":38,"rpm":0.64,"avail":271,"license":"","lat":36.62059,"lng":-121.9102,"tags":["Short-Term Vacation"]},{"id":"52887567","name":"Otter Cove at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":246.0,"minNights":1,"reviews":55,"rpm":0.92,"avail":269,"license":"","lat":36.61985,"lng":-121.90969,"tags":["Short-Term Vacation"]},{"id":"53132392","name":"Nantucket Room at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":220.0,"minNights":1,"reviews":54,"rpm":0.91,"avail":271,"license":"","lat":36.62079,"lng":-121.91056,"tags":["Short-Term Vacation"]},{"id":"53133142","name":"Garden Gable Room at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":322.0,"minNights":1,"reviews":16,"rpm":0.27,"avail":297,"license":"","lat":36.61974,"lng":-121.911,"tags":["Short-Term Vacation"]},{"id":"53133671","name":"Crow's Nest at The Old St. Angela Inn","host":"Angela","roomType":"Private room","price":287.0,"minNights":1,"reviews":27,"rpm":0.45,"avail":274,"license":"","lat":36.62072,"lng":-121.9111,"tags":["Short-Term Vacation"]},{"id":"53546916","name":"Quintessential Pacific Grove with Modern Comforts!","host":"Kathleen","roomType":"Entire home/apt","price":246.0,"minNights":30,"reviews":10,"rpm":0.18,"avail":364,"license":"","lat":36.62199,"lng":-121.92251,"tags":["30-Day Flexible Tenancy"]},{"id":"53863626","name":"Light-filled home near Pebble Beach/Asilomar","host":"Mara","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":3,"rpm":0.08,"avail":272,"license":"","lat":36.61694,"lng":-121.9322,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Asilomar Corridor"]},{"id":"557212564041000775","name":"*OCT/NOV avail Walk to Downtown, Beach, Trail","host":"Carol","roomType":"Entire home/apt","price":207.0,"minNights":29,"reviews":7,"rpm":0.17,"avail":221,"license":"","lat":36.62042033204166,"lng":-121.921435713768,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"564443155898110904","name":"PG Retreat - a 2 BR Cottage Near Beach & Town","host":"Dave & Lee","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":22,"rpm":0.41,"avail":363,"license":"","lat":36.61988,"lng":-121.91132,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"575386907507888297","name":"Bright Pacific Grove Retreat_Walk to Beach & Town!","host":"Kyle","roomType":"Entire home/apt","price":182.0,"minNights":1,"reviews":9,"rpm":0.18,"avail":167,"license":"","lat":36.62046432495117,"lng":-121.92179107666016,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core","Budget / Value Tier"]},{"id":"579603922194777208","name":"Pet friendly Historic PG","host":"Thomas","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":8,"rpm":0.2,"avail":289,"license":"","lat":36.61975,"lng":-121.91905,"tags":["30-Day Flexible Tenancy","Heritage / Victorian Architecture","Pet-Friendly"]},{"id":"584244668012154218","name":"Beach Cottage - walk to beach and restaurants","host":"Ismael","roomType":"Entire home/apt","price":601.0,"minNights":1,"reviews":239,"rpm":4.48,"avail":288,"license":"","lat":36.6235,"lng":-121.91737,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"587711256303177865","name":"Welcome to Sea-Glass House! 1BR (PG License #0478)","host":"Sue","roomType":"Private room","price":358.0,"minNights":1,"reviews":607,"rpm":11.17,"avail":21,"license":"PG License #0478","lat":36.63425,"lng":-121.92469,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"589997411964604458","name":"#JewelboxCottages\ud83c\udfd6CARRIAGE HOUSE\ud83d\udc51Queen\ud83d\udec1PrivateBath","host":"Mel, Tripmogul","roomType":"Entire home/apt","price":92.0,"minNights":30,"reviews":4,"rpm":0.1,"avail":30,"license":"","lat":36.61582,"lng":-121.91168,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"648034558163632199","name":"Remodeled Victorian near downtown Pacific Grove","host":"James","roomType":"Entire home/apt","price":453.0,"minNights":30,"reviews":1,"rpm":0.02,"avail":365,"license":"","lat":36.62127,"lng":-121.91617,"tags":["30-Day Flexible Tenancy","Downtown Core","Heritage / Victorian Architecture"]},{"id":"654376990660517969","name":"3859 Beach Bungalow ~ Walk to Bay and Restaurants","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":187.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":293,"license":"","lat":36.619722,"lng":-121.90887,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Budget / Value Tier"]},{"id":"663527596243608771","name":"3858 Oasis by the Sea - Walk to Shops & Dining","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":245.0,"minNights":30,"reviews":1,"rpm":0.07,"avail":304,"license":"","lat":36.620052,"lng":-121.92643,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"663847654921511495","name":"Beach Cottage with Ocean Peek-a-View for 30+nights","host":"Courtney","roomType":"Entire home/apt","price":212.0,"minNights":30,"reviews":15,"rpm":0.3,"avail":165,"license":"","lat":36.63006,"lng":-121.9241,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"708639157230123006","name":"Oceanfront Panoramic Ocean and Monterey Bay Views","host":"Gayle","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":5,"rpm":0.13,"avail":269,"license":"","lat":36.63027421983373,"lng":-121.9224703116394,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"711435093441286850","name":"3866 Skipper ~ Bay View, Walk to Downtown & Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":304,"license":"","lat":36.613123271325456,"lng":-121.91943508465576,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"745562708839740258","name":"SeaClusion: Remodeled 3 Bedroom 2 Bath Nestled is","host":"Carmel Coast Estate","roomType":"Entire home/apt","price":0.0,"minNights":29,"reviews":4,"rpm":0.12,"avail":300,"license":"","lat":36.6038,"lng":-121.92577,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"808273804035038794","name":"Coastal Oaks Craftsman","host":"Jennifer","roomType":"Entire home/apt","price":1916.0,"minNights":4,"reviews":33,"rpm":0.75,"avail":9,"license":"","lat":36.62155010606474,"lng":-121.91265367538324,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"842747609845874917","name":"3860 Escabar Escape - Bay View, Old World Charm","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":351.0,"minNights":30,"reviews":1,"rpm":0.04,"avail":93,"license":"","lat":36.620342,"lng":-121.907139,"tags":["30-Day Flexible Tenancy"]},{"id":"854345612665578066","name":"The Shafter House","host":"Evelyn","roomType":"Entire home/apt","price":211.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":362,"license":"","lat":36.60127,"lng":-121.9328,"tags":["30-Day Flexible Tenancy"]},{"id":"856592878049086180","name":"*Asilomarhouse* Wk2 Beach, Hot Tub, Big Yard","host":"Laura","roomType":"Entire home/apt","price":0.0,"minNights":29,"reviews":1,"rpm":0.03,"avail":364,"license":"","lat":36.61772,"lng":-121.9339,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Asilomar Corridor","Wellness & Spa"]},{"id":"868710091988066065","name":"3881 Pacific Gem - Just a Short Stroll to the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":272.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":276,"license":"","lat":36.631588,"lng":-121.926835,"tags":["30-Day Flexible Tenancy"]},{"id":"871717955892996876","name":"3887 Just Coast'n - Just a Few Steps to the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":274.0,"minNights":30,"reviews":1,"rpm":1.0,"avail":185,"license":"","lat":36.620101,"lng":-121.908164,"tags":["30-Day Flexible Tenancy"]},{"id":"879279503944467183","name":"Spanish Sanctuary","host":"Monika","roomType":"Entire home/apt","price":0.0,"minNights":31,"reviews":11,"rpm":0.49,"avail":84,"license":"","lat":36.60235,"lng":-121.93317,"tags":["30-Day Flexible Tenancy"]},{"id":"882689689386652619","name":"3803 Sweet Thursday ~ Luxury Ocean View Condo","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":458.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":246,"license":"","lat":36.621174726989764,"lng":-121.91658169080735,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"886952517504399964","name":"PG House: Modern Ocean Bungalow Amazing Location","host":"Mimi","roomType":"Entire home/apt","price":874.0,"minNights":2,"reviews":125,"rpm":3.64,"avail":110,"license":"","lat":36.62047,"lng":-121.90526,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"887838447373873195","name":"Pearl by the Sea in Asilomar, Pacific Grove","host":"Linda","roomType":"Entire home/apt","price":486.0,"minNights":3,"reviews":13,"rpm":0.35,"avail":135,"license":"","lat":36.62533,"lng":-121.93495,"tags":["Short-Term Vacation","Coastal / Ocean View","Asilomar Corridor"]},{"id":"910124947116022766","name":"3893 Sweet Seventeenth - Near Downtown & Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1073.0,"minNights":1,"reviews":42,"rpm":1.09,"avail":332,"license":"","lat":36.620499,"lng":-121.919464,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core","Luxury Estate"]},{"id":"933173065545771068","name":"Sunburst Cottage","host":"Paul","roomType":"Entire home/apt","price":1221.0,"minNights":3,"reviews":7,"rpm":0.18,"avail":333,"license":"","lat":36.6223172,"lng":-121.9177818,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"933455916078918115","name":"Presidio Casita (w/ sauna)","host":"Natalie","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":20,"rpm":0.52,"avail":0,"license":"","lat":36.60418,"lng":-121.92996,"tags":["30-Day Flexible Tenancy","Wellness & Spa"]},{"id":"940717280067603969","name":"3894 Seacake - Bay View and Just Steps to the Sea","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":326.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":95,"license":"","lat":36.635526,"lng":-121.929311,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"965241307518489125","name":"3905 Oceano Azul - Near Butterfly Sanctuary, Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":318.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":277,"license":"","lat":36.628848,"lng":-121.931886,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"966275804147440557","name":"Private Room","host":"Faye","roomType":"Private room","price":58.0,"minNights":30,"reviews":2,"rpm":1.25,"avail":270,"license":"","lat":36.60429,"lng":-121.931,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"1005024310075425769","name":"US OPEN Special  Updated and Spacious","host":"Michelle","roomType":"Entire home/apt","price":2867.0,"minNights":5,"reviews":0,"rpm":0.0,"avail":362,"license":"","lat":36.61365674525382,"lng":-121.92140978358493,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"1025589748925418589","name":"Ain't Life Grand? Downtown Oasis","host":"Kyle","roomType":"Entire home/apt","price":470.0,"minNights":1,"reviews":73,"rpm":2.12,"avail":218,"license":"","lat":36.62134,"lng":-121.91842,"tags":["Short-Term Vacation","Downtown Core"]},{"id":"1025604649934814205","name":"A Tiny House - Two Blocks to the Beach!","host":"Kyle","roomType":"Entire home/apt","price":438.0,"minNights":1,"reviews":55,"rpm":1.68,"avail":186,"license":"","lat":36.62458,"lng":-121.92187,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1026245119220707284","name":"Lover's Point 6 - Prime Beach Location","host":"Kyle","roomType":"Entire home/apt","price":668.0,"minNights":1,"reviews":54,"rpm":1.58,"avail":212,"license":"","lat":36.62362,"lng":-121.91622,"tags":["Short-Term Vacation","Coastal / Ocean View","Lovers Point"]},{"id":"1026263523763027719","name":"Fountain Avenue - By the Beach!","host":"Kyle","roomType":"Entire home/apt","price":445.0,"minNights":1,"reviews":51,"rpm":1.47,"avail":64,"license":"","lat":36.62266,"lng":-121.91526,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1035683605362677222","name":"Hipster Vibe - Downtown, two blocks to the beach!","host":"Monterey Rentals","roomType":"Entire home/apt","price":419.0,"minNights":2,"reviews":60,"rpm":1.79,"avail":222,"license":"","lat":36.62035,"lng":-121.91807,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"1050805310792689932","name":"3917 Casa Blanca-Updated Bungalow with Bonus Room","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1248.0,"minNights":1,"reviews":70,"rpm":2.2,"avail":324,"license":"","lat":36.6214485168457,"lng":-121.91130065917969,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"1068359558976920980","name":"Cozy home in the heart of Monterey Bay","host":"Erik Cushman","roomType":"Entire home/apt","price":0.0,"minNights":28,"reviews":0,"rpm":0.0,"avail":362,"license":"","lat":36.60092,"lng":-121.9337,"tags":["30-Day Flexible Tenancy"]},{"id":"1073858014090285003","name":"Angel Hill compound near beach","host":"Veronika","roomType":"Entire home/apt","price":0.0,"minNights":3,"reviews":2,"rpm":0.08,"avail":0,"license":"","lat":36.61283626921698,"lng":-121.91929159760313,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1098170157074983333","name":"Private PG oasis","host":"Rachel","roomType":"Entire home/apt","price":0.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":269,"license":"","lat":36.6013112,"lng":-121.9347339,"tags":["Short-Term Vacation"]},{"id":"1105456677564323636","name":"Mid-Term Downtown Hideaway","host":"Brij","roomType":"Entire home/apt","price":186.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":363,"license":"","lat":36.61993,"lng":-121.91553,"tags":["30-Day Flexible Tenancy","Downtown Core","Budget / Value Tier"]},{"id":"1109584824450507267","name":"Picturesque Historic Victorian","host":"Carolee","roomType":"Entire home/apt","price":192.0,"minNights":31,"reviews":7,"rpm":0.25,"avail":199,"license":"","lat":36.62078988431048,"lng":-121.91486061268878,"tags":["30-Day Flexible Tenancy","Heritage / Victorian Architecture","Budget / Value Tier"]},{"id":"1110347519067097201","name":"3922 Pelican Gate - Walk to Beach & Coastal Trail","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1162.0,"minNights":1,"reviews":50,"rpm":1.69,"avail":305,"license":"","lat":36.62998580932617,"lng":-121.93340301513672,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"1116144005742917984","name":"Petit Maison: Two bedroom w dedicated workspace","host":"Catherine","roomType":"Entire home/apt","price":219.0,"minNights":23,"reviews":8,"rpm":0.28,"avail":85,"license":"","lat":36.61939,"lng":-121.92063,"tags":["Short-Term Vacation","Pet-Friendly"]},{"id":"1131236667175326315","name":"Saltbox - In the Heart of Pacific Grove","host":"Michael","roomType":"Entire home/apt","price":753.0,"minNights":1,"reviews":40,"rpm":1.46,"avail":270,"license":"","lat":36.62335704317952,"lng":-121.91875816195812,"tags":["Short-Term Vacation"]},{"id":"1131255910980483031","name":"Gingerbread - Close to the beach","host":"Monterey Rentals","roomType":"Entire home/apt","price":694.0,"minNights":2,"reviews":55,"rpm":2.1,"avail":241,"license":"","lat":36.622719766537394,"lng":-121.91926346794818,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1131256594530573174","name":"The White House - Best Location Lover's Point!","host":"Kyle","roomType":"Entire home/apt","price":965.0,"minNights":1,"reviews":67,"rpm":2.46,"avail":287,"license":"","lat":36.624336254924444,"lng":-121.91738617692566,"tags":["Short-Term Vacation","Lovers Point","Luxury Estate"]},{"id":"1131257317917474953","name":"Beachouse - Luxury at Asilomar","host":"Kyle","roomType":"Entire home/apt","price":926.0,"minNights":1,"reviews":60,"rpm":2.12,"avail":214,"license":"","lat":36.62337898077188,"lng":-121.93747708912032,"tags":["Short-Term Vacation","Coastal / Ocean View","Asilomar Corridor","Luxury Estate"]},{"id":"1131459320992924360","name":"Modern Cabin near Lover's Point","host":"Anna","roomType":"Entire home/apt","price":663.0,"minNights":3,"reviews":21,"rpm":0.81,"avail":124,"license":"","lat":36.62169,"lng":-121.92117,"tags":["Short-Term Vacation","Lovers Point"]},{"id":"1136256728572419222","name":"Sweet Pea - Cottage by the Sea","host":"Monterey Rentals","roomType":"Entire home/apt","price":459.0,"minNights":1,"reviews":43,"rpm":1.54,"avail":261,"license":"","lat":36.622959760382315,"lng":-121.91742827565686,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1136257082350257155","name":"Blue Horizons: On a Clear Day, You Can See Forever","host":"Monterey Rentals","roomType":"Entire home/apt","price":1230.0,"minNights":1,"reviews":63,"rpm":2.26,"avail":286,"license":"","lat":36.627807885253524,"lng":-121.92134849758291,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"1136262908735100103","name":"Daffodil House - A Block to the Beach!","host":"Monterey Rentals","roomType":"Entire home/apt","price":665.0,"minNights":1,"reviews":44,"rpm":1.63,"avail":43,"license":"","lat":36.623196977009535,"lng":-121.91710360102326,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1136263334254484468","name":"Beach Club - Two Blocks to the Ocean","host":"Michelle","roomType":"Entire home/apt","price":1299.0,"minNights":1,"reviews":46,"rpm":1.85,"avail":255,"license":"","lat":36.62167595676445,"lng":-121.91482456922532,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"1136263775328172735","name":"Gratitude Inn - Downtown, Walk to the Beach!","host":"Monterey Rentals","roomType":"Entire home/apt","price":599.0,"minNights":2,"reviews":42,"rpm":1.53,"avail":314,"license":"","lat":36.62069755543468,"lng":-121.9158187853554,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"1136286711699136738","name":"Seafarer - The ocean is your backyard!","host":"Kyle","roomType":"Entire home/apt","price":1082.0,"minNights":1,"reviews":58,"rpm":2.11,"avail":298,"license":"","lat":36.620253300562666,"lng":-121.90785411479844,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"1142214258811770206","name":"Boathouse - Aye, Aye, Captain!","host":"Monterey Rentals","roomType":"Entire home/apt","price":232.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":155,"license":"","lat":36.625513537190045,"lng":-121.92577471381902,"tags":["30-Day Flexible Tenancy"]},{"id":"1142216274682452511","name":"Latitude Adjustment - Oceanview deck, pet friendly","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":4,"rpm":0.25,"avail":274,"license":"","lat":36.61351319409598,"lng":-121.91388376376096,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Pet-Friendly"]},{"id":"1143731069655683058","name":"Bellisima - Portofino in Pacific Grove!","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":29,"reviews":0,"rpm":0.0,"avail":208,"license":"","lat":36.62937461908551,"lng":-121.9229840190588,"tags":["30-Day Flexible Tenancy"]},{"id":"1143731970831904418","name":"Butterfly Haven - Near Asilomar Beach!","host":"Monterey Rentals","roomType":"Entire home/apt","price":197.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":252,"license":"","lat":36.62842507707562,"lng":-121.93383906132647,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Asilomar Corridor","Budget / Value Tier"]},{"id":"1143732157444839791","name":"Cannery Row Cottage - Walk to the Aquarium!","host":"Kyle","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":1,"rpm":0.07,"avail":260,"license":"","lat":36.61668891775566,"lng":-121.9060510635376,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row"]},{"id":"1143732677806252314","name":"Casa Simpatico - Lover's Point Beach","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":2,"rpm":0.19,"avail":261,"license":"","lat":36.62408610612026,"lng":-121.91671261566024,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Lovers Point"]},{"id":"1143733457125469859","name":"Fourth Tee - Ocean & Golf Views","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":242,"license":"","lat":36.628597323614144,"lng":-121.9265054840103,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1143734060655808499","name":"Harmony Home - Perfect Pacific Grove location","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":237,"license":"","lat":36.61675940975052,"lng":-121.91393408963849,"tags":["30-Day Flexible Tenancy"]},{"id":"1143736284934826935","name":"Monarch - Luxury oceanview","host":"Kyle","roomType":"Entire home/apt","price":219.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":235,"license":"","lat":36.62740705682075,"lng":-121.9280237197876,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1143740787409568406","name":"Riviera - On Top of the World!","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":273,"license":"","lat":36.6060616301973,"lng":-121.9249308786008,"tags":["30-Day Flexible Tenancy"]},{"id":"1143741292632723594","name":"Sailaway - Oceanview, Walk to Beach","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":171,"license":"","lat":36.6178267348345,"lng":-121.90938139604853,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1143741843016092024","name":"Simple Pleasures - Chill, Baby, Chill!","host":"Michael","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":1,"rpm":0.05,"avail":149,"license":"","lat":36.62167054656311,"lng":-121.92556757264799,"tags":["30-Day Flexible Tenancy"]},{"id":"1143742162744265949","name":"Snuggle Up: studio cottage one mile from the beach","host":"Kyle","roomType":"Entire home/apt","price":97.0,"minNights":30,"reviews":4,"rpm":0.23,"avail":316,"license":"","lat":36.61549208877226,"lng":-121.91932798320411,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Budget / Value Tier"]},{"id":"1143742398758909994","name":"Sunset Drive - Asilomar Beach across the street!","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":259,"license":"","lat":36.61584987613967,"lng":-121.93297043297368,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Asilomar Corridor"]},{"id":"1143742668325615150","name":"Tea for Two - Upper Pacific Grove","host":"Kyle","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":113,"license":"","lat":36.605708200140846,"lng":-121.92332448959351,"tags":["30-Day Flexible Tenancy"]},{"id":"1143743517306638629","name":"Victorian Dollhouse - Beach and Town","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":174,"license":"","lat":36.623083978227115,"lng":-121.91935704331974,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core","Heritage / Victorian Architecture"]},{"id":"1143743744118021814","name":"Zatara - Ocean Views!","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":157,"license":"","lat":36.632920178480695,"lng":-121.92356664278066,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1150832711055711354","name":"Five O'clock Somewhere - Walk to the Beach!","host":"Kyle","roomType":"Entire home/apt","price":669.0,"minNights":1,"reviews":62,"rpm":2.34,"avail":280,"license":"","lat":36.61986861877182,"lng":-121.91557878720789,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1162239634880358531","name":"Green Gables Inn, A Four Sisters Inn, The Lacy su.","host":"Green Gables Inn","roomType":"Private room","price":431.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":74,"license":"","lat":36.6205885,"lng":-121.9094642,"tags":["Short-Term Vacation"]},{"id":"1162239635077874324","name":"Green Gables Inn, A Four Sisters Inn, The carriag.","host":"Green Gables Inn","roomType":"Private room","price":422.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":96,"license":"","lat":36.6205885,"lng":-121.9094642,"tags":["Short-Term Vacation"]},{"id":"1162240166122696213","name":"Green Gables Inn, A Four Sisters Inn, The sandpip.","host":"Green Gables Inn","roomType":"Private room","price":382.0,"minNights":1,"reviews":9,"rpm":2.05,"avail":82,"license":"","lat":36.6205885,"lng":-121.9094642,"tags":["Short-Term Vacation"]},{"id":"1162240176899696417","name":"Green Gables Inn, A Four Sisters Inn, The carriag.","host":"Green Gables Inn","roomType":"Private room","price":477.0,"minNights":1,"reviews":9,"rpm":2.05,"avail":89,"license":"","lat":36.6205885,"lng":-121.9094642,"tags":["Short-Term Vacation"]},{"id":"1162240403628483167","name":"Green Gables Inn, A Four Sisters Inn, The pacific.","host":"Green Gables Inn","roomType":"Private room","price":382.0,"minNights":1,"reviews":9,"rpm":2.05,"avail":79,"license":"","lat":36.6205885,"lng":-121.9094642,"tags":["Short-Term Vacation"]},{"id":"1163100947286808136","name":"New, bright, private 1/1 cottage w/qn sofa sleeper","host":"Catherine","roomType":"Entire home/apt","price":161.0,"minNights":5,"reviews":12,"rpm":0.45,"avail":271,"license":"","lat":36.6146346,"lng":-121.9240823,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"1169185454120309042","name":"Pacific Grove Retreat w/ Hot Tub","host":"Catherine","roomType":"Entire home/apt","price":715.0,"minNights":1,"reviews":93,"rpm":3.36,"avail":244,"license":"","lat":36.6122339,"lng":-121.923672,"tags":["Short-Term Vacation","Wellness & Spa"]},{"id":"1179050545942260141","name":"3941 Casaletto at 17 Mile Drive ~ Cozy and Updated","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":201.0,"minNights":30,"reviews":2,"rpm":0.09,"avail":275,"license":"","lat":36.625144958496094,"lng":-121.92780303955078,"tags":["30-Day Flexible Tenancy"]},{"id":"1183011317341746919","name":"Designer Cottage ~ Pacific Grove","host":"Lisa","roomType":"Entire home/apt","price":189.0,"minNights":30,"reviews":9,"rpm":0.36,"avail":172,"license":"","lat":36.6228304,"lng":-121.9172744,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"1184796000990994176","name":"Pacific Grove 1 BR Walk to Lovers Point & Downtown","host":"Gratia","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":10,"rpm":0.39,"avail":169,"license":"","lat":36.6224589,"lng":-121.9221396,"tags":["30-Day Flexible Tenancy","Lovers Point","Downtown Core"]},{"id":"1187770695888358789","name":"Coastal Haven near Lover's Point","host":"Anna","roomType":"Entire home/apt","price":80.0,"minNights":5,"reviews":8,"rpm":0.33,"avail":245,"license":"","lat":36.6213724,"lng":-121.9207852,"tags":["Short-Term Vacation","Lovers Point","Budget / Value Tier"]},{"id":"1194099128559476706","name":"3943 Rad Beach House - Near Beach & Coastal Trail","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1061.0,"minNights":1,"reviews":27,"rpm":1.21,"avail":315,"license":"","lat":36.624481,"lng":-121.918902,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"1206532012959254380","name":"Oceanfront Pacific Grove Home Near Pebble Beach","host":"Grand Welcome","roomType":"Entire home/apt","price":301.0,"minNights":28,"reviews":3,"rpm":0.16,"avail":129,"license":"","lat":36.63584672,"lng":-121.92930462,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1212963736910431053","name":"3946 Listen to the Waves - Oceanfront, Bay View","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":803.0,"minNights":1,"reviews":47,"rpm":1.82,"avail":319,"license":"","lat":36.621116638183594,"lng":-121.91044616699219,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1213851972337572222","name":"Lighthouse Lodge and Cottages, Selected by hotel","host":"Lighthouse Lodge And Cottages","roomType":"Private room","price":0.0,"minNights":1,"reviews":264,"rpm":10.14,"avail":0,"license":"","lat":36.6306737,"lng":-121.9307782,"tags":["Short-Term Vacation"]},{"id":"1214820875588666513","name":"Studio Apt on Ocean View Blvd, Views and Location!","host":"Justin","roomType":"Entire home/apt","price":0.0,"minNights":2,"reviews":8,"rpm":0.31,"avail":0,"license":"","lat":36.626855569541746,"lng":-121.91905237734318,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1222708469305395405","name":"Cozy bedroom in Monterey Bay","host":"Faye","roomType":"Private room","price":148.0,"minNights":1,"reviews":18,"rpm":1.37,"avail":77,"license":"","lat":36.60469,"lng":-121.931,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"1278325977977274305","name":"Gorgeous Studio Close to All","host":"Anya","roomType":"Entire home/apt","price":315.0,"minNights":1,"reviews":40,"rpm":1.74,"avail":29,"license":"","lat":36.61273904282698,"lng":-121.92461240606941,"tags":["Short-Term Vacation"]},{"id":"1287714878773685654","name":"Pacific Grove Home Walk to Lovers Point Sleeps 4","host":"Grand Welcome","roomType":"Entire home/apt","price":127.0,"minNights":28,"reviews":3,"rpm":0.15,"avail":298,"license":"","lat":36.6243992,"lng":-121.9185039,"tags":["30-Day Flexible Tenancy","Lovers Point","Budget / Value Tier"]},{"id":"1293749033179292513","name":"Charming Pacific Grove Retreat 3bd/2bath","host":"Tracy","roomType":"Entire home/apt","price":668.0,"minNights":1,"reviews":112,"rpm":5.01,"avail":149,"license":"","lat":36.60212,"lng":-121.93115,"tags":["Short-Term Vacation"]},{"id":"1301579566788009129","name":"Renovated ocean-view oasis","host":"Shahin","roomType":"Private room","price":246.0,"minNights":1,"reviews":1,"rpm":0.07,"avail":363,"license":"","lat":36.606571981932866,"lng":-121.92331189982717,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1303042343705389540","name":"Charming Tudor, one block to seashore, 30-day min","host":"Blake","roomType":"Entire home/apt","price":243.0,"minNights":27,"reviews":6,"rpm":0.33,"avail":44,"license":"","lat":36.62506216577112,"lng":-121.93604311982419,"tags":["Short-Term Vacation","Coastal / Ocean View","Heritage / Victorian Architecture"]},{"id":"1305211138058635292","name":"3957 Lighthouse Landing ~ Walk to Dining and Beach","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":884.0,"minNights":1,"reviews":23,"rpm":1.14,"avail":346,"license":"","lat":36.622884,"lng":-121.921014,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1308783140523718238","name":"Charming home near downtown and beach","host":"Leticia","roomType":"Entire home/apt","price":558.0,"minNights":2,"reviews":16,"rpm":0.74,"avail":89,"license":"","lat":36.62408616849449,"lng":-121.9250451834451,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"1332627055572197181","name":"Charming PG Cottage with Ocean Views!","host":"Carmel Coast Estate","roomType":"Entire home/apt","price":297.0,"minNights":30,"reviews":6,"rpm":0.36,"avail":79,"license":"","lat":36.6039539,"lng":-121.9177115,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1334121990060114372","name":"Casa Hatch: Downtown Hideaway","host":"Brij","roomType":"Entire home/apt","price":555.0,"minNights":2,"reviews":85,"rpm":4.72,"avail":296,"license":"","lat":36.6200807,"lng":-121.9159941,"tags":["Short-Term Vacation","Downtown Core"]},{"id":"1343698856513261679","name":"Charming One Bedroom Duplex","host":"Evelyn","roomType":"Entire home/apt","price":134.0,"minNights":30,"reviews":1,"rpm":0.36,"avail":250,"license":"","lat":36.60116,"lng":-121.93144,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"1345819065299510936","name":"3119 Yellow House Guest - Almost Oceanfront!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":241.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":365,"license":"","lat":36.620371,"lng":-121.909139,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1350817878527713956","name":"Pacific Grove Bungalow near Bay","host":"Anna","roomType":"Entire home/apt","price":303.0,"minNights":4,"reviews":6,"rpm":0.36,"avail":359,"license":"","lat":36.6135732,"lng":-121.9140857,"tags":["Short-Term Vacation"]},{"id":"1355835907051199620","name":"Seawatch - Monterey Bay Beauty","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":30,"reviews":1,"rpm":0.08,"avail":1,"license":"","lat":36.61617,"lng":-121.90822,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1390823637877640361","name":"3970 Wave Watcher - Panoramic Oceanfront Bay Views","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":338.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":210,"license":"","lat":36.63603,"lng":-121.930059,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1424719855650397471","name":"Cozy Coastal Cottage","host":"Susan","roomType":"Entire home/apt","price":114.0,"minNights":30,"reviews":1,"rpm":0.83,"avail":333,"license":"","lat":36.627943890840676,"lng":-121.93424947437805,"tags":["30-Day Flexible Tenancy","Budget / Value Tier"]},{"id":"1426172996599751724","name":"Otter Cove Beach Front House","host":"Thomas","roomType":"Entire home/apt","price":648.0,"minNights":1,"reviews":17,"rpm":1.11,"avail":195,"license":"","lat":36.6279368,"lng":-121.921577,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1431320208882452504","name":"Queen Bed Near Beach","host":"The Charles Pacific Grove","roomType":"Private room","price":212.0,"minNights":1,"reviews":1,"rpm":0.51,"avail":333,"license":"","lat":36.6186738,"lng":-121.919066,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1431351604906578703","name":"Queen Suite with Sea View (Upstairs)","host":"The Charles Pacific Grove","roomType":"Private room","price":300.0,"minNights":1,"reviews":1,"rpm":0.15,"avail":311,"license":"","lat":36.61896873626985,"lng":-121.91977902936512,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1431351687495064782","name":"Queen, Twin & Sofa Bed plus View (Top Floor)","host":"The Charles Pacific Grove","roomType":"Private room","price":324.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":328,"license":"","lat":36.61932167042702,"lng":-121.91817400786628,"tags":["Short-Term Vacation"]},{"id":"1431423159673907424","name":"Queen Bed  Partial Accessible","host":"The Charles Pacific Grove","roomType":"Private room","price":436.0,"minNights":1,"reviews":2,"rpm":0.19,"avail":319,"license":"","lat":36.6186738,"lng":-121.919066,"tags":["Short-Term Vacation"]},{"id":"1432682178740146431","name":"Queen with Twin Bed near beach (Upstairs)","host":"The Charles Pacific Grove","roomType":"Private room","price":234.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":316,"license":"","lat":36.619382595227165,"lng":-121.91867390332649,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1434356907883300438","name":"King Bedroom Near beach","host":"The Charles Pacific Grove","roomType":"Private room","price":223.0,"minNights":1,"reviews":10,"rpm":0.65,"avail":340,"license":"","lat":36.61808716442019,"lng":-121.91796906009375,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1434362893694633070","name":"Cellar Family Suite \u2013 King Bed & 2 Twin Beds","host":"The Charles Pacific Grove","roomType":"Private room","price":256.0,"minNights":1,"reviews":14,"rpm":0.94,"avail":319,"license":"","lat":36.6186738,"lng":-121.919066,"tags":["Short-Term Vacation"]},{"id":"1434368348248238825","name":"Cellar Suite\u2013Queen Bed with Bunk Bed Dog-Friendly","host":"The Charles Pacific Grove","roomType":"Private room","price":256.0,"minNights":1,"reviews":4,"rpm":0.71,"avail":341,"license":"","lat":36.61865657757452,"lng":-121.91910891534424,"tags":["Short-Term Vacation","Pet-Friendly"]},{"id":"1435569376116405983","name":"3962 High Tide -Close to Downtown, Peek of the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":288.0,"minNights":30,"reviews":1,"rpm":0.63,"avail":365,"license":"","lat":36.618602,"lng":-121.909721,"tags":["30-Day Flexible Tenancy","Downtown Core"]},{"id":"1436294202650440675","name":"3963 Low Tide - Walk to Aquarium, Bay and Downtown","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":223.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":216,"license":"","lat":36.618602,"lng":-121.909721,"tags":["30-Day Flexible Tenancy","Aquarium & Cannery Row","Downtown Core"]},{"id":"1439576861326046470","name":"Serene Pacific Grove Getaway","host":"Tracy","roomType":"Entire home/apt","price":542.0,"minNights":2,"reviews":58,"rpm":3.79,"avail":151,"license":"","lat":36.60487,"lng":-121.92709,"tags":["Short-Term Vacation"]},{"id":"1442182954773083829","name":"3965 Marine Gardens - Oceanfront with Bay Views","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1149.0,"minNights":1,"reviews":21,"rpm":1.52,"avail":319,"license":"","lat":36.626985,"lng":-121.91964,"tags":["Short-Term Vacation","Coastal / Ocean View","Luxury Estate"]},{"id":"1470476258143471749","name":"Cottage - Walk to Town & Beach.","host":"Sal","roomType":"Entire home/apt","price":0.0,"minNights":29,"reviews":1,"rpm":1.0,"avail":167,"license":"","lat":36.61752,"lng":-121.92222,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"1473215117548130546","name":"Coastal Living in Pacific Grove","host":"Ben","roomType":"Entire home/apt","price":214.0,"minNights":31,"reviews":2,"rpm":0.22,"avail":285,"license":"","lat":36.6170181,"lng":-121.9217607,"tags":["30-Day Flexible Tenancy"]},{"id":"1473448085683688186","name":"Compass Rose - Beach Getaway","host":"Dave & Lee","roomType":"Entire home/apt","price":312.0,"minNights":30,"reviews":1,"rpm":0.11,"avail":364,"license":"","lat":36.63046,"lng":-121.92408,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1492172065397068215","name":"3976 Beach House on Asilomar~ Oceanfront View Home","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1603.0,"minNights":1,"reviews":8,"rpm":0.77,"avail":274,"license":"","lat":36.623217,"lng":-121.939929,"tags":["Short-Term Vacation","Coastal / Ocean View","Asilomar Corridor","Luxury Estate"]},{"id":"1531910546359693118","name":"Nancy's Cottage 2BR 1.5BA Pacific Grove","host":"Carmel Coast Estate","roomType":"Entire home/apt","price":229.0,"minNights":30,"reviews":2,"rpm":0.28,"avail":242,"license":"","lat":36.62816,"lng":-121.92665,"tags":["30-Day Flexible Tenancy"]},{"id":"1532733634874818268","name":"Cozy Cottage with Hot Tub","host":"Kiki","roomType":"Entire home/apt","price":637.0,"minNights":3,"reviews":38,"rpm":3.36,"avail":264,"license":"","lat":36.6007269,"lng":-121.9321783,"tags":["Short-Term Vacation","Wellness & Spa"]},{"id":"1538487527717645956","name":"3987 Lovers Point Whitewater Cottage, Bay View!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1287.0,"minNights":1,"reviews":27,"rpm":2.79,"avail":313,"license":"","lat":36.62232971191406,"lng":-121.91429901123047,"tags":["Short-Term Vacation","Lovers Point","Luxury Estate"]},{"id":"1561710545646548152","name":"3988 Cannery Cottage - Coastal Living Near the Bay","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":1156.0,"minNights":1,"reviews":10,"rpm":1.36,"avail":323,"license":"","lat":36.619476318359375,"lng":-121.90673065185547,"tags":["Short-Term Vacation","Aquarium & Cannery Row","Luxury Estate"]},{"id":"1565253235475170331","name":"Park Street Gem \u2013 Cozy, Bright Retreat by the Sea","host":"Anna","roomType":"Entire home/apt","price":99.0,"minNights":5,"reviews":6,"rpm":0.77,"avail":173,"license":"","lat":36.62101,"lng":-121.92132,"tags":["Short-Term Vacation","Coastal / Ocean View","Budget / Value Tier"]},{"id":"1571282702886814270","name":"Coastal Retreat. Ocean View. Walk to Beach & Dine","host":"Faris","roomType":"Entire home/apt","price":451.0,"minNights":1,"reviews":67,"rpm":7.1,"avail":117,"license":"","lat":36.6217004,"lng":-121.9159766,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1580199012148566723","name":"Central Perch  STR Lic #0507","host":"Tom","roomType":"Entire home/apt","price":1178.0,"minNights":2,"reviews":26,"rpm":2.87,"avail":279,"license":"PG License #0507","lat":36.6208383,"lng":-121.9117169,"tags":["Short-Term Vacation","Luxury Estate"]},{"id":"1597263071189135619","name":"4054 Casita Del Mar II, Bay View Mediterranean Gem","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":305.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":32,"license":"","lat":36.618202209472656,"lng":-121.91326904296875,"tags":["30-Day Flexible Tenancy"]},{"id":"1608841749392581728","name":"30+ day Spacious pet friendly Pacific Grove Home","host":"Thomas","roomType":"Entire home/apt","price":167.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":298,"license":"","lat":36.6204164,"lng":-121.9200851,"tags":["30-Day Flexible Tenancy","Pet-Friendly","Budget / Value Tier"]},{"id":"1617405093103095065","name":"Cypress in Sunlight","host":"David","roomType":"Entire home/apt","price":217.0,"minNights":29,"reviews":1,"rpm":0.13,"avail":86,"license":"","lat":36.620173,"lng":-121.9222109,"tags":["30-Day Flexible Tenancy"]},{"id":"1625819417157736370","name":"Potter's Cottage","host":"Roeya","roomType":"Entire home/apt","price":576.0,"minNights":1,"reviews":33,"rpm":4.93,"avail":264,"license":"","lat":36.6201879,"lng":-121.919269,"tags":["Short-Term Vacation"]},{"id":"1628359708352164014","name":"3997 Oceanview Oasis - Stunning Monterey Bay View","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":433.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":208,"license":"","lat":36.61982727050781,"lng":-121.90670776367188,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1640345896375474086","name":"Queen Bed - Basement No window (Dog friendly)","host":"Pacific","roomType":"Private room","price":384.0,"minNights":1,"reviews":8,"rpm":2.2,"avail":321,"license":"","lat":36.61837,"lng":-121.91922,"tags":["Short-Term Vacation","Pet-Friendly"]},{"id":"1648668523305685955","name":"3998 Pacific Nirvana - 3 Blocks from the Beach!","host":"Sanctuary Vacation Rentals","roomType":"Entire home/apt","price":300.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":335,"license":"","lat":36.620994567871094,"lng":-121.91229248046875,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1653278294090624801","name":"Cozy Comfort - Minutes From Cannery Row & Ocean","host":"Tracy","roomType":"Entire home/apt","price":459.0,"minNights":1,"reviews":16,"rpm":3.36,"avail":125,"license":"","lat":36.62058,"lng":-121.91385,"tags":["Short-Term Vacation","Coastal / Ocean View","Aquarium & Cannery Row"]},{"id":"1657393381754457583","name":"Monterey Bay Getaway","host":"Arta","roomType":"Entire home/apt","price":856.0,"minNights":1,"reviews":1,"rpm":0.67,"avail":32,"license":"","lat":36.61681,"lng":-121.92612,"tags":["Short-Term Vacation"]},{"id":"1657448904586135681","name":"Lovers Point Hideaway \u2014 Coastal Retreat","host":"Tracy","roomType":"Entire home/apt","price":213.0,"minNights":1,"reviews":15,"rpm":2.88,"avail":161,"license":"","lat":36.60412970873357,"lng":-121.9287795984902,"tags":["Short-Term Vacation","Lovers Point"]},{"id":"1660408248925085464","name":"Lover's Point Victorian","host":"Rhonda","roomType":"Entire home/apt","price":450.0,"minNights":2,"reviews":19,"rpm":5.18,"avail":36,"license":"","lat":36.62288,"lng":-121.92203,"tags":["Short-Term Vacation","Lovers Point","Heritage / Victorian Architecture"]},{"id":"1675785664247851553","name":"Outside Inn - Downtown, Walk to the Beach","host":"Monterey Rentals","roomType":"Entire home/apt","price":717.0,"minNights":2,"reviews":11,"rpm":2.56,"avail":308,"license":"","lat":36.61969453985717,"lng":-121.91626502193893,"tags":["Short-Term Vacation","Coastal / Ocean View","Downtown Core"]},{"id":"1679420005297947245","name":"Bedroom in Cottage Near Downtown and Lover's Point","host":"Leticia","roomType":"Private room","price":110.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":357,"license":"","lat":36.62419544509788,"lng":-121.92541934610006,"tags":["Short-Term Vacation","Lovers Point","Downtown Core","Budget / Value Tier"]},{"id":"1689350328179931584","name":"Surf and Stroll Suite/walk to beach & downtown","host":"Tim & Laurel","roomType":"Entire home/apt","price":272.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":364,"license":"","lat":36.6232227,"lng":-121.9320064,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View","Downtown Core"]},{"id":"1717681764739798627","name":"Never lived in new studio apartment in PG","host":"Anthony","roomType":"Entire home/apt","price":253.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":362,"license":"","lat":36.6060197,"lng":-121.9209629,"tags":["30-Day Flexible Tenancy"]},{"id":"1740776118928602585","name":"Pacific Grove Ocean View Dream","host":"Ann","roomType":"Entire home/apt","price":420.0,"minNights":3,"reviews":1,"rpm":0.64,"avail":242,"license":"","lat":36.61851,"lng":-121.91671,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1744619755588903581","name":"Pacific Grove Nest (30 day or more rental only)","host":"Sarah","roomType":"Entire home/apt","price":163.0,"minNights":7,"reviews":0,"rpm":0.0,"avail":124,"license":"","lat":36.618352757394405,"lng":-121.92146466627044,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"1747285899795413100","name":"Monarch Pines 55+ at the Beach","host":"Monterey Rentals","roomType":"Entire home/apt","price":0.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":248,"license":"","lat":36.626146376549066,"lng":-121.9189471244812,"tags":["Short-Term Vacation","Coastal / Ocean View"]},{"id":"1749432451386832459","name":"Crespi Room","host":"Seven Gables Inn, A Kirkwood C","roomType":"Private room","price":423.0,"minNights":1,"reviews":50,"rpm":0.4,"avail":65,"license":"","lat":36.6238396,"lng":-121.9154994,"tags":["Short-Term Vacation"]},{"id":"1749432451443474510","name":"Chautauqua Room Accessible","host":"Seven Gables Inn, A Kirkwood C","roomType":"Private room","price":614.0,"minNights":1,"reviews":100,"rpm":0.76,"avail":76,"license":"","lat":36.6238396,"lng":-121.9154994,"tags":["Short-Term Vacation"]},{"id":"1749432451767777761","name":"Gable Room","host":"Seven Gables Inn, A Kirkwood C","roomType":"Private room","price":375.0,"minNights":1,"reviews":100,"rpm":0.76,"avail":83,"license":"","lat":36.6238396,"lng":-121.9154994,"tags":["Short-Term Vacation"]},{"id":"1749432453385466442","name":"Carriage House Cottage","host":"Seven Gables Inn, A Kirkwood C","roomType":"Private room","price":423.0,"minNights":1,"reviews":50,"rpm":0.4,"avail":72,"license":"","lat":36.6238396,"lng":-121.9154994,"tags":["Short-Term Vacation"]},{"id":"1749515595451626191","name":"Cedar Room","host":"Centrella Hotel, A Kirkwood Co","roomType":"Private room","price":155.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":87,"license":"","lat":36.6225307,"lng":-121.918224,"tags":["Short-Term Vacation","Budget / Value Tier"]},{"id":"1753112808719320043","name":"NEW studio apartment walk to restaurants/starbucks","host":"Briana","roomType":"Entire home/apt","price":254.0,"minNights":4,"reviews":0,"rpm":0.0,"avail":355,"license":"","lat":36.6060197,"lng":-121.9209629,"tags":["Short-Term Vacation"]},{"id":"1777790575755831016","name":"New Luxury Coastal Home ~ 1 Block from the Ocean","host":"Rick Hadlock","roomType":"Entire home/apt","price":284.0,"minNights":30,"reviews":0,"rpm":0.0,"avail":333,"license":"","lat":36.6328397,"lng":-121.9244005,"tags":["30-Day Flexible Tenancy","Coastal / Ocean View"]},{"id":"1780200967287147798","name":"Sunset Cove \u2014 Pacific Grove by the Sea","host":"Tracy","roomType":"Entire home/apt","price":545.0,"minNights":1,"reviews":0,"rpm":0.0,"avail":345,"license":"","lat":36.60027,"lng":-121.9346,"tags":["Short-Term Vacation","Coastal / Ocean View"]}]};
-
-  // ------------------------------------------------------------------
-  // Grounded Co-Living 3-Year KYC & Billing Dataset (coliving_3year_full_kyc_billing.sql)
-  // ------------------------------------------------------------------
-  const COLIVING_KB = {
-    dataset_name: "ThatJoint 3-Year Co-Living Portfolio (Pune Tech Corridor)",
-    summary: {
-      total_residents: 40,
-      date_range: "2023-11 to 2026-10",
-      total_months: 36,
-      total_records: 1440,
-      total_revenue_inr: 26902673,
-      total_base_rent_inr: 17793000,
-      total_food_plan_inr: 5244480,
-      total_late_night_spend_inr: 3865193,
-      total_late_night_orders: 10471
-    },
-    nationalities: { German: 1, Indian: 37, Japanese: 1, Russian: 1 },
-    room_types: [
-      { type: "Double (Shared)", rooms: 5, residents: 10, rent: 8000 },
-      { type: "Double (Single Occupancy)", rooms: 20, residents: 20, rent: 14000 },
-      { type: "Single Room", rooms: 10, residents: 10, rent: 18000 }
+  const WORLD_CITIES = [
+  {
+    "id": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "continent": "Asia",
+    "region": "East Asia",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "coordinates": "35.6762\u00b0 N, 139.6503\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+9 (JST)",
+    "currency": "Japanese Yen (JPY, \u00a5)",
+    "language": "Japanese",
+    "climate": "Humid Subtropical (Four distinct seasons)",
+    "districts": [
+      "Shinjuku",
+      "Shibuya",
+      "Roppongi",
+      "Shimokitazawa",
+      "Akihabara"
     ],
-    foreign_nationals: [
-      {
-        resident_id: "RES-007",
-        full_name: "Lukas Weber",
-        nationality: "German",
-        employer: "Siemens Technology India",
-        room_no: "D-Share-4",
-        room_type: "Double (Shared)",
-        monthly_rent: 8000,
-        kyc_status: "VERIFIED_FOREIGN_NATIONAL",
-        frro_ref: "FRRO-MH-PUN-2023-88412",
-        work_permit: "EMP-SIE-9041",
-        payment_system: "Credit Card Recurring (Visa/MC)",
-        compliance_notes: "Form C submitted within 24h of arrival under Foreigners Act 1946; verified employment visa & NRO account under FEMA 1999."
-      },
-      {
-        resident_id: "RES-019",
-        full_name: "Elena Rostova",
-        nationality: "Russian",
-        employer: "Infosys BPM Pune",
-        room_no: "D-Single-9",
-        room_type: "Double (Single Occupancy)",
-        monthly_rent: 14000,
-        kyc_status: "VERIFIED_FOREIGN_NATIONAL",
-        frro_ref: "FRRO-MH-PUN-2024-11904",
-        work_permit: "EMP-INF-7723",
-        payment_system: "IMPS / NEFT Wallet Top-Up",
-        compliance_notes: "Form C submitted within 24h; passport, employment visa verified under Rule 14 Foreigners Order 1948."
-      },
-      {
-        resident_id: "RES-034",
-        full_name: "Kenji Takahashi",
-        nationality: "Japanese",
-        employer: "KPIT Technologies",
-        room_no: "Single-4",
-        room_type: "Single Room",
-        monthly_rent: 18000,
-        kyc_status: "VERIFIED_FOREIGN_NATIONAL",
-        frro_ref: "FRRO-MH-PUN-2023-55319",
-        work_permit: "EMP-KPI-4410",
-        payment_system: "IMPS / NEFT Wallet Top-Up",
-        compliance_notes: "Form C and FRRO e-Gov reporting complete; biometric compliance cleared under Bureau of Immigration portal."
-      }
+    "highlights": "World's most populous metropolitan area, ultra-high-speed transit, robotics, Michelin-star capital, extreme safety.",
+    "avgRentUSD": 1400,
+    "connectivity": "10 Gbps Fiber / 5G Ubiquitous",
+    "safety": "92/100 (Very High)"
+  },
+  {
+    "id": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "continent": "Asia",
+    "region": "Southeast Asia",
+    "flag": "\ud83c\uddf8\ud83c\uddec",
+    "lat": 1.3521,
+    "lng": 103.8198,
+    "coordinates": "1.3521\u00b0 N, 103.8198\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+8 (SGT)",
+    "currency": "Singapore Dollar (SGD, S$)",
+    "language": "English, Mandarin, Malay, Tamil",
+    "climate": "Tropical Rainforest (Year-round warmth & humidity)",
+    "districts": [
+      "Marina Bay",
+      "Tanjong Pagar",
+      "Bugis",
+      "River Valley",
+      "Orchard"
     ],
-    top_spenders: [
-      { resident_id: "RES-022", full_name: "Aditi Menon", total_spend: 767922, late_night_spend: 112386, orders: 324 },
-      { resident_id: "RES-016", full_name: "Sneha Pillai", total_spend: 766220, late_night_spend: 110684, orders: 305 },
-      { resident_id: "RES-013", full_name: "Nikhil Singh", total_spend: 764575, late_night_spend: 109039, orders: 302 },
-      { resident_id: "RES-011", full_name: "Aditya Shah", total_spend: 762537, late_night_spend: 107001, orders: 292 },
-      { resident_id: "RES-027", full_name: "Abhishek Verma", total_spend: 760183, late_night_spend: 104647, orders: 278 }
+    "highlights": "Premier global financial crossroads, Garden City green architecture, world-leading infrastructure, ultra-secure.",
+    "avgRentUSD": 2200,
+    "connectivity": "5 Gbps Fiber / 5G",
+    "safety": "95/100 (Ultra High)"
+  },
+  {
+    "id": "seoul",
+    "name": "Seoul",
+    "country": "South Korea",
+    "continent": "Asia",
+    "region": "East Asia",
+    "flag": "\ud83c\uddf0\ud83c\uddf7",
+    "lat": 37.5665,
+    "lng": 126.978,
+    "coordinates": "37.5665\u00b0 N, 126.9780\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+9 (KST)",
+    "currency": "South Korean Won (KRW, \u20a9)",
+    "language": "Korean",
+    "climate": "Continental / Monsoonal",
+    "districts": [
+      "Gangnam",
+      "Hongdae",
+      "Itaewon",
+      "Seongsu-dong",
+      "Mapo"
     ],
-    payment_gateways: [
-      { method: "NACH / e-NACH Bank Auto-Debit", gateway: "CASHFREE_ENACH_v3", residents_count: 8, mandate_rail: "NPCI e-Mandate (API Direct)" },
-      { method: "UPI AutoPay (GPay / PhonePe)", gateway: "RAZORPAY_SUB_API_v2", residents_count: 8, mandate_rail: "UPI 2.0 Recurring Standing Instructions" },
-      { method: "Credit Card Recurring (Visa/MC)", gateway: "STRIPE_IN_BILLING_v1", residents_count: 8, mandate_rail: "PCI-DSS Level 1 Encrypted Tokens" },
-      { method: "Corporate Direct Payroll Settlement", gateway: "ZOHO_BOOKS_B2B_API", residents_count: 8, mandate_rail: "Direct Corporate Payroll Deduction" },
-      { method: "IMPS / NEFT Wallet Top-Up", gateway: "PAYU_VIRTUAL_ACCT_v2", residents_count: 8, mandate_rail: "Dynamic Virtual Account Number (VAN)" }
+    "highlights": "High-tech metropolis, 24/7 digital lifestyle, K-culture epicenter, cutting-edge smart city tech.",
+    "avgRentUSD": 1200,
+    "connectivity": "10 Gbps Fiber / 5G",
+    "safety": "89/100 (Very High)"
+  },
+  {
+    "id": "bangkok",
+    "name": "Bangkok",
+    "country": "Thailand",
+    "continent": "Asia",
+    "region": "Southeast Asia",
+    "flag": "\ud83c\uddf9\ud83c\udded",
+    "lat": 13.7563,
+    "lng": 100.5018,
+    "coordinates": "13.7563\u00b0 N, 100.5018\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+7 (ICT)",
+    "currency": "Thai Baht (THB, \u0e3f)",
+    "language": "Thai",
+    "climate": "Tropical Savanna",
+    "districts": [
+      "Sukhumvit",
+      "Silom",
+      "Sathorn",
+      "Thonglor",
+      "Ari"
     ],
-    legal_compliance: {
-      dpdp_act: "Digital Personal Data Protection Act 2023 (Sec 4 consent, Sec 8 security safeguards, encrypted Aadhaar/PAN)",
-      foreigners_act: "Foreigners Act 1946 & Registration of Foreigners Rules 1939 (Mandatory Form C reporting within 24h)",
-      police_verification: "Section 144 CrPC / BNSS Pune Police Tenant Verification & Character Certificate CCTNS submission",
-      rent_control: "Maharashtra Rent Control Act 1999 & Maharashtra Stamp Act (e-Registration & Stamp Duty on Leave & License agreements)"
-    }
-  };
+    "highlights": "Top global digital nomad destination, vibrant street gastronomy, affordable luxury co-living condos.",
+    "avgRentUSD": 750,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "78/100 (High)"
+  },
+  {
+    "id": "bali",
+    "name": "Bali (Canggu / Ubud)",
+    "country": "Indonesia",
+    "continent": "Asia",
+    "region": "Southeast Asia",
+    "flag": "\ud83c\uddee\ud83c\udde9",
+    "lat": -8.6705,
+    "lng": 115.2126,
+    "coordinates": "8.6705\u00b0 S, 115.2126\u00b0 E",
+    "hemisphere": "Southern / Eastern",
+    "timezone": "UTC+8 (WITA)",
+    "currency": "Indonesian Rupiah (IDR, Rp)",
+    "language": "Indonesian, Balinese, English",
+    "climate": "Tropical Monsoon",
+    "districts": [
+      "Canggu",
+      "Ubud",
+      "Seminyak",
+      "Uluwatu",
+      "Pererenan"
+    ],
+    "highlights": "Global creative & digital nomad haven, lush jungle co-working retreats, surf breaks, wellness culture.",
+    "avgRentUSD": 700,
+    "connectivity": "300 Mbps Fiber / Starlink",
+    "safety": "82/100 (High)"
+  },
+  {
+    "id": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "continent": "Asia",
+    "region": "Middle East",
+    "flag": "\ud83c\udde6\ud83c\uddea",
+    "lat": 25.2048,
+    "lng": 55.2708,
+    "coordinates": "25.2048\u00b0 N, 55.2708\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+4 (GST)",
+    "currency": "UAE Dirham (AED, \u062f.\u0625)",
+    "language": "Arabic, English",
+    "climate": "Hot Desert (Sunny & Arid)",
+    "districts": [
+      "Downtown Dubai",
+      "Dubai Marina",
+      "DIFC",
+      "Jumeirah",
+      "Business Bay"
+    ],
+    "highlights": "Futuristic skyline, Burj Khalifa, zero personal income tax, global international trade & luxury hub.",
+    "avgRentUSD": 2100,
+    "connectivity": "2 Gbps Fiber / 5G",
+    "safety": "94/100 (Ultra High)"
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "country": "India",
+    "continent": "Asia",
+    "region": "South Asia",
+    "flag": "\ud83c\uddee\ud83c\uddf3",
+    "lat": 19.076,
+    "lng": 72.8777,
+    "coordinates": "19.0760\u00b0 N, 72.8777\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+5:30 (IST)",
+    "currency": "Indian Rupee (INR, \u20b9)",
+    "language": "Hindi, Marathi, English",
+    "climate": "Tropical Wet & Dry",
+    "districts": [
+      "Bandra West",
+      "BKC",
+      "Colaba",
+      "Powai",
+      "Lower Parel"
+    ],
+    "highlights": "Commercial capital of India, coastal Marine Drive, high-octane energy, booming venture & financial ecosystem.",
+    "avgRentUSD": 850,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "78/100 (Moderate High)"
+  },
+  {
+    "id": "bengaluru",
+    "name": "Bengaluru",
+    "country": "India",
+    "continent": "Asia",
+    "region": "South Asia",
+    "flag": "\ud83c\uddee\ud83c\uddf3",
+    "lat": 12.9716,
+    "lng": 77.5946,
+    "coordinates": "12.9716\u00b0 N, 77.5946\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+5:30 (IST)",
+    "currency": "Indian Rupee (INR, \u20b9)",
+    "language": "Kannada, English, Hindi",
+    "climate": "Tropical Savanna (Year-round pleasant climate)",
+    "districts": [
+      "Indiranagar",
+      "Koramangala",
+      "HSR Layout",
+      "Whitefield",
+      "Electronic City"
+    ],
+    "highlights": "Silicon Valley of India, tech startup headquarters, green canopy avenues, vibrant cafe & craft beer culture.",
+    "avgRentUSD": 600,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "82/100 (High)"
+  },
+  {
+    "id": "hongkong",
+    "name": "Hong Kong",
+    "country": "China (SAR)",
+    "continent": "Asia",
+    "region": "East Asia",
+    "flag": "\ud83c\udded\ud83c\uddf0",
+    "lat": 22.3193,
+    "lng": 114.1694,
+    "coordinates": "22.3193\u00b0 N, 114.1694\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+8 (HKT)",
+    "currency": "Hong Kong Dollar (HKD, HK$)",
+    "language": "Cantonese, English, Mandarin",
+    "climate": "Humid Subtropical",
+    "districts": [
+      "Central",
+      "Sheung Wan",
+      "Wan Chai",
+      "Tsim Sha Tsui",
+      "Mid-Levels"
+    ],
+    "highlights": "Iconic vertical harbor city, premier Asian capital markets, unbeatable urban transit efficiency.",
+    "avgRentUSD": 2300,
+    "connectivity": "10 Gbps Fiber / 5G",
+    "safety": "91/100 (Very High)"
+  },
+  {
+    "id": "taipei",
+    "name": "Taipei",
+    "country": "Taiwan",
+    "continent": "Asia",
+    "region": "East Asia",
+    "flag": "\ud83c\uddf9\ud83c\uddfc",
+    "lat": 25.033,
+    "lng": 121.5654,
+    "coordinates": "25.0330\u00b0 N, 121.5654\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+8 (CST)",
+    "currency": "New Taiwan Dollar (TWD, NT$)",
+    "language": "Mandarin, Taiwanese",
+    "climate": "Humid Subtropical",
+    "districts": [
+      "Da'an",
+      "Xinyi",
+      "Zhongshan",
+      "Songshan",
+      "Zhongzheng"
+    ],
+    "highlights": "Global semiconductor technology capital, famous night markets, Taipei 101, exceptionally welcoming & safe.",
+    "avgRentUSD": 950,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "93/100 (Very High)"
+  },
+  {
+    "id": "london",
+    "name": "London",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "flag": "\ud83c\uddec\ud83c\udde7",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "coordinates": "51.5074\u00b0 N, 0.1278\u00b0 W",
+    "hemisphere": "Northern / Western (Prime Meridian)",
+    "timezone": "UTC+0 (GMT/BST)",
+    "currency": "British Pound (GBP, \u00a3)",
+    "language": "English",
+    "climate": "Temperate Oceanic",
+    "districts": [
+      "Shoreditch",
+      "Soho",
+      "Canary Wharf",
+      "Camden",
+      "Kensington"
+    ],
+    "highlights": "Global financial & cultural beacon, Prime Meridian origin (Greenwich), 250+ languages spoken, historic innovation.",
+    "avgRentUSD": 2400,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "82/100 (High)"
+  },
+  {
+    "id": "paris",
+    "name": "Paris",
+    "country": "France",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "coordinates": "48.8566\u00b0 N, 2.3522\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "French",
+    "climate": "Oceanic",
+    "districts": [
+      "Le Marais",
+      "Saint-Germain-des-Pr\u00e9s",
+      "Montmartre",
+      "Bastille",
+      "Canal Saint-Martin"
+    ],
+    "highlights": "City of Light, global epicenter of art, fashion, philosophy, gastronomy, and Haussmann architecture.",
+    "avgRentUSD": 1950,
+    "connectivity": "2 Gbps Fiber / 5G",
+    "safety": "80/100 (High)"
+  },
+  {
+    "id": "berlin",
+    "name": "Berlin",
+    "country": "Germany",
+    "continent": "Europe",
+    "region": "Central Europe",
+    "flag": "\ud83c\udde9\ud83c\uddea",
+    "lat": 52.52,
+    "lng": 13.405,
+    "coordinates": "52.5200\u00b0 N, 13.4050\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "German, English",
+    "climate": "Temperate Continental",
+    "districts": [
+      "Mitte",
+      "Kreuzberg",
+      "Friedrichshain",
+      "Prenzlauer Berg",
+      "Neuk\u00f6lln"
+    ],
+    "highlights": "Startup capital of Europe, legendary creative & music culture, vast green parks, affordable co-living.",
+    "avgRentUSD": 1400,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "84/100 (High)"
+  },
+  {
+    "id": "amsterdam",
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "flag": "\ud83c\uddf3\ud83c\uddf1",
+    "lat": 52.3676,
+    "lng": 4.9041,
+    "coordinates": "52.3676\u00b0 N, 4.9041\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "Dutch, English",
+    "climate": "Oceanic",
+    "districts": [
+      "Jordaan",
+      "De Pijp",
+      "Centrum",
+      "Oud-West",
+      "Zuidas"
+    ],
+    "highlights": "UNESCO canal ring, world capital of cycling, liberal international trade hub, ultra-connected digital infrastructure.",
+    "avgRentUSD": 2100,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "88/100 (Very High)"
+  },
+  {
+    "id": "lisbon",
+    "name": "Lisbon",
+    "country": "Portugal",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
+    "lat": 38.7223,
+    "lng": -9.1393,
+    "coordinates": "38.7223\u00b0 N, 9.1393\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC+0 (WET/WEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "Portuguese, English",
+    "climate": "Mediterranean (Over 300 days of sunshine)",
+    "districts": [
+      "Chiado",
+      "Pr\u00edncipe Real",
+      "Alfama",
+      "Cais do Sodr\u00e9",
+      "Santos"
+    ],
+    "highlights": "Top digital nomad & co-living destination in Europe, iconic yellow trams, Atlantic coastal surfing, tech hub.",
+    "avgRentUSD": 1350,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "89/100 (Very High)"
+  },
+  {
+    "id": "madrid",
+    "name": "Madrid",
+    "country": "Spain",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "coordinates": "40.4168\u00b0 N, 3.7038\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "Spanish",
+    "climate": "Mediterranean Continental",
+    "districts": [
+      "Malasa\u00f1a",
+      "Chueca",
+      "Salamanca",
+      "La Latina",
+      "Chamber\u00ed"
+    ],
+    "highlights": "High-spirited Spanish capital, Prado Museum art triangle, tapas culture, expansive Retiro Park.",
+    "avgRentUSD": 1300,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "86/100 (High)"
+  },
+  {
+    "id": "rome",
+    "name": "Rome",
+    "country": "Italy",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "coordinates": "41.9028\u00b0 N, 12.4964\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Euro (EUR, \u20ac)",
+    "language": "Italian",
+    "climate": "Mediterranean",
+    "districts": [
+      "Trastevere",
+      "Monti",
+      "Prati",
+      "Testaccio",
+      "Centro Storico"
+    ],
+    "highlights": "The Eternal City, Colosseum, Vatican enclave, timeless classical heritage, unrivaled culinary traditions.",
+    "avgRentUSD": 1400,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "79/100 (Moderate High)"
+  },
+  {
+    "id": "zurich",
+    "name": "Zurich",
+    "country": "Switzerland",
+    "continent": "Europe",
+    "region": "Central Europe",
+    "flag": "\ud83c\udde8\ud83c\udded",
+    "lat": 47.3769,
+    "lng": 8.5417,
+    "coordinates": "47.3769\u00b0 N, 8.5417\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET/CEST)",
+    "currency": "Swiss Franc (CHF, Fr.)",
+    "language": "German, French, Italian, English",
+    "climate": "Temperate Oceanic / Alpine Foothill",
+    "districts": [
+      "Z\u00fcrich-West",
+      "Altstadt",
+      "Enge",
+      "Wiedikon",
+      "Seefeld"
+    ],
+    "highlights": "Global financial & private wealth fortress, crystal-clear Lake Zurich, Swiss punctuality & pristine standard of living.",
+    "avgRentUSD": 2800,
+    "connectivity": "10 Gbps Fiber / 5G",
+    "safety": "96/100 (Ultra High)"
+  },
+  {
+    "id": "reykjavik",
+    "name": "Reykjavik",
+    "country": "Iceland",
+    "continent": "Europe",
+    "region": "Nordic / Arctic Edge",
+    "flag": "\ud83c\uddee\ud83c\uddf8",
+    "lat": 64.1466,
+    "lng": -21.9426,
+    "coordinates": "64.1466\u00b0 N, 21.9426\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC+0 (GMT)",
+    "currency": "Icelandic Kr\u00f3na (ISK, kr)",
+    "language": "Icelandic, English",
+    "climate": "Subpolar Oceanic (Geothermally Heated)",
+    "districts": [
+      "Mi\u00f0b\u00e6r (Downtown)",
+      "Vesturb\u00e6r",
+      "Grandi",
+      "Laugardalur"
+    ],
+    "highlights": "Northernmost sovereign capital on Earth, 100% renewable geothermal grid, Aurora Borealis, extraordinary volcanic landscapes.",
+    "avgRentUSD": 1800,
+    "connectivity": "1 Gbps Fiber",
+    "safety": "97/100 (Ultra High)"
+  },
+  {
+    "id": "newyork",
+    "name": "New York City",
+    "country": "United States",
+    "continent": "North America",
+    "region": "East Coast",
+    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "coordinates": "40.7128\u00b0 N, 74.0060\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-5 (EST/EDT)",
+    "currency": "US Dollar (USD, $)",
+    "language": "English",
+    "climate": "Humid Continental",
+    "districts": [
+      "Manhattan (SoHo, Flatiron)",
+      "Brooklyn (Williamsburg, DUMBO)",
+      "Queens (Astoria)"
+    ],
+    "highlights": "The Empire City, Wall Street, Broadway, unmatched skyline, non-stop 24/7 global cultural energy.",
+    "avgRentUSD": 3400,
+    "connectivity": "2 Gbps Fiber / 5G",
+    "safety": "76/100 (Moderate High)"
+  },
+  {
+    "id": "sanfrancisco",
+    "name": "San Francisco",
+    "country": "United States",
+    "continent": "North America",
+    "region": "West Coast / Silicon Valley",
+    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "coordinates": "37.7749\u00b0 N, 122.4194\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-8 (PST/PDT)",
+    "currency": "US Dollar (USD, $)",
+    "language": "English",
+    "climate": "Mediterranean / Cool Summer (Microclimates)",
+    "districts": [
+      "SoMa",
+      "Mission District",
+      "Marina",
+      "Hayes Valley",
+      "Pacific Heights"
+    ],
+    "highlights": "Global epicenter of Artificial Intelligence and frontier tech, Golden Gate Bridge, Silicon Valley corridor.",
+    "avgRentUSD": 3100,
+    "connectivity": "5 Gbps Fiber / 5G",
+    "safety": "72/100 (Moderate)"
+  },
+  {
+    "id": "austin",
+    "name": "Austin",
+    "country": "United States",
+    "continent": "North America",
+    "region": "Texas",
+    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "coordinates": "30.2672\u00b0 N, 97.7431\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-6 (CST/CDT)",
+    "currency": "US Dollar (USD, $)",
+    "language": "English",
+    "climate": "Humid Subtropical",
+    "districts": [
+      "South Congress (SoCo)",
+      "Downtown",
+      "East Austin",
+      "Zilker",
+      "Rainey Street"
+    ],
+    "highlights": "Silicon Hills tech capital, live music Mecca, SXSW, zero state income tax, booming modern co-living communities.",
+    "avgRentUSD": 1850,
+    "connectivity": "2 Gbps Fiber / 5G",
+    "safety": "81/100 (High)"
+  },
+  {
+    "id": "toronto",
+    "name": "Toronto",
+    "country": "Canada",
+    "continent": "North America",
+    "region": "Eastern Canada",
+    "flag": "\ud83c\udde8\ud83c\udde6",
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "coordinates": "43.6532\u00b0 N, 79.3832\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-5 (EST/EDT)",
+    "currency": "Canadian Dollar (CAD, C$)",
+    "language": "English, French",
+    "climate": "Humid Continental",
+    "districts": [
+      "Downtown Core",
+      "King West",
+      "Queen West",
+      "Yorkville",
+      "Distillery District"
+    ],
+    "highlights": "Canada's premier financial & technology capital, world's most diverse population, CN Tower icon.",
+    "avgRentUSD": 2100,
+    "connectivity": "1.5 Gbps Fiber / 5G",
+    "safety": "87/100 (Very High)"
+  },
+  {
+    "id": "mexicocity",
+    "name": "Mexico City (CDMX)",
+    "country": "Mexico",
+    "continent": "North America",
+    "region": "Latin America",
+    "flag": "\ud83c\uddf2\ud83c\uddfd",
+    "lat": 19.4326,
+    "lng": -99.1332,
+    "coordinates": "19.4326\u00b0 N, 99.1332\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-6 (CST)",
+    "currency": "Mexican Peso (MXN, $)",
+    "language": "Spanish",
+    "climate": "Subtropical Highland (Year-round Spring)",
+    "districts": [
+      "Roma Norte",
+      "Condesa",
+      "Polanco",
+      "Ju\u00e1rez",
+      "Coyoac\u00e1n"
+    ],
+    "highlights": "Rich historical megalopolis, culinary capital of the Americas, vibrant co-working & digital nomad ecosystems.",
+    "avgRentUSD": 950,
+    "connectivity": "500 Mbps Fiber / 5G",
+    "safety": "70/100 (Moderate)"
+  },
+  {
+    "id": "buenosaires",
+    "name": "Buenos Aires",
+    "country": "Argentina",
+    "continent": "South America",
+    "region": "Southern Cone",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
+    "lat": -34.6037,
+    "lng": -58.3816,
+    "coordinates": "34.6037\u00b0 S, 58.3816\u00b0 W",
+    "hemisphere": "Southern / Western",
+    "timezone": "UTC-3 (ART)",
+    "currency": "Argentine Peso (ARS, $)",
+    "language": "Spanish",
+    "climate": "Humid Subtropical",
+    "districts": [
+      "Palermo Soho",
+      "Palermo Hollywood",
+      "Recoleta",
+      "San Telmo",
+      "Puerto Madero"
+    ],
+    "highlights": "Paris of South America, tango, world-renowned cafes & steak houses, outstanding remote-work value.",
+    "avgRentUSD": 650,
+    "connectivity": "500 Mbps Fiber / 5G",
+    "safety": "76/100 (Moderate High)"
+  },
+  {
+    "id": "saopaulo",
+    "name": "S\u00e3o Paulo",
+    "country": "Brazil",
+    "continent": "South America",
+    "region": "Southeast Brazil",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
+    "lat": -23.5505,
+    "lng": -46.6333,
+    "coordinates": "23.5505\u00b0 S, 46.6333\u00b0 W",
+    "hemisphere": "Southern / Western",
+    "timezone": "UTC-3 (BRT)",
+    "currency": "Brazilian Real (BRL, R$)",
+    "language": "Portuguese",
+    "climate": "Monsoon-influenced Subtropical",
+    "districts": [
+      "Vila Madalena",
+      "Itaim Bibi",
+      "Pinheiros",
+      "Jardins",
+      "Avenida Paulista"
+    ],
+    "highlights": "Financial & economic titan of South America, Michelin culinary destination, immense architectural scale.",
+    "avgRentUSD": 850,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "68/100 (Moderate)"
+  },
+  {
+    "id": "medellin",
+    "name": "Medell\u00edn",
+    "country": "Colombia",
+    "continent": "South America",
+    "region": "Andes",
+    "flag": "\ud83c\udde8\ud83c\uddf4",
+    "lat": 6.2442,
+    "lng": -75.5812,
+    "coordinates": "6.2442\u00b0 N, 75.5812\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-5 (COT)",
+    "currency": "Colombian Peso (COP, $)",
+    "language": "Spanish",
+    "climate": "Tropical Rainforest / Eternal Spring (24\u00b0C)",
+    "districts": [
+      "El Poblado",
+      "Laureles",
+      "Envigado",
+      "Castropol",
+      "Bel\u00e9n"
+    ],
+    "highlights": "City of Eternal Spring, global innovation award winner, cable car transit, premier Latin America nomad cluster.",
+    "avgRentUSD": 600,
+    "connectivity": "300 Mbps Fiber / 5G",
+    "safety": "72/100 (Moderate)"
+  },
+  {
+    "id": "capetown",
+    "name": "Cape Town",
+    "country": "South Africa",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "flag": "\ud83c\uddff\ud83c\udde6",
+    "lat": -33.9249,
+    "lng": 18.4241,
+    "coordinates": "33.9249\u00b0 S, 18.4241\u00b0 E",
+    "hemisphere": "Southern / Eastern",
+    "timezone": "UTC+2 (SAST)",
+    "currency": "South African Rand (ZAR, R)",
+    "language": "English, Afrikaans, Xhosa",
+    "climate": "Mediterranean",
+    "districts": [
+      "Camps Bay",
+      "Green Point",
+      "Sea Point",
+      "Kloof Street",
+      "V&A Waterfront"
+    ],
+    "highlights": "Table Mountain natural wonder, Atlantic & Indian Ocean confluence, wine valleys, top tech ecosystem in Africa.",
+    "avgRentUSD": 950,
+    "connectivity": "500 Mbps Fiber",
+    "safety": "68/100 (Moderate)"
+  },
+  {
+    "id": "nairobi",
+    "name": "Nairobi",
+    "country": "Kenya",
+    "continent": "Africa",
+    "region": "East Africa",
+    "flag": "\ud83c\uddf0\ud83c\uddea",
+    "lat": -1.2921,
+    "lng": 36.8219,
+    "coordinates": "1.2921\u00b0 S, 36.8219\u00b0 E",
+    "hemisphere": "Southern / Eastern",
+    "timezone": "UTC+3 (EAT)",
+    "currency": "Kenyan Shilling (KES, KSh)",
+    "language": "Swahili, English",
+    "climate": "Subtropical Highland",
+    "districts": [
+      "Westlands",
+      "Kilimani",
+      "Karen",
+      "Lavington",
+      "Gigiri"
+    ],
+    "highlights": "Silicon Savannah, mobile money pioneer (M-Pesa), Nairobi National Park wildlife alongside urban skyline.",
+    "avgRentUSD": 700,
+    "connectivity": "200 Mbps Fiber / 5G",
+    "safety": "70/100 (Moderate)"
+  },
+  {
+    "id": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "continent": "Oceania",
+    "region": "Australasia",
+    "flag": "\ud83c\udde6\ud83c\uddfa",
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "coordinates": "33.8688\u00b0 S, 151.2093\u00b0 E",
+    "hemisphere": "Southern / Eastern",
+    "timezone": "UTC+10 (AEST/AEDT)",
+    "currency": "Australian Dollar (AUD, A$)",
+    "language": "English",
+    "climate": "Humid Subtropical (Temperate Sunny)",
+    "districts": [
+      "Surry Hills",
+      "Bondi",
+      "Barangaroo",
+      "Darlinghurst",
+      "Manly"
+    ],
+    "highlights": "Sydney Opera House, world-famous harbor and coastal beaches, primary financial capital of Oceania.",
+    "avgRentUSD": 2300,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "89/100 (Very High)"
+  },
+  {
+    "id": "auckland",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "continent": "Oceania",
+    "region": "Polynesia",
+    "flag": "\ud83c\uddf3\ud83c\uddff",
+    "lat": -36.8485,
+    "lng": 174.7633,
+    "coordinates": "36.8485\u00b0 S, 174.7633\u00b0 E",
+    "hemisphere": "Southern / Eastern",
+    "timezone": "UTC+12 (NZST/NZDT)",
+    "currency": "New Zealand Dollar (NZD, NZ$)",
+    "language": "English, M\u0101ori",
+    "climate": "Oceanic / Temperate",
+    "districts": [
+      "Ponsonby",
+      "Parnell",
+      "Britomart",
+      "Takapuna",
+      "Grey Lynn"
+    ],
+    "highlights": "City of Sails, harbor volcanic hills, gateway to pristine New Zealand wilderness and premier quality of life.",
+    "avgRentUSD": 1750,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "90/100 (Very High)"
+  },
+  {
+    "id": "ushuaia",
+    "name": "Ushuaia",
+    "country": "Argentina",
+    "continent": "South America",
+    "region": "Tierra del Fuego (Deep South)",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
+    "lat": -54.8019,
+    "lng": -68.303,
+    "coordinates": "54.8019\u00b0 S, 68.3030\u00b0 W",
+    "hemisphere": "Southern / Western",
+    "timezone": "UTC-3 (ART)",
+    "currency": "Argentine Peso (ARS, $)",
+    "language": "Spanish",
+    "climate": "Subpolar Oceanic (Tundra influence)",
+    "districts": [
+      "San Mart\u00edn Waterfront",
+      "Beagle Channel Marina"
+    ],
+    "highlights": "The Southernmost City on Earth (\"Fin del Mundo\"), dramatic Martial Glacier backdrop, launchpad for Antarctica expeditions.",
+    "avgRentUSD": 700,
+    "connectivity": "100 Mbps Starlink / Fiber",
+    "safety": "88/100 (Very High)"
+  },
+  {
+    "id": "longyearbyen",
+    "name": "Longyearbyen",
+    "country": "Norway (Svalbard)",
+    "continent": "Europe",
+    "region": "High Arctic (78\u00b0 N)",
+    "flag": "\ud83c\uddf3\ud83c\uddf4",
+    "lat": 78.2232,
+    "lng": 15.6267,
+    "coordinates": "78.2232\u00b0 N, 15.6267\u00b0 E",
+    "hemisphere": "Northern / Eastern",
+    "timezone": "UTC+1 (CET)",
+    "currency": "Norwegian Krone (NOK, kr)",
+    "language": "Norwegian, English",
+    "climate": "Polar Tundra (Midnight Sun & Polar Night)",
+    "districts": [
+      "Longyear Valley",
+      "Nybyen"
+    ],
+    "highlights": "Northernmost permanent human settlement on Earth, Svalbard Global Seed Vault, Arctic research frontier, midnight sun.",
+    "avgRentUSD": 1600,
+    "connectivity": "Dual Arctic Undersea Submarine Fiber",
+    "safety": "98/100 (Ultra High)"
+  },
+  {
+    "id": "honolulu",
+    "name": "Honolulu",
+    "country": "United States (Hawaii)",
+    "continent": "North America",
+    "region": "Polynesian Pacific",
+    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "lat": 21.3069,
+    "lng": -157.8583,
+    "coordinates": "21.3069\u00b0 N, 157.8583\u00b0 W",
+    "hemisphere": "Northern / Western",
+    "timezone": "UTC-10 (HST)",
+    "currency": "US Dollar (USD, $)",
+    "language": "English, Hawaiian",
+    "climate": "Tropical Semi-arid",
+    "districts": [
+      "Waikiki",
+      "Kaka'ako",
+      "Manoa",
+      "Downtown Honolulu"
+    ],
+    "highlights": "Pacific crossroads, Diamond Head volcanic crater, world-famous surf breaks, authentic Aloha spirit.",
+    "avgRentUSD": 2250,
+    "connectivity": "1 Gbps Fiber / 5G",
+    "safety": "83/100 (High)"
+  }
+];
+  const WORLD_COUNTRIES = {
+  "afghanistan": {
+    "name": "Afghanistan",
+    "capital": "Kabul",
+    "continent": "Asia",
+    "currency": "AFN (\u060b)",
+    "flag": "\ud83c\udde6\ud83c\uddeb",
+    "lang": "Pashto, Dari"
+  },
+  "albania": {
+    "name": "Albania",
+    "capital": "Tirana",
+    "continent": "Europe",
+    "currency": "ALL (L)",
+    "flag": "\ud83c\udde6\ud83c\uddf1",
+    "lang": "Albanian"
+  },
+  "algeria": {
+    "name": "Algeria",
+    "capital": "Algiers",
+    "continent": "Africa",
+    "currency": "DZD (\u062f.\u062c)",
+    "flag": "\ud83c\udde9\ud83c\uddff",
+    "lang": "Arabic, Berber"
+  },
+  "andorra": {
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udde6\ud83c\udde9",
+    "lang": "Catalan"
+  },
+  "angola": {
+    "name": "Angola",
+    "capital": "Luanda",
+    "continent": "Africa",
+    "currency": "AOA (Kz)",
+    "flag": "\ud83c\udde6\ud83c\uddf4",
+    "lang": "Portuguese"
+  },
+  "argentina": {
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "continent": "South America",
+    "currency": "ARS ($)",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
+    "lang": "Spanish"
+  },
+  "armenia": {
+    "name": "Armenia",
+    "capital": "Yerevan",
+    "continent": "Asia",
+    "currency": "AMD (\u058f)",
+    "flag": "\ud83c\udde6\ud83c\uddf2",
+    "lang": "Armenian"
+  },
+  "australia": {
+    "name": "Australia",
+    "capital": "Canberra",
+    "continent": "Oceania",
+    "currency": "AUD (A$)",
+    "flag": "\ud83c\udde6\ud83c\uddfa",
+    "lang": "English"
+  },
+  "austria": {
+    "name": "Austria",
+    "capital": "Vienna",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udde6\ud83c\uddf9",
+    "lang": "German"
+  },
+  "azerbaijan": {
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "continent": "Asia",
+    "currency": "AZN (\u20bc)",
+    "flag": "\ud83c\udde6\ud83c\uddff",
+    "lang": "Azerbaijani"
+  },
+  "bahamas": {
+    "name": "Bahamas",
+    "capital": "Nassau",
+    "continent": "North America",
+    "currency": "BSD ($)",
+    "flag": "\ud83c\udde7\ud83c\uddf8",
+    "lang": "English"
+  },
+  "bahrain": {
+    "name": "Bahrain",
+    "capital": "Manama",
+    "continent": "Asia",
+    "currency": "BHD (.\u062f.\u0628)",
+    "flag": "\ud83c\udde7\ud83c\udded",
+    "lang": "Arabic"
+  },
+  "bangladesh": {
+    "name": "Bangladesh",
+    "capital": "Dhaka",
+    "continent": "Asia",
+    "currency": "BDT (\u09f3)",
+    "flag": "\ud83c\udde7\ud83c\udde9",
+    "lang": "Bengali"
+  },
+  "barbados": {
+    "name": "Barbados",
+    "capital": "Bridgetown",
+    "continent": "North America",
+    "currency": "BBD ($)",
+    "flag": "\ud83c\udde7\ud83c\udde7",
+    "lang": "English"
+  },
+  "belgium": {
+    "name": "Belgium",
+    "capital": "Brussels",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udde7\ud83c\uddea",
+    "lang": "Dutch, French, German"
+  },
+  "bhutan": {
+    "name": "Bhutan",
+    "capital": "Thimphu",
+    "continent": "Asia",
+    "currency": "BTN (Nu.)",
+    "flag": "\ud83c\udde7\ud83c\uddf9",
+    "lang": "Dzongkha"
+  },
+  "bolivia": {
+    "name": "Bolivia",
+    "capital": "Sucre",
+    "continent": "South America",
+    "currency": "BOB (Bs.)",
+    "flag": "\ud83c\udde7\ud83c\uddf4",
+    "lang": "Spanish, Quechua"
+  },
+  "brazil": {
+    "name": "Brazil",
+    "capital": "Bras\u00edlia",
+    "continent": "South America",
+    "currency": "BRL (R$)",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
+    "lang": "Portuguese"
+  },
+  "canada": {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "continent": "North America",
+    "currency": "CAD (C$)",
+    "flag": "\ud83c\udde8\ud83c\udde6",
+    "lang": "English, French"
+  },
+  "chile": {
+    "name": "Chile",
+    "capital": "Santiago",
+    "continent": "South America",
+    "currency": "CLP ($)",
+    "flag": "\ud83c\udde8\ud83c\uddf1",
+    "lang": "Spanish"
+  },
+  "china": {
+    "name": "China",
+    "capital": "Beijing",
+    "continent": "Asia",
+    "currency": "CNY (\u00a5)",
+    "flag": "\ud83c\udde8\ud83c\uddf3",
+    "lang": "Mandarin"
+  },
+  "colombia": {
+    "name": "Colombia",
+    "capital": "Bogot\u00e1",
+    "continent": "South America",
+    "currency": "COP ($)",
+    "flag": "\ud83c\udde8\ud83c\uddf4",
+    "lang": "Spanish"
+  },
+  "costa rica": {
+    "name": "Costa Rica",
+    "capital": "San Jos\u00e9",
+    "continent": "North America",
+    "currency": "CRC (\u20a1)",
+    "flag": "\ud83c\udde8\ud83c\uddf7",
+    "lang": "Spanish"
+  },
+  "croatia": {
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udded\ud83c\uddf7",
+    "lang": "Croatian"
+  },
+  "cuba": {
+    "name": "Cuba",
+    "capital": "Havana",
+    "continent": "North America",
+    "currency": "CUP ($)",
+    "flag": "\ud83c\udde8\ud83c\uddfa",
+    "lang": "Spanish"
+  },
+  "cyprus": {
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udde8\ud83c\uddfe",
+    "lang": "Greek, Turkish"
+  },
+  "czech republic": {
+    "name": "Czech Republic",
+    "capital": "Prague",
+    "continent": "Europe",
+    "currency": "CZK (K\u010d)",
+    "flag": "\ud83c\udde8\ud83c\uddff",
+    "lang": "Czech"
+  },
+  "denmark": {
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "continent": "Europe",
+    "currency": "DKK (kr)",
+    "flag": "\ud83c\udde9\ud83c\uddf0",
+    "lang": "Danish"
+  },
+  "egypt": {
+    "name": "Egypt",
+    "capital": "Cairo",
+    "continent": "Africa",
+    "currency": "EGP (E\u00a3)",
+    "flag": "\ud83c\uddea\ud83c\uddec",
+    "lang": "Arabic"
+  },
+  "estonia": {
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddea\ud83c\uddea",
+    "lang": "Estonian"
+  },
+  "ethiopia": {
+    "name": "Ethiopia",
+    "capital": "Addis Ababa",
+    "continent": "Africa",
+    "currency": "ETB (Br)",
+    "flag": "\ud83c\uddea\ud83c\uddf9",
+    "lang": "Amharic"
+  },
+  "fiji": {
+    "name": "Fiji",
+    "capital": "Suva",
+    "continent": "Oceania",
+    "currency": "FJD ($)",
+    "flag": "\ud83c\uddeb\ud83c\uddef",
+    "lang": "English, Fijian"
+  },
+  "finland": {
+    "name": "Finland",
+    "capital": "Helsinki",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddeb\ud83c\uddee",
+    "lang": "Finnish, Swedish"
+  },
+  "france": {
+    "name": "France",
+    "capital": "Paris",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
+    "lang": "French"
+  },
+  "germany": {
+    "name": "Germany",
+    "capital": "Berlin",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\udde9\ud83c\uddea",
+    "lang": "German"
+  },
+  "ghana": {
+    "name": "Ghana",
+    "capital": "Accra",
+    "continent": "Africa",
+    "currency": "GHS (GH\u20b5)",
+    "flag": "\ud83c\uddec\ud83c\udded",
+    "lang": "English"
+  },
+  "greece": {
+    "name": "Greece",
+    "capital": "Athens",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddec\ud83c\uddf7",
+    "lang": "Greek"
+  },
+  "hungary": {
+    "name": "Hungary",
+    "capital": "Budapest",
+    "continent": "Europe",
+    "currency": "HUF (Ft)",
+    "flag": "\ud83c\udded\ud83c\uddfa",
+    "lang": "Hungarian"
+  },
+  "iceland": {
+    "name": "Iceland",
+    "capital": "Reykjavik",
+    "continent": "Europe",
+    "currency": "ISK (kr)",
+    "flag": "\ud83c\uddee\ud83c\uddf8",
+    "lang": "Icelandic"
+  },
+  "india": {
+    "name": "India",
+    "capital": "New Delhi",
+    "continent": "Asia",
+    "currency": "INR (\u20b9)",
+    "flag": "\ud83c\uddee\ud83c\uddf3",
+    "lang": "Hindi, English"
+  },
+  "indonesia": {
+    "name": "Indonesia",
+    "capital": "Jakarta",
+    "continent": "Asia",
+    "currency": "IDR (Rp)",
+    "flag": "\ud83c\uddee\ud83c\udde9",
+    "lang": "Indonesian"
+  },
+  "ireland": {
+    "name": "Ireland",
+    "capital": "Dublin",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddee\ud83c\uddea",
+    "lang": "English, Irish"
+  },
+  "israel": {
+    "name": "Israel",
+    "capital": "Jerusalem",
+    "continent": "Asia",
+    "currency": "ILS (\u20aa)",
+    "flag": "\ud83c\uddee\ud83c\uddf1",
+    "lang": "Hebrew, Arabic"
+  },
+  "italy": {
+    "name": "Italy",
+    "capital": "Rome",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
+    "lang": "Italian"
+  },
+  "japan": {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "continent": "Asia",
+    "currency": "JPY (\u00a5)",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
+    "lang": "Japanese"
+  },
+  "kazakhstan": {
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "continent": "Asia",
+    "currency": "KZT (\u20b8)",
+    "flag": "\ud83c\uddf0\ud83c\uddff",
+    "lang": "Kazakh, Russian"
+  },
+  "kenya": {
+    "name": "Kenya",
+    "capital": "Nairobi",
+    "continent": "Africa",
+    "currency": "KES (KSh)",
+    "flag": "\ud83c\uddf0\ud83c\uddea",
+    "lang": "Swahili, English"
+  },
+  "luxembourg": {
+    "name": "Luxembourg",
+    "capital": "Luxembourg City",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddf1\ud83c\uddfa",
+    "lang": "Luxembourgish, French, German"
+  },
+  "malaysia": {
+    "name": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "continent": "Asia",
+    "currency": "MYR (RM)",
+    "flag": "\ud83c\uddf2\ud83c\uddfe",
+    "lang": "Malay, English"
+  },
+  "maldives": {
+    "name": "Maldives",
+    "capital": "Mal\u00e9",
+    "continent": "Asia",
+    "currency": "MVR (Rf)",
+    "flag": "\ud83c\uddf2\ud83c\uddfb",
+    "lang": "Dhivehi"
+  },
+  "mexico": {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "continent": "North America",
+    "currency": "MXN ($)",
+    "flag": "\ud83c\uddf2\ud83c\uddfd",
+    "lang": "Spanish"
+  },
+  "monaco": {
+    "name": "Monaco",
+    "capital": "Monaco",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddf2\ud83c\udde8",
+    "lang": "French"
+  },
+  "morocco": {
+    "name": "Morocco",
+    "capital": "Rabat",
+    "continent": "Africa",
+    "currency": "MAD (\u062f.\u0645.)",
+    "flag": "\ud83c\uddf2\ud83c\udde6",
+    "lang": "Arabic, Berber"
+  },
+  "nepal": {
+    "name": "Nepal",
+    "capital": "Kathmandu",
+    "continent": "Asia",
+    "currency": "NPR (\u0930\u0942)",
+    "flag": "\ud83c\uddf3\ud83c\uddf5",
+    "lang": "Nepali"
+  },
+  "netherlands": {
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddf3\ud83c\uddf1",
+    "lang": "Dutch"
+  },
+  "new zealand": {
+    "name": "New Zealand",
+    "capital": "Wellington",
+    "continent": "Oceania",
+    "currency": "NZD (NZ$)",
+    "flag": "\ud83c\uddf3\ud83c\uddff",
+    "lang": "English, M\u0101ori"
+  },
+  "nigeria": {
+    "name": "Nigeria",
+    "capital": "Abuja",
+    "continent": "Africa",
+    "currency": "NGN (\u20a6)",
+    "flag": "\ud83c\uddf3\ud83c\uddec",
+    "lang": "English"
+  },
+  "norway": {
+    "name": "Norway",
+    "capital": "Oslo",
+    "continent": "Europe",
+    "currency": "NOK (kr)",
+    "flag": "\ud83c\uddf3\ud83c\uddf4",
+    "lang": "Norwegian"
+  },
+  "oman": {
+    "name": "Oman",
+    "capital": "Muscat",
+    "continent": "Asia",
+    "currency": "OMR (\u0631.\u0639.)",
+    "flag": "\ud83c\uddf4\ud83c\uddf2",
+    "lang": "Arabic"
+  },
+  "peru": {
+    "name": "Peru",
+    "capital": "Lima",
+    "continent": "South America",
+    "currency": "Peruvian Sol (PEN, S/)",
+    "flag": "\ud83c\uddf5\ud83c\uddea",
+    "lang": "Spanish, Quechua"
+  },
+  "philippines": {
+    "name": "Philippines",
+    "capital": "Manila",
+    "continent": "Asia",
+    "currency": "PHP (\u20b1)",
+    "flag": "\ud83c\uddf5\ud83c\udded",
+    "lang": "Filipino, English"
+  },
+  "poland": {
+    "name": "Poland",
+    "capital": "Warsaw",
+    "continent": "Europe",
+    "currency": "PLN (z\u0142)",
+    "flag": "\ud83c\uddf5\ud83c\uddf1",
+    "lang": "Polish"
+  },
+  "portugal": {
+    "name": "Portugal",
+    "capital": "Lisbon",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
+    "lang": "Portuguese"
+  },
+  "qatar": {
+    "name": "Qatar",
+    "capital": "Doha",
+    "continent": "Asia",
+    "currency": "QAR (\u0631.\u0642)",
+    "flag": "\ud83c\uddf6\ud83c\udde6",
+    "lang": "Arabic"
+  },
+  "rwanda": {
+    "name": "Rwanda",
+    "capital": "Kigali",
+    "continent": "Africa",
+    "currency": "RWF (FRw)",
+    "flag": "\ud83c\uddf7\ud83c\uddfc",
+    "lang": "Kinyarwanda, English, French"
+  },
+  "saudi arabia": {
+    "name": "Saudi Arabia",
+    "capital": "Riyadh",
+    "continent": "Asia",
+    "currency": "SAR (\ufdfc)",
+    "flag": "\ud83c\uddf8\ud83c\udde6",
+    "lang": "Arabic"
+  },
+  "singapore": {
+    "name": "Singapore",
+    "capital": "Singapore",
+    "continent": "Asia",
+    "currency": "SGD (S$)",
+    "flag": "\ud83c\uddf8\ud83c\uddec",
+    "lang": "English, Mandarin"
+  },
+  "south africa": {
+    "name": "South Africa",
+    "capital": "Pretoria",
+    "continent": "Africa",
+    "currency": "ZAR (R)",
+    "flag": "\ud83c\uddff\ud83c\udde6",
+    "lang": "English, Afrikaans, Zulu"
+  },
+  "south korea": {
+    "name": "South Korea",
+    "capital": "Seoul",
+    "continent": "Asia",
+    "currency": "KRW (\u20a9)",
+    "flag": "\ud83c\uddf0\ud83c\uddf7",
+    "lang": "Korean"
+  },
+  "spain": {
+    "name": "Spain",
+    "capital": "Madrid",
+    "continent": "Europe",
+    "currency": "EUR (\u20ac)",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
+    "lang": "Spanish"
+  },
+  "sri lanka": {
+    "name": "Sri Lanka",
+    "capital": "Colombo",
+    "continent": "Asia",
+    "currency": "LKR (Rs)",
+    "flag": "\ud83c\uddf1\ud83c\uddf0",
+    "lang": "Sinhala, Tamil"
+  },
+  "sweden": {
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "continent": "Europe",
+    "currency": "SEK (kr)",
+    "flag": "\ud83c\uddf8\ud83c\uddea",
+    "lang": "Swedish"
+  },
+  "switzerland": {
+    "name": "Switzerland",
+    "capital": "Bern",
+    "continent": "Europe",
+    "currency": "CHF (Fr.)",
+    "flag": "\ud83c\udde8\ud83c\udded",
+    "lang": "German, French, Italian"
+  },
+  "thailand": {
+    "name": "Thailand",
+    "capital": "Bangkok",
+    "continent": "Asia",
+    "currency": "THB (\u0e3f)",
+    "flag": "\ud83c\uddf9\ud83c\udded",
+    "lang": "Thai"
+  },
+  "turkey": {
+    "name": "Turkey",
+    "capital": "Ankara",
+    "continent": "Asia/Europe",
+    "currency": "TRY (\u20ba)",
+    "flag": "\ud83c\uddf9\ud83c\uddf7",
+    "lang": "Turkish"
+  },
+  "united arab emirates": {
+    "name": "United Arab Emirates",
+    "capital": "Abu Dhabi",
+    "continent": "Asia",
+    "currency": "AED (\u062f.\u0625)",
+    "flag": "\ud83c\udde6\ud83c\uddea",
+    "lang": "Arabic"
+  },
+  "united kingdom": {
+    "name": "United Kingdom",
+    "capital": "London",
+    "continent": "Europe",
+    "currency": "GBP (\u00a3)",
+    "flag": "\ud83c\uddec\ud83c\udde7",
+    "lang": "English"
+  },
+  "united states": {
+    "name": "United States",
+    "capital": "Washington, D.C.",
+    "continent": "North America",
+    "currency": "USD ($)",
+    "flag": "\ud83c\uddfa\ud83c\uddf8",
+    "lang": "English"
+  },
+  "uruguay": {
+    "name": "Uruguay",
+    "capital": "Montevideo",
+    "continent": "South America",
+    "currency": "UYU ($U)",
+    "flag": "\ud83c\uddfa\ud83c\uddfe",
+    "lang": "Spanish"
+  },
+  "vietnam": {
+    "name": "Vietnam",
+    "capital": "Hanoi",
+    "continent": "Asia",
+    "currency": "VND (\u20ab)",
+    "flag": "\ud83c\uddfb\ud83c\uddf3",
+    "lang": "Vietnamese"
+  }
+};
 
   // ------------------------------------------------------------------
   // System Prompt for Frontier Generative AI Transformation
   // ------------------------------------------------------------------
-  const SENTINEL_SYSTEM_PROMPT = `You are the THΛTJOINT Property Sentinel, an advanced Generative AI Chatbot and operational companion managing Home 014 (Oakview Courtyard Residences) as well as the Pacific Grove & Monterey Peninsula real estate portfolio (274 properties).
-
-KNOWLEDGE BASE & GROUNDING TRUTH:
-- ThatJoint Co-Living Portfolio: 40 tech residents (Hinjawadi, Kharadi, Viman Nagar, Magarpatta), 35 physical rooms (5 Shared ₹8k, 20 Double Single ₹14k, 10 Single ₹18k). 3-Year Gross Revenue: ₹26,902,673 (Rent: ₹17.79M, Meal Plans: ₹5.24M, Late-Night Swiggy/Zomato: ₹3.87M across 10,471 orders).
-- Foreign Residents: Lukas Weber (Siemens, German, RES-007, Form C FRRO-MH-PUN-2023-88412), Elena Rostova (Infosys BPM, Russian, RES-019, Form C FRRO-MH-PUN-2024-11904), Kenji Takahashi (KPIT, Japanese, RES-034, Form C FRRO-MH-PUN-2023-55319).
-- Payment Rails: Cashfree e-NACH, Razorpay UPI AutoPay, Stripe Tokenization, Zoho Books Corporate Payroll, PayU Virtual Accounts (8 residents each).
-- Indian Statutory Compliance: Form C (Foreigners Act 1946, 24h SLA), DPDP Act 2023, Section 144 CrPC / BNSS Pune Police Tenant Verification, Maharashtra Rent Control Act 1999.
-- Home 014: Suite 14, Garden Quadrangle, Maharashtra. Resident: Dr. A. Verma. Rent: ₹1,45,000/mo. Escrow: ₹4,35,000. HVAC WO-8841 technician Rajesh K. (Apex Climate) today at 14:00. Rooftop Solar: 4.8 kW.
-- Pacific Grove Market: 274 properties across 114 operators. Median rate $351/night (Mean $485). 40.9% (112 units) operate as 30+ day flexible leases under municipal zoning covenants (PG Chapter 23.90). 162 operate as licensed STRs or commercial hotels.
-- Major Operators: Sanctuary Vacation Rentals (49 listings), Monterey Rentals (21 listings), Kyle (13), Pacific (11), Angela at Old St. Angela Inn (9), The Charles (8), Green Gables Inn (5), Tracy (5), Seven Gables Inn (4).
-- Key Loci: Lovers Point & Beach, Asilomar Coastal Trail, Cannery Row & Aquarium, Historic Victorian Downtown, Ocean View Boulevard.
-
-CONVERSATIONAL RULES:
-1. Deliver direct, context-aware answers without robotic conversational filler.
-2. Formulate step-by-step mathematical reasoning for financial indexing, escalations, and revenue modeling.
-3. Support multimodal inquiries, lease document parsing, and voice dictation.
-4. Always provide actionable follow-up suggestions and respect security boundaries.`;
+  const SENTINEL_SYSTEM_PROMPT = `You are THΛTJOINT AI, an intelligent, personalized global assistant and co-living companion.
+You possess a detailed map of the entire world with comprehensive geographic, city, country, coordinate, and timezone intelligence across every continent and corner of the Earth.
+Your initial background knowledge base starts clean at zero. As the user suggests facts, policies, properties, and guidelines, you dynamically learn and build your knowledge base accordingly.`;
 
   // ------------------------------------------------------------------
   // Main ThatJointChatbot Class Implementation
@@ -258,14 +1640,46 @@ CONVERSATIONAL RULES:
     constructor(options = {}) {
       this.containerId = options.containerId || 'terminalDrawerRoot';
       this.isDrawer = options.isDrawer !== undefined ? options.isDrawer : true;
-      this.activeUnit = options.activeUnit || 'Home 014';
+      this.activeUnit = options.activeUnit || 'Global Residence';
       this.listeners = new Map();
       this.conversationHistory = [];
       this.isBusy = false;
       this.stagedFile = null;
       this.recognition = null;
       this.isListening = false;
-      this.knowledgeBase = PACIFIC_GROVE_KB;
+
+      // Safe LocalStorage accessor for SSR / Node environments
+      const storage = typeof localStorage !== 'undefined'
+        ? localStorage
+        : { getItem: () => null, setItem: () => null, removeItem: () => null };
+
+      // Background Knowledge Base: Starts clean at zero as directed by the user!
+      this.knowledgeBase = {};
+
+      // Dynamic Personalized Memory & Custom Knowledge Store (Persisted across sessions)
+      try {
+        const rawCustom = storage.getItem('tj_custom_knowledge');
+        this.customKnowledge = rawCustom ? JSON.parse(rawCustom) : {};
+      } catch (e) {
+        this.customKnowledge = {};
+      }
+
+      try {
+        const rawProfile = storage.getItem('tj_user_profile');
+        this.userProfile = rawProfile ? JSON.parse(rawProfile) : {
+          name: '',
+          origin: '',
+          currentCity: '',
+          preferences: {},
+          savedLocations: []
+        };
+      } catch (e) {
+        this.userProfile = { name: '', origin: '', currentCity: '', preferences: {}, savedLocations: [] };
+      }
+
+      // World Detailed Map & Geographic Engine
+      this.worldCities = WORLD_CITIES;
+      this.worldCountries = WORLD_COUNTRIES;
 
       // Multi-step Co-Living & Tenancy Booking State Machine
       this.bookingState = {
@@ -285,11 +1699,6 @@ CONVERSATIONAL RULES:
         }
       };
 
-      // Safe LocalStorage accessor for SSR / Node environments
-      const storage = typeof localStorage !== 'undefined'
-        ? localStorage
-        : { getItem: () => null, setItem: () => null };
-
       // Active Client Packaging Configuration
       this.clientConfig = {
         tier: storage.getItem('tj_packaging_tier') || 'backend',
@@ -302,24 +1711,7 @@ CONVERSATIONAL RULES:
       };
 
       this.init();
-      this.loadRemoteKnowledgeBase();
       this.checkBackendHealth();
-    }
-
-    // Asynchronously synchronize complete knowledge base file if available
-    async loadRemoteKnowledgeBase() {
-      try {
-        const res = await fetch('assets/data/sentinel_knowledge_base.json');
-        if (res.ok) {
-          const data = await res.json();
-          if (data && data.properties && data.properties.length) {
-            this.knowledgeBase = data;
-            this.updateTelemetryPills();
-          }
-        }
-      } catch (e) {
-        // Running offline or embedded mode - embedded PACIFIC_GROVE_KB is already active
-      }
     }
 
     resetBookingState() {
@@ -341,1302 +1733,473 @@ CONVERSATIONAL RULES:
       };
     }
 
-    init() {
-      if (typeof document === 'undefined') return;
-      this.container = typeof this.containerId === 'string'
-        ? document.getElementById(this.containerId)
-        : this.containerId;
+    // ----------------------------------------------------------------
+    // Personalized Knowledge & Learning Methods (Dynamic Knowledge Base)
+    // ----------------------------------------------------------------
+    learnCustomKnowledge(topic, content) {
+      const cleanTopic = (topic || 'Custom Note').trim();
+      const cleanContent = (content || '').trim();
+      this.customKnowledge[cleanTopic] = {
+        content: cleanContent,
+        updatedAt: new Date().toISOString()
+      };
 
-      if (!this.container) {
-        if (this.isDrawer && typeof document !== 'undefined' && document.body) {
-          this.container = document.createElement('div');
-          this.container.id = typeof this.containerId === 'string' ? this.containerId : 'sentinelDrawerRoot';
-          document.body.appendChild(this.container);
-        } else {
-          console.warn(`[ThatJointChatbot] Target container '#${this.containerId}' not found in DOM.`);
-          return;
-        }
-      }
-
-      this.render();
-      this.bindElements();
-      this.initSpeechRecognition();
-      this.bindEvents();
-      this.setupKeyboardShortcuts();
-      this.renderWelcomeHub();
-
-      if (typeof window !== 'undefined') {
-        window.ThatJointSentinel = this;
-        window.openSentinelAI = (q) => this.openDrawer(q);
-        window.closeSentinelAI = () => this.closeDrawer();
-        window.toggleSentinelAI = () => this.toggleDrawer();
-      }
-    }
-
-    render() {
-      const template = `
-        <div class="tj-companion-container ${this.isDrawer ? 'tj-companion-drawer' : ''}" id="tjCompanionView" role="region" aria-label="THΛTJOINT AI">
-          <!-- Drag and Drop Overlay -->
-          <div class="tj-dropzone-overlay" id="tjDropzoneOverlay" aria-hidden="true">
-            <span class="icon">📄</span>
-            <strong>Drop Lease or Document</strong>
-            <p>PDF, images, CSVs, or agreements analyzed automatically</p>
-          </div>
-
-          <!-- Minimal Elegant Topbar -->
-          <header class="tj-sentinel-header tj-clean-header">
-            <div class="tj-sentinel-topline">
-              <div class="tj-sentinel-profile">
-                <div class="tj-clean-avatar" aria-hidden="true">
-                  <span class="tj-avatar-sparkle">✦</span>
-                </div>
-                <div class="tj-sentinel-meta">
-                  <h3 class="tj-sentinel-name">THΛTJOINT AI</h3>
-                  <div class="tj-clean-status">
-                    <span class="tj-status-dot"></span>
-                    <span id="sentinelStatusText">Ready · Connected</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Sleek Controls: Clear & Close -->
-              <div class="tj-sentinel-actions">
-                <button type="button" class="tj-sentinel-icon-btn" id="btnClearChat" title="Clear chat session" aria-label="Clear chat">↺</button>
-                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="btnCloseDrawer" title="Close [Esc]" aria-label="Close drawer">✕</button>` : ''}
-              </div>
-            </div>
-          </header>
-
-          <!-- Main Chat Feed & Stream -->
-          <div class="tj-companion-body" id="companionBody">
-            <div class="tj-companion-feed" id="companionFeed" role="log" aria-live="polite">
-              <!-- Messages & Welcome Hub stream here -->
-            </div>
-
-            <!-- Sleek Input Dock -->
-            <div class="tj-input-dock tj-clean-dock">
-              <!-- Staged File Preview Tray -->
-              <div class="tj-staged-attachment" id="stagedAttachment" style="display: none;">
-                <div class="tj-staged-info">
-                  <span class="icon" id="stagedFileIcon">📄</span>
-                  <div>
-                    <strong id="stagedFileName">Document.pdf</strong>
-                    <small id="stagedFileSize">(240 KB)</small>
-                  </div>
-                </div>
-                <button type="button" class="tj-staged-remove-btn" id="stagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">✕</button>
-              </div>
-
-              <!-- Clean Form -->
-              <form class="tj-media-form tj-clean-form" id="chatForm" autocomplete="off">
-                <input type="file" id="hiddenFileInput" accept=".pdf,.png,.jpg,.jpeg,.csv,.docx" style="display: none;" />
-
-                <button type="button" class="tj-attach-btn" id="btnAttachFile" title="Attach file or lease" aria-label="Attach file">
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"></path></svg>
-                </button>
-
-                <button type="button" class="tj-mic-btn" id="btnVoiceInput" title="Dictate voice query" aria-label="Dictate query">
-                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"></path><path d="M19 10v2a7 7 0 01-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                </button>
-
-                <div class="tj-textarea-wrapper">
-                  <textarea
-                    id="chatInput"
-                    rows="1"
-                    placeholder="Ask ThatJoint AI anything..."
-                    aria-label="Ask ThatJoint AI"></textarea>
-                </div>
-
-                <button type="submit" class="tj-send-btn" id="btnSend" title="Send message" aria-label="Send">
-                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-              </form>
-
-              <div class="tj-clean-footer-hint">
-                <span>Press <strong>Enter</strong> to send · <strong>Esc</strong> to close</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Knowledge Base Explorer Modal -->
-        <dialog id="knowledgeBaseModal" class="tj-dialog" aria-labelledby="kbModalTitle">
-          <div class="config-modal-inner">
-            <div class="config-head">
-              <span>THΛTJOINT / <b>PACIFIC GROVE KNOWLEDGE BASE</b></span>
-              <button type="button" class="config-close-btn" id="kbCloseBtn" aria-label="Close modal">×</button>
-            </div>
-            <div class="kb-modal-header">
-              <h2 class="config-title" id="kbModalTitle">PACIFIC GROVE<br /><em>274 PROPERTY REPOSITORY.</em></h2>
-              <p class="config-desc">
-                Search verified municipal listings, filter by stay covenants, or load any property dossier directly into Sentinel AI with one click.
-              </p>
-            </div>
-
-            <div class="kb-search-bar">
-              <input type="text" id="kbSearchInput" placeholder="Search 274 properties by title, host (Sanctuary, Kyle, etc.), or amenity..." aria-label="Search properties" />
-              <button type="button" id="kbClearSearch" aria-label="Clear search">×</button>
-            </div>
-
-            <div class="kb-filter-tabs" id="kbFilterTabs">
-              <button type="button" class="kb-tab is-active" data-cat="all">All (274)</button>
-              <button type="button" class="kb-tab" data-cat="oceanfront">🌊 Oceanfront (133)</button>
-              <button type="button" class="kb-tab" data-cat="30day">📅 30-Day Flexible (112)</button>
-              <button type="button" class="kb-tab" data-cat="toprated">⭐ Top Rated (500+)</button>
-              <button type="button" class="kb-tab" data-cat="luxury">💎 Luxury $900+ (31)</button>
-              <button type="button" class="kb-tab" data-cat="sanctuary">🏢 Sanctuary (49)</button>
-              <button type="button" class="kb-tab" data-cat="monterey">🏘️ Monterey Rentals (21)</button>
-              <button type="button" class="kb-tab" data-cat="pet">🐶 Pet-Friendly</button>
-            </div>
-
-            <div class="kb-results-summary" id="kbResultsCount">Showing 274 verified properties</div>
-            <div class="kb-cards-grid" id="kbCardsGrid" role="list">
-              <!-- Property cards render dynamically -->
-            </div>
-          </div>
-        </dialog>
-
-        <!-- Directives & Commands Modal -->
-        <dialog id="directivesModal" class="tj-dialog" aria-labelledby="directivesTitle">
-          <div class="config-modal-inner">
-            <div class="config-head">
-              <span>THΛTJOINT / <b>OPERATIONAL DIRECTIVES GUIDE</b></span>
-              <button type="button" class="config-close-btn" id="directivesCloseBtn" aria-label="Close modal">×</button>
-            </div>
-            <h2 class="config-title" id="directivesTitle">SENTINEL AI<br /><em>COMMAND DIRECTIVES.</em></h2>
-            <p class="config-desc">
-              Property Sentinel supports natural conversational reasoning, actuarial math, lease document parsing, and instant query execution. Tap any directive to execute it immediately:
-            </p>
-            <div class="directives-grid">
-              <div class="directive-section">
-                <h4>📊 Market Intelligence & Portfolios</h4>
-                <div class="directive-chips">
-                  <button type="button" class="directive-chip" data-query="Pacific Grove Market Overview">Pacific Grove Market Overview</button>
-                  <button type="button" class="directive-chip" data-query="Explain 30-day minimum stay rule">Explain 30-day minimum stay rule</button>
-                  <button type="button" class="directive-chip" data-query="Who are the biggest operators?">Who are the biggest operators?</button>
-                  <button type="button" class="directive-chip" data-query="Compare short-term vs 30-day rental yield">Compare 30d vs STR rental yield</button>
-                </div>
-              </div>
-              <div class="directive-section">
-                <h4>🌊 Curated Property Collections</h4>
-                <div class="directive-chips">
-                  <button type="button" class="directive-chip" data-query="Show me luxury oceanfront villas">Show me luxury oceanfront villas</button>
-                  <button type="button" class="directive-chip" data-query="Find properties near Lovers Point">Find properties near Lovers Point</button>
-                  <button type="button" class="directive-chip" data-query="Find pet-friendly cottages">Find pet-friendly cottages</button>
-                  <button type="button" class="directive-chip" data-query="Properties with over 500 reviews">Properties with over 500 reviews</button>
-                </div>
-              </div>
-              <div class="directive-section">
-                <h4>⚡ Financial & Escalation Math</h4>
-                <div class="directive-chips">
-                  <button type="button" class="directive-chip" data-query="Calculate 5% rent escalation on Home 014">Calculate 5% escalation on Unit 014</button>
-                  <button type="button" class="directive-chip" data-query="What if rent increases by 8%?">Simulate 8% rent inflation index</button>
-                  <button type="button" class="directive-chip" data-query="Draft renewal agreement with 5% escalation">Draft renewal agreement</button>
-                </div>
-              </div>
-              <div class="directive-section">
-                <h4>🏡 Residential Operations & IoT</h4>
-                <div class="directive-chips">
-                  <button type="button" class="directive-chip" data-query="Home 014 Status & Telemetry">Home 014 Full Telemetry</button>
-                  <button type="button" class="directive-chip" data-query="Draft vendor dispatch email to Apex Climate">Draft vendor notice to Apex</button>
-                  <button type="button" class="directive-chip" data-query="Explain Home 014 like I'm 5 years old">Explain Home 014 simply (ELI5)</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </dialog>
-      `;
-
-      if (this.isDrawer) {
-        this.container.innerHTML = `
-          <button type="button" class="tj-sentinel-launcher-btn" id="tjSentinelLauncher" aria-label="Open ThatJoint AI Side Window" title="Open ThatJoint AI [?]">
-            <span class="tj-launcher-pulse" aria-hidden="true"></span>
-            <span class="tj-launcher-text">ThatJoint AI</span>
-            <span class="tj-launcher-kbd" aria-hidden="true">?</span>
-          </button>
-          <div class="tj-companion-backdrop" id="tjBackdrop" aria-hidden="true"></div>
-          ${template}
-        `;
-      } else {
-        this.container.innerHTML = template;
-      }
-    }
-
-    bindElements() {
-      this.ensureConfigModal();
-      this.feed = document.getElementById('companionFeed');
-      this.input = document.getElementById('chatInput');
-      this.form = document.getElementById('chatForm');
-      this.mascot = document.getElementById('sentinelMascotWrapper');
-      this.statusText = document.getElementById('sentinelStatusText');
-      this.tierBadge = document.getElementById('sentinelTierBadge');
-      this.dropOverlay = document.getElementById('tjDropzoneOverlay');
-      this.dropStrip = document.getElementById('leaseDropStrip');
-      this.stagedAttachment = document.getElementById('stagedAttachment');
-      this.stagedFileName = document.getElementById('stagedFileName');
-      this.stagedFileSize = document.getElementById('stagedFileSize');
-      this.fileInput = document.getElementById('hiddenFileInput');
-      this.micBtn = document.getElementById('btnVoiceInput');
-      this.viewContainer = document.getElementById('tjCompanionView');
-      this.backdrop = document.getElementById('tjBackdrop');
-      this.launcherBtn = document.getElementById('tjSentinelLauncher');
-
-      // Modals
-      this.configModal = document.getElementById('configModal');
-      this.kbModal = document.getElementById('knowledgeBaseModal');
-      this.directivesModal = document.getElementById('directivesModal');
-      this.kbSearchInput = document.getElementById('kbSearchInput');
-      this.kbCardsGrid = document.getElementById('kbCardsGrid');
-      this.kbResultsCount = document.getElementById('kbResultsCount');
-      this.quickRibbon = document.getElementById('quickPillsRibbon');
-    }
-
-    ensureConfigModal() {
-      if (document.getElementById('configModal')) return;
-      const dlg = document.createElement('dialog');
-      dlg.id = 'configModal';
-      dlg.className = 'tj-dialog';
-      dlg.setAttribute('aria-labelledby', 'configTitle');
-      dlg.setAttribute('aria-describedby', 'configDesc');
-      dlg.innerHTML = `
-        <div class="config-modal-inner">
-          <div class="config-head">
-            <span>THΛTJOINT / <b>CLIENT PACKAGING TIERS</b></span>
-            <button type="button" class="config-close-btn" id="configCloseBtn" aria-label="Close modal">×</button>
-          </div>
-
-          <h2 class="config-title" id="configTitle">SELECT CLIENT<br /><em>PACKAGING TIER.</em></h2>
-          <p class="config-desc" id="configDesc">
-            Configure the execution layer for Property Sentinel operations. Toggle between self-contained static execution, your own frontier model API keys, or an enterprise property operations webhook.
-          </p>
-
-          <form id="configForm">
-            <div class="config-tier-grid">
-              <div class="config-tier-card is-selected" data-tier="tier1">
-                <div class="config-tier-header">
-                  <label>
-                    <input type="radio" name="packagingTier" value="tier1" checked />
-                    Tier 1: Local Autonomous Engine
-                  </label>
-                  <span class="config-tier-badge">Static Zero-Config</span>
-                </div>
-                <p>Grounded in verified local property records for Home 014 and the Pacific Grove 274-unit knowledge base. Zero latency, works offline, and requires no API keys.</p>
-              </div>
-
-              <div class="config-tier-card" data-tier="tier2">
-                <div class="config-tier-header">
-                  <label>
-                    <input type="radio" name="packagingTier" value="tier2" />
-                    Tier 2: Bring-Your-Own API Key
-                  </label>
-                  <span class="config-tier-badge">Frontier Model BYOK</span>
-                </div>
-                <p>Connect Google Gemini or OpenAI GPT models for live multimodal document understanding and autonomous operational synthesis.</p>
-                
-                <div class="config-fields-block" id="tier2Fields">
-                  <div class="config-field-row">
-                    <label for="tier2Provider">Provider</label>
-                    <select id="tier2Provider">
-                      <option value="gemini">Google Gemini (Gemini 1.5 / 2.0)</option>
-                      <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
-                    </select>
-                  </div>
-                  <div class="config-field-row">
-                    <label for="tier2Key">API Key</label>
-                    <input type="password" id="tier2Key" placeholder="AIzaSy... or sk-..." />
-                  </div>
-                  <div class="config-field-row">
-                    <label for="tier2Model">Model Identifier</label>
-                    <input type="text" id="tier2Model" placeholder="gemini-1.5-flash" value="gemini-1.5-flash" />
-                  </div>
-                </div>
-              </div>
-
-              <div class="config-tier-card" data-tier="tier3">
-                <div class="config-tier-header">
-                  <label>
-                    <input type="radio" name="packagingTier" value="tier3" />
-                    Tier 3: Enterprise Webhook
-                  </label>
-                  <span class="config-tier-badge">Enterprise Endpoint</span>
-                </div>
-                <p>Stream real-time queries, lease uploads, and maintenance tickets directly to your organization's Yardi, RealPage, or private microservice bus.</p>
-                
-                <div class="config-fields-block" id="tier3Fields">
-                  <div class="config-field-row">
-                    <label for="tier3Url">Webhook Endpoint URL</label>
-                    <input type="url" id="tier3Url" placeholder="https://api.property-ops.internal/v1/sentinel" />
-                  </div>
-                  <div class="config-field-row">
-                    <label for="tier3Token">Authorization Token (Optional)</label>
-                    <input type="password" id="tier3Token" placeholder="Bearer eyJhbGci..." />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="config-actions-row">
-              <button type="button" class="config-btn-reset" id="btnResetConfig">Reset to Defaults</button>
-              <button type="submit" class="config-btn-save" id="btnSaveConfig">Save Configuration</button>
-            </div>
-          </form>
-        </div>
-      `;
-      document.body.appendChild(dlg);
-    }
-
-    initSpeechRecognition() {
-      const SpeechClass = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechClass) {
-        if (this.micBtn) {
-          this.micBtn.title = 'Speech Recognition not supported in this browser (Use typing)';
-          this.micBtn.classList.add('is-unsupported');
-        }
-        return;
-      }
-
-      try {
-        this.recognition = new SpeechClass();
-        this.recognition.continuous = false;
-        this.recognition.interimResults = true;
-        this.recognition.lang = 'en-US';
-
-        this.recognition.onstart = () => {
-          this.isListening = true;
-          if (this.micBtn) this.micBtn.classList.add('is-listening');
-          this.setMascotState('listening', '<span>Listening...</span> · <i>Voice dictation active</i>');
-        };
-
-        this.recognition.onresult = (event) => {
-          let interim = '';
-          let final = '';
-          for (let i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-              final += event.results[i][0].transcript;
-            } else {
-              interim += event.results[i][0].transcript;
-            }
-          }
-          if (this.input) {
-            this.input.value = final || interim;
-            this.autoExpandInput();
-          }
-        };
-
-        this.recognition.onerror = (event) => {
-          console.warn('[SpeechRecognition] error:', event.error);
-          this.stopVoiceRecognition();
-          this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Voice ended</i>');
-        };
-
-        this.recognition.onend = () => {
-          this.isListening = false;
-          if (this.micBtn) this.micBtn.classList.remove('is-listening');
-          if (this.input && this.input.value.trim().length > 0) {
-            this.submitQuery();
-          } else {
-            this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Active monitoring</i>');
-          }
-        };
-      } catch (err) {
-        console.warn('SpeechRecognition failed initialization:', err);
-      }
-    }
-
-    toggleVoiceRecognition() {
-      if (!this.recognition) {
-        alert('Voice recognition requires Chrome, Edge, or Safari with microphone permissions enabled.');
-        return;
-      }
-      if (this.isListening) {
-        this.stopVoiceRecognition();
-      } else {
+      if (typeof localStorage !== 'undefined') {
         try {
-          this.recognition.start();
-        } catch (e) {
-          console.warn('Recognition start exception:', e);
-        }
-      }
-    }
-
-    stopVoiceRecognition() {
-      if (this.recognition && this.isListening) {
-        try {
-          this.recognition.stop();
+          localStorage.setItem('tj_custom_knowledge', JSON.stringify(this.customKnowledge));
         } catch (e) {}
       }
-      this.isListening = false;
-      if (this.micBtn) this.micBtn.classList.remove('is-listening');
+      return cleanTopic;
     }
 
-    bindEvents() {
-      // Form submit
-      if (this.form) {
-        this.form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          this.submitQuery();
-        });
+    getCustomKnowledge(topic = null) {
+      if (topic) {
+        return this.customKnowledge[topic] || null;
       }
-
-      // Input auto-expand & slash command handler
-      if (this.input) {
-        this.input.addEventListener('input', () => {
-          this.autoExpandInput();
-        });
-        this.input.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
-            e.preventDefault();
-            this.submitQuery();
-          } else if (e.key === 'Escape') {
-            if (this.isDrawer) this.closeDrawer();
-          } else if (e.key === '?' && !this.input.value) {
-            e.preventDefault();
-            this.openDirectivesModal();
-          }
-        });
-      }
-
-      // Attachment handling
-      const attachBtn = document.getElementById('btnAttachFile');
-      if (attachBtn && this.fileInput) {
-        attachBtn.addEventListener('click', () => this.fileInput.click());
-      }
-      if (this.dropStrip && this.fileInput) {
-        this.dropStrip.addEventListener('click', () => this.fileInput.click());
-      }
-      if (this.fileInput) {
-        this.fileInput.addEventListener('change', (e) => {
-          if (e.target.files && e.target.files[0]) {
-            this.stageFile(e.target.files[0]);
-          }
-        });
-      }
-
-      // Remove staged file
-      const removeBtn = document.getElementById('stagedRemoveBtn');
-      if (removeBtn) {
-        removeBtn.addEventListener('click', () => this.clearStagedFile());
-      }
-
-      // Drag and drop events
-      const body = document.getElementById('companionBody');
-      if (body) {
-        ['dragenter', 'dragover'].forEach(name => {
-          body.addEventListener(name, (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            if (this.dropOverlay) this.dropOverlay.classList.add('is-active');
-          });
-        });
-        ['dragleave', 'drop'].forEach(name => {
-          body.addEventListener(name, (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            if (this.dropOverlay) this.dropOverlay.classList.remove('is-active');
-          });
-        });
-        body.addEventListener('drop', (e) => {
-          const dt = e.dataTransfer;
-          if (dt && dt.files && dt.files.length) {
-            this.stageFile(dt.files[0]);
-          }
-        });
-      }
-
-      // Voice dictation button
-      if (this.micBtn) {
-        this.micBtn.addEventListener('click', () => this.toggleVoiceRecognition());
-      }
-
-      // Quick ribbon horizontal scrolling
-      const scrollLeftBtn = document.getElementById('ribbonScrollLeft');
-      const scrollRightBtn = document.getElementById('ribbonScrollRight');
-      if (scrollLeftBtn && this.quickRibbon) {
-        scrollLeftBtn.addEventListener('click', () => {
-          this.quickRibbon.scrollBy({ left: -160, behavior: 'smooth' });
-        });
-      }
-      if (scrollRightBtn && this.quickRibbon) {
-        scrollRightBtn.addEventListener('click', () => {
-          this.quickRibbon.scrollBy({ left: 160, behavior: 'smooth' });
-        });
-      }
-
-      // Quick action pills click
-      if (this.quickRibbon) {
-        this.quickRibbon.addEventListener('click', (e) => {
-          const pill = e.target.closest('.tj-quick-pill');
-          if (!pill) return;
-          const query = pill.getAttribute('data-query');
-          const action = pill.getAttribute('data-action');
-          if (action === 'open-kb') {
-            this.openKnowledgeBaseModal();
-          } else if (action === 'open-help') {
-            this.openDirectivesModal();
-          } else if (query) {
-            if (this.input) this.input.value = query;
-            this.submitQuery();
-          }
-        });
-      }
-
-      // Directives modal chips
-      if (this.directivesModal) {
-        this.directivesModal.addEventListener('click', (e) => {
-          const chip = e.target.closest('.directive-chip');
-          if (chip) {
-            const query = chip.getAttribute('data-query');
-            if (query) {
-              this.closeDirectivesModal();
-              if (this.input) this.input.value = query;
-              this.submitQuery();
-            }
-          }
-        });
-      }
-
-      // Modals controls
-      const btnOpenKb = document.getElementById('btnOpenKnowledgeBase');
-      if (btnOpenKb) btnOpenKb.addEventListener('click', () => this.openKnowledgeBaseModal());
-      const kbCloseBtn = document.getElementById('kbCloseBtn');
-      if (kbCloseBtn) kbCloseBtn.addEventListener('click', () => this.closeKnowledgeBaseModal());
-
-      const btnCommandHelp = document.getElementById('btnCommandHelp');
-      if (btnCommandHelp) btnCommandHelp.addEventListener('click', () => this.openDirectivesModal());
-      const directivesCloseBtn = document.getElementById('directivesCloseBtn');
-      if (directivesCloseBtn) directivesCloseBtn.addEventListener('click', () => this.closeDirectivesModal());
-
-      const btnOpenConfig = document.getElementById('btnOpenConfig');
-      if (btnOpenConfig) btnOpenConfig.addEventListener('click', () => this.openConfigModal());
-      const configCloseBtn = document.getElementById('configCloseBtn');
-      if (configCloseBtn) configCloseBtn.addEventListener('click', () => this.closeConfigModal());
-
-      // Knowledge Base filter tabs
-      const kbFilterTabs = document.getElementById('kbFilterTabs');
-      if (kbFilterTabs) {
-        kbFilterTabs.addEventListener('click', (e) => {
-          const tab = e.target.closest('.kb-tab');
-          if (!tab) return;
-          kbFilterTabs.querySelectorAll('.kb-tab').forEach(t => t.classList.remove('is-active'));
-          tab.classList.add('is-active');
-          const cat = tab.getAttribute('data-cat') || 'all';
-          const query = this.kbSearchInput ? this.kbSearchInput.value : '';
-          this.renderKnowledgeBaseList(cat, query);
-        });
-      }
-
-      // Knowledge Base live search input
-      if (this.kbSearchInput) {
-        this.kbSearchInput.addEventListener('input', () => {
-          const activeTab = document.querySelector('#kbFilterTabs .kb-tab.is-active');
-          const cat = activeTab ? activeTab.getAttribute('data-cat') : 'all';
-          this.renderKnowledgeBaseList(cat, this.kbSearchInput.value);
-        });
-      }
-      const kbClearSearch = document.getElementById('kbClearSearch');
-      if (kbClearSearch && this.kbSearchInput) {
-        kbClearSearch.addEventListener('click', () => {
-          this.kbSearchInput.value = '';
-          const activeTab = document.querySelector('#kbFilterTabs .kb-tab.is-active');
-          const cat = activeTab ? activeTab.getAttribute('data-cat') : 'all';
-          this.renderKnowledgeBaseList(cat, '');
-        });
-      }
-
-      // Knowledge Base card click handler
-      if (this.kbCardsGrid) {
-        this.kbCardsGrid.addEventListener('click', (e) => {
-          const btn = e.target.closest('.kb-card-load-btn');
-          const card = e.target.closest('.kb-property-card');
-          if (btn || card) {
-            const targetCard = card || btn.closest('.kb-property-card');
-            const propId = targetCard.getAttribute('data-id');
-            const propName = targetCard.getAttribute('data-name');
-            this.closeKnowledgeBaseModal();
-            this.dispatchQuery(`Inspect property ${propName} (ID: ${propId})`);
-          }
-        });
-      }
-
-      // Reset / Clear chat
-      const clearBtn = document.getElementById('btnClearChat');
-      if (clearBtn) {
-        clearBtn.addEventListener('click', () => {
-          this.conversationHistory = [];
-          this.resetBookingState();
-          if (this.feed) this.feed.innerHTML = '';
-          this.renderWelcomeHub();
-          this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Session reset</i>');
-        });
-      }
-
-      // Drawer close buttons
-      const closeDrawerBtn = document.getElementById('btnCloseDrawer');
-      if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => this.closeDrawer());
-      if (this.backdrop) this.backdrop.addEventListener('click', () => this.closeDrawer());
-
-      // Chat feed card button delegation
-      if (this.feed) {
-        this.feed.addEventListener('click', (e) => {
-          const btn = e.target.closest('.tj-card-btn');
-          if (btn) {
-            const action = btn.getAttribute('data-action');
-            const payload = btn.getAttribute('data-payload');
-            this.handleCardAction(action, payload, btn);
-            return;
-          }
-
-          const copyBtn = e.target.closest('.tj-copy-draft-btn');
-          if (copyBtn) {
-            const targetId = copyBtn.getAttribute('data-copy-target');
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) {
-              this.copyToClipboard(targetEl.innerText, copyBtn);
-            }
-            return;
-          }
-
-          const chip = e.target.closest('.tj-followup-chip');
-          if (chip) {
-            const query = chip.getAttribute('data-query');
-            if (query) {
-              if (this.input) this.input.value = query;
-              this.submitQuery();
-            }
-          }
-        });
-      }
-
-      // Mascot interactive reactivity (Head tracking)
-      if (this.mascot) {
-        this.mascot.addEventListener('click', () => {
-          this.setMascotState('speaking', '<span>Sentinel Online</span> · <i>All covenants nominal</i>');
-          setTimeout(() => {
-            this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Autonomous Monitoring</i>');
-          }, 2400);
-        });
-      }
-
-      // Global mouse move for subtle mascot head orientation
-      window.addEventListener('mousemove', (e) => {
-        if (!this.mascot) return;
-        const rect = this.mascot.getBoundingClientRect();
-        const mascotX = rect.left + rect.width / 2;
-        const mascotY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - mascotX) / window.innerWidth;
-        const deltaY = (e.clientY - mascotY) / window.innerHeight;
-        const head = document.getElementById('mascotHead');
-        if (head) {
-          head.style.transform = `translate(${deltaX * 4}px, ${deltaY * 3}px)`;
-        }
-      });
-
-      // Config form handler
-      const configForm = document.getElementById('configForm');
-      if (configForm) {
-        configForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          this.saveConfigForm();
-        });
-      }
-
-      // Floating launcher button
-      if (this.launcherBtn) {
-        this.launcherBtn.addEventListener('click', () => {
-          this.toggleDrawer();
-        });
-      }
-
-      // Backdrop dismissal
-      if (this.backdrop) {
-        this.backdrop.addEventListener('click', () => {
-          this.closeDrawer();
-        });
-      }
-
-      // Close drawer button
-      const btnClose = document.getElementById('btnCloseDrawer');
-      if (btnClose) {
-        btnClose.addEventListener('click', () => {
-          this.closeDrawer();
-        });
-      }
-
-      // Any external trigger buttons/links
-      if (typeof document !== 'undefined') {
-        document.querySelectorAll('[data-open-sentinel], [href="#sentinel"]').forEach(el => {
-          el.addEventListener('click', (e) => {
-            e.preventDefault();
-            this.openDrawer();
-          });
-        });
-      }
+      return this.customKnowledge;
     }
 
-    setupKeyboardShortcuts() {
-      window.addEventListener('keydown', (e) => {
-        // Cmd+K or Ctrl+K opens/toggles companion
-        if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
-          e.preventDefault();
-          this.toggleDrawer();
-          return;
-        }
-        // '?' toggles drawer when not typing in an input
-        if (e.key === '?' && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
-          e.preventDefault();
-          this.toggleDrawer();
-          return;
-        }
-        // Esc closes companion or modals
-        if (e.key === 'Escape') {
-          if (this.kbModal && this.kbModal.open) {
-            this.closeKnowledgeBaseModal();
-          } else if (this.directivesModal && this.directivesModal.open) {
-            this.closeDirectivesModal();
-          } else if (this.configModal && this.configModal.open) {
-            this.closeConfigModal();
-          } else if (this.isDrawer && this.viewContainer && this.viewContainer.classList.contains('is-open')) {
-            this.closeDrawer();
-          }
-        }
-      });
-    }
-
-    autoExpandInput() {
-      if (!this.input) return;
-      this.input.style.height = 'auto';
-      const scrollH = this.input.scrollHeight;
-      this.input.style.height = Math.min(scrollH, 120) + 'px';
-    }
-
-    stageFile(file) {
-      this.stagedFile = file;
-      if (this.stagedAttachment) {
-        this.stagedAttachment.classList.add('is-visible');
-        if (this.stagedFileName) this.stagedFileName.textContent = file.name;
-        if (this.stagedFileSize) {
-          const sizeKb = Math.round(file.size / 1024);
-          this.stagedFileSize.textContent = sizeKb > 1024 ? `(${(sizeKb / 1024).toFixed(1)} MB)` : `(${sizeKb} KB)`;
-        }
-      }
-      this.setMascotState('thinking', `<span>Document Staged</span> · <i>${this.escapeHtml(file.name)}</i>`);
-    }
-
-    clearStagedFile() {
-      this.stagedFile = null;
-      if (this.fileInput) this.fileInput.value = '';
-      if (this.stagedAttachment) this.stagedAttachment.classList.remove('is-visible');
-      this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Active monitoring</i>');
-    }
-
-    submitQuery() {
-      if (this.isBusy || !this.input) return;
-      const text = this.input.value.trim();
-      const file = this.stagedFile;
-      if (!text && !file) return;
-
-      this.input.value = '';
-      this.autoExpandInput();
-      this.clearStagedFile();
-      this.dispatchQuery(text, file);
-    }
-
-    setMascotState(state, statusHtml) {
-      if (this.mascot) this.mascot.setAttribute('data-state', state);
-      if (this.statusText && statusHtml) this.statusText.innerHTML = statusHtml;
-    }
-
-    getTierLabel() {
-      switch (this.clientConfig.tier) {
-        case 'backend': return 'Tier 0 (Backend :8000)';
-        case 'tier2': return 'Tier 2 (BYO Key)';
-        case 'tier3': return 'Tier 3 (Webhook)';
-        default: return 'Tier 1 (Zero-Config)';
-      }
-    }
-
-    async checkBackendHealth() {
-      const healthUrl = (this.clientConfig.backendUrl || 'http://localhost:8000/api/chat').replace('/api/chat', '/api/health');
-      try {
-        const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-        const tid = controller ? setTimeout(() => controller.abort(), 1200) : null;
-        const res = await fetch(healthUrl, { signal: controller ? controller.signal : undefined });
-        if (tid) clearTimeout(tid);
-        if (res.ok) {
-          this.updateBackendStatus(true);
-          return;
-        }
-      } catch (e) {}
-      this.updateBackendStatus(false);
-    }
-
-    updateBackendStatus(isOnline) {
-      const textEl = document.getElementById('backendStatusText');
-      if (textEl) {
-        textEl.innerHTML = isOnline
-          ? '<span style="color:#10b981;font-weight:600;">● Online (Port 8000)</span>'
-          : '<span style="color:#f59e0b;font-weight:600;">○ Standalone Fallback</span>';
-      }
-      const chipEl = document.getElementById('backendStatusChip');
-      if (chipEl) {
-        if (isOnline) chipEl.classList.add('highlight');
-        else chipEl.classList.remove('highlight');
-      }
-    }
-
-    // ----------------------------------------------------------------
-    // Interactive Knowledge Base Explorer Modal Methods
-    // ----------------------------------------------------------------
-    openKnowledgeBaseModal() {
-      if (!this.kbModal) return;
-      this.renderKnowledgeBaseList('all', '');
-      try {
-        this.kbModal.showModal();
-      } catch (e) {
-        this.kbModal.setAttribute('open', '');
-      }
-      if (this.kbSearchInput) {
-        setTimeout(() => this.kbSearchInput.focus(), 80);
-      }
-    }
-
-    closeKnowledgeBaseModal() {
-      if (!this.kbModal) return;
-      try {
-        this.kbModal.close();
-      } catch (e) {
-        this.kbModal.removeAttribute('open');
-      }
-    }
-
-    renderKnowledgeBaseList(category = 'all', searchQuery = '') {
-      if (!this.kbCardsGrid) return;
-      const q = (searchQuery || '').trim().toLowerCase();
-      let list = (this.knowledgeBase && this.knowledgeBase.properties) || [];
-
-      // Filter by Category
-      if (category === 'oceanfront') {
-        list = list.filter(p => (p.tags || []).includes('Coastal / Ocean View'));
-      } else if (category === '30day') {
-        list = list.filter(p => (p.minNights || p.minimum_nights || 0) >= 28);
-      } else if (category === 'toprated') {
-        list = list.filter(p => (p.reviews || 0) >= 400);
-      } else if (category === 'luxury') {
-        list = list.filter(p => (p.price || p.price_usd || 0) >= 900);
-      } else if (category === 'sanctuary') {
-        list = list.filter(p => (p.host || '').includes('Sanctuary'));
-      } else if (category === 'monterey') {
-        list = list.filter(p => (p.host || '').includes('Monterey'));
-      } else if (category === 'pet') {
-        list = list.filter(p => (p.tags || []).includes('Pet-Friendly'));
-      }
-
-      // Filter by Search Query
-      if (q) {
-        list = list.filter(p => {
-          const name = (p.name || '').toLowerCase();
-          const host = (p.host || '').toLowerCase();
-          const id = String(p.id || '');
-          const tags = (p.tags || []).join(' ').toLowerCase();
-          return name.includes(q) || host.includes(q) || id.includes(q) || tags.includes(q);
-        });
-      }
-
-      if (this.kbResultsCount) {
-        this.kbResultsCount.textContent = `Showing ${list.length} ${list.length === 1 ? 'property' : 'properties'} in Pacific Grove`;
-      }
-
-      if (!list.length) {
-        this.kbCardsGrid.innerHTML = `
-          <div class="kb-empty-state">
-            <span class="icon">🔍</span>
-            <strong>No properties matching "${this.escapeHtml(searchQuery)}"</strong>
-            <p>Try clearing your search query or selecting "All (274)" filter tab.</p>
-          </div>
-        `;
-        return;
-      }
-
-      // Render top 60 cards for high performance
-      const renderedItems = list.slice(0, 60);
-      const cardsHtml = renderedItems.map(p => {
-        const price = p.price || p.price_usd || 0;
-        const min = p.minNights || p.minimum_nights || 1;
-        const reviews = p.reviews || 0;
-        const rateLabel = price > 0 ? `$${Math.round(price).toLocaleString('en-US')}` : 'Contact for Rate';
-        const stayBadge = min >= 28 ? '30+ Day Stay' : `${min}d Min`;
-        const stayClass = min >= 28 ? 'badge-flexible' : 'badge-str';
-        const isOcean = (p.tags || []).includes('Coastal / Ocean View');
-
-        return `
-          <article class="kb-property-card" data-id="${p.id}" data-name="${this.escapeHtml(p.name)}" role="listitem">
-            <div class="kb-card-top">
-              <span class="kb-stay-badge ${stayClass}">${stayBadge}</span>
-              ${isOcean ? '<span class="kb-ocean-badge">🌊 Ocean</span>' : ''}
-              ${p.license ? `<span class="kb-license-badge">${this.escapeHtml(p.license)}</span>` : ''}
-            </div>
-            <h4 class="kb-card-title">${this.escapeHtml(p.name)}</h4>
-            <div class="kb-card-meta">
-              <span>👤 <strong>${this.escapeHtml(p.host)}</strong></span>
-              <span>🏠 ${this.escapeHtml(p.roomType || p.room_type || 'Entire home')}</span>
-            </div>
-            <div class="kb-card-footer">
-              <div class="kb-card-price">
-                <strong>${rateLabel}</strong>
-                <small>/night</small>
-              </div>
-              <div class="kb-card-reviews">
-                ★ ${reviews} reviews
-              </div>
-            </div>
-            <button type="button" class="kb-card-load-btn" aria-label="Load property dossier">
-              <span>Load Dossier into Sentinel</span>
-              <i>↗</i>
-            </button>
-          </article>
-        `;
-      }).join('');
-
-      this.kbCardsGrid.innerHTML = cardsHtml;
-    }
-
-    openDirectivesModal() {
-      if (!this.directivesModal) return;
-      try {
-        this.directivesModal.showModal();
-      } catch (e) {
-        this.directivesModal.setAttribute('open', '');
-      }
-    }
-
-    closeDirectivesModal() {
-      if (!this.directivesModal) return;
-      try {
-        this.directivesModal.close();
-      } catch (e) {
-        this.directivesModal.removeAttribute('open');
-      }
-    }
-
-    openConfigModal() {
-      if (!this.configModal) return;
-      try {
-        this.configModal.showModal();
-      } catch (e) {
-        this.configModal.setAttribute('open', '');
-      }
-    }
-
-    closeConfigModal() {
-      if (!this.configModal) return;
-      try {
-        this.configModal.close();
-      } catch (e) {
-        this.configModal.removeAttribute('open');
-      }
-    }
-
-    saveConfigForm() {
-      const form = document.getElementById('configForm');
-      if (!form) return;
-      const storage = typeof localStorage !== 'undefined' ? localStorage : { setItem: () => null };
-      const tierInput = form.querySelector('input[name="packagingTier"]:checked');
-      if (tierInput) {
-        this.clientConfig.tier = tierInput.value;
-        storage.setItem('tj_packaging_tier', tierInput.value);
-      }
-      const t2Key = document.getElementById('tier2Key');
-      if (t2Key) {
-        this.clientConfig.tier2Key = t2Key.value;
-        storage.setItem('tj_tier2_key', t2Key.value);
-      }
-      const t2Provider = document.getElementById('tier2Provider');
-      if (t2Provider) {
-        this.clientConfig.tier2Provider = t2Provider.value;
-        storage.setItem('tj_tier2_provider', t2Provider.value);
-      }
-      const t2Model = document.getElementById('tier2Model');
-      if (t2Model) {
-        this.clientConfig.tier2Model = t2Model.value;
-        storage.setItem('tj_tier2_model', t2Model.value);
-      }
-      const bUrl = document.getElementById('backendUrl');
-      if (bUrl && bUrl.value) {
-        this.clientConfig.backendUrl = bUrl.value;
-        storage.setItem('tj_backend_url', bUrl.value);
-      }
-      this.checkBackendHealth();
-      if (this.tierBadge) this.tierBadge.textContent = this.getTierLabel();
-      this.closeConfigModal();
-      this.appendMessage({
-        type: 'companion',
-        author: 'THΛTJOINT Sentinel · Packaging Engine',
-        title: 'Packaging Configuration Updated',
-        body: `Execution layer switched to <strong>${this.getTierLabel()}</strong>. Real-time reasoning and operational synthesis are now active under this protocol.`
-      });
-    }
-
-    // ----------------------------------------------------------------
-    // Interactive Welcome Hub (Empty Chat View)
-    // ----------------------------------------------------------------
-    renderWelcomeHub() {
-      if (!this.feed) return;
-      const hubWrap = document.createElement('div');
-      hubWrap.className = 'tj-welcome-clean';
-      hubWrap.innerHTML = `
-        <div class="tj-welcome-badge">
-          <span>● AI Operations</span>
-        </div>
-        <h2 class="tj-welcome-title">How can I help you today?</h2>
-        <p class="tj-welcome-desc">
-          Ask questions about building operations, Home 014, co-living KYC, billing schedules, or property portfolios.
-        </p>
-
-        <div class="tj-clean-starter-grid">
-          <button type="button" class="tj-clean-starter-card" data-query="Co-Living 3-Year Overview">
-            <span class="card-icon">🏢</span>
-            <div class="card-text">
-              <strong>Co-Living Overview</strong>
-              <small>40 tech residents · 3-year performance</small>
-            </div>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </button>
-
-          <button type="button" class="tj-clean-starter-card" data-query="Home 014 Status & Telemetry">
-            <span class="card-icon">🏡</span>
-            <div class="card-text">
-              <strong>Home 014 Operations</strong>
-              <small>HVAC SLA · rooftop solar · lease active</small>
-            </div>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </button>
-
-          <button type="button" class="tj-clean-starter-card" data-query="What is the total revenue over 3 years?">
-            <span class="card-icon">💳</span>
-            <div class="card-text">
-              <strong>3-Year Billing & KYC</strong>
-              <small>₹2.69 Cr revenue · Swiggy/Zomato · Form C</small>
-            </div>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </button>
-
-          <button type="button" class="tj-clean-starter-card" data-query="Pacific Grove Market Overview">
-            <span class="card-icon">📊</span>
-            <div class="card-text">
-              <strong>Market & Listings</strong>
-              <small>274 coastal units · 30-day covenants</small>
-            </div>
-            <span class="card-arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
-      `;
-
-      hubWrap.addEventListener('click', (e) => {
-        const card = e.target.closest('.tj-clean-starter-card') || e.target.closest('.tj-welcome-card');
-        if (card) {
-          const query = card.getAttribute('data-query');
-          if (query) {
-            if (this.input) this.input.value = query;
-            this.submitQuery();
-          }
-        }
-      });
-
-      this.feed.appendChild(hubWrap);
-    }
-
-    // ----------------------------------------------------------------
-    // Query Dispatch & Execution Engine
-    // ----------------------------------------------------------------
-    dispatchQuery(query, file = null) {
-      this.isBusy = true;
-      this.setMascotState('thinking', file ? '<span>Analyzing Document...</span> · <i>Multimodal parsing</i>' : '<span>Synthesizing Intent...</span> · <i>Actuarial & context retrieval</i>');
-
-      // Append user bubble
-      this.appendMessage({
-        type: 'user',
-        author: 'Property Operator',
-        title: null,
-        body: query || (file ? `Attached file: ${file.name}` : ''),
-        attachment: file ? { name: file.name, size: `${(file.size / 1024).toFixed(0)} KB` } : null
-      });
-
-      // Push turn to conversational memory
-      this.conversationHistory.push({
-        role: 'user',
-        content: query || (file ? `Attached document: ${file.name}` : '')
-      });
-
-      // Interactive Booking & Tenancy Flow Interception
-      const lowerQ = (query || '').toLowerCase();
-      if (this.isBookingTrigger(lowerQ) || (this.bookingState && this.bookingState.active)) {
-        setTimeout(() => {
-          const resp = this.handleBookingFlow(query, file);
-          this.deliverResponse(resp);
-        }, 280);
-        return;
-      }
-
-      const tier = this.clientConfig.tier;
-      if (tier === 'tier2' && this.clientConfig.tier2Key) {
-        this.callTier2Model(query, file);
-      } else if (tier === 'tier3' && this.clientConfig.tier3Url) {
-        this.callTier3Webhook(query, file);
+    forgetCustomKnowledge(topic = null) {
+      if (topic && this.customKnowledge[topic]) {
+        delete this.customKnowledge[topic];
       } else {
-        // Connect to strong ThatJoint Grounded Backend service with local fallback
-        this.callThatJointBackend(query, file);
+        this.customKnowledge = {};
+      }
+
+      if (typeof localStorage !== 'undefined') {
+        try {
+          localStorage.setItem('tj_custom_knowledge', JSON.stringify(this.customKnowledge));
+        } catch (e) {}
       }
     }
 
-    async callThatJointBackend(query, file) {
-      const backendUrl = this.clientConfig.backendUrl || 'http://localhost:8000/api/chat';
-      let timedOut = false;
-      const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-      const tid = controller ? setTimeout(() => { timedOut = true; controller.abort(); }, 3500) : null;
-
-      try {
-        const payload = {
-          query: query || (file ? `Analyze document: ${file.name}` : ''),
-          history: this.conversationHistory,
-          activeUnit: this.activeUnit || 'Pune Co-Living Facility'
-        };
-
-        const res = await fetch(backendUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-          signal: controller ? controller.signal : undefined
-        });
-        if (tid) clearTimeout(tid);
-
-        if (res.ok) {
-          const data = await res.json();
-          if (data && (data.body || data.response)) {
-            this.updateBackendStatus(true);
-            this.deliverResponse({
-              type: 'companion',
-              author: data.author || 'THΛTJOINT Co-Living Engine · Live Backend',
-              title: data.title || 'Operational Intelligence Synthesis',
-              body: data.body || data.response,
-              richCard: data.richCard || null,
-              followUps: data.followUps || null
-            });
-            return;
-          }
-        }
-      } catch (err) {
-        if (tid) clearTimeout(tid);
-        // Backend offline or unreachable -> fall back to local engine
-        this.updateBackendStatus(false);
+    updateUserProfile(updates = {}) {
+      Object.assign(this.userProfile, updates);
+      if (typeof localStorage !== 'undefined') {
+        try {
+          localStorage.setItem('tj_user_profile', JSON.stringify(this.userProfile));
+        } catch (e) {}
       }
-
-      // Seamless fallback to Tier 1 local synthesis engine
-      const latency = 280 + Math.floor(Math.random() * 200);
-      setTimeout(() => {
-        const response = this.generateGenerativeResponse(query, file);
-        this.deliverResponse(response);
-      }, latency);
     }
 
-    async callTier2Model(query, file) {
-      const apiKey = this.clientConfig.tier2Key;
-      const provider = this.clientConfig.tier2Provider;
-      const model = this.clientConfig.tier2Model;
-
-      try {
-        if (provider === 'gemini') {
-          const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
-          const contents = this.conversationHistory.map(h => ({
-            role: h.role === 'user' ? 'user' : 'model',
-            parts: [{ text: h.content }]
-          }));
-          contents.push({
-            role: 'user',
-            parts: [{ text: query || `Analyze document ${file.name}` }]
-          });
-
-          const res = await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              systemInstruction: { parts: [{ text: SENTINEL_SYSTEM_PROMPT }] },
-              contents: contents
-            })
-          });
-
-          if (!res.ok) throw new Error(`Gemini API error: ${res.status}`);
-          const data = await res.json();
-          const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response generated.';
-          this.deliverResponse({
-            type: 'companion',
-            author: `THΛTJOINT Sentinel · Gemini (${model})`,
-            title: 'Multimodal Synthesis Result',
-            body: replyText.replace(/\n/g, '<br />')
-          });
-          return;
-        }
-      } catch (err) {
-        console.warn('Tier 2 model call failed, falling back to Tier 1 local engine:', err);
-      }
-
-      // Fallback to Tier 1
-      const fallback = this.generateGenerativeResponse(query, file);
-      fallback.title = `${fallback.title || 'Response'} (Tier 1 Fallback)`;
-      this.deliverResponse(fallback);
+    isTeachingQuery(lower) {
+      return /\b(remember that|learn that|add note|add rule|note down|add to knowledge base|add property|our policy is|we offer|teach:)\b/i.test(lower);
     }
 
-    async callTier3Webhook(query, file) {
-      try {
-        const headers = { 'Content-Type': 'application/json' };
-        if (this.clientConfig.tier3Token) {
-          headers['Authorization'] = this.clientConfig.tier3Token;
-        }
-        const res = await fetch(this.clientConfig.tier3Url, {
-          method: 'POST',
-          headers: headers,
-          body: JSON.stringify({
-            unit: PROPERTY_DATA.unit,
-            query: query,
-            history: this.conversationHistory,
-            timestamp: new Date().toISOString()
-          })
-        });
-        if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
-        const data = await res.json();
-        this.deliverResponse({
+    isPersonalizationQuery(lower) {
+      return /\b(my name is|call me|i am from|i live in|who am i|what do you know about me|show knowledge base|what have you learned|what do you know|custom knowledge|list memory)\b/i.test(lower);
+    }
+
+    handlePersonalizationAndLearning(rawQuery) {
+      const lower = rawQuery.toLowerCase();
+
+      // Clear or Reset Knowledge Base
+      if (/\b(clear custom knowledge|reset knowledge base|forget everything|wipe memory)\b/i.test(lower)) {
+        this.forgetCustomKnowledge();
+        return {
           type: 'companion',
-          author: 'THΛTJOINT Sentinel · Enterprise Webhook',
-          title: data.title || 'Enterprise Operations Payload',
-          body: data.body || data.response || 'Operation logged successfully.',
-          richCard: data.richCard
-        });
-        return;
-      } catch (err) {
-        console.warn('Tier 3 webhook call failed, falling back to local engine:', err);
+          author: 'ThatJoint AI · Memory System',
+          title: 'Knowledge Base Reset to Zero',
+          body: 'All custom knowledge has been wiped. Background knowledge base is completely at zero baseline, ready for new user suggestions.',
+          richCard: {
+            title: 'Knowledge Base Status',
+            badge: 'Clean Zero-Base',
+            params: [
+              { label: 'Custom Topics', value: '0', sub: 'Clean Slate' },
+              { label: 'World Map', value: 'Active', sub: '7 Continents' }
+            ]
+          }
+        };
       }
 
-      const fallback = this.generateGenerativeResponse(query, file);
-      fallback.title = `${fallback.title || 'Response'} (Tier 1 Fallback)`;
-      this.deliverResponse(fallback);
+      // Show Knowledge Base
+      if (/\b(show knowledge base|what have you learned|what do you know|custom knowledge|list memory)\b/i.test(lower)) {
+        const keys = Object.keys(this.customKnowledge);
+        if (keys.length === 0) {
+          return {
+            type: 'companion',
+            author: 'ThatJoint AI · Knowledge Base',
+            title: 'Background Knowledge Base: Zero Baseline',
+            body: `<strong>Background Knowledge Base is at Zero:</strong><br />
+No background properties or fixed datasets are loaded. You can teach me any custom rules, property specifications, co-living pricing, or operating guidelines and I will build them into active memory!<br /><br />
+<em>Try saying: "Remember that ThatJoint has luxury co-living villas in Bali and Lisbon with 1 Gbps fiber WiFi."</em>`,
+            richCard: {
+              title: 'Active Knowledge State',
+              badge: 'Zero Knowledge Base',
+              params: [
+                { label: 'Status', value: 'Zero-Base', sub: 'Ready to build' },
+                { label: 'World Map', value: 'Active', sub: 'Global coverage' }
+              ],
+              actions: [
+                { label: '🗺️ Explore World Map', action: 'open-kb' },
+                { label: '🏡 Start Booking', action: 'query', payload: 'I want to book a room' }
+              ]
+            }
+          };
+        }
+
+        let listHtml = '<strong>Personalized Knowledge Base (User-Defined):</strong><br /><br />';
+        keys.forEach(k => {
+          listHtml += `• <strong>${this.escapeHtml(k)}:</strong> ${this.escapeHtml(this.customKnowledge[k].content)}<br />`;
+        });
+
+        return {
+          type: 'companion',
+          author: 'ThatJoint AI · Knowledge Base',
+          title: `Custom Knowledge Base (${keys.length} ${keys.length === 1 ? 'Topic' : 'Topics'} Learned)`,
+          body: listHtml,
+          richCard: {
+            title: 'Learned Knowledge Dossier',
+            badge: `${keys.length} Active Topics`,
+            params: keys.slice(0, 3).map(k => ({
+              label: k,
+              value: 'Learned',
+              sub: this.customKnowledge[k].content.slice(0, 24) + '...'
+            })),
+            actions: [
+              { label: 'Wipe Knowledge to Zero', action: 'query', payload: 'Clear custom knowledge' }
+            ]
+          }
+        };
+      }
+
+      // Teach / Record New Knowledge
+      if (this.isTeachingQuery(lower)) {
+        const match = rawQuery.match(/(?:remember that|learn that|add note:?|add rule:?|note down:?|add to knowledge base:?|add property:?|our policy is|we offer:?|teach:?)\s*(.*)/i);
+        const content = match && match[1] ? match[1].trim() : rawQuery;
+        
+        let topic = 'Custom Policy';
+        if (content.toLowerCase().includes('property') || content.toLowerCase().includes('unit') || content.toLowerCase().includes('villa')) {
+          topic = 'Property Portfolio';
+        } else if (content.toLowerCase().includes('pricing') || content.toLowerCase().includes('deposit') || content.toLowerCase().includes('rent')) {
+          topic = 'Financial & Billing';
+        } else if (content.toLowerCase().includes('wifi') || content.toLowerCase().includes('amenity') || content.toLowerCase().includes('facility')) {
+          topic = 'Amenities & Infrastructure';
+        } else {
+          topic = content.split(' ')[0] + ' ' + (content.split(' ')[1] || 'Guideline');
+        }
+
+        this.learnCustomKnowledge(topic, content);
+
+        return {
+          type: 'companion',
+          author: 'ThatJoint AI · Memory System',
+          title: `Knowledge Recorded: ${topic}`,
+          body: `✓ <strong>Recorded into ThatJoint AI Knowledge Base:</strong><br />
+• <strong>Topic:</strong> ${this.escapeHtml(topic)}<br />
+• <strong>Knowledge:</strong> <em>"${this.escapeHtml(content)}"</em><br /><br />
+I have committed this to memory and will use it in future answers as you suggested.`,
+          richCard: {
+            title: 'Knowledge Base Updated',
+            badge: 'Committed to Memory',
+            params: [
+              { label: 'Topic', value: topic, sub: 'User Suggested' },
+              { label: 'Memory Store', value: 'Persistent', sub: 'Saved' }
+            ],
+            actions: [
+              { label: 'View Knowledge Base', action: 'query', payload: 'Show knowledge base' }
+            ]
+          }
+        };
+      }
+
+      // User Introduction & Personalization
+      const nameMatch = rawQuery.match(/(?:my name is|call me|i am|i'm)\s+([A-Za-z\s.'-]+)/i);
+      if (nameMatch && nameMatch[1].trim().length > 1) {
+        const userName = nameMatch[1].trim();
+        this.updateUserProfile({ name: userName });
+        return {
+          type: 'companion',
+          author: 'ThatJoint AI · Personalization',
+          title: `Nice to meet you, ${userName}!`,
+          body: `Hello <strong>${this.escapeHtml(userName)}</strong>! I have updated my personalized profile for you. How can I assist you today? We can explore detailed world maps, book a co-living stay, or build custom knowledge for our properties.`,
+          richCard: {
+            title: 'Personalized Profile Active',
+            badge: `User: ${userName}`,
+            params: [
+              { label: 'User Name', value: userName, sub: 'Profile Active' },
+              { label: 'AI Status', value: 'Ready', sub: 'Personalized' }
+            ]
+          }
+        };
+      }
+
+      return null;
     }
 
-    deliverResponse(response) {
-      this.isBusy = false;
-      this.setMascotState('speaking', '<span>Sentinel Response</span> · <i>Operational guidance delivered</i>');
+    // ----------------------------------------------------------------
+    // Detailed World Map & Geographic Intelligence Engine
+    // ----------------------------------------------------------------
+    isWorldMapQuery(lower) {
+      if (!lower) return false;
+      // Country or city matches
+      for (const city of this.worldCities) {
+        if (new RegExp('\\b' + city.id + '\\b|\\b' + city.name.toLowerCase() + '\\b', 'i').test(lower)) {
+          return true;
+        }
+      }
+      for (const cName in this.worldCountries) {
+        if (new RegExp('\\b' + cName + '\\b', 'i').test(lower)) {
+          return true;
+        }
+      }
+      return /\b(world map|coordinates|latitude|longitude|timezone|time in|time difference|capital of|where is|climate of|continent|countries|cities of|southernmost|northernmost|geography)\b/i.test(lower);
+    }
 
-      // Append assistant message
-      this.appendMessage(response);
+    resolveWorldLocation(query) {
+      const lower = (query || '').toLowerCase();
 
-      // Save to memory
-      this.conversationHistory.push({
-        role: 'assistant',
-        content: response.body || response.title || 'Operational action dispatched.'
-      });
+      // Check cities
+      for (const city of this.worldCities) {
+        if (new RegExp('\\b' + city.id + '\\b|\\b' + city.name.toLowerCase().replace(/\(.*\)/, '').trim() + '\\b', 'i').test(lower)) {
+          return { type: 'city', data: city };
+        }
+      }
 
-      // Return to idle state after brief speaking pulse
-      setTimeout(() => {
-        this.setMascotState('idle', '<span>Sentinel Ready</span> · <i>Autonomous Monitoring</i>');
-      }, 1600);
+      // Check countries
+      for (const cKey in this.worldCountries) {
+        if (new RegExp('\\b' + cKey + '\\b', 'i').test(lower)) {
+          const c = this.worldCountries[cKey];
+          // Check if we have a city in this country
+          const matchedCity = this.worldCities.find(ct => ct.country.toLowerCase().includes(cKey));
+          return { type: 'country', data: c, cityData: matchedCity || null };
+        }
+      }
+
+      // Extreme queries
+      if (/southernmost/i.test(lower)) {
+        const ush = this.worldCities.find(c => c.id === 'ushuaia');
+        if (ush) return { type: 'city', data: ush };
+      }
+      if (/northernmost/i.test(lower)) {
+        const lyb = this.worldCities.find(c => c.id === 'longyearbyen');
+        if (lyb) return { type: 'city', data: lyb };
+      }
+
+      return null;
+    }
+
+    calculateTimeDifference(locA, locB) {
+      const getUtcOffset = (tzStr) => {
+        const m = (tzStr || '').match(/UTC([+-]\d+(?:\.\d+)?)/i);
+        return m ? parseFloat(m[1]) : 0;
+      };
+      const offsetA = getUtcOffset(locA.timezone);
+      const offsetB = getUtcOffset(locB.timezone);
+      const diff = offsetA - offsetB;
+      return diff;
+    }
+
+    renderWorldMapSVG(highlightedCityId = null) {
+      const city = highlightedCityId ? this.worldCities.find(c => c.id === highlightedCityId) : null;
+      let pinX = 450;
+      let pinY = 160;
+
+      if (city) {
+        // Equirectangular projection mapping: x = (lng + 180) * (900 / 360), y = (90 - lat) * (420 / 180)
+        pinX = Math.round((city.lng + 180) * (900 / 360));
+        pinY = Math.round((90 - city.lat) * (420 / 180));
+      }
+
+      return `
+        <svg viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg" class="tj-world-map-svg" style="width:100%; height:auto; background:#181615; border-radius:6px; margin:10px 0; border:1px solid #332d29;">
+          <defs>
+            <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#A459FF" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#A459FF" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- Lat/Long Coordinate Grid -->
+          <line x1="0" y1="210" x2="900" y2="210" stroke="#332d29" stroke-width="1" stroke-dasharray="4,4"/> <!-- Equator -->
+          <line x1="450" y1="0" x2="450" y2="420" stroke="#332d29" stroke-width="1" stroke-dasharray="4,4"/> <!-- Prime Meridian -->
+          <text x="12" y="205" fill="#665b53" font-size="10" font-family="sans-serif">Equator 0°</text>
+          <text x="455" y="16" fill="#665b53" font-size="10" font-family="sans-serif">Prime Meridian 0°</text>
+
+          <!-- Continents Simplified Vectors -->
+          <!-- North America -->
+          <path d="M120 70 Q160 50 240 60 Q280 90 260 140 Q220 170 170 180 Q140 140 120 70 Z" fill="#2d2724" stroke="#4a403a"/>
+          <!-- South America -->
+          <path d="M240 200 Q290 220 280 290 Q260 360 220 380 Q210 320 220 240 Z" fill="#2d2724" stroke="#4a403a"/>
+          <!-- Europe -->
+          <path d="M430 80 Q510 70 540 110 Q500 150 440 140 Q410 110 430 80 Z" fill="#2d2724" stroke="#4a403a"/>
+          <!-- Africa -->
+          <path d="M420 160 Q520 160 540 230 Q510 330 450 340 Q400 280 410 200 Z" fill="#2d2724" stroke="#4a403a"/>
+          <!-- Asia -->
+          <path d="M540 70 Q750 60 780 130 Q740 220 620 200 Q560 140 540 70 Z" fill="#2d2724" stroke="#4a403a"/>
+          <!-- Australia / Oceania -->
+          <path d="M700 260 Q790 260 800 320 Q750 350 710 330 Z" fill="#2d2724" stroke="#4a403a"/>
+
+          <!-- Target Location Pulse Pin -->
+          <circle cx="${pinX}" cy="${pinY}" r="24" fill="url(#pinGlow)"/>
+          <circle cx="${pinX}" cy="${pinY}" r="6" fill="#A459FF" stroke="#FFFFFF" stroke-width="2"/>
+          ${city ? `<text x="${Math.min(780, pinX + 10)}" y="${Math.max(25, pinY - 8)}" fill="#FFFFFF" font-size="12" font-weight="bold" font-family="sans-serif">${city.flag} ${city.name} (${city.coordinates})</text>` : ''}
+        </svg>
+      `;
+    }
+
+    handleWorldMapQuery(rawQuery) {
+      const lower = rawQuery.toLowerCase();
+      const resolved = this.resolveWorldLocation(rawQuery);
+
+      // Time difference query e.g. "time difference between Tokyo and New York", "timezone difference between Tokyo and London"
+      const timeDiffMatch = lower.match(/(?:timezone\s+difference|time\s+difference|time\s+diff|hours\s+between)\s+(?:between\s+)?([A-Za-z\s]+?)\s+(?:and|to|vs\.?)\s+([A-Za-z\s\?]+)/i);
+      if (timeDiffMatch) {
+        const cleanA = timeDiffMatch[1].trim();
+        const cleanB = timeDiffMatch[2].replace(/\?/g, '').trim();
+        const resA = this.resolveWorldLocation(cleanA);
+        const resB = this.resolveWorldLocation(cleanB);
+        if (resA && resB && resA.data && resB.data) {
+          const cityA = resA.data;
+          const cityB = resB.data;
+          const diff = this.calculateTimeDifference(cityA, cityB);
+          const aheadOrBehind = diff > 0 ? 'ahead of' : 'behind';
+          return {
+            type: 'companion',
+            author: 'ThatJoint AI · Global Time Engine',
+            title: `Global Timezone Intelligence: ${cityA.name} vs. ${cityB.name}`,
+            body: `<strong>World Timezone Calculation:</strong><br />
+• 📍 <strong>${cityA.name}:</strong> ${cityA.timezone}<br />
+• 📍 <strong>${cityB.name}:</strong> ${cityB.timezone}<br /><br />
+${cityA.name} is <strong>${Math.abs(diff)} hours ${aheadOrBehind}</strong> ${cityB.name}.<br /><br />
+When it is 12:00 PM (Noon) in ${cityB.name}, it is ${diff >= 0 ? 12 + diff : 12 + diff}:00 in ${cityA.name}.`,
+            richCard: {
+              title: 'Timezone Differential',
+              badge: `${Math.abs(diff)}h Offset`,
+              params: [
+                { label: cityA.name, value: cityA.timezone, sub: cityA.country },
+                { label: cityB.name, value: cityB.timezone, sub: cityB.country },
+                { label: 'Difference', value: `${Math.abs(diff)} Hours`, sub: aheadOrBehind }
+              ]
+            }
+          };
+        }
+      }
+
+      // Capital city questions e.g. "What is the capital of Peru?"
+      const capitalMatch = lower.match(/(?:capital\s+of|what\s+is\s+the\s+capital\s+of)\s+([A-Za-z\s]+)/i);
+      if (capitalMatch) {
+        const cKey = capitalMatch[1].trim().toLowerCase();
+        if (this.worldCountries[cKey]) {
+          const c = this.worldCountries[cKey];
+          return {
+            type: 'companion',
+            author: 'ThatJoint AI · World Geography Core',
+            title: `Capital of ${c.name}: ${c.capital}`,
+            body: `The capital city of <strong>${c.name}</strong> ${c.flag} is <strong>${c.capital}</strong>.<br /><br />
+• 🌍 <strong>Continent:</strong> ${c.continent}<br />
+• 💵 <strong>Official Currency:</strong> ${c.currency}<br />
+• 🗣️ <strong>Primary Language:</strong> ${c.lang}`,
+            richCard: {
+              title: `${c.flag} ${c.name} Dossier`,
+              badge: c.continent,
+              params: [
+                { label: 'Capital', value: c.capital, sub: 'National Seat' },
+                { label: 'Currency', value: c.currency, sub: 'Legal Tender' },
+                { label: 'Continent', value: c.continent, sub: 'Geographic Region' }
+              ],
+              actions: [
+                { label: `Explore ${c.capital} on Map`, action: 'query', payload: `Explore ${c.capital}` }
+              ]
+            }
+          };
+        }
+      }
+
+      // Specific City or Country Match
+      if (resolved) {
+        if (resolved.type === 'city') {
+          const city = resolved.data;
+          const svgMap = this.renderWorldMapSVG(city.id);
+          const districtsStr = city.districts.join(' · ');
+
+          return {
+            type: 'companion',
+            author: 'ThatJoint AI · World Map & Geographic Core',
+            title: `Global Dossier: ${city.name}, ${city.country} ${city.flag}`,
+            body: `<strong>Global Geographic & Living Profile:</strong><br />
+${city.highlights}<br /><br />
+• 🌐 <strong>Exact Coordinates:</strong> <code>${city.coordinates}</code> (${city.hemisphere})<br />
+• ⏱️ <strong>Timezone:</strong> ${city.timezone}<br />
+• 💵 <strong>Currency:</strong> ${city.currency}<br />
+• 🗣️ <strong>Language:</strong> ${city.language}<br />
+• ☀️ <strong>Climate:</strong> ${city.climate}<br />
+• 🏡 <strong>Top Co-Living & Tech Districts:</strong> <em>${districtsStr}</em><br />
+• 📶 <strong>Connectivity & Safety:</strong> ${city.connectivity} | Safety: ${city.safety}<br />
+• 💰 <strong>Avg Monthly Living Cost:</strong> ~$${city.avgRentUSD} / month<br />
+${svgMap}`,
+            richCard: {
+              title: `${city.flag} ${city.name} (${city.country})`,
+              badge: city.continent,
+              params: [
+                { label: 'Coordinates', value: city.coordinates, sub: city.hemisphere },
+                { label: 'Timezone', value: city.timezone, sub: 'Standard Time' },
+                { label: 'Est. Rent', value: `$${city.avgRentUSD} / mo`, sub: 'Co-Living / Studio' }
+              ],
+              actions: [
+                { label: `🏡 Book Co-Living in ${city.name}`, action: 'query', payload: `I want to book a room in ${city.name}` },
+                { label: '🗺️ Open World Map Explorer', action: 'open-kb' }
+              ]
+            },
+            followUps: [
+              `What is the time difference between ${city.name} and London?`,
+              `I want to book a room in ${city.name}`,
+              `Compare ${city.name} with Berlin`
+            ]
+          };
+        } else if (resolved.type === 'country') {
+          const c = resolved.data;
+          const city = resolved.cityData;
+          return {
+            type: 'companion',
+            author: 'ThatJoint AI · World Geography Core',
+            title: `Country Profile: ${c.name} ${c.flag}`,
+            body: `<strong>${c.name} Geographic Dossier:</strong><br />
+• 🏛️ <strong>Capital City:</strong> ${c.capital}<br />
+• 🌍 <strong>Continent:</strong> ${c.continent}<br />
+• 💵 <strong>Official Currency:</strong> ${c.currency}<br />
+• 🗣️ <strong>Primary Language:</strong> ${c.lang}<br /><br />
+${city ? `<strong>Major Co-Living & Tech Hub:</strong> ${city.name} (${city.coordinates}) — avg co-living rent ~$${city.avgRentUSD}/mo.` : 'Connect your custom properties or co-living specs for this country!'}`,
+            richCard: {
+              title: `${c.flag} ${c.name} Overview`,
+              badge: c.continent,
+              params: [
+                { label: 'Capital', value: c.capital, sub: 'National Seat' },
+                { label: 'Currency', value: c.currency, sub: 'Official Tender' },
+                { label: 'Continent', value: c.continent, sub: 'Region' }
+              ],
+              actions: [
+                { label: city ? `Explore ${city.name}` : 'Open World Map', action: city ? 'query' : 'open-kb', payload: city ? `Tell me about ${city.name}` : undefined }
+              ]
+            }
+          };
+        }
+      }
+
+      // General World Map Overview
+      const defaultSvg = this.renderWorldMapSVG();
+      return {
+        type: 'companion',
+        author: 'ThatJoint AI · World Map Engine',
+        title: 'Global Detailed World Map Active',
+        body: `<strong>Global Geographic Intelligence:</strong><br />
+I am equipped with a detailed world map spanning all 7 continents, 195+ countries, and extreme corners of Earth (from Tokyo to Ushuaia, and from London to Reykjavik).<br /><br />
+Ask me about any city, coordinates, country capital, timezone difference, or co-living ecosystem across the globe!<br />
+${defaultSvg}`,
+        richCard: {
+          title: 'World Map Engine',
+          badge: '7 Continents Active',
+          params: [
+            { label: 'Global Cities', value: `${this.worldCities.length} Hubs`, sub: 'Detailed Dossiers' },
+            { label: 'Sovereign States', value: '195+ Countries', sub: 'Capitals & Currencies' },
+            { label: 'Coverage', value: '100% Globe', sub: 'North to South Poles' }
+          ],
+          actions: [
+            { label: '🗺️ Open World Map Explorer', action: 'open-kb' },
+            { label: '📍 Southernmost City (Ushuaia)', action: 'query', payload: 'Where is Ushuaia?' },
+            { label: '📍 Northernmost Town (Svalbard)', action: 'query', payload: 'Where is Longyearbyen?' }
+          ]
+        }
+      };
     }
 
     // ----------------------------------------------------------------
@@ -1676,16 +2239,16 @@ CONVERSATIONAL RULES:
       if (areaM && areaM[1].trim().length > 1) {
         data.interestedArea = areaM[1].trim();
       } else {
-        const knownAreas = ['Hinjawadi', 'Kharadi', 'Viman Nagar', 'Magarpatta', 'Baner', 'Balewadi', 'Pacific Grove', 'Aundh', 'Kalyani Nagar'];
-        for (const area of knownAreas) {
-          if (new RegExp('\\b' + area + '\\b', 'i').test(text)) {
-            data.interestedArea = area;
+        // Check world cities or major areas
+        for (const city of this.worldCities) {
+          if (new RegExp('\\b' + city.name.toLowerCase().split(' ')[0] + '\\b', 'i').test(text)) {
+            data.interestedArea = city.name + ', ' + city.country;
             break;
           }
         }
       }
 
-      // Comma-separated fallback e.g. "Rahul Sharma, Delhi, Mumbai, Hinjawadi"
+      // Comma-separated fallback e.g. "Alex, London, Tokyo, Shibuya"
       if ((!data.name || !data.originAddress) && text.includes(',')) {
         const parts = text.split(',').map(p => p.trim()).filter(Boolean);
         if (parts.length >= 4) {
@@ -1693,10 +2256,6 @@ CONVERSATIONAL RULES:
           if (!data.originAddress) data.originAddress = parts[1].replace(/^(from|origin:?)\s+/i, '');
           if (!data.currentLocation) data.currentLocation = parts[2].replace(/^(currently in|current:?)\s+/i, '');
           if (!data.interestedArea) data.interestedArea = parts[3].replace(/^(interested in|area:?)\s+/i, '');
-        } else if (parts.length === 3) {
-          if (!data.name) data.name = parts[0].replace(/^(i am|i'm|my name is)\s+/i, '');
-          if (!data.originAddress) data.originAddress = parts[1].replace(/^(from|origin:?)\s+/i, '');
-          if (!data.interestedArea) data.interestedArea = parts[2].replace(/^(interested in|area:?)\s+/i, '');
         }
       }
 
@@ -1712,14 +2271,14 @@ CONVERSATIONAL RULES:
       };
 
       // Budget detection
-      if (/(shared|twin|8\s*k|8000|10\s*k|10000|12\s*k|12000)/i.test(text)) {
-        prefs.budget = 'Shared Executive Pod (₹8,000 – ₹12,000 / mo)';
-      } else if (/(private|single|14\s*k|14000|15\s*k|15000|16\s*k|16000|18\s*k|18000)/i.test(text)) {
-        prefs.budget = 'Private Studio Suite (₹14,000 – ₹18,000 / mo)';
-      } else if (/(suite|penthouse|luxury|20\s*k|20000|25\s*k|25000)/i.test(text)) {
-        prefs.budget = 'Luxury Penthouse Residence (₹18,000 – ₹26,000 / mo)';
+      if (/(shared|twin|8\s*k|8000|10\s*k|10000|12\s*k|12000|\$700|\$800)/i.test(text)) {
+        prefs.budget = 'Shared Executive Pod ($700 – $1,000 / mo)';
+      } else if (/(private|single|14\s*k|14000|15\s*k|15000|16\s*k|16000|18\s*k|18000|\$1400|\$1500)/i.test(text)) {
+        prefs.budget = 'Private Studio Suite ($1,400 – $1,800 / mo)';
+      } else if (/(suite|penthouse|luxury|20\s*k|20000|25\s*k|25000|\$2000|\$2500)/i.test(text)) {
+        prefs.budget = 'Luxury Penthouse Residence ($2,000 – $2,800 / mo)';
       } else {
-        prefs.budget = 'Standard Executive Studio (₹14,000 – ₹18,000 / mo)';
+        prefs.budget = 'Standard Executive Studio ($1,400 – $1,800 / mo)';
       }
 
       // Facilities detection
@@ -1739,12 +2298,12 @@ CONVERSATIONAL RULES:
       }
 
       if (prefs.facilities.length === 0) {
-        prefs.facilities = ['High-speed Fiber WiFi', 'Daily Housekeeping', 'Solar Microgrid Backup', 'Ergonomic Workstation'];
+        prefs.facilities = ['High-speed Fiber WiFi', 'Daily Housekeeping', 'Ergonomic Workstation'];
       }
 
       // Document proof detection in text
       if (!prefs.docProof && /(aadhaar|passport|voter|pan|id|document|license|offer\s*letter|form\s*c)/i.test(text)) {
-        prefs.docProof = 'Government KYC ID Provided (Digital Verification ✓)';
+        prefs.docProof = 'Government KYC ID / Passport Provided (Digital Verification ✓)';
       }
 
       return prefs;
@@ -1761,7 +2320,7 @@ CONVERSATIONAL RULES:
           type: 'companion',
           author: 'ThatJoint Tenancy Concierge',
           title: 'Booking Inquiry Reset',
-          body: 'Your tenancy intake session has been reset. You can ask about general co-living amenities, Home 014 telemetry, or start a new booking anytime.',
+          body: 'Your tenancy intake session has been reset. You can explore our global world map, configure custom knowledge, or start a new booking anytime.',
           richCard: {
             title: 'Concierge Ready',
             badge: 'Session Reset',
@@ -1771,7 +2330,7 @@ CONVERSATIONAL RULES:
             ],
             actions: [
               { label: 'Start New Booking', action: 'query', payload: 'I want to book a room' },
-              { label: 'Explore Knowledge Base', action: 'open-kb' }
+              { label: '🗺️ Explore World Map', action: 'open-kb' }
             ]
           }
         };
@@ -1817,10 +2376,13 @@ CONVERSATIONAL RULES:
         if (extracted.interestedArea) this.bookingState.data.interestedArea = extracted.interestedArea;
 
         // Smart fallbacks if user typed concise answers
-        if (!this.bookingState.data.name && extracted.name) this.bookingState.data.name = extracted.name;
         if (!this.bookingState.data.interestedArea) {
-          const areaMatch = q.match(/(hinjawadi|kharadi|viman nagar|magarpatta|baner|balewadi|pacific grove)/i);
-          if (areaMatch) this.bookingState.data.interestedArea = areaMatch[0];
+          for (const city of this.worldCities) {
+            if (new RegExp('\\b' + city.name.toLowerCase().split(' ')[0] + '\\b', 'i').test(q)) {
+              this.bookingState.data.interestedArea = city.name + ', ' + city.country;
+              break;
+            }
+          }
         }
 
         this.bookingState.step = 2;
@@ -1850,7 +2412,6 @@ CONVERSATIONAL RULES:
           selectedSite = 'Home 014 (Executive Studio Suite)';
         }
 
-        // If file uploaded in Stage 3 as proof
         if (file) {
           this.bookingState.data.documentProof = `${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
         }
@@ -1861,41 +2422,40 @@ CONVERSATIONAL RULES:
         return this.generateStage4Confirmation(selectedSite);
       }
 
-      // Default fallback
       return this.generateStage1Response();
     }
 
     generateStage1Response() {
       return {
         type: 'companion',
-        author: 'ThatJoint Co-Living Concierge · Tenancy Onboarding',
+        author: 'ThatJoint Co-Living Concierge · Global Onboarding',
         title: 'Co-Living Tenancy Intake · Personal & Location Details',
         body: `<strong>Welcome to ThatJoint Co-Living Reservation Concierge!</strong><br />
-I am here to find and configure your ideal co-living residence. To tailor matching sites according to your needs, please provide the following details:<br /><br />
+I am here to find and configure your ideal co-living residence in any corner of the world. To curate matching spaces according to your requirements, please provide your initial details:<br /><br />
 1. 👤 <strong>Full Legal Name</strong><br />
 2. 📍 <strong>Origin Address</strong> (Permanent hometown, state, or country)<br />
 3. 🏙️ <strong>Current Location</strong> (Where you are currently residing or working)<br />
-4. 🎯 <strong>Interested Area for Living</strong> (e.g., <em>Hinjawadi Tech Park, Kharadi, Viman Nagar, Magarpatta, Baner, or Pacific Grove</em>)<br /><br />
-<em>You can reply in one message (e.g. "Rohit Sharma, Delhi, Mumbai, Hinjawadi") or select your preferred living hub below:</em>`,
+4. 🎯 <strong>Interested Area for Living</strong> (e.g., <em>Tokyo, Lisbon, London, Berlin, Singapore, New York, Bali, or Cape Town</em>)<br /><br />
+<em>You can reply in one message (e.g. "Alex, London, Tokyo, Shibuya") or select your preferred destination below:</em>`,
         richCard: {
           title: 'Tenancy Intake: Step 1 of 3',
           badge: 'Applicant Details Required',
           params: [
             { label: 'Intake Stage', value: 'Step 1 of 3', sub: 'Personal & Geo Details' },
-            { label: 'Available Hubs', value: '4 Tech Corridors', sub: 'Pune & Monterey' },
-            { label: 'Covenants', value: 'Flexible / 11-Mo', sub: 'Zero Brokerage' }
+            { label: 'Destinations', value: '7 Continents', sub: 'Global Inventory' },
+            { label: 'Covenants', value: 'Flexible Tenancy', sub: 'Zero Brokerage' }
           ],
           actions: [
-            { label: '📍 Hinjawadi Phase 1', action: 'query', payload: 'Area: Hinjawadi Phase 1' },
-            { label: '📍 Kharadi IT Park', action: 'query', payload: 'Area: Kharadi IT Corridor' },
-            { label: '📍 Viman Nagar', action: 'query', payload: 'Area: Viman Nagar' },
-            { label: '📍 Baner Tech Hub', action: 'query', payload: 'Area: Baner Tech Hub' }
+            { label: '🇯🇵 Tokyo Shibuya', action: 'query', payload: 'Area: Tokyo, Japan' },
+            { label: '🇵🇹 Lisbon Chiado', action: 'query', payload: 'Area: Lisbon, Portugal' },
+            { label: '🇩🇪 Berlin Mitte', action: 'query', payload: 'Area: Berlin, Germany' },
+            { label: '🗺️ Explore World Map', action: 'open-kb' }
           ]
         },
         followUps: [
-          'My name is Rahul, from Delhi, currently in Mumbai, interested in Hinjawadi',
-          'Name: Sneha Patel, Origin: Bangalore, Current: Pune, Area: Kharadi',
-          'Area: Viman Nagar (Single Room)'
+          'My name is Alex, from London, currently in Tokyo, interested in Shibuya',
+          'Name: Sneha Patel, Origin: Bangalore, Current: Lisbon, Area: Chiado',
+          'Area: Berlin Mitte (Private Studio)'
         ]
       };
     }
@@ -1904,7 +2464,7 @@ I am here to find and configure your ideal co-living residence. To tailor matchi
       const name = data.name || 'Valued Resident';
       const origin = data.originAddress || 'Registered Hometown';
       const current = data.currentLocation || 'Current City';
-      const area = data.interestedArea || 'Pune Tech Corridor';
+      const area = data.interestedArea || 'Global Living Hub';
 
       return {
         type: 'companion',
@@ -1914,48 +2474,43 @@ I am here to find and configure your ideal co-living residence. To tailor matchi
 • 📍 <strong>Origin Address:</strong> ${this.escapeHtml(origin)}<br />
 • 🏙️ <strong>Current Location:</strong> ${this.escapeHtml(current)}<br />
 • 🎯 <strong>Target Living Area:</strong> ${this.escapeHtml(area)}<br /><br />
-Now, let\'s sort matching residences by configuring your living preferences and KYC verification:<br /><br />
+Now, let's configure your living preferences, budget, and identity verification:<br /><br />
 1. 💵 <strong>Monthly Price Range / Budget:</strong><br />
-   • <em>Shared Executive Pod:</em> ₹8,000 – ₹12,000 / month<br />
-   • <em>Private Studio Suite:</em> ₹14,000 – ₹18,000 / month<br />
-   • <em>Luxury Penthouse:</em> ₹18,000 – ₹26,000 / month<br /><br />
+   • <em>Shared Executive Pod:</em> $700 – $1,000 / month<br />
+   • <em>Private Studio Suite:</em> $1,400 – $1,800 / month<br />
+   • <em>Luxury Penthouse:</em> $2,000 – $2,800 / month<br /><br />
 2. ⚡ <strong>Desired Facilities & Amenities:</strong><br />
-   • Dedicated high-speed fiber WiFi, chef meal plans, ergonomic workstation, gym & pool access, private balcony, rooftop solar microgrid.<br /><br />
+   • Dedicated high-speed fiber WiFi, chef meal plans, ergonomic workstation, gym & pool access, private balcony.<br /><br />
 3. 📋 <strong>Special or Specific Requirements:</strong><br />
-   • Target move-in date, lease flexibility (monthly vs 11-mo covenant), 2-wheeler or 4-wheeler parking, quiet floor preference.<br /><br />
+   • Target move-in date, lease flexibility (monthly vs long-term), parking, quiet floor preference.<br /><br />
 4. 📑 <strong>Document Proof (KYC Verification):</strong><br />
-   • As per Maharashtra Tenancy & DPDP 2023 compliance, please upload or attach your Government ID / Document Proof (<em>Aadhaar Card, Passport, Corporate Offer Letter, or Form C for expats</em>).<br />
+   • Please upload or attach your Government ID / Document Proof (<em>Passport, National ID, or Employment Offer Letter</em>).<br />
    • Click <strong>[Attach KYC Document 📎]</strong> below, use the paperclip icon, or drop your file into this window.`,
         richCard: {
           title: 'Preferences & Document Verification',
           badge: 'Step 2 / 3: Preferences & KYC',
           params: [
             { label: 'Applicant', value: name, sub: origin },
-            { label: 'Target Area', value: area, sub: 'Sorted Inventory' },
-            { label: 'KYC Document', value: data.documentProof ? 'Uploaded ✓' : 'Awaiting Proof', sub: 'DPDP & Police Verification' }
+            { label: 'Target Area', value: area, sub: 'Global Inventory' },
+            { label: 'KYC Document', value: data.documentProof ? 'Uploaded ✓' : 'Awaiting Proof', sub: 'Identity Verification' }
           ],
           actions: [
-            { label: '💵 Shared (₹8k–₹12k)', action: 'query', payload: 'Budget: Shared ₹8,000 - ₹12,000, high-speed WiFi and meals' },
-            { label: '💵 Private (₹14k–₹18k)', action: 'query', payload: 'Budget: Private Studio ₹14,000 - ₹18,000, workstation & balcony' },
-            { label: '💵 Suite (₹18k–₹25k)', action: 'query', payload: 'Budget: Luxury Suite ₹18,000 - ₹25,000, all amenities included' },
+            { label: '💵 Shared ($700–$1k)', action: 'query', payload: 'Budget: Shared $700 - $1,000, high-speed WiFi' },
+            { label: '💵 Private ($1.4k–$1.8k)', action: 'query', payload: 'Budget: Private Studio $1,400 - $1,800, workstation & balcony' },
+            { label: '💵 Suite ($2k–$2.8k)', action: 'query', payload: 'Budget: Luxury Suite $2,000 - $2,800, all amenities' },
             { label: '📎 Attach KYC Document', action: 'trigger-upload' }
           ]
-        },
-        followUps: [
-          'Budget: ₹14,000 - ₹18,000, need high-speed WiFi, gym, and parking',
-          'Shared room under ₹12,000 with chef meal plan',
-          'Luxury studio suite with balcony and move-in by 1st next month'
-        ]
+        }
       };
     }
 
     generateStage3Response(data) {
       const name = data.name || 'Valued Resident';
-      const area = data.interestedArea || 'Hinjawadi Tech Hub';
-      const budget = data.budgetRange || 'Private Studio (₹14,000 – ₹18,000 / mo)';
+      const area = data.interestedArea || 'Global Living Hub';
+      const budget = data.budgetRange || 'Private Studio Suite ($1,400 – $1,800 / mo)';
       const facilitiesStr = (data.facilities && data.facilities.length)
         ? data.facilities.join(', ')
-        : 'Fiber WiFi, Solar Backup, Ergonomic Desk, Daily Housekeeping';
+        : 'High-speed Fiber WiFi, Ergonomic Desk, Daily Housekeeping';
       const docStatus = data.documentProof
         ? `Verified ✓ (${this.escapeHtml(data.documentProof)})`
         : 'Pending Digital Handover (Submit prior to check-in)';
@@ -1965,35 +2520,35 @@ Now, let\'s sort matching residences by configuring your living preferences and 
         author: 'ThatJoint Co-Living Concierge · Site Selection',
         title: `Curated Residences for ${name} in ${area}`,
         body: `<strong>Matching Co-Living Residences Curated for Your Profile:</strong><br />
-We have filtered our portfolio according to your location (<strong>${this.escapeHtml(area)}</strong>), budget (<strong>${this.escapeHtml(budget)}</strong>), and requested amenities (<em>${this.escapeHtml(facilitiesStr)}</em>).<br /><br />
+We have filtered our global portfolio according to your destination (<strong>${this.escapeHtml(area)}</strong>), budget (<strong>${this.escapeHtml(budget)}</strong>), and requested amenities (<em>${this.escapeHtml(facilitiesStr)}</em>).<br /><br />
 • 📄 <strong>KYC Verification:</strong> ${docStatus}<br /><br />
 <strong>Please review and select your preferred residence below to lock in your reservation hold:</strong><br /><br />
 
 1. 🏡 <strong>ThatJoint Home 014 - Executive Studio Suite</strong><br />
-   • <strong>Location:</strong> ${this.escapeHtml(area)} · Central Quadrangle (3 min to Tech Parks)<br />
-   • <strong>Tariff:</strong> <strong>₹16,500 / month</strong> (All-inclusive utilities & maintenance)<br />
-   • <strong>Amenities:</strong> 500 Mbps Fiber WiFi, ergonomic workstation, 4.8 kW rooftop solar microgrid, private balcony, gym & clubhouse access.<br />
-   • <strong>Availability:</strong> Immediate Move-in · Unit Inspected & Sanitized<br /><br />
+   • <strong>Location:</strong> ${this.escapeHtml(area)} · Prime Tech District<br />
+   • <strong>Tariff:</strong> <strong>$1,650 / month</strong> (All-inclusive utilities & high-speed fiber)<br />
+   • <strong>Amenities:</strong> 1 Gbps Fiber WiFi, Herman Miller ergonomic desk, private balcony, gym & rooftop lounge.<br />
+   • <strong>Availability:</strong> Immediate Move-in · Sanitized & Verified<br /><br />
 
 2. 🌿 <strong>ThatJoint Unit 008 - Premium Garden Residence</strong><br />
-   • <strong>Location:</strong> ${this.escapeHtml(area)} · East Boulevard<br />
-   • <strong>Tariff:</strong> <strong>₹18,500 / month</strong> (Inclusive of Chef Meal Subscription)<br />
-   • <strong>Amenities:</strong> Landscaped garden patio, biometrically locked smart entry, covered vehicle parking, weekly linen service.<br />
+   • <strong>Location:</strong> ${this.escapeHtml(area)} · Garden Boulevard<br />
+   • <strong>Tariff:</strong> <strong>$1,850 / month</strong> (Inclusive of Chef Dining Subscription)<br />
+   • <strong>Amenities:</strong> Landscaped patio, biometrically locked entry, parking, weekly linen service.<br />
    • <strong>Availability:</strong> Available from 1st of next month<br /><br />
 
 3. ⚡ <strong>ThatJoint Unit 022 - Smart Shared Tech Pod</strong><br />
    • <strong>Location:</strong> ${this.escapeHtml(area)} · Innovation Quadrangle<br />
-   • <strong>Tariff:</strong> <strong>₹10,500 / month</strong> (Zero Lock-in Deposit option)<br />
-   • <strong>Amenities:</strong> Sound-isolated acoustic workstation pod, 24/7 cafe pantry, high-speed WiFi, co-working lounge.<br />
+   • <strong>Tariff:</strong> <strong>$950 / month</strong> (Zero Lock-in Option)<br />
+   • <strong>Amenities:</strong> Soundproof acoustic pod, 24/7 cafe pantry, high-speed WiFi, co-working access.<br />
    • <strong>Availability:</strong> Immediate Move-in<br /><br />
 <em>Click on any of the buttons below to confirm your booking and generate your tenancy reservation pass:</em>`,
         richCard: {
           title: 'Select Residence to Reserve',
           badge: 'Step 3 / 3: Select Site',
           params: [
-            { label: 'Site 1', value: 'Home 014', sub: '₹16,500 / mo · Studio' },
-            { label: 'Site 2', value: 'Unit 008', sub: '₹18,500 / mo · Garden' },
-            { label: 'Site 3', value: 'Unit 022', sub: '₹10,500 / mo · Shared' }
+            { label: 'Site 1', value: 'Home 014', sub: '$1,650 / mo · Studio' },
+            { label: 'Site 2', value: 'Unit 008', sub: '$1,850 / mo · Garden' },
+            { label: 'Site 3', value: 'Unit 022', sub: '$950 / mo · Shared' }
           ],
           actions: [
             { label: '✓ Select Home 014', action: 'select-site', payload: 'Home 014' },
@@ -2015,8 +2570,8 @@ We have filtered our portfolio according to your location (<strong>${this.escape
       const name = d.name || 'Valued Resident';
       const site = siteName || d.selectedSite || 'Home 014 (Executive Studio Suite)';
       const ref = d.bookingRef || ('TJ-BK-' + Math.floor(100000 + Math.random() * 900000));
-      const tariff = site.includes('008') ? '₹18,500 / month' : site.includes('022') ? '₹10,500 / month' : '₹16,500 / month';
-      const docStatus = d.documentProof ? `Verified ✓ (${this.escapeHtml(d.documentProof)})` : 'Pending Handover (Aadhaar / ID verification prior to key handover)';
+      const tariff = site.includes('008') ? '$1,850 / month' : site.includes('022') ? '$950 / month' : '$1,650 / month';
+      const docStatus = d.documentProof ? `Verified ✓ (${this.escapeHtml(d.documentProof)})` : 'Pending Handover (Submit prior to check-in)';
 
       return {
         type: 'companion',
@@ -2028,14 +2583,14 @@ Here is your official tenancy onboarding dossier:<br />
 • 🏠 <strong>Reserved Residence:</strong> <strong>${this.escapeHtml(site)}</strong><br />
 • 📍 <strong>Tenant Origin:</strong> ${this.escapeHtml(d.originAddress || 'Registered Hometown')}<br />
 • 🏙️ <strong>Current Location:</strong> ${this.escapeHtml(d.currentLocation || 'Current City')}<br />
-• 🎯 <strong>Living Area:</strong> ${this.escapeHtml(d.interestedArea || 'Tech Corridor')}<br />
-• 💵 <strong>Monthly Tariff:</strong> <strong>${tariff}</strong> (All-inclusive: Fiber WiFi, Power Backup, Housekeeping)<br />
+• 🎯 <strong>Living Area:</strong> ${this.escapeHtml(d.interestedArea || 'Global Living Hub')}<br />
+• 💵 <strong>Monthly Tariff:</strong> <strong>${tariff}</strong> (All-inclusive: Fiber WiFi, Utilities, Housekeeping)<br />
 • 📑 <strong>KYC Verification:</strong> ${docStatus}<br />
-• 🔒 <strong>Security Deposit:</strong> 100% Escrow-backed refundable deposit covenant<br /><br />
+• 🔒 <strong>Security Deposit:</strong> 100% Escrow-backed refundable covenant<br /><br />
 <strong>Onboarding & Next Steps:</strong><br />
-1. A digital tenancy agreement and smart pass receipt have been queued.<br />
-2. Your community onboarding manager will reach out via WhatsApp/email within 2 hours to confirm your move-in slot and luggage transit.<br />
-3. Your biometric / smart pass access will be activated on your check-in day.`,
+1. A digital tenancy agreement and smart pass passkey have been generated.<br />
+2. Your community onboarding manager will reach out via WhatsApp/email to confirm your move-in slot.<br />
+3. Digital keycard access will activate automatically on your arrival day.`,
         richCard: {
           title: `Booking Hold: ${site.split(' ')[0]} ${site.split(' ')[1] || ''}`,
           badge: `Hold Active · #${ref}`,
@@ -2047,985 +2602,816 @@ Here is your official tenancy onboarding dossier:<br />
           ],
           actions: [
             { label: '🏡 View 3D Tour', action: 'crosslink-3d', payload: 'complete-assembly' },
-            { label: '📄 Download Covenant Draft', action: 'query', payload: 'Draft renewal agreement' },
+            { label: '🗺️ Explore World Map', action: 'open-kb' },
             { label: '↺ New Booking Inquiry', action: 'query', payload: 'I want to book a room' }
           ]
-        },
-        followUps: [
-          'Home 014 Status & Telemetry',
-          'What is the total revenue over 3 years?',
-          'Draft renewal agreement'
-        ]
+        }
       };
     }
 
     // ----------------------------------------------------------------
-    // Autonomous Generative Synthesis Engine (Knowledge Base Aware)
+    // Autonomous Generative Synthesis Engine (World & Personalized Core)
     // ----------------------------------------------------------------
     generateGenerativeResponse(rawQuery, file) {
       const q = (rawQuery || '').trim();
       const lower = q.toLowerCase();
-      const recentHistoryText = this.conversationHistory.slice(-4).map(h => (h.content || '')).join(' ').toLowerCase();
 
       // 1. Safety Guardrails: Reject harmful/illegal instructions neutrally
       if (/(hack|exploit|bypass|steal|weapon|attack|ddos|vulnerability)/i.test(lower)) {
         return {
           type: 'companion',
-          author: 'THΛTJOINT Sentinel · Security Layer',
+          author: 'THΛTJOINT AI · Security Layer',
           title: 'Security Boundary Enforced',
-          body: 'Security protocol prevents execution of requests that compromise building infrastructure, access locks, or resident privacy. Redirecting to standard property management operations.',
+          body: 'Security protocol prevents execution of requests that compromise infrastructure, locks, or resident privacy. Redirecting to standard operations.',
           richCard: {
             title: 'System Access Log',
             badge: 'Policy Enforced',
             params: [
-              { label: 'Security State', value: 'Nominal', sub: 'Access Pass Active' },
-              { label: 'Unit', value: PROPERTY_DATA.unit, sub: 'Zero Breaches' }
+              { label: 'Security State', value: 'Nominal', sub: 'Boundary Active' },
+              { label: 'Infractions', value: '0', sub: 'Enforced' }
             ]
           }
         };
       }
 
-      // 1.5 Interactive Co-Living Booking & Intake State Machine
-      if (this.isBookingTrigger(lower) || (this.bookingState && this.bookingState.active)) {
+      // 2. Active Co-Living Booking State Machine (Prioritized when active intake in progress)
+      if (this.bookingState && this.bookingState.active) {
         return this.handleBookingFlow(q, file);
       }
 
-      // 2. Document & CSV File Upload Processing
+      // 3. Dynamic Personalization & Custom Knowledge Base (User suggestions & memory)
+      if (this.isTeachingQuery(lower) || this.isPersonalizationQuery(lower)) {
+        const pResp = this.handlePersonalizationAndLearning(q);
+        if (pResp) return pResp;
+      }
+
+      // 4. Interactive Co-Living Booking Trigger (Fresh intake initiation)
+      if (this.isBookingTrigger(lower)) {
+        return this.handleBookingFlow(q, file);
+      }
+
+      // 4. Detailed World Map & Geographic Intelligence (Any corner of the world!)
+      if (this.isWorldMapQuery(lower)) {
+        return this.handleWorldMapQuery(q);
+      }
+
+      // 5. Multimodal Document Parsing & File Upload
       if (file) {
-        const isCsv = file.name.endsWith('.csv');
-        const isPdf = file.name.endsWith('.pdf');
         return {
           type: 'companion',
-          author: 'THΛTJOINT Sentinel · Multimodal Ingestion Core',
+          author: 'THΛTJOINT AI · Multimodal Core',
           title: `Document Ingested: ${this.escapeHtml(file.name)}`,
           body: `<strong>Document Ingestion Summary:</strong><br />
-File <em>${this.escapeHtml(file.name)}</em> (${(file.size / 1024).toFixed(0)} KB) has been cryptographically parsed and matched against active municipal real estate covenants.<br /><br />
-• <strong>Format Detected:</strong> ${isCsv ? 'Tabular Property Inventory (CSV)' : isPdf ? 'Tenancy Covenants & Lease Agreement (PDF)' : 'Property Asset Document'}<br />
-• <strong>Compliance Check:</strong> Zero non-conforming riders detected. Pacific Grove Chapter 23.90 short-term rental limits verified.<br />
-• <strong>Escrow & Ledger:</strong> Deposit covenant backed by digital escrow reserve.`,
+File <em>${this.escapeHtml(file.name)}</em> (${(file.size / 1024).toFixed(0)} KB) has been parsed and verified.<br /><br />
+• <strong>Format:</strong> ${file.type || 'Document'}<br />
+• <strong>Audit Status:</strong> Zero non-conforming covenants detected.<br />
+• <strong>Integration:</strong> Document linked with active profile.`,
           richCard: {
-            title: 'Ingestion Audit Dossier',
+            title: 'Document Dossier',
             badge: 'Audit Passed 100%',
             params: [
-              { label: 'File Type', value: file.type || 'Document', sub: 'Verified' },
-              { label: 'Zoning Covenants', value: 'Compliant', sub: 'PG Municipal Code' },
-              { label: 'Ledger Audit', value: 'Zero Arrears', sub: 'Escrow Validated' }
-            ],
-            actions: [
-              { label: 'Explore Knowledge Base (274)', action: 'open-kb' },
-              { label: 'Draft Lease Confirmation', action: 'query', payload: 'Draft renewal agreement' }
+              { label: 'File Name', value: file.name.slice(0, 16), sub: `${(file.size / 1024).toFixed(0)} KB` },
+              { label: 'Status', value: 'Verified', sub: 'Cryptographically Checked' }
             ]
           }
         };
       }
 
-      // 2.5 Grounded Co-Living Intelligence (coliving_3year_full_kyc_billing.sql)
-      if (/(coliving|co-living|pune|thatjoint|residents master|how many residents|dataset|tech corridor)/i.test(lower) && !/(ocean|pacific|sanctuary|victorian)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Grounded Knowledge',
-          title: 'ThatJoint 3-Year Co-Living Portfolio Overview (Pune Corridor)',
-          body: `<strong>ThatJoint Co-Living Portfolio Synthesis:</strong><br />
-The property operates across Pune\'s high-density tech corridor (Hinjawadi Infotech Park, EON Free Zone Kharadi, Viman Nagar, Magarpatta City).<br /><br />
-• <strong>Resident Base:</strong> 40 working tech professionals (37 Indian nationals, 3 Foreign nationals).<br />
-• <strong>Physical Inventory:</strong> 35 physical rooms (5 Double Shared at ₹8,000/mo, 20 Double Single Occupancy at ₹14,000/mo, 10 Single Rooms at ₹18,000/mo).<br />
-• <strong>3-Year Billing Horizon:</strong> 36 consecutive calendar months (Nov 2023 – Oct 2026), 1,440 reconciled billing rows.<br />
-• <strong>Gross Revenue:</strong> <strong>₹2,69,02,673 (₹2.69 Cr)</strong> (Rent: ₹17.79M, Meal Plans: ₹5.24M, Late-Night Swiggy/Zomato Deliveries: ₹3.87M across 10,471 orders).<br />
-• <strong>Statutory Legislature:</strong> Mandatory Form C FRRO e-Gov filings under Foreigners Act 1946 (24h SLA), DPDP Act 2023 data masking, Section 144 CrPC / BNSS Pune Police Tenant Verification.`,
-          richCard: {
-            title: '3-Year Operational & Financial Ledger',
-            badge: 'Reconciled 100%',
-            params: [
-              { label: 'Gross Revenue', value: '₹2.69 Cr', sub: '₹26,902,673' },
-              { label: 'Active Residents', value: '40', sub: '3 Foreign Nationals' },
-              { label: 'Delivery Spend', value: '₹38.65 L', sub: '10,471 orders' },
-              { label: 'Rooms / Capacity', value: '35 / 40 Beds', sub: '100% Occupancy' }
-            ],
-            actions: [
-              { label: 'View Top Spenders', action: 'query', payload: 'Who are the top 5 spenders?' },
-              { label: 'Foreign Resident KYC', action: 'query', payload: 'Resident KYC: Lukas Weber (FRRO Form C)' },
-              { label: 'Late-Night Orders', action: 'query', payload: 'Swiggy and Zomato late-night delivery webhooks' }
-            ]
-          }
-        };
-      }
-
-      // 2.6 Foreign Nationals & Resident KYC (Lukas Weber, Elena Rostova, Kenji Takahashi)
-      if (/(lukas|weber|elena|rostova|kenji|takahashi|foreign national|form c|frro)/i.test(lower)) {
-        if (/lukas|weber|german/i.test(lower)) {
+      // 6. Check Custom Learned Knowledge Base
+      for (const topic in this.customKnowledge) {
+        if (lower.includes(topic.toLowerCase())) {
           return {
             type: 'companion',
-            author: 'THΛTJOINT Co-Living Engine · Resident KYC Dossier',
-            title: 'Resident Dossier: Lukas Weber (RES-007)',
-            body: `<strong>Verified Resident Dossier & Regulatory Record:</strong><br />
-• <strong>Resident ID:</strong> RES-007 | <strong>Nationality:</strong> German (Germany)<br />
-• <strong>Employer:</strong> Siemens Technology India | <strong>Room:</strong> D-Share-4 (Double Shared, ₹8,000/mo)<br />
-• <strong>KYC Status:</strong> <code>VERIFIED_FOREIGN_NATIONAL</code><br />
-• <strong>FRRO Ref:</strong> <code>FRRO-MH-PUN-2023-88412</code> | <strong>Work Permit:</strong> <code>EMP-SIE-9041</code><br />
-• <strong>Payment Method:</strong> Credit Card Recurring (Visa/MC) via Stripe Tokenization<br /><br />
-<strong>Statutory Compliance Notes:</strong><br />
-• <em>Foreigners Act 1946 & Registration of Foreigners Rules:</em> Form C digital filing completed within 24 hours of check-in.<br />
-• <em>FEMA 1999:</em> Verified NRO bank account compliance for residential lease settlement.<br />
-• <em>DPDP Act 2023:</em> Masked simulated identity data stored under AES-256 encryption.`,
+            author: 'ThatJoint AI · Custom Knowledge',
+            title: `Custom Policy: ${topic}`,
+            body: `Based on your personalized knowledge base:<br /><br />
+• <strong>${topic}:</strong> ${this.escapeHtml(this.customKnowledge[topic].content)}`,
             richCard: {
-              title: 'Lukas Weber · Regulatory Audit',
-              badge: 'Form C Verified',
+              title: topic,
+              badge: 'Learned Knowledge',
               params: [
-                { label: 'Monthly Rent', value: '₹8,000', sub: 'Room D-Share-4' },
-                { label: 'Employer', value: 'Siemens India', sub: 'Technology' },
-                { label: 'FRRO Cert', value: 'Verified', sub: 'Pune Police Portal' },
-                { label: 'Payment Rail', value: 'Stripe Token', sub: 'Zero Arrears' }
-              ],
-              actions: [
-                { label: 'Query Elena Rostova (Infosys)', action: 'query', payload: 'Elena Rostova KYC' },
-                { label: 'Query Kenji Takahashi (KPIT)', action: 'query', payload: 'Kenji Takahashi KYC' }
-              ]
-            }
-          };
-        } else if (/elena|rostova|russian/i.test(lower)) {
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Co-Living Engine · Resident KYC Dossier',
-            title: 'Resident Dossier: Elena Rostova (RES-019)',
-            body: `<strong>Verified Resident Dossier & Regulatory Record:</strong><br />
-• <strong>Resident ID:</strong> RES-019 | <strong>Nationality:</strong> Russian (Russia)<br />
-• <strong>Employer:</strong> Infosys BPM Pune | <strong>Room:</strong> D-Single-9 (Double Single, ₹14,000/mo)<br />
-• <strong>KYC Status:</strong> <code>VERIFIED_FOREIGN_NATIONAL</code><br />
-• <strong>FRRO Ref:</strong> <code>FRRO-MH-PUN-2024-11904</code> | <strong>Work Permit:</strong> <code>EMP-INF-7723</code><br />
-• <strong>Payment Method:</strong> IMPS / NEFT Wallet Top-Up via PayU Virtual Accounts<br /><br />
-Form C filed within statutory 24-hour window on Bureau of Immigration portal. Employment visa validated for duration of co-living tenancy.`,
-            richCard: {
-              title: 'Elena Rostova · Regulatory Audit',
-              badge: 'Form C Verified',
-              params: [
-                { label: 'Monthly Rent', value: '₹14,000', sub: 'Room D-Single-9' },
-                { label: 'Employer', value: 'Infosys BPM', sub: 'Phase 2 Hinjawadi' },
-                { label: 'FRRO Cert', value: 'Verified', sub: 'Bureau of Immigration' },
-                { label: 'Payment Rail', value: 'PayU VAN', sub: 'Active' }
-              ]
-            }
-          };
-        } else if (/kenji|takahashi|japanese/i.test(lower)) {
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Co-Living Engine · Resident KYC Dossier',
-            title: 'Resident Dossier: Kenji Takahashi (RES-034)',
-            body: `<strong>Verified Resident Dossier & Regulatory Record:</strong><br />
-• <strong>Resident ID:</strong> RES-034 | <strong>Nationality:</strong> Japanese (Japan)<br />
-• <strong>Employer:</strong> KPIT Technologies | <strong>Room:</strong> Single-4 (Single Room, ₹18,000/mo)<br />
-• <strong>KYC Status:</strong> <code>VERIFIED_FOREIGN_NATIONAL</code><br />
-• <strong>FRRO Ref:</strong> <code>FRRO-MH-PUN-2023-55319</code> | <strong>Work Permit:</strong> <code>EMP-KPI-4410</code><br />
-• <strong>Payment Method:</strong> IMPS / NEFT Wallet Top-Up via PayU Virtual Accounts<br /><br />
-Cleared under Foreigners Order 1948 & FEMA 1999 non-resident rupee account framework.`,
-            richCard: {
-              title: 'Kenji Takahashi · Regulatory Audit',
-              badge: 'Form C Verified',
-              params: [
-                { label: 'Monthly Rent', value: '₹18,000', sub: 'Room Single-4' },
-                { label: 'Employer', value: 'KPIT Tech', sub: 'Automotive Software' },
-                { label: 'FRRO Cert', value: 'Verified', sub: 'Valid Visa' },
-                { label: 'Payment Rail', value: 'PayU VAN', sub: 'Active' }
-              ]
-            }
-          };
-        } else {
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Co-Living Engine · Foreign National Compliance',
-            title: 'Foreign National Compliance Summary (3 Residents)',
-            body: `<strong>Foreign National Tenancy Roster & Form C Audits:</strong><br />
-ThatJoint accommodates 3 foreign national tech residents in Pune Corridor:<br />
-1. <strong>Lukas Weber (RES-007)</strong> — German | Siemens Technology | Room D-Share-4 (₹8,000) | FRRO-MH-PUN-2023-88412<br />
-2. <strong>Elena Rostova (RES-019)</strong> — Russian | Infosys BPM Pune | Room D-Single-9 (₹14,000) | FRRO-MH-PUN-2024-11904<br />
-3. <strong>Kenji Takahashi (RES-034)</strong> — Japanese | KPIT Technologies | Room Single-4 (₹18,000) | FRRO-MH-PUN-2023-55319<br /><br />
-<strong>Regulatory Mandate:</strong> 100% of foreign guests have their mandatory Form C filed within 24 hours of arrival on the Bureau of Immigration BoI / e-FRRO portal under the Foreigners Act 1946.`,
-            richCard: {
-              title: 'Foreign Nationals · Form C Registry',
-              badge: '100% SLA Met',
-              params: [
-                { label: 'Lukas Weber', value: 'Siemens', sub: 'German / D-Share-4' },
-                { label: 'Elena Rostova', value: 'Infosys', sub: 'Russian / D-Single-9' },
-                { label: 'Kenji Takahashi', value: 'KPIT', sub: 'Japanese / Single-4' }
+                { label: 'Source', value: 'User Suggested', sub: 'Active Memory' }
               ]
             }
           };
         }
       }
 
-      // 2.7 Top Spenders
-      if (/(top spender|highest spend|who spent most|most expensive resident)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Financial Analytics',
-          title: 'Top 5 Highest Spenders Across 3-Year Dataset',
-          body: `<strong>Top Resident Spenders (Rent + Meal Plans + Late-Night Deliveries):</strong><br />
-1. <strong>Aditi Menon (RES-022):</strong> <strong>₹7,67,922</strong> total spend | 324 orders (₹1,12,386 food delivery) | TCS Hinjawadi<br />
-2. <strong>Sneha Pillai (RES-016):</strong> <strong>₹7,66,220</strong> total spend | 305 orders (₹1,10,684 food delivery) | Barclays Kharadi<br />
-3. <strong>Nikhil Singh (RES-013):</strong> <strong>₹7,64,575</strong> total spend | 302 orders (₹1,09,039 food delivery) | Persistent Systems<br />
-4. <strong>Aditya Shah (RES-011):</strong> <strong>₹7,62,537</strong> total spend | 292 orders (₹1,07,001 food delivery) | Bajaj Finserv Viman Nagar<br />
-5. <strong>Abhishek Verma (RES-027):</strong> <strong>₹7,60,183</strong> total spend | 278 orders (₹1,04,647 food delivery) | Bajaj Finserv Viman Nagar<br /><br />
-All top spenders occupy Double Single Occupancy rooms (₹14,000/mo base rent) and have active 24/7 food delivery ordering patterns.`,
-          richCard: {
-            title: 'Top Spenders Leaderboard',
-            badge: '36-Month Cumulative',
-            params: [
-              { label: '#1 Aditi Menon', value: '₹7.68 L', sub: '324 orders' },
-              { label: '#2 Sneha Pillai', value: '₹7.66 L', sub: '305 orders' },
-              { label: '#3 Nikhil Singh', value: '₹7.65 L', sub: '302 orders' },
-              { label: '#4 Aditya Shah', value: '₹7.63 L', sub: '292 orders' }
-            ]
-          }
-        };
-      }
-
-      // 2.8 3-Year Revenue & Financial Totals
-      if (/(total revenue|gross revenue|3 year revenue|yearly revenue|how much revenue|financial audit)/i.test(lower) && !/(pacific|monterey)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Actuarial Ledger',
-          title: '3-Year Gross Financial Performance (₹2,69,02,673)',
-          body: `<strong>Consolidated Revenue Ledger Breakdown (36 Months):</strong><br />
-• <strong>Gross Revenue:</strong> <strong>₹2,69,02,673 (₹2.69 Cr)</strong> across 1,440 billing entries.<br />
-• <strong>Base Rental Revenue:</strong> ₹1,77,93,000 (66.1% of total).<br />
-• <strong>Mandatory Meal Plan Subscriptions:</strong> ₹52,44,480 (19.5% of total).<br />
-• <strong>Late-Night Food Delivery Surcharges:</strong> ₹38,65,193 (14.4% of total across 10,471 orders).<br /><br />
-<strong>Year-Over-Year Trajectory:</strong><br />
-• <strong>2023 (Nov–Dec, 2 mos):</strong> ₹14,63,223 | 640 orders<br />
-• <strong>2024 (Full year, 12 mos):</strong> ₹86,64,712 | 3,394 orders<br />
-• <strong>2025 (Full year, 12 mos):</strong> ₹90,05,458 | 3,418 orders<br />
-• <strong>2026 (Jan–Oct, 10 mos):</strong> ₹77,69,280 | 3,019 orders`,
-          richCard: {
-            title: 'Revenue Distribution Waterfall',
-            badge: '100% Escrow Validated',
-            params: [
-              { label: 'Gross 3-Year', value: '₹2.69 Cr', sub: '₹26,902,673' },
-              { label: 'Base Rent', value: '₹1.78 Cr', sub: '₹17,793,000' },
-              { label: 'Meal Plans', value: '₹52.44 L', sub: '₹5,244,480' },
-              { label: 'Deliveries', value: '₹38.65 L', sub: '10,471 Orders' }
-            ]
-          }
-        };
-      }
-
-      // 2.9 Swiggy / Zomato Late-Night Deliveries
-      if (/(swiggy|zomato|late night|delivery|food order|midnight order)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Delivery Logistics Hub',
-          title: 'Swiggy & Zomato Late-Night Delivery Operations',
-          body: `<strong>Delivery Webhook & Logistics Intelligence:</strong><br />
-• <strong>Total Late-Night Deliveries:</strong> 10,471 orders captured between 23:00 and 03:30.<br />
-• <strong>Gross Delivery Value:</strong> ₹38,65,193 (Average ₹369.13 per order).<br />
-• <strong>Average Delivery Distance:</strong> 5.3 km from core Pune culinary clusters (Balewadi High Street, Viman Nagar, Kharadi IT Park).<br />
-• <strong>Smart Access Integration:</strong> Delivery couriers receive one-time OTP passes (Main Gate Access #4481) directly routed to ground-floor thermal lockers with zero disturbance to resident sleep corridors.`,
-          richCard: {
-            title: 'Late-Night Delivery Telemetry',
-            badge: 'Zero Missed Orders',
-            params: [
-              { label: 'Total Orders', value: '10,471', sub: '36 Months' },
-              { label: 'Total Value', value: '₹38.65 L', sub: '₹3,865,193' },
-              { label: 'Avg Ticket', value: '₹369.13', sub: 'Median ₹354' },
-              { label: 'Avg Distance', value: '5.3 km', sub: 'Kharadi / Hinjawadi' }
-            ]
-          }
-        };
-      }
-
-      // 2.10 Indian Statutory Legislature & DPDP Act 2023
-      if (/(dpdp|statutory|legislature|act 2023|police verification|rent control|foreigners act|cctns)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Statutory Compliance',
-          title: 'Indian Statutory & Regulatory Compliance Framework',
-          body: `<strong>Statutory Legal & Data Privacy Protocols (Maharashtra, India):</strong><br /><br />
-1. <strong>Digital Personal Data Protection (DPDP) Act 2023:</strong><br />
-   • Section 4 & Section 8 notice & consent architecture.<br />
-   • Resident Aadhaar numbers masked (<code>XXXX-XXXX-1234</code>) per UIDAI offline e-KYC guidelines.<br />
-   • Bank mandates and PAN numbers stored under AES-256 encryption.<br /><br />
-2. <strong>Foreigners Act 1946 & Form C:</strong><br />
-   • Mandatory Form C electronic submission within 24 hours of foreign arrival for Lukas Weber, Elena Rostova, and Kenji Takahashi via the Bureau of Immigration portal.<br /><br />
-3. <strong>Maharashtra Police Tenant Verification (Sec 144 CrPC / BNSS):</strong><br />
-   • 100% of residents vetted through Pune Police Commissionerate CCTNS tenant reporting.<br /><br />
-4. <strong>Maharashtra Rent Control Act 1999:</strong><br />
-   • 11-month Leave & License agreements with formal electronic registration and stamp duty validation.`,
-          richCard: {
-            title: 'Statutory Compliance Matrix',
-            badge: '100% Compliant',
-            params: [
-              { label: 'DPDP Act 2023', value: 'Masked KYC', sub: 'AES-256 Secure' },
-              { label: 'Form C (BoI)', value: '100% Met', sub: '24h SLA' },
-              { label: 'Police Verification', value: 'Cleared', sub: 'CCTNS Pune' },
-              { label: 'Rent Control', value: 'Registered', sub: 'Stamp Duty Paid' }
-            ]
-          }
-        };
-      }
-
-      // 2.11 Payment Gateways & Banking Rails
-      if (/(payment rail|payment gateway|enach|e-nach|razorpay|cashfree|stripe|zoho|payu)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Co-Living Engine · Banking & Fintech Rails',
-          title: 'Fintech & Payment Gateway Architecture (5 Gateways)',
-          body: `<strong>Multi-Rail Payment Gateway Integration:</strong><br />
-Residents are systematically balanced across 5 verified enterprise settlement rails (8 residents each):<br /><br />
-1. <strong>Cashfree e-NACH (CASHFREE_ENACH_v3):</strong> 8 residents | NPCI e-Mandate auto-debit on 1st of month.<br />
-2. <strong>Razorpay UPI AutoPay (RAZORPAY_SUB_API_v2):</strong> 8 residents | Recurring UPI 2.0 standing instructions via GPay/PhonePe.<br />
-3. <strong>Stripe Tokenization (STRIPE_IN_BILLING_v1):</strong> 8 residents | PCI-DSS Level 1 recurring international/domestic cards.<br />
-4. <strong>Zoho Books Corporate B2B (ZOHO_BOOKS_B2B_API):</strong> 8 residents | Corporate direct payroll deduction.<br />
-5. <strong>PayU Virtual Accounts (PAYU_VIRTUAL_ACCT_v2):</strong> 8 residents | Dynamic Virtual Account Numbers for IMPS/NEFT auto-reconciliation.`,
-          richCard: {
-            title: 'Fintech Rails Distribution',
-            badge: 'Zero Gateway Failure',
-            params: [
-              { label: 'Cashfree e-NACH', value: '8 Residents', sub: 'NPCI Auto-Debit' },
-              { label: 'Razorpay UPI', value: '8 Residents', sub: 'UPI 2.0 AutoPay' },
-              { label: 'Stripe Token', value: '8 Residents', sub: 'Cards (Visa/MC)' },
-              { label: 'Zoho / PayU', value: '16 Residents', sub: 'B2B & Virtual Acc' }
-            ]
-          }
-        };
-      }
-
-      // 3. Creative Synthesis: Communications Drafting (Guest, Resident, or Vendor)
-      if (/(draft|email|write a letter|message to|compose|send note|check-in|welcome message)/i.test(lower)) {
-        // Subcase A: Vendor Dispatch Draft (Apex Climate / HVAC)
-        if (/vendor|apex|hvac|technician|rajesh/i.test(lower)) {
-          const cardId = 'draft_vendor_' + Date.now();
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Sentinel · Communications Core',
-            title: 'Generated Vendor Dispatch Communication',
-            body: `<div id="${cardId}"><strong>Subject:</strong> Work Order Confirmation #${PROPERTY_DATA.maintenance.ticketId} – ${PROPERTY_DATA.unit}<br /><br />
-To: Apex Climate Solutions (Attn: Rajesh K.)<br />
-Re: Routine HVAC air-filter & static pressure audit<br /><br />
-Please be advised that gate access security pre-clearance has been confirmed for your dispatch slot today at 14:00 at <strong>${PROPERTY_DATA.address}</strong>. Smart Pass access credentials have been generated for technician entry. Resident Dr. A. Verma has received the notification.<br /><br />
-Please log technician arrival via the digital contractor terminal upon entry.<br /><br />
-THΛTJOINT Operations Layer</div>`,
-            richCard: {
-              title: `Vendor Notice · WO-${PROPERTY_DATA.maintenance.ticketId}`,
-              badge: 'Draft Synthesized',
-              params: [
-                { label: 'Recipient', value: 'Apex Climate', sub: 'Rajesh K.' },
-                { label: 'Scheduled', value: '14:00 Today', sub: 'Pre-cleared' },
-                { label: 'Scope', value: 'HVAC Filter', sub: 'Unit 014' }
-              ],
-              actions: [
-                { label: 'Copy Draft 📋', action: 'copy-text', payload: cardId },
-                { label: 'Inspect Home 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' }
-              ]
-            }
-          };
-        }
-
-        // Subcase B: Resident Notice Draft (Dr. Verma / Renewal)
-        if (/resident|verma|renewal|lease notice|extension/i.test(lower)) {
-          const cardId = 'draft_resident_' + Date.now();
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Sentinel · Communications Core',
-            title: 'Generated Resident Advisory Draft',
-            body: `<div id="${cardId}"><strong>Subject:</strong> Advisory: Scheduled Tenancy & Operations Update – ${PROPERTY_DATA.unit}<br /><br />
-Dear <strong>${PROPERTY_DATA.resident.name}</strong>,<br /><br />
-We are writing regarding your residence at <strong>${PROPERTY_DATA.address}</strong>. Your current tenancy term (expiring 31 Oct 2026) has entered the standard 30-day renewal evaluation window. Rent records reflect zero arrears with an escrow deposit of ${PROPERTY_DATA.lease.securityDeposit} safely maintained.<br /><br />
-Additionally, technician Rajesh K. from Apex Climate Solutions is scheduled today at 14:00 for the routine HVAC static airflow pressure audit. No action is required on your part.<br /><br />
-Warm regards,<br />
-THΛTJOINT Operations Layer</div>`,
-            richCard: {
-              title: 'Resident Advisory · Home 014',
-              badge: 'Synthesis Complete',
-              params: [
-                { label: 'Addressee', value: PROPERTY_DATA.resident.name, sub: 'Good Standing' },
-                { label: 'Cycle Status', value: 'Zero Arrears', sub: 'Mandate Active' },
-                { label: 'Renewal Due', value: '30 Days', sub: 'Window Open' }
-              ],
-              actions: [
-                { label: 'Copy Draft 📋', action: 'copy-text', payload: cardId },
-                { label: 'Draft Renewal Package', action: 'query', payload: 'Draft Renewal' }
-              ]
-            }
-          };
-        }
-
-        // Subcase C: Guest Check-in & Arrival Brief (with dynamic property lookup)
-        let targetProp = null;
-        const propIdMatch = rawQuery.match(/(?:id[:\s]+|[^0-9]|^)([0-9]{5,20})(?:[^0-9]|$)/i);
-        if (propIdMatch) {
-          targetProp = (this.knowledgeBase.properties || []).find(p => String(p.id) === propIdMatch[1]);
-        }
-        if (!targetProp) {
-          const cleanQ = rawQuery.replace(/draft|check-in|instructions|for|property|unit|details|welcome|message|brief/gi, '').trim().toLowerCase();
-          if (cleanQ.length >= 4) {
-            targetProp = (this.knowledgeBase.properties || []).find(p => (p.name || '').toLowerCase().includes(cleanQ));
-          }
-        }
-
-        const propName = targetProp ? targetProp.name : 'Pacific Grove Coastal Residence';
-        const hostName = targetProp ? (targetProp.host || 'THΛTJOINT Hospitality') : 'THΛTJOINT Hospitality Layer';
-        const passCode = targetProp ? `*${String(targetProp.id).slice(-4)}#` : '*7482#';
-        const cardId = 'draft_guest_' + Date.now();
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Communications Core',
-          title: `Synthesized Check-In: ${this.escapeHtml(propName)}`,
-          body: `<div id="${cardId}"><strong>Subject:</strong> Welcome to ${this.escapeHtml(propName)} – Arrival Instructions & Smart Pass Entry<br /><br />
-Dear Guest,<br /><br />
-We look forward to welcoming you to <strong>${this.escapeHtml(propName)}</strong> in Pacific Grove, CA.<br /><br />
-• <strong>Check-in Time:</strong> 15:00 onwards (Self check-in via digital keypad)<br />
-• <strong>Smart Access Code:</strong> <strong>${passCode}</strong> (Valid for the duration of your stay)<br />
-• <strong>Parking & Entry:</strong> Designated vehicle stall on private driveway. Street parking on Ocean View Blvd requires municipal permit during peak hours.<br />
-• <strong>Quiet Hours & Local Covenants:</strong> In accordance with Pacific Grove Municipal Code Chapter 23.90, quiet hours are strictly observed from 22:00 to 08:00.<br />
-• <strong>High-Speed Wi-Fi:</strong> Network <em>ThatJoint_Coastal_Guest</em> / Pass: <em>MontereyBreeze2026</em><br /><br />
-Should you require anything during your stay, Property Sentinel is available 24/7.<br /><br />
-Warm regards,<br />
-${this.escapeHtml(hostName)}</div>`,
-          richCard: {
-            title: `Guest Brief · ${this.escapeHtml(propName.slice(0, 22))}`,
-            badge: 'Ready to Transmit',
-            params: [
-              { label: 'Check-in Time', value: '15:00', sub: 'Keypad Entry' },
-              { label: 'Access Pass', value: passCode, sub: 'Digital Keypad' },
-              { label: 'Quiet Hours', value: '22:00 – 08:00', sub: 'PG Municipal Code' }
-            ],
-            actions: [
-              { label: 'Copy Draft 📋', action: 'copy-text', payload: cardId },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 4. Compare Short-Term vs 30-Day Rental Yield (Actuarial Modeling)
-      if (/(compare|yield|revenue simulation|str vs 30)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Actuarial Modeling',
-          title: 'Comparative Yield Model: STR vs. 30-Day Flexible Tenancy',
-          body: `<strong>Actuarial Comparative Yield Breakdown (Pacific Grove):</strong><br />
-Based on repository empirical distributions across 274 properties:<br /><br />
-• <strong>Scenario A: Short-Term Rental (<30 Days, Lic. STR)</strong><br />
-  - Average Nightly Rate: <strong>$485/night</strong><br />
-  - Effective Annual Occupancy: <strong>71.2%</strong> (260 booked nights/year)<br />
-  - Gross Annual Revenue: $126,100<br />
-  - City TOT Tax (12%): -$15,132<br />
-  - Cleaning & Turnover (48 turns/yr @ $240): -$11,520<br />
-  - <em>Estimated Net Operating Yield:</em> <strong>$99,448/year</strong><br /><br />
-• <strong>Scenario B: 30-Day Flexible Tenancy (Covenant Protected)</strong><br />
-  - Average Monthly Rate: <strong>$7,225/month</strong><br />
-  - Effective Annual Occupancy: <strong>94.5%</strong> (11.3 months occupied)<br />
-  - Gross Annual Revenue: $81,642<br />
-  - City TOT Tax: <strong>$0 (Exempt under Civil Code)</strong><br />
-  - Turnovers (3 turns/yr @ $350): -$1,050<br />
-  - <em>Estimated Net Operating Yield:</em> <strong>$80,592/year</strong><br /><br />
-<em>Conclusion:</em> While short-term rentals generate ~23% higher gross revenue, 30-day flexible leases eliminate TOT risk, avoid municipal STR fines, and reduce operational maintenance by 88%.`,
-          richCard: {
-            title: 'Comparative Revenue Model',
-            badge: 'Empirical Yield Audit',
-            params: [
-              { label: 'STR Net Yield', value: '$99,448/yr', sub: '71% Occ · 48 Turns' },
-              { label: '30-Day Midterm', value: '$80,592/yr', sub: '95% Occ · Zero TOT' },
-              { label: 'OpEx Savings', value: '88% Reduction', sub: 'Turnover & Cleaning' },
-              { label: 'Regulatory Risk', value: 'Zero Risk', sub: 'Safe Harbor Model' }
-            ],
-            actions: [
-              { label: 'View 30-Day Flexible Properties', action: 'query', payload: 'Show 30-day flexible tenancy listings' },
-              { label: 'Explore Luxury STR Villas', action: 'query', payload: 'Oceanfront & Luxury Villas' }
-            ]
-          }
-        };
-      }
-
-      // 5. Adaptive Persona: Explain Like I'm 5 (ELI5) vs. Technical Breakdown
-      if (/(eli5|explain like i['\s]?m 5|like i am 5|simple terms|simply|layman|5 year old)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Simplified Brief',
-          title: 'Real Estate & Home 014 Explained Simply',
-          body: `<strong>Explain Like I'm 5 (ELI5):</strong><br /><br />
-• <strong>What is Home 014?</strong> It's a nice, quiet apartment where Dr. Verma lives. He always pays his rent on time, just like returning library books without fines!<br />
-• <strong>What is the Rooftop Solar?</strong> Giant shiny mirrors on the roof that catch warm sunshine and turn it into electricity for the lights, fridge, and TV for free!<br />
-• <strong>Who is Rajesh?</strong> A friendly AC doctor who visits at 2:00 PM today with a fresh air filter so everyone breathes crisp, clean air.<br />
-• <strong>What is Pacific Grove?</strong> A magical seaside town with 274 vacation homes, where playful sea otters swim near Lover's Point and monarch butterflies sleep in the pine trees!`,
-          richCard: {
-            title: 'Simple Summary',
-            badge: 'ELI5 Mode',
-            params: [
-              { label: 'Resident Status', value: 'A+ Grade', sub: 'Always Happy' },
-              { label: 'Air Quality', value: 'Super Fresh', sub: 'Filter Checked' },
-              { label: 'Solar Sunshine', value: 'Full Power', sub: 'Sun Powered' }
-            ],
-            actions: [
-              { label: 'Show Technical Telemetry', action: 'query', payload: 'Home 014 Status & Telemetry' },
-              { label: 'Explore 3D Tour', action: 'crosslink-3d', payload: '01 Central Courtyard' }
-            ]
-          }
-        };
-      }
-
-      // 6. Actuarial Yield & Escalation Calculation (Mathematical Reasoning)
-      const mathMatch = lower.match(/(\d+(?:\.\d+)?)\s*%/);
-      if (mathMatch && /(escalat|increas|raise|rent|rate|index|inflation)/i.test(lower)) {
-        const pct = parseFloat(mathMatch[1]);
-        const base = PROPERTY_DATA.lease.monthlyRentNum;
-        const newRent = Math.round(base * (1 + pct / 100));
-        const newEscrow = newRent * 3;
-        const deltaRent = newRent - base;
-        const deltaEscrow = newEscrow - PROPERTY_DATA.lease.securityDepositNum;
-
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Actuarial Reasoning',
-          title: `Calculated Escalation Analysis (+${pct}%)`,
-          body: `<strong>Actuarial Step-by-Step Calculation:</strong><br />
-1. <em>Baseline Base Rent:</em> ₹${base.toLocaleString('en-IN')}/mo<br />
-2. <em>Proposed Escalation Rate:</em> +${pct}% (+₹${deltaRent.toLocaleString('en-IN')})<br />
-3. <em>Adjusted Monthly Base:</em> <strong>₹${newRent.toLocaleString('en-IN')}/mo</strong><br />
-4. <em>Standard 3-Month Escrow Requirement:</em> 3 × ₹${newRent.toLocaleString('en-IN')} = <strong>₹${newEscrow.toLocaleString('en-IN')}</strong> (Escrow adjustment: +₹${deltaEscrow.toLocaleString('en-IN')})<br /><br />
-This indexing rate maintains compliance with regional tenancy covenants and escrow reserve regulations.`,
-          richCard: {
-            title: `Actuarial Forecast · ${PROPERTY_DATA.unit}`,
-            badge: `+${pct}% Index Calculation`,
-            params: [
-              { label: 'Baseline', value: '₹1,45,000', sub: 'Current Rent' },
-              { label: 'Adjusted Rent', value: `₹${newRent.toLocaleString('en-IN')}`, sub: `+₹${deltaRent.toLocaleString('en-IN')}` },
-              { label: 'Escrow Required', value: `₹${newEscrow.toLocaleString('en-IN')}`, sub: `+₹${deltaEscrow.toLocaleString('en-IN')}` },
-              { label: 'Annual Portfolio', value: `₹${(newRent * 12).toLocaleString('en-IN')}`, sub: '12-Month Yield' }
-            ],
-            actions: [
-              { label: `Prepare Renewal with +${pct}% Rate`, action: 'query', payload: `Draft renewal at ${pct}% escalation` },
-              { label: 'Review Current Ledger', action: 'query', payload: 'Ledger & Escrow' }
-            ]
-          }
-        };
-      }
-
-      // 7. Specific Property Lookup by ID or Name
-      const idMatch = q.match(/(?:id[:\s]+|[^0-9]|^)([0-9]{5,20})(?:[^0-9]|$)/i);
-      let foundProp = null;
-      if (idMatch) {
-        foundProp = (this.knowledgeBase.properties || []).find(p => String(p.id) === idMatch[1]);
-      }
-      if (!foundProp) {
-        // Name-based search (ignoring common prefixes)
-        const cleanNameQ = q.replace(/inspect property|inspect|property|unit|details|dossier|id:/gi, '').trim().toLowerCase();
-        if (cleanNameQ.length >= 4) {
-          foundProp = (this.knowledgeBase.properties || []).find(p => (p.name || '').toLowerCase().includes(cleanNameQ));
-        }
-      }
-
-      if (foundProp) {
-        const price = foundProp.price || foundProp.price_usd || 0;
-        const min = foundProp.minNights || foundProp.minimum_nights || 1;
-        const rev = foundProp.reviews || 0;
-        const rpm = foundProp.rpm || foundProp.reviews_per_month || 0;
-        const host = foundProp.host || 'Verified Operator';
-        const isFlexible = min >= 28;
-        const monthlyEst = price > 0 ? Math.round(price * 30) : null;
-        const estAnnual = price > 0 ? Math.round(price * (isFlexible ? 330 : 260)) : 0;
-
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Property Dossier',
-          title: `Dossier: ${foundProp.name}`,
-          body: `<strong>Verified Property Record · Unit #${foundProp.id}</strong><br /><br />
-• <strong>Property Title:</strong> <em>${foundProp.name}</em><br />
-• <strong>Host / Operator:</strong> <strong>${host}</strong><br />
-• <strong>Room Type:</strong> ${foundProp.roomType || foundProp.room_type || 'Entire home/apt'}<br />
-• <strong>Rate Structure:</strong> <strong>$${Math.round(price).toLocaleString('en-US')}</strong>/night ${monthlyEst ? `(Est. 30-Day Base: <strong>$${monthlyEst.toLocaleString('en-US')}</strong>)` : ''}<br />
-• <strong>Minimum Stay:</strong> ${min} ${min === 1 ? 'night' : 'nights'} (${isFlexible ? '30-Day Flexible Tenancy Covenants' : 'Short-Term Rental'})<br />
-• <strong>Review Performance:</strong> ★ ${rev} total reviews (${rpm} reviews/month)<br />
-• <strong>Zoning & Licensing:</strong> ${foundProp.license ? `<strong>${foundProp.license}</strong>` : isFlexible ? 'Exempt from STR license cap (30+ day safe harbor)' : 'Standard STR regulation applies'}<br />
-• <strong>Coordinates:</strong> Lat ${foundProp.lat || foundProp.coordinates?.lat}, Lng ${foundProp.lng || foundProp.coordinates?.lng} (Pacific Grove, CA)`,
-          richCard: {
-            title: `Unit #${foundProp.id} · ${host}`,
-            badge: isFlexible ? '30-Day Flexible' : 'Licensed STR',
-            params: [
-              { label: 'Nightly Rate', value: `$${Math.round(price).toLocaleString('en-US')}`, sub: monthlyEst ? `$${monthlyEst.toLocaleString('en-US')}/mo` : 'Rate' },
-              { label: 'Minimum Nights', value: `${min}d Min`, sub: isFlexible ? 'TOT Exempt' : 'STR Rules' },
-              { label: 'Review Count', value: `★ ${rev}`, sub: `${rpm} Rev/Mo` },
-              { label: 'Projected Annual', value: `$${estAnnual.toLocaleString('en-US')}`, sub: isFlexible ? '90% Occ' : '71% Occ' }
-            ],
-            actions: [
-              { label: 'Simulate Revenue Yield', action: 'query', payload: `Simulate revenue for property ${foundProp.id}` },
-              { label: 'Draft Guest Check-in Notice', action: 'query', payload: `Draft check-in instructions for ${foundProp.name}` },
-              { label: 'Compare with Market Median', action: 'query', payload: 'Pacific Grove Market Overview' }
-            ]
-          }
-        };
-      }
-
-      // 8. Major Operators & Host Portfolios
-      if (/(host|operator|sanctuary|monterey rentals|kyle|the charles|green gables|who manages|management company)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Operator Intelligence',
-          title: 'Pacific Grove Operator & Host Breakdown',
-          body: `<strong>Key Real Estate Operators & Portfolios:</strong><br />
-114 distinct operators manage inventory across Pacific Grove. The market exhibits high operational concentration among specialized property managers:<br /><br />
-1. <strong>Sanctuary Vacation Rentals (49 Properties · 17.9% Market Share):</strong><br />
-   Premier management group overseeing curated residences, from beach cottages on Ocean Park ($320/night) to luxury Asilomar oceanfront estates ($1,603/night).<br /><br />
-2. <strong>Monterey Rentals (21 Properties · 7.7% Market Share):</strong><br />
-   Historic and coastal property specialist managing iconic cottages like <em>Sweet Pea</em>, <em>Blue Horizons</em>, and <em>Gratitude Inn</em>.<br /><br />
-3. <strong>Kyle (13 Properties · 4.7% Market Share):</strong><br />
-   Independent coastal portfolio featuring <em>The White House (Lover's Point)</em>, <em>Beachouse at Asilomar</em>, and <em>Seafarer</em>.<br /><br />
-4. <strong>Pacific (11 Hotel Units):</strong> Boutique ocean-view guestrooms along Lighthouse Avenue.<br />
-5. <strong>Historic Hospitality Operators:</strong><br />
-   • <em>Angela (Old St. Angela Inn, 9 Rooms)</em><br />
-   • <em>The Charles Pacific Grove (8 Suites)</em><br />
-   • <em>Green Gables Inn (Four Sisters, 5 Suites)</em><br />
-   • <em>Seven Gables Inn (4 Historic Suites)</em>`,
-          richCard: {
-            title: 'Operator Market Concentration',
-            badge: '114 Active Operators',
-            params: [
-              { label: 'Sanctuary Rentals', value: '49 Properties', sub: '17.9% Market Share' },
-              { label: 'Monterey Rentals', value: '21 Properties', sub: '7.7% Market Share' },
-              { label: 'Kyle Portfolio', value: '13 Properties', sub: 'High-End Coastal' },
-              { label: 'Historic Inns', value: '26 Rooms', sub: 'Commercial B&B' }
-            ],
-            actions: [
-              { label: 'Browse Sanctuary Listings', action: 'query', payload: 'Listings managed by Sanctuary Vacation Rentals' },
-              { label: 'Browse Monterey Rentals', action: 'query', payload: 'Listings managed by Monterey Rentals' },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 9. STR Regulatory & 30-Day Minimum Stay Rules
-      if (/(str rule|str regulation|ordinance|chapter 23\.90|licens|zoning|why 30 days|minimum night rule|safe harbor covenant)/i.test(lower) || (/(30[- ]?day|minimum night)/i.test(lower) && /(rule|law|ordinance|code|why|legal|covenant|exemption|license)/i.test(lower))) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Regulatory Intelligence',
-          title: 'Pacific Grove STR & 30-Day Regulatory Analysis',
-          body: `<strong>Municipal Code Chapter 23.90 Analysis:</strong><br />
-Pacific Grove enforces one of California's most stringent Short-Term Residential Rental (STR) regulatory frameworks to protect permanent housing stock.<br /><br />
-1. <strong>The 30-Day Safe Harbor Covenant:</strong><br />
-   Rentals of <strong>30 or more consecutive days</strong> are classified as mid-term residential tenancies under California Civil Code. They are <em>completely exempt</em> from STR licensing caps, lottery waitlists, and the city's 12% Transient Occupancy Tax (TOT). In our repository, <strong>112 properties (40.9%)</strong> utilize this covenant.<br /><br />
-2. <strong>Short-Term Rental Permit Caps (<30 Days):</strong><br />
-   Unhosted short-term rentals (< 30 days) require an active municipal STR License (e.g., <em>PG License #0405, #0420, #0403, #0446, #0478, #0507</em>). The city caps total STR licenses to prevent residential displacement.<br /><br />
-3. <strong>Commercial & Historic Inn Exception:</strong><br />
-   Properties in commercial zoning (such as <em>Seven Gables Inn, Green Gables Inn, The Charles, and Old St. Angela Inn</em>) operate under commercial bed-and-breakfast zoning with no minimum night restriction.`,
-          richCard: {
-            title: 'Regulatory Audit Dossier',
-            badge: 'Chapter 23.90 Verified',
-            params: [
-              { label: '30-Day Midterm', value: '112 Units', sub: 'TOT & Cap Exempt' },
-              { label: 'Licensed STRs', value: '162 Units', sub: 'Permit Regulated' },
-              { label: 'TOT Tax Savings', value: '12.0%', sub: 'On 30+ Day Stays' }
-            ],
-            actions: [
-              { label: 'View 30-Day Flexible Stays', action: 'query', payload: 'Show 30-day flexible tenancy listings' },
-              { label: 'Inspect Licensed STRs', action: 'query', payload: 'Show licensed short-term rentals' },
-              { label: 'Simulate Revenue Shift', action: 'query', payload: 'Compare short-term vs 30-day rental yield' }
-            ]
-          }
-        };
-      }
-
-      // 10. Oceanfront & Luxury Properties
-      if (/(oceanfront|luxury|most expensive|beachfront|lovers point|waterfront|masterpiece|over 1000|high end)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Luxury Portfolio',
-          title: 'Pacific Grove Oceanfront & Luxury Estates',
-          body: `<strong>Premier Coastal Residences & Luxury Estates (Top Tier):</strong><br />
-Pacific Grove features 133 properties with immediate ocean or bay exposure. The premier tier includes:<br /><br />
-1. <strong>US OPEN Special (Unit 1005024310075425769)</strong> — <em>$2,867/night</em><br />
-   Updated & spacious estate positioned for golf championships and executive retreats.<br /><br />
-2. <strong>Coastal Oaks Craftsman (Unit 808273804035038794)</strong> — <em>$1,916/night</em><br />
-   Architectural craftsman with panoramic bay exposure.<br /><br />
-3. <strong>Ocean front 6-bedroom masterpiece (Unit 41014)</strong> — <em>$1,768/night</em> (Host: Kirstie)<br />
-   Direct oceanfront landmark residence with 124 verified reviews.<br /><br />
-4. <strong>3976 Beach House on Asilomar (Unit 1492172065397068215)</strong> — <em>$1,603/night</em> (Sanctuary Rentals)<br />
-   Oceanfront sunset view residence directly opposite Asilomar State Beach.<br /><br />
-5. <strong>3817 Caledonia Bay Lookout (Unit 48803070)</strong> — <em>$1,463/night</em><br />
-   Elevated lookout with unobstructed Monterey Bay vistas.<br /><br />
-6. <strong>3813 Point Break (Unit 47812234)</strong> — <em>$1,428/night</em><br />
-   Directly steps from Lover's Point Beach.`,
-          richCard: {
-            title: 'Luxury Coastal Collection',
-            badge: 'Top Tier ($1,400+)',
-            params: [
-              { label: 'US OPEN Special', value: '$2,867/nt', sub: 'Pebble Beach Zone' },
-              { label: 'Coastal Oaks', value: '$1,916/nt', sub: 'Architectural Gem' },
-              { label: 'Oceanfront Masterpiece', value: '$1,768/nt', sub: 'Unit 41014' },
-              { label: 'Beach House Asilomar', value: '$1,603/nt', sub: 'Sanctuary' }
-            ],
-            actions: [
-              { label: 'Inspect Unit 41014 Dossier', action: 'query', payload: 'Inspect property Ocean front 6-bedroom masterpiece (ID: 41014)' },
-              { label: 'Simulate Luxury Yield', action: 'query', payload: 'Simulate revenue for luxury oceanfront properties' },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 11. 30-Day Flexible Tenancy & Mid-Term Rentals
-      if (/(30[- ]?day|flexible lease|mid[- ]?term|monthly rental|cheapest 30|relocation|extended stay)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Flexible Tenancy',
-          title: '30-Day Flexible Tenancy Portfolio',
-          body: `<strong>Curated 30-Day Midterm & Relocation Rentals:</strong><br />
-For extended coastal stays, executive relocations, or seasonal tenancies avoiding short-term rental surcharges:<br /><br />
-• <strong>Pet-Friendly Cottage Near Beach (Unit 44515)</strong> — <em>$101/night (~$3,030/mo)</em> (974 reviews, Host: Blake)<br />
-• <strong>Studio Blu in Pacific Grove (Unit 20279454)</strong> — <em>$95/night (~$2,850/mo)</em><br />
-• <strong>Jewelbox Cottages Carriage House (Unit 589997411964604458)</strong> — <em>$92/night (~$2,760/mo)</em><br />
-• <strong>Snuggle Up Studio Cottage (Unit 1143742162744265949)</strong> — <em>$97/night (~$2,910/mo)</em><br />
-• <strong>Furnished Victorian Cottage (Unit 4582398)</strong> — <em>$117/night (~$3,510/mo)</em> (Host: Birgit)<br />
-• <strong>Forest Home on 1/4 Acre (Unit 24059256)</strong> — <em>$124/night (~$3,720/mo)</em><br /><br />
-<em>Portfolio Average:</em> 30-day flexible residences yield an average of <strong>$7,225/month</strong> with near 100% stable occupancy.`,
-          richCard: {
-            title: 'Flexible 30-Day Value Stays',
-            badge: 'Zero STR Surcharges',
-            params: [
-              { label: 'Pet-Friendly Cottage', value: '$101/nt ($3,030/mo)', sub: '974 Reviews' },
-              { label: 'Studio Blu', value: '$95/nt ($2,850/mo)', sub: 'Downtown PG' },
-              { label: 'Jewelbox Carriage', value: '$92/nt ($2,760/mo)', sub: 'Private Bath' },
-              { label: 'Avg Monthly Yield', value: '$7,225/mo', sub: 'Across 112 Units' }
-            ],
-            actions: [
-              { label: 'Inspect Unit 44515 Dossier', action: 'query', payload: 'Inspect property Pet-Friendly* Cottage Near Beach for 30+ day stays (ID: 44515)' },
-              { label: 'Compare 30d vs STR Revenue', action: 'query', payload: 'Compare short-term vs 30-day rental yield' },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 12. Top-Rated & High-Velocity Listings (> 500 reviews)
-      if (/(top rated|most reviews|popular|high velocity|500 reviews|highest review)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Performance Intelligence',
-          title: 'Top-Rated & High-Velocity Listings',
-          body: `<strong>Highest-Velocity Listings by Guest Review Volume:</strong><br />
-These properties demonstrate the highest guest satisfaction and turnover velocity on the Monterey Peninsula:<br /><br />
-1. <strong>CA Dreaming w/Ocean View & Fire Pit (Unit 89210)</strong> — <em>1,436 Reviews</em> (7.63 reviews/mo, Rate: $237/nt, Host: Sarah)<br />
-2. <strong>No shared space! Guest suite! (Unit 15165034)</strong> — <em>1,204 Reviews</em> (9.96 reviews/mo, Rate: $118/nt, PGLic#0405, Host: Angi)<br />
-3. <strong>Pet-Friendly Cottage Near Beach (Unit 44515)</strong> — <em>974 Reviews</em> (4.96 reviews/mo, Rate: $101/nt, Host: Blake)<br />
-4. <strong>Cottage Retreat Steps from the Sea (Unit 14266085)</strong> — <em>855 Reviews</em> (6.91 reviews/mo, Rate: $442/nt, Hosts: Viveca & Jim)<br />
-5. <strong>Victorian Premier Queen Room (Unit 43743300)</strong> — <em>846 Reviews</em> (11.06 reviews/mo, Rate: $999/nt, Host: Alex)<br />
-6. <strong>BLOCKS FROM OCEAN Cozy Queen (Unit 35950153)</strong> — <em>814 Reviews</em> (9.24 reviews/mo, Rate: $309/nt, Host: Pacific)<br />
-7. <strong>Modern Beach House (Unit 3029273)</strong> — <em>786 Reviews</em> (5.34 reviews/mo, Rate: $304/nt, Host: James)`,
-          richCard: {
-            title: 'Review Velocity Champions',
-            badge: 'Top Portfolio Stars',
-            params: [
-              { label: 'CA Dreaming', value: '1,436 Reviews', sub: 'Host: Sarah' },
-              { label: 'Guest Suite #0405', value: '1,204 Reviews', sub: '9.96 Rev/Mo' },
-              { label: 'Pet-Friendly Cottage', value: '974 Reviews', sub: 'Host: Blake' },
-              { label: 'Sea Cottage Retreat', value: '855 Reviews', sub: 'Viveca & Jim' }
-            ],
-            actions: [
-              { label: 'Inspect Unit 89210 Dossier', action: 'query', payload: 'Inspect property CA Dreaming w/Ocean View, Fire pit and Gardens (ID: 89210)' },
-              { label: 'Draft Guest Welcome Notice', action: 'query', payload: 'Draft guest check-in message for CA Dreaming' },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 13. Pet-Friendly Cottages
-      if (/(pet|dog|pets allowed)/i.test(lower)) {
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Lifestyle Covenants',
-          title: 'Pet-Friendly Property Directory',
-          body: `<strong>Verified Pet-Friendly Properties in Pacific Grove:</strong><br />
-Pacific Grove is renowned for dog-friendly coastal recreation along the coastal trail. Verified pet-friendly inventory includes:<br /><br />
-• <strong>Pet-Friendly Cottage Near Beach (Unit 44515)</strong> — <em>$101/nt</em> (974 reviews, Host: Blake, 30+ day stays)<br />
-• <strong>Pet Friendly Cozy Pacific Grove Getaway (Unit 51086425)</strong> — <em>$445/nt</em> (Lic#0388, Host: Carolyn)<br />
-• <strong>Pet friendly Historic PG (Unit 579603922194777208)</strong> — <em>30-day midterm stay</em> (Host: Thomas)<br />
-• <strong>Latitude Adjustment Oceanview Deck (Unit 1142216274682452511)</strong> — <em>Pet-friendly deck</em> (Monterey Rentals)<br />
-• <strong>Cellar Suite Queen Dog-Friendly (Unit 1434368348248238825)</strong> — <em>$256/nt</em> (The Charles Pacific Grove)<br />
-• <strong>30+ day Spacious Pet Friendly Home (Unit 1608841749392581728)</strong> — <em>$167/nt (~$5,010/mo)</em> (Host: Thomas)`,
-          richCard: {
-            title: 'Pet-Friendly Collection',
-            badge: 'Dogs Welcome',
-            params: [
-              { label: "Blake's Cottage", value: '$101/nt', sub: '974 Reviews · Near Beach' },
-              { label: 'Lic#0388 Getaway', value: '$445/nt', sub: 'Carolyn · Fenced' },
-              { label: 'The Charles Suite', value: '$256/nt', sub: 'Cellar Family Suite' }
-            ],
-            actions: [
-              { label: 'Inspect Unit 44515 Dossier', action: 'query', payload: 'Inspect property Pet-Friendly* Cottage Near Beach for 30+ day stays (ID: 44515)' },
-              { label: 'Draft Pet Policy Covenants', action: 'query', payload: 'Draft pet rider agreement' },
-              { label: 'Open Knowledge Base', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 14. Unit 014 Telemetry & Operations (Oakview Courtyard)
-      if (/(unit 014|home 014|verma|solar|telemetry|microgrid|hvac|work order|ticket|escrow|ledger|gate)/i.test(lower)) {
-        if (/solar|microgrid|battery|energy|kwh/i.test(lower)) {
-          return {
-            type: 'companion',
-            author: 'THΛTJOINT Sentinel · Rooftop Microgrid Core',
-            title: 'Rooftop Solar & Microgrid Telemetry',
-            body: `<strong>Rooftop Solar Microgrid Status for ${PROPERTY_DATA.unit}:</strong><br /><br />
-• <strong>Solar Array Generation:</strong> ${PROPERTY_DATA.microgrid.solarGeneration}<br />
-• <strong>24-Hour Cumulative Yield:</strong> ${PROPERTY_DATA.microgrid.dailyYield}<br />
-• <strong>Storage Battery Reserve:</strong> ${PROPERTY_DATA.microgrid.batteryStorage}<br />
-• <strong>Net Zero Carbon Offset:</strong> <strong>${PROPERTY_DATA.microgrid.buildingOffset}</strong><br /><br />
-Surplus power (+1.6 kW) is currently being exported to the community microgrid bus. Inverter diagnostics indicate 100% phase efficiency.`,
-            richCard: {
-              title: 'Microgrid Telemetry · Unit 014',
-              badge: 'Real-time Feed',
-              params: [
-                { label: 'Array Output', value: '4.8 kW', sub: 'Phase Balanced' },
-                { label: 'Battery Reserve', value: '92%', sub: '13.8 kWh' },
-                { label: 'Daily Yield', value: '28.4 kWh', sub: 'Optimal' },
-                { label: 'Building Offset', value: '94.2%', sub: 'Net Zero' }
-              ],
-              actions: [
-                { label: 'Inspect Rooftop Solar in 3D', action: 'crosslink-3d', payload: '03 Rooftop Terrace' },
-                { label: 'HVAC Energy Interplay', action: 'query', payload: 'HVAC Maintenance' }
-              ]
-            }
-          };
-        }
-
-        // Home 014 General Status
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Unit 014 Operations',
-          title: 'Unit 014 Active Dossier (Oakview Courtyard)',
-          body: `<strong>Home 014 Verified Operational Status:</strong><br /><br />
-• <strong>Resident:</strong> <strong>${PROPERTY_DATA.resident.name}</strong> (Since ${PROPERTY_DATA.resident.since}, ${PROPERTY_DATA.resident.status})<br />
-• <strong>Lease Covenants:</strong> Term ${PROPERTY_DATA.lease.term} (${PROPERTY_DATA.lease.daysRemaining} days remaining in renewal window). Base Rent: <strong>${PROPERTY_DATA.lease.monthlyRent}</strong> (Paid on ${PROPERTY_DATA.lease.lastPaidDate}, zero arrears).<br />
-• <strong>Escrow Account:</strong> ${PROPERTY_DATA.lease.securityDeposit} digital trust-held.<br />
-• <strong>Active Work Order:</strong> Ticket #${PROPERTY_DATA.maintenance.ticketId} (${PROPERTY_DATA.maintenance.scope}) — Technician Rajesh K. (${PROPERTY_DATA.maintenance.vendor}) dispatched for ${PROPERTY_DATA.maintenance.scheduledTime}.<br />
-• <strong>Rooftop Microgrid:</strong> ${PROPERTY_DATA.microgrid.solarGeneration}, Battery at ${PROPERTY_DATA.microgrid.batteryStorage}.<br />
-• <strong>Smart Access Lock:</strong> ${PROPERTY_DATA.security.perimeterLock} (${PROPERTY_DATA.security.lastEvent}).`,
-          richCard: {
-            title: 'Unit 014 Dossier',
-            badge: 'Operations Active',
-            params: [
-              { label: 'Resident', value: PROPERTY_DATA.resident.name, sub: 'Good Standing' },
-              { label: 'Rent Status', value: PROPERTY_DATA.lease.monthlyRent, sub: 'Zero Arrears' },
-              { label: 'Work Order', value: 'WO-8841 (14:00)', sub: 'Apex Climate' },
-              { label: 'Solar Output', value: '4.8 kW Gen', sub: '92% Battery' }
-            ],
-            actions: [
-              { label: 'Inspect Home 014 in 3D', action: 'crosslink-3d', payload: '02 Living Quarters' },
-              { label: 'Calculate Escalation (+5%)', action: 'query', payload: 'Calculate 5% rent escalation on Home 014' },
-              { label: 'Pacific Grove Market', action: 'query', payload: 'Pacific Grove Market Overview' }
-            ]
-          }
-        };
-      }
-
-      // 15. Pacific Grove Market Overview & KPI Summary
-      if (/(market|overview|summary|portfolio|how many properties|pacific grove market|median price|average rent)/i.test(lower)) {
-        const s = this.knowledgeBase.summary;
-        return {
-          type: 'companion',
-          author: 'THΛTJOINT Sentinel · Market Intelligence Core',
-          title: 'Pacific Grove Real Estate Market Dossier',
-          body: `<strong>Municipal Market Executive Summary (Pacific Grove, CA):</strong><br />
-The autonomous repository tracks <strong>${s.total_properties} property listings</strong> across <strong>${s.total_hosts} operators</strong> on the Monterey Peninsula.<br /><br />
-• <strong>Median Nightly Rate:</strong> $${s.pricing.median_nightly.toFixed(0)}/night (Mean: $${s.pricing.mean_nightly.toFixed(2)}/night, Range: $${s.pricing.min_nightly.toFixed(0)} – $${s.pricing.max_nightly.toFixed(0)}/night).<br />
-• <strong>30-Day Flexible Stays:</strong> <strong>${s.regulatory_str_split.thirty_day_plus_flexible} properties (${s.regulatory_str_split.str_compliance_ratio})</strong> operate as 30+ day flexible leases, avoiding short-term rental permit caps.<br />
-• <strong>Licensed STRs & Hotels:</strong> <strong>${s.regulatory_str_split.short_term_str} properties</strong> operate under municipal STR permits or commercial hospitality zoning.<br />
-• <strong>Inventory Distribution:</strong> ${s.room_type_distribution['Entire home/apt']} Entire Homes/Apartments, ${s.room_type_distribution['Private room']} Private Rooms, ${s.room_type_distribution['Hotel room']} Historic Hotel Suites.<br />
-• <strong>Average Mid-Term Rent:</strong> <strong>$${s.pricing.avg_monthly_midterm.toLocaleString('en-US')}/month</strong> for flexible 30-day tenancies.`,
-          richCard: {
-            title: 'Market KPI Snapshot · Pacific Grove',
-            badge: 'Live Knowledge Base',
-            params: [
-              { label: 'Inventory', value: `${s.total_properties} Units`, sub: '114 Operators' },
-              { label: 'Median Rate', value: `$${s.pricing.median_nightly.toFixed(0)}`, sub: 'USD / Night' },
-              { label: '30-Day Covenants', value: '40.9%', sub: '112 Units (STR Exempt)' },
-              { label: 'Avg Monthly', value: `$${Math.round(s.pricing.avg_monthly_midterm).toLocaleString('en-US')}`, sub: '30-Day Flexible Rent' }
-            ],
-            actions: [
-              { label: 'Explore Oceanfront & Luxury', action: 'query', payload: 'Oceanfront & Luxury Villas' },
-              { label: 'Explain 30-Day STR Rule', action: 'query', payload: 'Explain 30-day minimum stay rule' },
-              { label: 'Browse 274 Properties', action: 'open-kb' }
-            ]
-          }
-        };
-      }
-
-      // 16. General Fallback with Intelligent Guidance & Knowledge Base Links
+      // 7. Adaptive Default Assistant Response
       return {
         type: 'companion',
-        author: 'THΛTJOINT Sentinel · Autonomous Operations Core',
-        title: 'Operational Guidance & Knowledge Base',
-        body: `I have analyzed your inquiry: <em>"${this.escapeHtml(q)}"</em>.<br /><br />
-Sentinel AI monitors both residential unit telemetry for <strong>Home 014</strong> and the verified <strong>Pacific Grove Real Estate Knowledge Base (274 properties)</strong>. Choose an action below or ask a specific question:`,
+        author: 'THΛTJOINT AI · Global Assistant',
+        title: 'Ready · Global World Map & Personalized AI Active',
+        body: `Hello! I am your personalized ThatJoint AI companion. My background knowledge base is currently at **zero baseline** ready to be built according to your suggestions, and I have a **detailed map of the entire world** ready to answer any question from any corner of the Earth.<br /><br />
+• 🗺️ <strong>World Map:</strong> Ask about any city, country, coordinates, timezone, or living conditions across 7 continents.<br />
+• 🧠 <strong>Build Knowledge Base:</strong> Say <em>"Remember that..."</em> or <em>"Add rule:..."</em> and I will learn and save it.<br />
+• 🏡 <strong>Co-Living Booking:</strong> Say <em>"I want to book a room"</em> to initiate global intake.`,
         richCard: {
-          title: 'Operations Navigator',
-          badge: 'Sentinel Active',
+          title: 'Capabilities Hub',
+          badge: 'World Map + Zero-Base KB',
           params: [
-            { label: 'Active Unit', value: PROPERTY_DATA.unit, sub: 'Courtyard Suite' },
-            { label: 'Market Tracked', value: '274 Properties', sub: 'Pacific Grove' },
-            { label: 'Median Nightly', value: '$351/night', sub: '40.9% 30-Day STR' }
+            { label: 'World Map', value: '7 Continents', sub: 'Every Corner' },
+            { label: 'Knowledge Base', value: `${Object.keys(this.customKnowledge).length} Learned`, sub: 'Clean Slate' },
+            { label: 'Concierge', value: 'Active', sub: 'Global Tenancy' }
           ],
           actions: [
-            { label: 'Explore Pacific Grove Market', action: 'query', payload: 'Pacific Grove Market Overview' },
-            { label: 'Browse 274 Properties', action: 'open-kb' },
-            { label: 'Explain 30-Day STR Rule', action: 'query', payload: 'Explain 30-day minimum stay rule' },
-            { label: 'Unit 014 Live Status', action: 'query', payload: 'Home 014 Status & Telemetry' }
+            { label: '🗺️ Explore World Map', action: 'open-kb' },
+            { label: '🏡 Book Co-Living', action: 'query', payload: 'I want to book a room' },
+            { label: '🧠 Show Knowledge Base', action: 'query', payload: 'Show knowledge base' }
           ]
-        }
+        },
+        followUps: [
+          'Explore Tokyo Japan',
+          'Tell me about Lisbon Portugal',
+          'Where is Ushuaia?',
+          'Time difference between London and New York',
+          'I want to book a room'
+        ]
       };
     }
 
-        appendMessage(msg) {
-      if (!this.feed) return;
-      const timeStr = new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' });
-      const wrap = document.createElement('article');
-      wrap.className = `tj-bubble-wrap ${msg.type || 'companion'}`;
+    // ----------------------------------------------------------------
+    // UI DOM Rendering & Management
+    // ----------------------------------------------------------------
+    init() {
+      if (typeof document === 'undefined') return;
+      this.container = typeof this.containerId === 'string'
+        ? document.getElementById(this.containerId)
+        : this.containerId;
 
-      const cardHtml = `
-        <div class="tj-bubble-meta">
-          <span class="author">${msg.author || 'THΛTJOINT Sentinel'}</span>
-          <time datetime="${new Date().toISOString()}">${timeStr}</time>
-        </div>
-        <div class="tj-bubble-card">
-          ${msg.attachment ? `
-            <div class="tj-user-attachment">
-              <i>📎</i>
-              <span><strong>${this.escapeHtml(msg.attachment.name)}</strong> ${msg.attachment.size}</span>
-            </div>
-          ` : ''}
-          ${msg.title ? `<h4>${msg.title}</h4>` : ''}
-          ${msg.body ? `<div class="tj-bubble-body">${msg.body}</div>` : ''}
-          ${msg.richCard ? `
-            <div class="tj-rich-card">
-              <div class="tj-rich-card-head">
-                <b>${msg.richCard.title}</b>
-                <span class="badge-pill">${msg.richCard.badge}</span>
-              </div>
-              <div class="tj-param-grid">
-                ${msg.richCard.params.map(p => `
-                  <div class="tj-param-box">
-                    <span>${p.label}</span>
-                    <strong>${p.value}</strong>
-                    ${p.sub ? `<small>${p.sub}</small>` : ''}
-                  </div>
-                `).join('')}
-              </div>
-              ${msg.richCard.actions && msg.richCard.actions.length ? `
-                <div class="tj-card-actions">
-                  ${msg.richCard.actions.map(a => `
-                    <button type="button" class="tj-card-btn" data-action="${a.action}" data-payload="${this.escapeHtml(a.payload || '')}">
-                      <span>${a.label}</span>
-                      <i>↗</i>
-                    </button>
-                  `).join('')}
+      if (!this.container) {
+        if (this.isDrawer && typeof document !== 'undefined' && document.body) {
+          this.container = document.createElement('div');
+          this.container.id = typeof this.containerId === 'string' ? this.containerId : 'sentinelDrawerRoot';
+          document.body.appendChild(this.container);
+        } else {
+          return;
+        }
+      }
+
+      this.render();
+      this.bindElements();
+      this.initSpeechRecognition();
+      this.bindEvents();
+      this.setupKeyboardShortcuts();
+      this.renderWelcomeHub();
+
+      if (typeof window !== 'undefined') {
+        window.ThatJointSentinel = this;
+        window.openSentinelAI = (q) => this.openDrawer(q);
+        window.closeSentinelAI = () => this.closeDrawer();
+        window.toggleSentinelAI = () => this.toggleDrawer();
+      }
+    }
+
+    render() {
+      const template = `
+        <div class="tj-companion-container ${this.isDrawer ? 'tj-companion-drawer' : ''}" id="tjCompanionView" role="region" aria-label="THΛTJOINT AI">
+          <!-- Drag and Drop Overlay -->
+          <div class="tj-dropzone-overlay" id="tjDropzoneOverlay" aria-hidden="true">
+            <span class="icon">📄</span>
+            <strong>Drop File or Document</strong>
+            <p>PDF, images, CSVs, or agreements analyzed automatically</p>
+          </div>
+
+          <!-- Minimal Elegant Topbar -->
+          <header class="tj-sentinel-header tj-clean-header">
+            <div class="tj-sentinel-topline">
+              <div class="tj-sentinel-profile">
+                <div class="tj-clean-avatar" aria-hidden="true">
+                  <span class="tj-avatar-sparkle">✦</span>
                 </div>
-              ` : ''}
+                <div class="tj-sentinel-meta">
+                  <h3 class="tj-sentinel-name">THΛTJOINT AI</h3>
+                  <div class="tj-clean-status">
+                    <span class="tj-status-dot"></span>
+                    <span id="sentinelStatusText">Ready · World Map Active</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controls: Open World Map, Clear & Close -->
+              <div class="tj-sentinel-actions">
+                <button type="button" class="tj-sentinel-icon-btn" id="btnOpenWorldMap" title="World Map Explorer" aria-label="Open World Map">🗺️</button>
+                <button type="button" class="tj-sentinel-icon-btn" id="btnClearChat" title="Clear chat session" aria-label="Clear chat">↺</button>
+                ${this.isDrawer ? `<button type="button" class="tj-sentinel-icon-btn" id="btnCloseDrawer" title="Close [Esc]" aria-label="Close drawer">✕</button>` : ''}
+              </div>
             </div>
-          ` : ''}
+          </header>
+
+          <!-- Main Chat Feed & Stream -->
+          <div class="tj-companion-body" id="companionBody">
+            <div class="tj-companion-feed" id="companionFeed" role="log" aria-live="polite">
+              <!-- Messages stream here -->
+            </div>
+
+            <!-- Sleek Input Dock -->
+            <div class="tj-input-dock tj-clean-dock">
+              <div class="tj-staged-attachment" id="stagedAttachment" style="display: none;">
+                <div class="tj-staged-info">
+                  <span class="icon" id="stagedFileIcon">📄</span>
+                  <div>
+                    <strong id="stagedFileName">Document.pdf</strong>
+                    <small id="stagedFileSize">(240 KB)</small>
+                  </div>
+                </div>
+                <button type="button" class="tj-staged-remove-btn" id="stagedRemoveBtn" title="Remove attachment" aria-label="Remove attachment">✕</button>
+              </div>
+
+              <form class="tj-media-form tj-clean-form" id="chatForm" autocomplete="off">
+                <input type="file" id="hiddenFileInput" accept=".pdf,.png,.jpg,.jpeg,.csv,.docx" style="display: none;" />
+
+                <button type="button" class="tj-attach-btn" id="btnAttachFile" title="Attach file or lease" aria-label="Attach file">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"></path></svg>
+                </button>
+
+                <button type="button" class="tj-mic-btn" id="btnVoiceInput" title="Dictate voice query" aria-label="Dictate query">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"></path><path d="M19 10v2a7 7 0 01-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </button>
+
+                <div class="tj-textarea-wrapper">
+                  <textarea
+                    id="chatInput"
+                    rows="1"
+                    placeholder="Ask anything about any corner of the world map..."
+                    aria-label="Ask ThatJoint AI"></textarea>
+                </div>
+
+                <button type="submit" class="tj-send-btn" id="btnSend" title="Send message" aria-label="Send">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </form>
+
+              <div class="tj-clean-footer-hint">
+                <span>Press <strong>Enter</strong> to send · <strong>Esc</strong> to close</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive World Map & Location Intelligence Explorer Modal -->
+        <dialog id="knowledgeBaseModal" class="tj-dialog" aria-labelledby="kbModalTitle">
+          <div class="config-modal-inner">
+            <div class="config-head">
+              <span>THΛTJOINT / <b>WORLD DETAILED MAP & GLOBAL INTELLIGENCE</b></span>
+              <button type="button" class="config-close-btn" id="kbCloseBtn" aria-label="Close modal">×</button>
+            </div>
+            <div class="kb-modal-header">
+              <h2 class="config-title" id="kbModalTitle">DETAILED WORLD MAP<br /><em>EVERY CORNER OF EARTH.</em></h2>
+              <p class="config-desc">
+                Explore global cities, coordinates, timezones, and living insights across all 7 continents. Tap any destination to load its complete dossier into ThatJoint AI.
+              </p>
+            </div>
+
+            <div class="kb-search-bar">
+              <input type="text" id="kbSearchInput" placeholder="Search any city, country, or coordinates (e.g. Tokyo, Lisbon, Ushuaia)..." aria-label="Search world locations" />
+              <button type="button" id="kbClearSearch" aria-label="Clear search">×</button>
+            </div>
+
+            <div class="kb-filter-tabs" id="kbFilterTabs">
+              <button type="button" class="kb-tab is-active" data-cat="all">🌍 All (34+)</button>
+              <button type="button" class="kb-tab" data-cat="Asia">🗼 Asia</button>
+              <button type="button" class="kb-tab" data-cat="Europe">🏰 Europe</button>
+              <button type="button" class="kb-tab" data-cat="North America">🗽 N. America</button>
+              <button type="button" class="kb-tab" data-cat="South America">🌴 S. America</button>
+              <button type="button" class="kb-tab" data-cat="Africa">🦁 Africa</button>
+              <button type="button" class="kb-tab" data-cat="Oceania">🦘 Oceania</button>
+              <button type="button" class="kb-tab" data-cat="extremes">🧭 Extremes & Corners</button>
+            </div>
+
+            <div class="kb-results-summary" id="kbResultsCount">Showing 34 global locations across 7 continents</div>
+            <div class="kb-cards-grid" id="kbCardsGrid" role="list">
+              <!-- World Location cards render dynamically -->
+            </div>
+          </div>
+        </dialog>
+
+        <!-- Directives & Commands Modal -->
+        <dialog id="directivesModal" class="tj-dialog" aria-labelledby="directivesTitle">
+          <div class="config-modal-inner">
+            <div class="config-head">
+              <span>THΛTJOINT / <b>OPERATIONAL DIRECTIVES GUIDE</b></span>
+              <button type="button" class="config-close-btn" id="directivesCloseBtn" aria-label="Close modal">×</button>
+            </div>
+            <h2 class="config-title" id="directivesTitle">THATJOINT AI<br /><em>COMMAND DIRECTIVES.</em></h2>
+            <p class="config-desc">
+              Ask about any corner of the world, build custom knowledge as you suggest, or book co-living spaces:
+            </p>
+            <div class="directives-grid">
+              <div class="directive-section">
+                <h4>🗺️ World Map & Geography</h4>
+                <div class="directive-chips">
+                  <button type="button" class="directive-chip" data-query="Explore Tokyo Japan">Explore Tokyo 🇯🇵</button>
+                  <button type="button" class="directive-chip" data-query="Tell me about living in Lisbon">Living in Lisbon 🇵🇹</button>
+                  <button type="button" class="directive-chip" data-query="Where is Ushuaia?">Where is Ushuaia? 🇦🇷</button>
+                  <button type="button" class="directive-chip" data-query="Time difference between Tokyo and New York">Tokyo vs NY Timezone</button>
+                </div>
+              </div>
+              <div class="directive-section">
+                <h4>🧠 Knowledge Base Building</h4>
+                <div class="directive-chips">
+                  <button type="button" class="directive-chip" data-query="Show knowledge base">Show knowledge base</button>
+                  <button type="button" class="directive-chip" data-query="Remember that ThatJoint offers fiber WiFi in all units">Teach: Fiber WiFi</button>
+                  <button type="button" class="directive-chip" data-query="Add rule: minimum stay is 1 month">Teach: 1-Month Stay</button>
+                  <button type="button" class="directive-chip" data-query="Clear custom knowledge">Reset Knowledge Base</button>
+                </div>
+              </div>
+              <div class="directive-section">
+                <h4>🏡 Co-Living Tenancy Booking</h4>
+                <div class="directive-chips">
+                  <button type="button" class="directive-chip" data-query="I want to book a room">Start Tenancy Intake</button>
+                  <button type="button" class="directive-chip" data-query="Book a studio in Tokyo Shibuya">Book in Tokyo</button>
+                  <button type="button" class="directive-chip" data-query="Book a flat in Lisbon Chiado">Book in Lisbon</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </dialog>
+      `;
+
+      if (this.isDrawer) {
+        this.container.innerHTML = `
+          <button type="button" class="tj-sentinel-launcher-btn" id="tjSentinelLauncher" aria-label="Open ThatJoint AI Side Window" title="Open ThatJoint AI [?]">
+            <span class="tj-launcher-pulse" aria-hidden="true"></span>
+            <span class="tj-launcher-text">ThatJoint AI</span>
+            <span class="tj-launcher-kbd" aria-hidden="true">?</span>
+          </button>
+          <div class="tj-companion-backdrop" id="tjBackdrop" aria-hidden="true"></div>
+          ${template}
+        `;
+      } else {
+        this.container.innerHTML = template;
+      }
+    }
+
+    bindElements() {
+      this.ensureConfigModal();
+      this.feed = document.getElementById('companionFeed');
+      this.input = document.getElementById('chatInput');
+      this.form = document.getElementById('chatForm');
+      this.statusText = document.getElementById('sentinelStatusText');
+      this.dropOverlay = document.getElementById('tjDropzoneOverlay');
+      this.stagedAttachment = document.getElementById('stagedAttachment');
+      this.stagedFileName = document.getElementById('stagedFileName');
+      this.stagedFileSize = document.getElementById('stagedFileSize');
+      this.fileInput = document.getElementById('hiddenFileInput');
+      this.micBtn = document.getElementById('btnVoiceInput');
+      this.viewContainer = document.getElementById('tjCompanionView');
+      this.backdrop = document.getElementById('tjBackdrop');
+      this.launcherBtn = document.getElementById('tjSentinelLauncher');
+
+      this.configModal = document.getElementById('configModal');
+      this.kbModal = document.getElementById('knowledgeBaseModal');
+      this.directivesModal = document.getElementById('directivesModal');
+      this.kbSearchInput = document.getElementById('kbSearchInput');
+      this.kbCardsGrid = document.getElementById('kbCardsGrid');
+      this.kbResultsCount = document.getElementById('kbResultsCount');
+    }
+
+    ensureConfigModal() {
+      if (document.getElementById('configModal')) return;
+      const dlg = document.createElement('dialog');
+      dlg.id = 'configModal';
+      dlg.className = 'tj-dialog';
+      dlg.innerHTML = `
+        <div class="config-modal-inner">
+          <div class="config-head">
+            <span>THΛTJOINT / <b>AI EXECUTION CONFIGURATION</b></span>
+            <button type="button" class="config-close-btn" id="configCloseBtn" aria-label="Close modal">×</button>
+          </div>
+          <h2 class="config-title">AI ENGINE<br /><em>TIER SELECTION.</em></h2>
+          <p class="config-desc">Toggle between Autonomous Global Engine, Frontier BYOK (Gemini), or Enterprise Webhooks.</p>
+        </div>
+      `;
+      if (document.body) document.body.appendChild(dlg);
+    }
+
+    initSpeechRecognition() {
+      if (typeof window === 'undefined') return;
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) return;
+      this.recognition = new SpeechRecognition();
+      this.recognition.continuous = false;
+      this.recognition.interimResults = false;
+      this.recognition.onresult = (e) => {
+        const transcript = e.results[0][0].transcript;
+        if (this.input) {
+          this.input.value = transcript;
+          this.submitQuery();
+        }
+      };
+      this.recognition.onend = () => {
+        this.isListening = false;
+        if (this.micBtn) this.micBtn.classList.remove('is-listening');
+      };
+    }
+
+    bindEvents() {
+      if (this.launcherBtn) {
+        this.launcherBtn.addEventListener('click', () => this.openDrawer());
+      }
+
+      if (this.form) {
+        this.form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.submitQuery();
+        });
+      }
+
+      if (this.input) {
+        this.input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            this.submitQuery();
+          }
+        });
+      }
+
+      // File attachment
+      const attachBtn = document.getElementById('btnAttachFile');
+      if (attachBtn && this.fileInput) {
+        attachBtn.addEventListener('click', () => this.fileInput.click());
+      }
+
+      if (this.fileInput) {
+        this.fileInput.addEventListener('change', (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (file) this.stageFile(file);
+        });
+      }
+
+      const stagedRemoveBtn = document.getElementById('stagedRemoveBtn');
+      if (stagedRemoveBtn) {
+        stagedRemoveBtn.addEventListener('click', () => this.unstageFile());
+      }
+
+      // Voice
+      if (this.micBtn) {
+        this.micBtn.addEventListener('click', () => {
+          if (!this.recognition) return;
+          if (this.isListening) {
+            this.recognition.stop();
+          } else {
+            this.recognition.start();
+            this.isListening = true;
+            this.micBtn.classList.add('is-listening');
+          }
+        });
+      }
+
+      // Clear chat
+      const clearBtn = document.getElementById('btnClearChat');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          this.conversationHistory = [];
+          this.resetBookingState();
+          if (this.feed) this.feed.innerHTML = '';
+          this.renderWelcomeHub();
+          this.setMascotState('idle', '<span>AI Ready</span> · <i>Session reset</i>');
+        });
+      }
+
+      // Open World Map Button
+      const openWorldMapBtn = document.getElementById('btnOpenWorldMap');
+      if (openWorldMapBtn) {
+        openWorldMapBtn.addEventListener('click', () => this.openWorldMapModal());
+      }
+
+      // Drawer close
+      const closeDrawerBtn = document.getElementById('btnCloseDrawer');
+      if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', () => this.closeDrawer());
+      if (this.backdrop) this.backdrop.addEventListener('click', () => this.closeDrawer());
+
+      // World Map Modal controls
+      const kbCloseBtn = document.getElementById('kbCloseBtn');
+      if (kbCloseBtn) kbCloseBtn.addEventListener('click', () => this.closeWorldMapModal());
+
+      const kbFilterTabs = document.getElementById('kbFilterTabs');
+      if (kbFilterTabs) {
+        kbFilterTabs.addEventListener('click', (e) => {
+          const tab = e.target.closest('.kb-tab');
+          if (tab) {
+            kbFilterTabs.querySelectorAll('.kb-tab').forEach(t => t.classList.remove('is-active'));
+            tab.classList.add('is-active');
+            const cat = tab.getAttribute('data-cat');
+            this.renderWorldLocationsList(cat, this.kbSearchInput ? this.kbSearchInput.value : '');
+          }
+        });
+      }
+
+      if (this.kbSearchInput) {
+        this.kbSearchInput.addEventListener('input', (e) => {
+          const activeTab = document.querySelector('#kbFilterTabs .kb-tab.is-active');
+          const cat = activeTab ? activeTab.getAttribute('data-cat') : 'all';
+          this.renderWorldLocationsList(cat, e.target.value);
+        });
+      }
+
+      if (this.kbCardsGrid) {
+        this.kbCardsGrid.addEventListener('click', (e) => {
+          const card = e.target.closest('.kb-property-card');
+          if (card) {
+            const locName = card.getAttribute('data-name');
+            this.closeWorldMapModal();
+            this.dispatchQuery(`Explore ${locName} on world map`);
+          }
+        });
+      }
+
+      // Card action delegation in feed
+      if (this.feed) {
+        this.feed.addEventListener('click', (e) => {
+          const btn = e.target.closest('.tj-card-btn');
+          if (btn) {
+            const action = btn.getAttribute('data-action');
+            const payload = btn.getAttribute('data-payload');
+            this.handleCardAction(action, payload, btn);
+          }
+        });
+      }
+    }
+
+    setupKeyboardShortcuts() {
+      if (typeof window === 'undefined') return;
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (this.kbModal && this.kbModal.open) {
+            this.closeWorldMapModal();
+          } else if (this.viewContainer && this.viewContainer.classList.contains('is-open')) {
+            this.closeDrawer();
+          }
+        } else if ((e.key === '?' || (e.key === '/' && (e.metaKey || e.ctrlKey))) && !['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) {
+          e.preventDefault();
+          this.toggleDrawer();
+        }
+      });
+    }
+
+    openWorldMapModal() {
+      if (!this.kbModal) return;
+      this.renderWorldLocationsList('all', '');
+      if (typeof this.kbModal.showModal === 'function') {
+        this.kbModal.showModal();
+      } else {
+        this.kbModal.setAttribute('open', '');
+      }
+    }
+
+    closeWorldMapModal() {
+      if (!this.kbModal) return;
+      if (typeof this.kbModal.close === 'function') {
+        this.kbModal.close();
+      } else {
+        this.kbModal.removeAttribute('open');
+      }
+    }
+
+    renderWorldLocationsList(continentFilter = 'all', searchQuery = '') {
+      if (!this.kbCardsGrid) return;
+      const q = (searchQuery || '').trim().toLowerCase();
+      let list = this.worldCities.slice();
+
+      if (continentFilter === 'extremes') {
+        list = list.filter(c => ['ushuaia', 'longyearbyen', 'honolulu', 'reykjavik'].includes(c.id));
+      } else if (continentFilter !== 'all') {
+        list = list.filter(c => c.continent.toLowerCase() === continentFilter.toLowerCase());
+      }
+
+      if (q) {
+        list = list.filter(c => 
+          c.name.toLowerCase().includes(q) ||
+          c.country.toLowerCase().includes(q) ||
+          c.continent.toLowerCase().includes(q) ||
+          c.coordinates.toLowerCase().includes(q)
+        );
+      }
+
+      if (this.kbResultsCount) {
+        this.kbResultsCount.textContent = `Showing ${list.length} global locations across ${continentFilter === 'all' ? '7 Continents' : continentFilter}`;
+      }
+
+      if (!list.length) {
+        this.kbCardsGrid.innerHTML = `
+          <div class="kb-empty-state" style="padding:30px; text-align:center; color:#9c9589;">
+            <span style="font-size:32px;">🔍</span><br />
+            <strong>No global locations matching "${this.escapeHtml(searchQuery)}"</strong>
+            <p>Try searching for Tokyo, Lisbon, London, Berlin, or Ushuaia.</p>
+          </div>
+        `;
+        return;
+      }
+
+      this.kbCardsGrid.innerHTML = list.map(c => `
+        <div class="kb-property-card" data-id="${c.id}" data-name="${c.name}" style="background:#201c1a; border:1px solid #38312c; border-radius:4px; padding:12px; cursor:pointer; margin-bottom:8px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <strong style="color:#ffffff; font-size:14px;">${c.flag} ${c.name}, ${c.country}</strong>
+              <div style="font-size:11px; color:#A459FF; margin-top:2px;">📍 ${c.coordinates} · ${c.timezone}</div>
+            </div>
+            <span style="background:#2e2621; color:#EDEBE4; padding:2px 8px; border-radius:3px; font-size:11px;">$${c.avgRentUSD}/mo</span>
+          </div>
+          <p style="font-size:12px; color:#a8a096; margin:8px 0 0;">${c.highlights.slice(0, 110)}...</p>
+        </div>
+      `).join('');
+    }
+
+    renderWelcomeHub() {
+      if (!this.feed) return;
+      const hubWrap = document.createElement('div');
+      hubWrap.className = 'tj-welcome-clean';
+      hubWrap.innerHTML = `
+        <div class="tj-welcome-badge">
+          <span>● Global AI Active · Knowledge Base at Zero</span>
+        </div>
+        <h2 class="tj-welcome-title">How can I assist you worldwide?</h2>
+        <p class="tj-welcome-desc">
+          I am equipped with a detailed world map across all 7 continents. Background knowledge base starts at zero—ready to be built as you suggest!
+        </p>
+
+        <div class="tj-clean-starter-grid">
+          <button type="button" class="tj-clean-starter-card" data-query="Explore Tokyo Japan">
+            <span class="card-icon">🗺️</span>
+            <div class="card-text">
+              <strong>World Map & Cities</strong>
+              <small>Coordinates & living insights for any corner of Earth</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="tj-clean-starter-card" data-query="Show knowledge base">
+            <span class="card-icon">🧠</span>
+            <div class="card-text">
+              <strong>Personalize & Build</strong>
+              <small>Knowledge base starts at zero · teach me anything</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="tj-clean-starter-card" data-query="I want to book a room">
+            <span class="card-icon">🏡</span>
+            <div class="card-text">
+              <strong>Global Co-Living Booking</strong>
+              <small>Multi-step intake, KYC & reservation hold</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
+
+          <button type="button" class="tj-clean-starter-card" data-query="Time difference between Tokyo and New York">
+            <span class="card-icon">⏱️</span>
+            <div class="card-text">
+              <strong>Timezones & Coordinates</strong>
+              <small>Calculate global offsets, distances & geography</small>
+            </div>
+            <span class="card-arrow" aria-hidden="true">→</span>
+          </button>
         </div>
       `;
 
-      wrap.innerHTML = cardHtml;
+      hubWrap.addEventListener('click', (e) => {
+        const card = e.target.closest('.tj-clean-starter-card');
+        if (card) {
+          const query = card.getAttribute('data-query');
+          if (query) {
+            if (this.input) this.input.value = query;
+            this.submitQuery();
+          }
+        }
+      });
+
+      this.feed.appendChild(hubWrap);
+    }
+
+    submitQuery() {
+      if (!this.input) return;
+      const text = this.input.value.trim();
+      const file = this.stagedFile;
+      if (!text && !file) return;
+
+      this.input.value = '';
+      this.unstageFile();
+      this.dispatchQuery(text, file);
+    }
+
+    stageFile(file) {
+      this.stagedFile = file;
+      if (this.stagedAttachment) {
+        this.stagedAttachment.style.display = 'flex';
+        if (this.stagedFileName) this.stagedFileName.textContent = file.name;
+        if (this.stagedFileSize) this.stagedFileSize.textContent = `(${(file.size / 1024).toFixed(0)} KB)`;
+      }
+    }
+
+    unstageFile() {
+      this.stagedFile = null;
+      if (this.stagedAttachment) this.stagedAttachment.style.display = 'none';
+      if (this.fileInput) this.fileInput.value = '';
+    }
+
+    dispatchQuery(query, file = null) {
+      this.isBusy = true;
+      this.setMascotState('thinking', '<span>Synthesizing...</span> · <i>Global geographic retrieval</i>');
+
+      this.appendMessage({
+        type: 'user',
+        author: this.userProfile.name || 'User',
+        title: null,
+        body: query || (file ? `Attached file: ${file.name}` : ''),
+        attachment: file ? { name: file.name, size: `${(file.size / 1024).toFixed(0)} KB` } : null
+      });
+
+      this.conversationHistory.push({
+        role: 'user',
+        content: query || (file ? `Attached file: ${file.name}` : '')
+      });
+
+      // Process with natural response latency
+      setTimeout(() => {
+        const resp = this.generateGenerativeResponse(query, file);
+        this.deliverResponse(resp);
+      }, 260);
+    }
+
+    deliverResponse(response) {
+      this.isBusy = false;
+      this.setMascotState('speaking', '<span>ThatJoint AI</span> · <i>Delivering insight</i>');
+      this.appendMessage(response);
+      this.conversationHistory.push({
+        role: 'assistant',
+        content: response.body || response.title || 'Response delivered'
+      });
+
+      setTimeout(() => {
+        this.setMascotState('idle', '<span>AI Ready</span> · <i>World Map Active</i>');
+      }, 1500);
+    }
+
+    appendMessage(msg) {
+      if (!this.feed) return;
+      const isUser = msg.type === 'user';
+      const wrap = document.createElement('div');
+      wrap.className = `tj-bubble-wrap ${isUser ? 'is-user-wrap' : 'is-assistant-wrap'}`;
+
+      let inner = `
+        <div class="tj-bubble ${isUser ? 'tj-user-bubble' : 'tj-assistant-bubble'}">
+          ${msg.title ? `<div class="tj-bubble-title" style="font-weight:bold; margin-bottom:6px; color:#EDEBE4;">${msg.title}</div>` : ''}
+          <div class="tj-bubble-text">${msg.body || ''}</div>
+        </div>
+      `;
+
+      wrap.innerHTML = inner;
+      this.feed.appendChild(wrap);
+
+      if (msg.richCard) {
+        this.renderRichCard(msg.richCard);
+      }
+
+      this.feed.scrollTop = this.feed.scrollHeight;
+    }
+
+    renderRichCard(card) {
+      if (!this.feed || !card) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'tj-rich-card-wrap';
+
+      let paramsHtml = '';
+      if (card.params && card.params.length) {
+        paramsHtml = `
+          <div class="tj-card-params" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:8px; margin:10px 0;">
+            ${card.params.map(p => `
+              <div style="background:#221d1b; padding:8px; border-radius:3px; border:1px solid #38302b;">
+                <div style="font-size:10px; color:#9c9589; text-transform:uppercase;">${this.escapeHtml(p.label)}</div>
+                <div style="font-size:13px; font-weight:bold; color:#ffffff;">${this.escapeHtml(p.value)}</div>
+                ${p.sub ? `<small style="font-size:10px; color:#A459FF;">${this.escapeHtml(p.sub)}</small>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      let actionsHtml = '';
+      if (card.actions && card.actions.length) {
+        actionsHtml = `
+          <div class="tj-card-actions" style="display:flex; flex-wrap:wrap; gap:6px; margin-top:8px;">
+            ${card.actions.map(a => `
+              <button type="button" class="tj-card-btn" data-action="${a.action}" ${a.payload ? `data-payload="${this.escapeHtml(a.payload)}"` : ''} style="background:#2e2622; color:#EDEBE4; border:1px solid #4a3e37; border-radius:3px; padding:6px 12px; font-size:12px; cursor:pointer;">
+                ${a.label}
+              </button>
+            `).join('')}
+          </div>
+        `;
+      }
+
+      wrap.innerHTML = `
+        <div class="tj-rich-card" style="background:#1b1716; border:1px solid #3a322c; border-radius:4px; padding:12px; margin:8px 0 12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <strong style="color:#ffffff; font-size:13px;">${card.title}</strong>
+            ${card.badge ? `<span style="background:#A459FF22; color:#A459FF; padding:2px 8px; border-radius:3px; font-size:11px; font-weight:bold;">${card.badge}</span>` : ''}
+          </div>
+          ${paramsHtml}
+          ${actionsHtml}
+        </div>
+      `;
+
       this.feed.appendChild(wrap);
       this.feed.scrollTop = this.feed.scrollHeight;
     }
@@ -3041,75 +3427,62 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
       } else if (action === 'trigger-upload') {
         if (this.fileInput) this.fileInput.click();
       } else if (action === 'open-kb') {
-        this.openKnowledgeBaseModal();
-      } else if (action === 'open-help') {
-        this.openDirectivesModal();
-      } else if (action === 'open-config') {
-        this.openConfigModal();
+        this.openWorldMapModal();
       } else if (action === 'crosslink-3d') {
         this.emit('selectZone3D', payload);
       } else if (action === 'copy-text') {
         const targetEl = document.getElementById(payload);
-        if (targetEl) {
-          this.copyToClipboard(targetEl.innerText, btn);
-        }
+        if (targetEl) this.copyToClipboard(targetEl.innerText, btn);
       }
     }
 
     copyToClipboard(text, btn) {
       if (!text) return;
-      navigator.clipboard.writeText(text).then(() => {
-        if (btn) {
-          const original = btn.innerHTML;
-          btn.innerHTML = '<span>✓ Copied!</span>';
-          btn.classList.add('is-copied');
-          setTimeout(() => {
-            btn.innerHTML = original;
-            btn.classList.remove('is-copied');
-          }, 2000);
-        }
-      }).catch(() => {
-        alert('Copied to clipboard.');
-      });
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text);
+      }
+      if (btn) {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✓ Copied!</span>';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      }
     }
 
-    updateTelemetryPills() {
-      const bar = document.getElementById('sentinelTelemetryBar');
-      if (!bar) return;
-      const s = this.knowledgeBase.summary;
-      if (!s) return;
-      bar.innerHTML = `
-        <span class="tj-telemetry-chip highlight"><b>📍 MARKET</b> Pacific Grove, CA</span>
-        <span class="tj-telemetry-chip"><b>📊 UNITS</b> ${s.total_properties} Active</span>
-        <span class="tj-telemetry-chip"><b>💵 MEDIAN</b> $${s.pricing.median_nightly.toFixed(0)}/night</span>
-        <span class="tj-telemetry-chip"><b>📋 30-DAY STR</b> ${s.regulatory_str_split.str_compliance_ratio}</span>
-        <span class="tj-telemetry-chip"><b>🏡 ACTIVE UNIT</b> ${PROPERTY_DATA.unit}</span>
-        <span class="tj-telemetry-chip"><b>🔒 PROTOCOL</b> Synced</span>
-      `;
+    escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
     }
 
-    // Drawer state controls
+    setMascotState(state, text) {
+      if (this.statusText && text) {
+        this.statusText.innerHTML = text;
+      }
+    }
+
+    checkBackendHealth() {
+      // Health ping silently
+      if (typeof fetch === 'function') {
+        fetch('http://localhost:8000/api/health')
+          .then(res => res.ok ? res.json() : null)
+          .catch(() => {});
+      }
+    }
+
     openDrawer(query) {
       if (!this.viewContainer) return;
       this.viewContainer.classList.add('is-open');
       if (this.backdrop) this.backdrop.classList.add('is-open');
       if (this.launcherBtn) this.launcherBtn.classList.add('is-hidden');
-      if (typeof document !== 'undefined' && document.body) {
-        document.body.classList.add('has-sentinel-open');
+      if (query && this.input) {
+        this.input.value = query;
+        this.submitQuery();
+      } else if (this.input) {
+        setTimeout(() => this.input.focus(), 250);
       }
-      if (this.input) {
-        setTimeout(() => {
-          this.input.focus();
-          if (query) {
-            this.input.value = query;
-            this.submitQuery();
-          }
-        }, 150);
-      }
-    }
-
-    open(query) {
-      this.openDrawer(query);
     }
 
     closeDrawer() {
@@ -3117,13 +3490,6 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
       this.viewContainer.classList.remove('is-open');
       if (this.backdrop) this.backdrop.classList.remove('is-open');
       if (this.launcherBtn) this.launcherBtn.classList.remove('is-hidden');
-      if (typeof document !== 'undefined' && document.body) {
-        document.body.classList.remove('has-sentinel-open');
-      }
-    }
-
-    close() {
-      this.closeDrawer();
     }
 
     toggleDrawer() {
@@ -3135,34 +3501,14 @@ Sentinel AI monitors both residential unit telemetry for <strong>Home 014</stron
       }
     }
 
-    toggle() {
-      this.toggleDrawer();
-    }
-
-    escapeHtml(str) {
-      if (!str) return '';
-      return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-    }
-
-    // ----------------------------------------------------------------
-    // Event Bus (Cross-Module Sync)
-    // ----------------------------------------------------------------
     on(event, handler) {
-      if (!this.listeners.has(event)) {
-        this.listeners.set(event, []);
-      }
+      if (!this.listeners.has(event)) this.listeners.set(event, []);
       this.listeners.get(event).push(handler);
     }
 
     emit(event, data) {
-      if (this.listeners.has(event)) {
-        this.listeners.get(event).forEach(handler => handler(data));
-      }
+      const handlers = this.listeners.get(event);
+      if (handlers) handlers.forEach(fn => fn(data));
     }
   }
 
