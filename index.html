@@ -13,6 +13,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css?v=20261023-1" />
   <link rel="stylesheet" href="building-tour.css" />
+  <link rel="stylesheet" href="chatbot.css" />
   <noscript><style>.loader { display: none !important; }</style></noscript>
 </head>
 <body>
@@ -335,9 +336,13 @@
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite">Your Request is processed , Thanks for interest!</div>
 
+  <!-- Sentinel AI Companion Side Window Root -->
+  <div id="sentinelDrawerRoot"></div>
+
   <script src="assets/vendor/three.min.js" defer></script>
   <script src="assets/vendor/OrbitControls.js" defer></script>
   <script src="building-tour.js" defer></script>
+  <script src="chatbot.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script><script src="app.js?v=20261020-1" defer></script>
 </body>
 </html>

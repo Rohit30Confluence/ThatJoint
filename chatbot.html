@@ -2,11 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=index.html" />
-  <title>Redirecting to THΛTJOINT...</title>
-  <link rel="canonical" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F1F3F6" />
+  <meta name="description" content="THΛTJOINT Property Sentinel — Generative AI property companion with voice dictation, document parsing, and operational intelligence." />
+  <title>THΛTJOINT / Property Sentinel AI Companion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css?v=20260927-2" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <style>
+    body {
+      background: var(--fog, #F1F3F6);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      color: var(--charcoal, #2B2B2B);
+      font-family: var(--body, "DM Sans", Arial, sans-serif);
+      -webkit-font-smoothing: antialiased;
+    }
+    .companion-page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--line, rgba(43, 43, 43, 0.16));
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .companion-page-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .companion-page-nav a {
+      color: var(--grey, #7A7A7A);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .companion-page-nav a:hover,
+    .companion-page-nav a.is-current {
+      color: var(--purple, #A459FF);
+    }
+    .companion-wrapper-full {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 32px 24px 40px;
+      box-sizing: border-box;
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .companion-wrapper-full .tj-companion-container {
+      width: 100%;
+      height: calc(100vh - 220px);
+      min-height: 620px;
+      max-height: 900px;
+    }
+    @media (max-width: 768px) {
+      .companion-page-header {
+        padding: 12px 16px;
+      }
+      .companion-wrapper-full {
+        padding: 16px 14px 24px;
+      }
+      .companion-wrapper-full .tj-companion-container {
+        height: calc(100vh - 170px);
+        min-height: 540px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="index.html">THΛTJOINT</a>...</p>
+  <header class="companion-page-header">
+    <a class="brand" href="index.html" aria-label="THATJOINT home">THΛTJOINT<span>.</span></a>
+    <nav class="companion-page-nav" aria-label="Companion Navigation">
+      <a href="index.html">← Back to Overview</a>
+      <a href="building-tour.html">3D Building Tour ↗</a>
+      <a href="chatbot.html" class="is-current">Property Sentinel AI</a>
+    </nav>
+  </header>
+
+  <main class="companion-wrapper-full">
+    <!-- Editorial Intro matching THATJOINT Design System -->
+    <div class="companion-hero-intro">
+      <p class="eyebrow"><span>05</span><b>Connected Intelligence Layer · 40 Tech Residents · 274 Units Active</b></p>
+      <h1 class="companion-display-title">ThatJoint Co-Living & Sentinel Engine,<br /><em>already in context.</em></h1>
+      <p class="companion-intro-copy">
+        Autonomous operations and chatbot service grounded in <strong>3-Year Co-Living KYC & Billing Data</strong> (40 tech corridor residents, ₹26.9M revenue, Form C & DPDP Act compliance) and <strong>Pacific Grove Coastal Portfolio (274 Properties)</strong>.
+      </p>
+    </div>
+
+    <div id="companionApp" style="width: 100%;"></div>
+  </main>
+
+  <!-- Client Packaging / Settings Modal -->
+  <dialog id="configModal" aria-labelledby="configTitle" aria-describedby="configDesc">
+    <div class="config-modal-inner">
+      <div class="config-head">
+        <span>THΛTJOINT / <b>CLIENT PACKAGING TIERS</b></span>
+        <button type="button" class="config-close-btn" id="configCloseBtn" aria-label="Close modal">×</button>
+      </div>
+
+      <h2 class="config-title" id="configTitle">SELECT CLIENT<br /><em>PACKAGING TIER.</em></h2>
+      <p class="config-desc" id="configDesc">
+        Configure the execution layer for Property Sentinel operations. Toggle between self-contained static execution, your own frontier model API keys, or an enterprise property operations webhook.
+      </p>
+
+      <form id="configForm">
+        <div class="config-tier-grid">
+          <!-- Tier 0: ThatJoint AI Grounded Backend Service -->
+          <div class="config-tier-card is-selected" data-tier="backend">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="backend" checked />
+                Tier 0: ThatJoint AI Co-Living Backend
+              </label>
+              <span class="config-tier-badge">Live Server (Port 8000)</span>
+            </div>
+            <p>Connects to the ThatJoint Python backend engine grounded in <code>coliving_3year_full_kyc_billing.sql</code>. Live SQL execution, full resident KYC dossiers (FRRO Form C, FEMA, DPDP Act 2023), and 3-year financial audits.</p>
+            <div class="config-fields-block" id="backendFields">
+              <div class="config-field-row">
+                <label for="backendUrl">Backend API Endpoint</label>
+                <input type="url" id="backendUrl" placeholder="http://localhost:8000/api/chat" value="http://localhost:8000/api/chat" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 1: Local Heuristic Engine -->
+          <div class="config-tier-card" data-tier="tier1">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier1" />
+                Tier 1: Standalone Embedded Engine
+              </label>
+              <span class="config-tier-badge">Zero-Config Offline</span>
+            </div>
+            <p>Runs in-browser with zero external network calls. Pre-loaded with embedded co-living aggregates, Home 014 lease covenants, and Pacific Grove portfolio analytics.</p>
+          </div>
+
+          <!-- Tier 2: BYO API Key -->
+          <div class="config-tier-card" data-tier="tier2">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier2" />
+                Tier 2: Bring-Your-Own API Key
+              </label>
+              <span class="config-tier-badge">Frontier Model BYOK</span>
+            </div>
+            <p>Connect Google Gemini or OpenAI GPT models for live multimodal document understanding and autonomous operational synthesis.</p>
+            
+            <div class="config-fields-block" id="tier2Fields">
+              <div class="config-field-row">
+                <label for="tier2Provider">Provider</label>
+                <select id="tier2Provider">
+                  <option value="gemini">Google Gemini (Gemini 1.5 / 2.0)</option>
+                  <option value="openai">OpenAI (GPT-4o / GPT-4o-mini)</option>
+                </select>
+              </div>
+              <div class="config-field-row">
+                <label for="tier2Key">API Key</label>
+                <input type="password" id="tier2Key" placeholder="AIzaSy... or sk-..." />
+              </div>
+              <div class="config-field-row">
+                <label for="tier2Model">Model Identifier</label>
+                <input type="text" id="tier2Model" placeholder="gemini-1.5-flash" value="gemini-1.5-flash" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: Enterprise Webhook -->
+          <div class="config-tier-card" data-tier="tier3">
+            <div class="config-tier-header">
+              <label>
+                <input type="radio" name="packagingTier" value="tier3" />
+                Tier 3: Enterprise Webhook
+              </label>
+              <span class="config-tier-badge">Enterprise Endpoint</span>
+            </div>
+            <p>Stream real-time queries, lease uploads, and maintenance tickets directly to your organization's Yardi, RealPage, or private microservice bus.</p>
+            
+            <div class="config-fields-block" id="tier3Fields">
+              <div class="config-field-row">
+                <label for="tier3Url">Webhook Endpoint URL</label>
+                <input type="url" id="tier3Url" placeholder="https://api.property-ops.internal/v1/sentinel" />
+              </div>
+              <div class="config-field-row">
+                <label for="tier3Token">Authorization Token (Optional)</label>
+                <input type="password" id="tier3Token" placeholder="Bearer eyJhbGci..." />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="config-actions-row">
+          <button type="button" class="config-btn-reset" id="btnResetConfig">Reset to Defaults</button>
+          <button type="submit" class="config-btn-save" id="btnSaveConfig">Save Configuration</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="chatbot.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sentinel = new ThatJointChatbot({
+        containerId: 'companionApp',
+        isDrawer: false,
+        activeUnit: 'Home 014'
+      });
+
+      // Handle crosslink requests to 3D Tour
+      sentinel.on('selectZone3D', function (zone) {
+        window.location.href = 'building-tour.html?zone=' + encodeURIComponent(zone);
+      });
+    });
+  </script>
 </body>
 </html>

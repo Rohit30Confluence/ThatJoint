@@ -950,6 +950,24 @@
     }
   }
 
+  /* ------------------------------------------------------------------ *
+   *  Sentinel AI Companion Side Window Integration                     *
+   * ------------------------------------------------------------------ */
+  function initSentinelCompanion() {
+    var drawerRoot = document.getElementById('sentinelDrawerRoot');
+    if (drawerRoot && typeof ThatJointChatbot !== 'undefined') {
+      try {
+        new ThatJointChatbot({
+          containerId: drawerRoot,
+          isDrawer: true,
+          activeUnit: 'Home 014'
+        });
+      } catch (err) {
+        console.error('Sentinel AI companion could not start:', err);
+      }
+    }
+  }
+
   /* Active navigation scroll-spy highlighting active section */
   function initNavScrollSpy() {
     var navLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
@@ -981,6 +999,7 @@
 
   function startAppFeatures() {
     init3DTour();
+    initSentinelCompanion();
     initNavScrollSpy();
   }
 

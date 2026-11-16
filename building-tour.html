@@ -11,6 +11,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23A459FF'/%3E%3Cpath d='M7 9h18v4h-7v12h-4V13H7z' fill='white'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="styles.css?v=20260927-2" />
   <link rel="stylesheet" href="building-tour.css" />
+  <link rel="stylesheet" href="chatbot.css" />
   <style>
     body {
       background: #eef1f3;
@@ -86,16 +87,29 @@
     <div id="buildingTourApp"></div>
   </main>
 
+  <!-- Sentinel AI Companion Side Window Root -->
+  <div id="sentinelDrawerRoot"></div>
+
   <!-- Vendor Three.js & OrbitControls -->
   <script src="assets/vendor/three.min.js"></script>
   <script src="assets/vendor/OrbitControls.js"></script>
   <script src="building-tour.js"></script>
+  <script src="chatbot.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // Initialize 3D Building Tour
       var tour = new ThatJointBuildingTour({
         containerId: 'buildingTourApp'
       });
+
+      // Initialize Sentinel AI Side Window Drawer
+      if (typeof ThatJointChatbot !== 'undefined') {
+        new ThatJointChatbot({
+          containerId: 'sentinelDrawerRoot',
+          isDrawer: true,
+          activeUnit: 'Home 014'
+        });
+      }
 
       // Check URL search params for direct zone linking (e.g. ?zone=02%20Living%20Quarters)
       var params = new URLSearchParams(window.location.search);
